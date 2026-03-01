@@ -22,6 +22,244 @@ interface BlogPostData {
 }
 
 const blogPostsData: Record<string, BlogPostData> = {
+  "how-to-make-passport-photo-at-home-usa": {
+    id: 19,
+    slug: "how-to-make-passport-photo-at-home-usa",
+    title: "How to Make a Passport Photo at Home (USA): Free DIY Guide 2026",
+    excerpt: "Save $15+ by making your own US passport photo at home. Step-by-step guide with exact size requirements, background removal, and free tools.",
+    category: "Image Tools",
+    date: "2026-03-01",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1200&h=600&fit=crop",
+    relatedTool: "/tools/image-cropper",
+    content: `
+## How to Make a Passport Photo at Home (USA) — Complete Free Guide 2026
+
+Every year, **millions of Americans** search for how to take a passport photo at home. Whether you're applying for a **new US passport**, **passport renewal**, or a **visa**, you need a photo that meets strict US Department of State requirements. The good news? You can do it yourself at home — for **free** — using just your phone and our online tools.
+
+This guide covers **exact passport photo dimensions**, **background rules**, **common rejection reasons**, and a step-by-step process to create a perfect passport photo using **[ToolsKit.tech](/)** — completely free, no signup required.
+
+[AD_BANNER]
+
+## US Passport Photo Requirements (2026)
+
+Before you start, here are the **official US Department of State passport photo specifications**:
+
+| Requirement | Specification |
+|---|---|
+| **Size** | 2 x 2 inches (51 x 51 mm) |
+| **Resolution** | Minimum 600 x 600 pixels |
+| **File Size** | 240KB–10MB (for online applications) |
+| **Format** | JPEG/JPG |
+| **Background** | Plain white or off-white |
+| **Head Size** | 1–1⅜ inches (25–35 mm) from chin to top of head |
+| **Recency** | Taken within last 6 months |
+| **Glasses** | NOT allowed (since 2016) |
+| **Expression** | Neutral, mouth closed, eyes open |
+
+### What Gets Your Photo REJECTED?
+
+The State Department rejects thousands of passport photos every week. Common reasons include:
+
+1. **Shadows on face or background** — use front-facing natural light
+2. **Non-white background** — must be plain white
+3. **Glasses or sunglasses** — not permitted since November 2016
+4. **Wrong dimensions** — must be exactly 2x2 inches
+5. **Blurry or low resolution** — minimum 600x600 pixels
+6. **Over-edited or filtered** — no beauty filters, Snapchat filters, etc.
+7. **Head too big or too small** — head must be 50-69% of photo height
+8. **Wearing headphones, earbuds, or Bluetooth devices**
+
+[AD_BANNER]
+
+## Step-by-Step: Make Your Passport Photo at Home
+
+### Step 1: Take the Photo
+
+**What you need:** A smartphone (iPhone or Android) and a plain white wall.
+
+**Tips for the perfect shot:**
+- Stand 4 feet from a **plain white wall**
+- Face a **window** for natural, even lighting (no flash needed)
+- Hold the phone at **eye level** or have someone take it for you
+- Keep a **neutral expression** — no smiling, mouth closed
+- Remove glasses, headphones, and hats (religious headwear is allowed)
+- Wear dark clothing that contrasts with the white background
+
+### Step 2: Remove the Background (Free)
+
+Even with a white wall, your background might have shadows or uneven tones. Use our free **[Background Remover tool](/tools/remove-background)** to get a perfectly clean background:
+
+1. Go to **[ToolsKit Background Remover](/tools/remove-background)**
+2. Upload your photo
+3. The AI automatically removes the background
+4. Download the transparent-background image
+5. Add a pure white background using any basic editor
+
+This ensures your photo has the **exact white background** the State Department requires.
+
+### Step 3: Crop to 2x2 Inches
+
+Your photo must be exactly **2 x 2 inches**. Use our free **[Image Cropper](/tools/image-cropper)**:
+
+1. Go to **[ToolsKit Image Cropper](/tools/image-cropper)**
+2. Upload your photo
+3. Set the aspect ratio to **1:1** (square)
+4. Position the crop so your head is centered and occupies **50-69%** of the frame
+5. Make sure there's space above your head (about ¼ inch)
+6. Download the cropped image
+
+**Pro tip:** Set output resolution to **600 x 600 pixels** or higher for best quality.
+
+[AD_BANNER]
+
+### Step 4: Resize the File (If Needed)
+
+For **online passport applications** (DS-160, DS-82 online), your photo must be:
+- **Between 240KB and 10MB**
+- **JPEG format**
+- **Minimum 600 x 600 pixels, maximum 1200 x 1200 pixels**
+
+If your file is too large or too small, use our **[KB Converter](/tools/kb-converter)**:
+
+1. Go to **[ToolsKit KB Converter](/tools/kb-converter)**
+2. Upload your cropped passport photo
+3. Set the target size (e.g., **500KB** for optimal quality)
+4. Download the perfectly sized file
+
+### Step 5: Print (For Mail-In Applications)
+
+If you're mailing your passport application (Form DS-11 or DS-82), you need a **printed** photo:
+
+- Print on **glossy or matte photo paper**
+- Use a photo printer or go to **CVS, Walgreens, or Walmart** for printing
+- You can also use our **[Image to PDF tool](/tools/image-to-pdf)** to create a print-ready PDF
+
+**Print dimensions:** Exactly 2 x 2 inches. Most photo printing kiosks have a "passport photo" option.
+
+## Passport Photo for Online Applications (DS-160 Visa / DS-82 Renewal)
+
+If you're applying online through **travel.state.gov**, here's what you need:
+
+| Online Requirement | Details |
+|---|---|
+| **Format** | JPEG only |
+| **Dimensions** | 600x600 to 1200x1200 pixels |
+| **File Size** | 240KB to 10MB |
+| **Color** | 24-bit color |
+| **No compression artifacts** | Use high quality JPEG |
+
+Our **[Image Compressor](/tools/image-compressor)** lets you control JPEG quality precisely — so you can hit the exact file size range without visible quality loss.
+
+[AD_BANNER]
+
+## How Much Does a Passport Photo Cost? (DIY vs Store)
+
+| Method | Cost | Time |
+|---|---|---|
+| **CVS / Walgreens** | $16.99 | 15–30 minutes |
+| **USPS Post Office** | $15.00 | 15–30 minutes |
+| **Walmart** | $7.44 | 10–20 minutes |
+| **Costco** (discontinued) | N/A | N/A |
+| **DIY at Home (ToolsKit.tech)** | **FREE** | **5–10 minutes** |
+
+By using **[ToolsKit.tech](/)**, you save **$7–$17 per photo** — and for a family of four, that's up to **$68 saved**.
+
+## US Visa Photo Requirements (B1/B2, F1, H1B)
+
+All US visa photos follow the **same 2x2 inch specification** as passport photos. Whether you're applying for:
+
+- **B1/B2 Tourist Visa**
+- **F1 Student Visa**
+- **H1B Work Visa**
+- **K1 Fiancé Visa**
+- **Green Card (I-485)**
+
+The requirements are identical. Use the same steps above with our free tools:
+- **[Background Remover](/tools/remove-background)** for clean white background
+- **[Image Cropper](/tools/image-cropper)** for perfect 2x2 dimensions
+- **[KB Converter](/tools/kb-converter)** for exact file size
+
+[AD_BANNER]
+
+## Green Card Photo Requirements (I-485, I-130, I-751)
+
+USCIS immigration forms require the **same 2x2 inch photo**. Key points:
+
+- Must show **current appearance** (taken within 30 days for immigration forms)
+- **White background** only
+- **No glasses** allowed
+- Print **2 copies** for mail applications
+- Write your **A-number** lightly in pencil on the back
+
+## Baby & Infant Passport Photo Tips
+
+Taking a passport photo of a **baby or toddler** is tricky. Here's how:
+
+1. **Lay baby on a white sheet** and take the photo from above
+2. Baby's **eyes must be open** (try during alert/awake time)
+3. No pacifiers, toys, or hands in the frame
+4. **Only the baby** should be in the photo (no parent hands visible)
+5. Use **[Background Remover](/tools/remove-background)** to clean up any wrinkles in the sheet
+6. Crop with **[Image Cropper](/tools/image-cropper)** to center baby's face
+
+## Passport Photo Checklist ✅
+
+Before submitting, verify your photo meets ALL requirements:
+
+- ☐ Taken within last **6 months**
+- ☐ **2 x 2 inches** (51 x 51 mm)
+- ☐ **White background**, no shadows
+- ☐ **No glasses** or sunglasses
+- ☐ **Neutral expression**, mouth closed
+- ☐ Both **eyes open**, facing camera directly
+- ☐ **No filters** or heavy editing
+- ☐ **High resolution** (min 600x600 pixels)
+- ☐ **JPEG format** for online submission
+- ☐ **240KB–10MB** file size for online applications
+- ☐ Head size is **50–69%** of photo height
+- ☐ Full face visible, no hair covering eyes
+
+[AD_BANNER]
+
+## Frequently Asked Questions
+
+**Can I take my own passport photo with my iPhone?**
+Yes! Use your iPhone's rear camera for best quality. Set a timer or ask someone to hold the phone. Then use **[ToolsKit.tech](/)** to remove background, crop, and resize for free.
+
+**Can I smile in my passport photo?**
+A slight, natural smile is acceptable, but the State Department recommends a **neutral expression** with mouth closed. Avoid showing teeth.
+
+**Can I wear makeup in my passport photo?**
+Yes, normal everyday makeup is fine. Avoid dramatic makeup that significantly alters your appearance.
+
+**How long is a passport photo valid?**
+Your photo must be taken within the last **6 months** and reflect your current appearance.
+
+**Can I use a selfie for my passport photo?**
+The State Department doesn't specifically ban selfies, but selfies often have issues with distance, angle, and arm shadows. It's better to have someone else take the photo or use a tripod with a timer.
+
+**What if my passport photo is rejected?**
+If rejected, you'll receive a notice explaining why. Common fixes: retake with better lighting, remove glasses, use a whiter background. Use our **[Background Remover](/tools/remove-background)** to fix background issues instantly.
+
+**Can I print passport photos at home?**
+Yes, if you have a photo printer and glossy photo paper. Print at 300 DPI for sharp results. Use our **[Image to PDF](/tools/image-to-pdf)** tool to create a print-ready layout.
+
+## Summary: Your Free Passport Photo Toolkit
+
+| Step | Free Tool |
+|---|---|
+| Remove Background | **[Background Remover](/tools/remove-background)** |
+| Crop to 2x2 inches | **[Image Cropper](/tools/image-cropper)** |
+| Resize File Size | **[KB Converter](/tools/kb-converter)** |
+| Compress Quality | **[Image Compressor](/tools/image-compressor)** |
+| Create Print PDF | **[Image to PDF](/tools/image-to-pdf)** |
+
+All tools are **100% free**, work on any device, and require **no signup or download**. Your photos are processed in your browser — we never store your images.
+
+**[Start Making Your Passport Photo Now →](/tools/image-cropper)**
+`
+  },
   "how-to-compress-images-without-losing-quality": {
     id: 1,
     slug: "how-to-compress-images-without-losing-quality",

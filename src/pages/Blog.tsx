@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 19,
+    slug: "how-to-make-passport-photo-at-home-usa",
+    title: "How to Make a Passport Photo at Home (USA): Free DIY Guide 2026",
+    excerpt: "Save $15+ by making your own US passport photo at home. Step-by-step guide with exact size requirements (2x2 inches), background removal, cropping, and free online tools — accepted by USPS & State Department.",
+    category: "Image Tools",
+    date: "2026-03-01",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=400&fit=crop"
+  },
+  {
     id: 18,
     slug: "reduce-image-size-kb-government-forms",
     title: "How to Reduce Image Size to 20KB, 50KB, 100KB for Government Forms (2026 Guide)",
