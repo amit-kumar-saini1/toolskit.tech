@@ -9,6 +9,8 @@ interface SEOProps {
   ogType?: string;
   structuredData?: object;
   noindex?: boolean;
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
 }
 
 const SEO = ({
@@ -20,6 +22,8 @@ const SEO = ({
   ogType = "website",
   structuredData,
   noindex = false,
+  articlePublishedTime,
+  articleModifiedTime,
 }: SEOProps) => {
   const siteUrl = "https://toolskit.tech";
   const fullUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
@@ -44,8 +48,14 @@ const SEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="ToolsKit.tech" />
       <meta property="og:locale" content="en_US" />
+      
+      {/* Article meta for Google Discover */}
+      {articlePublishedTime && <meta property="article:published_time" content={articlePublishedTime} />}
+      {articleModifiedTime && <meta property="article:modified_time" content={articleModifiedTime} />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
