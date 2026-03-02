@@ -31,16 +31,16 @@ const DonateBanner = () => {
           Support to keep this free & secure. Scan QR to donate via UPI.
         </p>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
-const ToolArticleSection = ({ article, toolName }: { article: ToolArticle; toolName: string }) => {
+const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolName: string;}) => {
   // Parse howToUse into numbered steps
-  const howToUseSteps = article.howToUse
-    .split(/(?:First,|Second,|Next,|Then,|After|Finally,|Once|Begin by|Start by)/gi)
-    .filter(step => step.trim().length > 20)
-    .map(step => step.trim().replace(/^[,.\s]+/, '').replace(/[.]\s*$/, ''));
+  const howToUseSteps = article.howToUse.
+  split(/(?:First,|Second,|Next,|Then,|After|Finally,|Once|Begin by|Start by)/gi).
+  filter((step) => step.trim().length > 20).
+  map((step) => step.trim().replace(/^[,.\s]+/, '').replace(/[.]\s*$/, ''));
 
   return (
     <div className="glass-card rounded-2xl p-6 space-y-8">
@@ -77,20 +77,20 @@ const ToolArticleSection = ({ article, toolName }: { article: ToolArticle; toolN
           </h3>
         </div>
         <div className="p-4">
-          {howToUseSteps.length > 1 ? (
-            <ol className="space-y-3">
-              {howToUseSteps.map((step, index) => (
-                <li key={index} className="flex gap-3 text-sm md:text-base">
+          {howToUseSteps.length > 1 ?
+          <ol className="space-y-3">
+              {howToUseSteps.map((step, index) =>
+            <li key={index} className="flex gap-3 text-sm md:text-base">
                   <span className="shrink-0 w-6 h-6 rounded bg-secondary/20 text-secondary-foreground flex items-center justify-center text-xs font-semibold">
                     {index + 1}
                   </span>
                   <span className="text-muted-foreground leading-relaxed">{step}.</span>
                 </li>
-              ))}
-            </ol>
-          ) : (
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{article.howToUse}</p>
-          )}
+            )}
+            </ol> :
+
+          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{article.howToUse}</p>
+          }
         </div>
       </div>
       
@@ -104,14 +104,14 @@ const ToolArticleSection = ({ article, toolName }: { article: ToolArticle; toolN
         </div>
         <div className="p-4">
           <div className="grid gap-2">
-            {article.keyFeatures.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3 p-2 rounded-lg hover:bg-muted/30 transition-colors">
+            {article.keyFeatures.map((feature, index) =>
+            <div key={index} className="flex items-start gap-3 p-2 rounded-lg hover:bg-muted/30 transition-colors">
                 <span className="shrink-0 w-5 h-5 rounded bg-green-500/20 text-green-600 dark:text-green-400 flex items-center justify-center text-xs font-bold">
                   ✓
                 </span>
                 <span className="text-muted-foreground text-sm md:text-base">{feature}</span>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
@@ -128,8 +128,8 @@ const ToolArticleSection = ({ article, toolName }: { article: ToolArticle; toolN
           <li>• Your files are processed in your browser, no data is uploaded.</li>
         </ul>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: ToolLayoutProps) => {
@@ -137,21 +137,21 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
   const slug = toolSlug || title.toLowerCase().replace(/\s+/g, "-");
   const seoData = toolsSEO[slug];
   const structuredData = getToolStructuredData(slug, seoData?.h1Title || title, seoData?.description || description);
-  
+
   // Use SEO-optimized H1 title if available
   const h1Title = seoData?.h1Title || title;
 
   return (
     <>
-      {seoData && (
-        <SEO
-          title={seoData.title}
-          description={seoData.description}
-          keywords={seoData.keywords}
-          canonicalUrl={`/tools/${slug}`}
-          structuredData={structuredData}
-        />
-      )}
+      {seoData &&
+      <SEO
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={`/tools/${slug}`}
+        structuredData={structuredData} />
+
+      }
       
       <div className="min-h-screen py-8">
         <div className="container">
@@ -182,15 +182,15 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </header>
 
             {/* H2 Sub-headings for keyword spreading */}
-            {seoData?.h2Headings && seoData.h2Headings.length > 0 && (
-              <section className="glass-card rounded-2xl p-6">
-                {seoData.h2Headings.map((heading, index) => (
-                  <h2 key={index} className="text-lg md:text-xl font-semibold text-foreground mb-3 last:mb-0">
-                    {heading}
-                  </h2>
-                ))}
-              </section>
-            )}
+            {seoData?.h2Headings && seoData.h2Headings.length > 0
+
+
+
+
+
+
+
+            }
 
             {/* Tool Content */}
             <section className="glass-card rounded-2xl p-6">
@@ -201,22 +201,22 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             <DonateBanner />
 
             {/* FAQ Section */}
-            {seoData?.faqs && seoData.faqs.length > 0 && (
-              <section className="glass-card rounded-2xl p-6">
+            {seoData?.faqs && seoData.faqs.length > 0 &&
+            <section className="glass-card rounded-2xl p-6">
                 <FAQ faqs={seoData.faqs} toolName={title} />
               </section>
-            )}
+            }
 
 
             {/* SEO Article Section */}
-            {seoData?.article && (
-              <ToolArticleSection article={seoData.article} toolName={title} />
-            )}
+            {seoData?.article &&
+            <ToolArticleSection article={seoData.article} toolName={title} />
+            }
           </article>
         </div>
       </div>
-    </>
-  );
+    </>);
+
 };
 
 export default ToolLayout;
