@@ -181,6 +181,17 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
               </div>
             </header>
 
+            {/* H2 Sub-headings for keyword spreading */}
+            {seoData?.h2Headings && seoData.h2Headings.length > 0 && (
+              <section className="glass-card rounded-2xl p-6">
+                {seoData.h2Headings.map((heading, index) => (
+                  <h2 key={index} className="text-lg md:text-xl font-semibold text-foreground mb-3 last:mb-0">
+                    {heading}
+                  </h2>
+                ))}
+              </section>
+            )}
+
             {/* Tool Content */}
             <section className="glass-card rounded-2xl p-6">
               {children}
