@@ -159,9 +159,14 @@ export const toolsSEO: Record<string, ToolSEO> = {
   "pdf-to-image": {
     title: "PDF to Image, PDF to Word, PDF to JPG Converter Free Online 2026",
     h1Title: "Free PDF to Winword Converter",
-    h2Headings: ["Convert PDF to Word (Docx)", "Fast PDF to Image & JPG Extraction"],
-    description: "Convert PDF to Image, PDF to Word, PDF to JPG, PDF to PNG free online. Extract all pages from PDF as high-quality images. No signup, instant download.",
-    keywords: "pdf to image, pdf to jpg, pdf to png, pdf to word, pdf converter, convert pdf to image, convert pdf to word, pdf to winword, extract images from pdf, free pdf to image, pdf to jpg converter, pdf to word converter online free",
+    h2Headings: [
+      "Convert PDF to Word & Docx Online Free",
+      "PDF to JPG & PNG Image Extractor",
+      "PDF to Image Without Watermark – No Signup",
+      "Extract Images from PDF for Admit Card & Forms"
+    ],
+    description: "Convert PDF to Image, PDF to Word, PDF to JPG, PDF to PNG free online. Extract images from PDF without watermark. No signup, works on mobile. Instant download.",
+    keywords: "pdf to image, pdf to jpg, pdf to png, pdf to word, pdf converter, convert pdf to image, convert pdf to word, pdf to winword, extract images from pdf, free pdf to image, pdf to jpg converter, pdf to word converter online free, pdf to jpeg online free, pdf to image without watermark, pdf to image converter for mobile, pdf to photo for form filling, admit card pdf to image, ssc pdf to image, pdf page to photo, online pdf converter no signup, pdf to high quality image",
     faqs: [
       {
         question: "How do I extract images from a PDF?",

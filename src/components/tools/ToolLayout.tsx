@@ -182,12 +182,18 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </header>
 
             {/* H2 Sub-headings for keyword spreading */}
-            {seoData?.h2Headings && seoData.h2Headings.length > 0
-
-
-
-
-
+            {seoData?.h2Headings && seoData.h2Headings.length > 0 && (
+              <section className="glass-card rounded-2xl p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {seoData.h2Headings.map((heading, i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-muted/40 border border-border/50">
+                      <Sparkles className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <h2 className="text-sm md:text-base font-semibold text-foreground">{heading}</h2>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )
 
 
             }
