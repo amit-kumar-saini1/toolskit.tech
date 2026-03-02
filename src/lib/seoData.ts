@@ -156,10 +156,10 @@ export const toolsSEO: Record<string, ToolSEO> = {
     }
   },
   "pdf-to-image": {
-    title: "Free PDF to Image Converter Online - Convert PDF to JPG/PNG",
-    h1Title: "PDF to Image Converter Free - Extract PDF Pages as JPG/PNG",
-    description: "Convert PDF to images online for free. Extract all pages from PDF as JPG or PNG images. High quality conversion, no signup required, instant download.",
-    keywords: "pdf to image, pdf to jpg, pdf to png, convert pdf to image, extract images from pdf, pdf converter, free pdf to image",
+    title: "PDF to Image, PDF to Word, PDF to JPG Converter Free Online 2026",
+    h1Title: "PDF to Image | PDF to Word | PDF to JPG | PDF Converter Free Online",
+    description: "Convert PDF to Image, PDF to Word, PDF to JPG, PDF to PNG free online. Extract all pages from PDF as high-quality images. No signup, instant download.",
+    keywords: "pdf to image, pdf to jpg, pdf to png, pdf to word, pdf converter, convert pdf to image, convert pdf to word, pdf to winword, extract images from pdf, free pdf to image, pdf to jpg converter, pdf to word converter online free",
     faqs: [
       {
         question: "How do I extract images from a PDF?",
