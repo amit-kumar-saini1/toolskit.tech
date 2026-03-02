@@ -8,6 +8,7 @@ export interface ToolArticle {
 export interface ToolSEO {
   title: string;
   h1Title: string;
+  h2Headings?: string[];
   description: string;
   keywords: string;
   faqs: { question: string; answer: string }[];
@@ -157,7 +158,8 @@ export const toolsSEO: Record<string, ToolSEO> = {
   },
   "pdf-to-image": {
     title: "PDF to Image, PDF to Word, PDF to JPG Converter Free Online 2026",
-    h1Title: "PDF to Image | PDF to Word | PDF to JPG | PDF Converter Free Online",
+    h1Title: "Free PDF to Winword Converter",
+    h2Headings: ["Convert PDF to Word (Docx)", "Fast PDF to Image & JPG Extraction"],
     description: "Convert PDF to Image, PDF to Word, PDF to JPG, PDF to PNG free online. Extract all pages from PDF as high-quality images. No signup, instant download.",
     keywords: "pdf to image, pdf to jpg, pdf to png, pdf to word, pdf converter, convert pdf to image, convert pdf to word, pdf to winword, extract images from pdf, free pdf to image, pdf to jpg converter, pdf to word converter online free",
     faqs: [
