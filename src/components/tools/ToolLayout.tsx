@@ -170,13 +170,13 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
           <article className="max-w-4xl mx-auto space-y-6">
             {/* Header */}
             <header className="glass-card rounded-2xl p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-primary-foreground" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shrink-0">
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
                 </div>
-                <div>
-                  <h1 className="text-2xl md:text-3xl font-bold">{h1Title}</h1>
-                  <p className="text-muted-foreground">{seoData?.description || description}</p>
+                <div className="min-w-0">
+                  <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Title}</h1>
+                  <p className="text-sm sm:text-base text-muted-foreground mt-1">{seoData?.description || description}</p>
                 </div>
               </div>
             </header>
