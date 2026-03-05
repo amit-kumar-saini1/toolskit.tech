@@ -53,7 +53,7 @@ const blogPosts = [
     title: "Understanding BMI: A Complete Health Guide for Everyone",
     excerpt: "Learn what BMI means, how to calculate it, and what your results indicate about your overall health and fitness.",
     category: "Health Tools",
-    date: "2026-02-25",
+    date: "2026-01-16",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
   },
