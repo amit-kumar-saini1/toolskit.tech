@@ -23,7 +23,7 @@ const blogPosts = [
     title: "How to Compress Images Without Losing Quality in 2026",
     excerpt: "Learn the best techniques to reduce image file size while maintaining visual quality. Updated guide for 2026.",
     category: "Image Tools",
-    date: "2026-02-28",
+    date: "2026-01-25",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
   },
