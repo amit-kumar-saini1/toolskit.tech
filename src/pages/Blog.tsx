@@ -73,7 +73,7 @@ const blogPosts = [
     title: "Color Theory for Web Design: Picking Perfect Color Palettes",
     excerpt: "Understand color theory basics and learn how to choose color combinations that make your website stand out.",
     category: "Design Tools",
-    date: "2026-02-23",
+    date: "2026-01-10",
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop"
   },
