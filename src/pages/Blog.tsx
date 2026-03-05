@@ -163,7 +163,7 @@ const blogPosts = [
     title: "Time Zone Converter: The Complete Guide to Converting Time Between Zones (2026)",
     excerpt: "Learn how to convert time between time zones accurately. Complete guide covering IST to EST, GMT to PST, DST handling, and tips for international scheduling.",
     category: "Converter Tools",
-    date: "2026-02-15",
+    date: "2025-12-14",
     readTime: "14 min read",
     image: "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=600&h=400&fit=crop"
   },
