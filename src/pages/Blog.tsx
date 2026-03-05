@@ -123,7 +123,7 @@ const blogPosts = [
     title: "SSC Form Photo Size Compressor – SSC फॉर्म के लिए फोटो साइज कैसे कम करें (2026 गाइड)",
     excerpt: "SSC CGL, CHSL, MTS फॉर्म भरते समय फोटो साइज की समस्या? जानिए कैसे फ्री में फोटो को सही KB साइज में कंप्रेस करें बिना क्वालिटी खोए।",
     category: "Image Tools",
-    date: "2026-02-19",
+    date: "2025-12-26",
     readTime: "15 min read",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop"
   },
