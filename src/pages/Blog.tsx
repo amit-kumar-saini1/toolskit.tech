@@ -83,7 +83,7 @@ const blogPosts = [
     title: "Best Image Tools for Social Media: Create Stunning Posts in 2026",
     excerpt: "Master social media visuals with these free image tools. Learn to crop, compress, add text, and remove backgrounds for Instagram, Facebook, and more.",
     category: "Image Tools",
-    date: "2026-02-22",
+    date: "2026-01-07",
     readTime: "10 min read",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
   },
