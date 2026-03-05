@@ -63,7 +63,7 @@ const blogPosts = [
     title: "PDF to Image & Image to PDF: Tips for Perfect Conversions",
     excerpt: "Master the art of converting between PDF and image formats with our expert tips and tricks.",
     category: "PDF Tools",
-    date: "2026-02-24",
+    date: "2026-01-13",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=400&fit=crop"
   },
