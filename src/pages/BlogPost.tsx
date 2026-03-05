@@ -706,6 +706,8 @@ Obesity significantly increases risk of:
 - Joint problems
 - Mental health issues
 
+[AD_BANNER]
+
 ## Limitations of BMI
 
 While BMI is useful, it has several limitations:
