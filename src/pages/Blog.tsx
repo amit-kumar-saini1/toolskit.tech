@@ -43,7 +43,7 @@ const blogPosts = [
     title: "How to Remove Background from Images for Free - Step by Step Guide",
     excerpt: "Discover the easiest ways to remove backgrounds from your photos without any design skills or expensive software.",
     category: "Image Tools",
-    date: "2026-02-26",
+    date: "2026-01-19",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=400&fit=crop"
   },
