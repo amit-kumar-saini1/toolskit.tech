@@ -183,7 +183,7 @@ const blogPosts = [
     title: "Resizing Identity Documents for Australian Rental Applications (1Form/2Apply Guide)",
     excerpt: "Learn how to resize your identity documents like passport, driver's licence, and bank statements to meet 1Form and 2Apply upload requirements for Australian rental applications.",
     category: "Image Tools",
-    date: "2026-02-13",
+    date: "2025-12-08",
     readTime: "12 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
   },
