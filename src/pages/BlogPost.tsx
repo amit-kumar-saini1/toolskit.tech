@@ -4790,7 +4790,7 @@ const BlogPost = () => {
               if (paragraph.trim() === '[AD_BANNER]') {
                 return (
                   <div key={index} className="my-8 flex justify-center" style={{ minHeight: '250px', minWidth: '300px' }}>
-                    <AdBanner slot="6244673247" format="rectangle" className="w-full max-w-[336px]" />
+                    <AdBanner slot="3313644457" format="auto" className="w-full" />
                   </div>
                 );
               }
