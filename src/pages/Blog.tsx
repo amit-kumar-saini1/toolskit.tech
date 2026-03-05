@@ -153,7 +153,7 @@ const blogPosts = [
     title: "Metric vs. Imperial: The Ultimate Unit Conversion Guide for Moving to the USA (2026)",
     excerpt: "Moving to America? Master the US measurement system with this complete guide covering miles, Fahrenheit, pounds, gallons, and more — with easy conversion tips and free tools.",
     category: "Converter Tools",
-    date: "2026-02-16",
+    date: "2025-12-17",
     readTime: "16 min read",
     image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&h=400&fit=crop"
   },
