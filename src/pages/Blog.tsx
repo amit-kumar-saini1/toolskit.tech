@@ -13,7 +13,7 @@ const blogPosts = [
     title: "How to Make a Passport Photo at Home (USA): Free DIY Guide 2026",
     excerpt: "Save $15+ by making your own US passport photo at home. Step-by-step guide with exact size requirements (2x2 inches), background removal, cropping, and free online tools — accepted by USPS & State Department.",
     category: "Image Tools",
-    date: "2026-03-01",
+    date: "2026-01-28",
     readTime: "18 min read",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=400&fit=crop"
   },
@@ -23,7 +23,7 @@ const blogPosts = [
     title: "How to Compress Images Without Losing Quality in 2026",
     excerpt: "Learn the best techniques to reduce image file size while maintaining visual quality. Updated guide for 2026.",
     category: "Image Tools",
-    date: "2026-02-28",
+    date: "2026-01-25",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
   },
@@ -33,7 +33,7 @@ const blogPosts = [
     title: "Complete Guide to QR Codes: Creation, Usage & Best Practices",
     excerpt: "Everything you need to know about QR codes - from creating your first code to implementing them in marketing campaigns.",
     category: "QR Tools",
-    date: "2026-02-27",
+    date: "2026-01-22",
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?w=600&h=400&fit=crop"
   },
@@ -43,7 +43,7 @@ const blogPosts = [
     title: "How to Remove Background from Images for Free - Step by Step Guide",
     excerpt: "Discover the easiest ways to remove backgrounds from your photos without any design skills or expensive software.",
     category: "Image Tools",
-    date: "2026-02-26",
+    date: "2026-01-19",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=400&fit=crop"
   },
@@ -53,7 +53,7 @@ const blogPosts = [
     title: "Understanding BMI: A Complete Health Guide for Everyone",
     excerpt: "Learn what BMI means, how to calculate it, and what your results indicate about your overall health and fitness.",
     category: "Health Tools",
-    date: "2026-02-25",
+    date: "2026-01-16",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
   },
@@ -63,7 +63,7 @@ const blogPosts = [
     title: "PDF to Image & Image to PDF: Tips for Perfect Conversions",
     excerpt: "Master the art of converting between PDF and image formats with our expert tips and tricks.",
     category: "PDF Tools",
-    date: "2026-02-24",
+    date: "2026-01-13",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=400&fit=crop"
   },
@@ -73,7 +73,7 @@ const blogPosts = [
     title: "Color Theory for Web Design: Picking Perfect Color Palettes",
     excerpt: "Understand color theory basics and learn how to choose color combinations that make your website stand out.",
     category: "Design Tools",
-    date: "2026-02-23",
+    date: "2026-01-10",
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop"
   },
@@ -83,7 +83,7 @@ const blogPosts = [
     title: "Best Image Tools for Social Media: Create Stunning Posts in 2026",
     excerpt: "Master social media visuals with these free image tools. Learn to crop, compress, add text, and remove backgrounds for Instagram, Facebook, and more.",
     category: "Image Tools",
-    date: "2026-02-22",
+    date: "2026-01-07",
     readTime: "10 min read",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
   },
@@ -93,7 +93,7 @@ const blogPosts = [
     title: "Essential Online Calculators for Daily Life: Complete Guide 2026",
     excerpt: "From BMI to age calculations, discover the most useful free online calculators that simplify your everyday tasks and health tracking.",
     category: "Calculator Tools",
-    date: "2026-02-21",
+    date: "2026-01-04",
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop"
   },
@@ -103,7 +103,7 @@ const blogPosts = [
     title: "Top 5 PDF Tools for Students: Ultimate Guide for 2026",
     excerpt: "Discover the best free PDF tools every student needs. From converting PDFs to images to creating PDFs from photos - complete guide with rankings and tips.",
     category: "PDF Tools",
-    date: "2026-02-20",
+    date: "2026-01-01",
     readTime: "12 min read",
     image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
   },
@@ -113,7 +113,7 @@ const blogPosts = [
     title: "How to Reduce Image Size to 20KB, 50KB, 100KB for Government Forms (2026 Guide)",
     excerpt: "Step-by-step guide to reduce photo & signature size to exact KB for SSC, UPSC, Railway, Agniveer, Bank, and all government exam forms. Free online tool — no signup needed.",
     category: "Image Tools",
-    date: "2026-02-19",
+    date: "2025-12-29",
     readTime: "16 min read",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop"
   },
@@ -123,7 +123,7 @@ const blogPosts = [
     title: "SSC Form Photo Size Compressor – SSC फॉर्म के लिए फोटो साइज कैसे कम करें (2026 गाइड)",
     excerpt: "SSC CGL, CHSL, MTS फॉर्म भरते समय फोटो साइज की समस्या? जानिए कैसे फ्री में फोटो को सही KB साइज में कंप्रेस करें बिना क्वालिटी खोए।",
     category: "Image Tools",
-    date: "2026-02-19",
+    date: "2025-12-26",
     readTime: "15 min read",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop"
   },
@@ -133,7 +133,7 @@ const blogPosts = [
     title: "Best Free Online Tools for US College Students & Job Seekers (2026)",
     excerpt: "Discover the top free online tools every American college student and job seeker needs in 2026 — from resume photo editors to PDF converters, GPA tools, and more.",
     category: "US Tools Guide",
-    date: "2026-02-18",
+    date: "2025-12-23",
     readTime: "15 min read",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
   },
@@ -143,7 +143,7 @@ const blogPosts = [
     title: "12th के बाद क्या करें? – Complete Career Guide After 12th (2026)",
     excerpt: "12th पास करने के बाद कौन सा कोर्स करें? Science, Commerce, Arts सभी स्ट्रीम के लिए बेस्ट करियर ऑप्शन्स, टॉप कोर्सेज, और फ्री ऑनलाइन टूल्स की पूरी जानकारी।",
     category: "Career Guide",
-    date: "2026-02-17",
+    date: "2025-12-20",
     readTime: "18 min read",
     image: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=600&h=400&fit=crop"
   },
@@ -153,7 +153,7 @@ const blogPosts = [
     title: "Metric vs. Imperial: The Ultimate Unit Conversion Guide for Moving to the USA (2026)",
     excerpt: "Moving to America? Master the US measurement system with this complete guide covering miles, Fahrenheit, pounds, gallons, and more — with easy conversion tips and free tools.",
     category: "Converter Tools",
-    date: "2026-02-16",
+    date: "2025-12-17",
     readTime: "16 min read",
     image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&h=400&fit=crop"
   },
@@ -163,7 +163,7 @@ const blogPosts = [
     title: "Time Zone Converter: The Complete Guide to Converting Time Between Zones (2026)",
     excerpt: "Learn how to convert time between time zones accurately. Complete guide covering IST to EST, GMT to PST, DST handling, and tips for international scheduling.",
     category: "Converter Tools",
-    date: "2026-02-15",
+    date: "2025-12-14",
     readTime: "14 min read",
     image: "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=600&h=400&fit=crop"
   },
@@ -173,7 +173,7 @@ const blogPosts = [
     title: "Resizing Documents for UK Visa Applications: Step-by-Step Guide (2026)",
     excerpt: "Learn how to resize your photos, documents, and supporting files to meet UK visa application requirements. Complete step-by-step guide for all UK visa types.",
     category: "Image Tools",
-    date: "2026-02-13",
+    date: "2025-12-11",
     readTime: "14 min read",
     image: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=600&h=400&fit=crop"
   },
@@ -183,7 +183,7 @@ const blogPosts = [
     title: "Resizing Identity Documents for Australian Rental Applications (1Form/2Apply Guide)",
     excerpt: "Learn how to resize your identity documents like passport, driver's licence, and bank statements to meet 1Form and 2Apply upload requirements for Australian rental applications.",
     category: "Image Tools",
-    date: "2026-02-13",
+    date: "2025-12-08",
     readTime: "12 min read",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
   },
@@ -193,7 +193,7 @@ const blogPosts = [
     title: "Army Agniveer Recruitment 2026: Photo और Signature का Size कैसे कम करें?",
     excerpt: "Army Agniveer भर्ती 2026 का फॉर्म भर रहे हैं? जानिए Photo और Signature को सही KB साइज में कैसे कम करें – स्टेप बाय स्टेप गाइड हिंदी में।",
     category: "Image Tools",
-    date: "2026-02-12",
+    date: "2025-12-05",
     readTime: "15 min read",
     image: "https://images.unsplash.com/photo-1579912437766-7896df6d3cd3?w=600&h=400&fit=crop"
   }
