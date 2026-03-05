@@ -133,7 +133,7 @@ const blogPosts = [
     title: "Best Free Online Tools for US College Students & Job Seekers (2026)",
     excerpt: "Discover the top free online tools every American college student and job seeker needs in 2026 — from resume photo editors to PDF converters, GPA tools, and more.",
     category: "US Tools Guide",
-    date: "2026-02-18",
+    date: "2025-12-23",
     readTime: "15 min read",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
   },
