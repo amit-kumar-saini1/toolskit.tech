@@ -10,8 +10,8 @@ const blogPosts = [
   {
     id: 20,
     slug: "how-to-make-website-without-coding",
-    title: "Bina Coding Website Kaise Banaye? – How to Make Website Without Coding in 2026 (Free Guide)",
-    excerpt: "Bina ek line code likhe apni professional website banayein! Lovable, WordPress, aur free tools se website banane ka complete guide — Hindi mein. Earning ke tarike bhi janiye.",
+    title: "How to Make a Website Without Coding in 2026: Free Step-by-Step Guide (USA, UK, Australia)",
+    excerpt: "Build a professional website without writing a single line of code! Complete 2026 guide using Lovable AI, WordPress & free tools. Includes 10+ proven ways to earn money from your website.",
     category: "Tech Guide",
     date: "2026-03-05",
     readTime: "20 min read",
