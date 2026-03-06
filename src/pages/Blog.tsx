@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 20,
+    slug: "how-to-make-website-without-coding",
+    title: "Bina Coding Website Kaise Banaye? – How to Make Website Without Coding in 2026 (Free Guide)",
+    excerpt: "Bina ek line code likhe apni professional website banayein! Lovable, WordPress, aur free tools se website banane ka complete guide — Hindi mein. Earning ke tarike bhi janiye.",
+    category: "Tech Guide",
+    date: "2026-03-05",
+    readTime: "20 min read",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+  },
+  {
     id: 19,
     slug: "how-to-make-passport-photo-at-home-usa",
     title: "How to Make a Passport Photo at Home (USA): Free DIY Guide 2026",
