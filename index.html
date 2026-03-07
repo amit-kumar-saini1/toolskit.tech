@@ -46,11 +46,18 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
     
-    <!-- Google AdSense -->
+    <!-- Font - preload for faster rendering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    
+    <!-- DNS prefetch for ads -->
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    
+    <!-- Google AdSense - defer loading -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292" crossorigin="anonymous"></script>
     <!-- Bing serch consol -->
     <meta name="msvalidate.01" content="79620B965645F4DFAEE352E47E2F04D7" />
