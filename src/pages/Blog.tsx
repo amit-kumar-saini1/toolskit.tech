@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 21,
+    slug: "best-free-ai-tools-2026",
+    title: "15 Best Free AI Tools in 2026 That Will Save You Hours Every Day (USA, UK, Australia)",
+    excerpt: "Discover the most powerful free AI tools of 2026 — from AI website builders to image generators, writing assistants & productivity apps. Used by millions in the US, UK & Australia. No signup needed for most!",
+    category: "AI Tools",
+    date: "2026-03-07",
+    readTime: "22 min read",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+  },
+  {
     id: 20,
     slug: "how-to-make-website-without-coding",
     title: "How to Make a Website Without Coding in 2026: Free Step-by-Step Guide (USA, UK, Australia)",
