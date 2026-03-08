@@ -106,6 +106,20 @@ const tools = [
     path: "/tools/time-zone-converter",
     color: "#0EA5E9"
   },
+  {
+    title: "Currency Converter",
+    description: "Convert currencies with live rates",
+    icon: TrendingUp,
+    path: "/tools/currency-converter",
+    color: "#EAB308"
+  },
+  {
+    title: "Crypto Converter",
+    description: "Live crypto prices & converter",
+    icon: Bitcoin,
+    path: "/tools/crypto-converter",
+    color: "#F7931A"
+  },
 ];
 
 const AllTools = () => {
