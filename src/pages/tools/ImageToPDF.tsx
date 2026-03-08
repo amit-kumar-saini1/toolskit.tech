@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import ToolLayout from "@/components/tools/ToolLayout";
 import { AdDownloadModal } from "@/components/AdDownloadModal";
 import { toast } from "sonner";
-import { jsPDF } from "jspdf";
+
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
