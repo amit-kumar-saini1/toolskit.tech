@@ -12,7 +12,8 @@ import {
   Type,
   Calendar,
   Hash,
-  ArrowRight
+  ArrowRight,
+  Clock
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
@@ -108,6 +109,13 @@ const tools = [
     icon: Calculator,
     path: "/tools/bmi-calculator",
     color: "#22c55e",
+  },
+  {
+    title: "Time Zone Converter",
+    description: "Convert time between global zones",
+    icon: Clock,
+    path: "/tools/time-zone-converter",
+    color: "#0891b2",
   },
 ];
 
