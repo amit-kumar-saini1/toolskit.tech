@@ -192,7 +192,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
 
               {/* Ad Banner above FAQ - mobile only */}
               <div className="my-4 sm:my-6 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:hidden">
-                <AdBanner slot="2745516861" format="auto" responsive={true} />
+                <AdBanner slot="9647130857" format="auto" responsive={true} />
               </div>
 
               {/* FAQ Section */}
