@@ -45,6 +45,7 @@ const ImageToPDF = () => {
     }
 
     try {
+      const { jsPDF } = await import("jspdf");
       const pdf = new jsPDF();
 
       for (let i = 0; i < images.length; i++) {
