@@ -196,9 +196,6 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             {seoData?.article &&
             <ToolArticleSection article={seoData.article} toolName={title} />
             }
-
-            {/* Donate Banner */}
-            <DonateBanner />
           </article>
         </div>
       </div>
