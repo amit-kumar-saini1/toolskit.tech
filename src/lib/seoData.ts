@@ -520,6 +520,49 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "Mobile Friendly – Works perfectly on all devices and screen sizes"
       ]
     }
+  },
+  "crypto-converter": {
+    title: "Free Crypto Converter Online - Live Bitcoin & Crypto Prices",
+    h1Title: "Free Crypto Converter - Live Cryptocurrency Prices",
+    h2Headings: ["Live Crypto Market Prices", "Bitcoin to INR / USD Converter"],
+    description: "Free crypto converter with real-time prices. Convert Bitcoin, Ethereum, Solana & 20+ cryptocurrencies to USD, INR, EUR instantly. Live market data, 24h changes & market cap.",
+    keywords: "crypto converter, bitcoin price, ethereum price, btc to inr, btc to usd, cryptocurrency converter, crypto to inr, bitcoin converter, live crypto prices, crypto market, solana price, dogecoin price",
+    faqs: [
+      {
+        question: "How accurate are the crypto prices?",
+        answer: "Our crypto converter uses real-time data from CoinGecko API, one of the most trusted cryptocurrency data providers. Prices are fetched live and reflect current market values."
+      },
+      {
+        question: "How many cryptocurrencies are supported?",
+        answer: "We support 20+ popular cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), Solana (SOL), XRP, Dogecoin (DOGE), Cardano (ADA), and more."
+      },
+      {
+        question: "Can I convert Bitcoin to INR?",
+        answer: "Yes! Simply select Bitcoin as your cryptocurrency and INR as your fiat currency. You'll get the latest BTC to INR price with real-time market data."
+      },
+      {
+        question: "Is the crypto converter free?",
+        answer: "100% free! No signup, no limits. Convert between any supported cryptocurrency and 10+ fiat currencies as many times as you want."
+      },
+      {
+        question: "What market data is shown?",
+        answer: "Along with price conversion, we show live market data including 24-hour price change percentage, market capitalization, and a sortable table of top cryptocurrencies."
+      }
+    ],
+    article: {
+      introduction: "Cryptocurrency markets move fast — and having a reliable, real-time crypto converter is essential for traders, investors, and enthusiasts. Our free Crypto Converter tool provides live prices for 20+ popular cryptocurrencies including Bitcoin, Ethereum, Solana, XRP, and Dogecoin. Whether you want to check how much your Bitcoin is worth in Indian Rupees, convert Ethereum to USD, or compare market caps — this tool gives you instant, accurate results powered by CoinGecko's trusted market data.",
+      howToUse: "First, enter the amount of cryptocurrency you want to convert. Next, select your cryptocurrency from the dropdown — choose from Bitcoin, Ethereum, Solana, and 17+ more coins. Then, select your target fiat currency — USD, INR, EUR, GBP, and more are available. The conversion result appears instantly with the current market price. You can also browse the live market table below to see prices, 24h changes, and market caps for all supported cryptocurrencies. Click any coin in the table to quickly select it for conversion.",
+      keyFeatures: [
+        "Real-Time Prices – Live cryptocurrency prices from CoinGecko API",
+        "20+ Cryptocurrencies – Bitcoin, Ethereum, Solana, XRP, DOGE, and more",
+        "10+ Fiat Currencies – Convert to USD, INR, EUR, GBP, JPY, and more",
+        "24h Price Changes – See which coins are trending up or down",
+        "Market Cap Data – Compare cryptocurrencies by market capitalization",
+        "One-Click Selection – Click any coin in the market table to convert",
+        "Refresh Button – Get the latest prices with one click",
+        "100% Free – No signup, no limits, no hidden charges"
+      ]
+    }
   }
 };
 
