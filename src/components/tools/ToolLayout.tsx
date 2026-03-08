@@ -172,39 +172,54 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </Link>
           </Button>
 
-          {/* Main Content */}
-          <article className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
-            {/* Header + Tool Content merged */}
-            <section className="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-6 space-y-4 sm:space-y-6">
-              <header className="text-center space-y-2">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-tight">{h1Title}</h1>
-                <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
-              </header>
+          {/* Main Content with Sidebar */}
+          <div className="max-w-6xl mx-auto lg:flex lg:gap-6">
+            {/* Main Content */}
+            <article className="flex-1 min-w-0 space-y-4 sm:space-y-6">
+              {/* Header + Tool Content merged */}
+              <section className="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-6 space-y-4 sm:space-y-6">
+                <header className="text-center space-y-2">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-tight">{h1Title}</h1>
+                  <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
+                </header>
 
-              {/* H2 Sub-headings for keyword spreading */}
-              {seoData?.h2Headings && seoData.h2Headings.length > 0
+                {/* H2 Sub-headings for keyword spreading */}
+                {seoData?.h2Headings && seoData.h2Headings.length > 0
+                }
+
+                {children}
+              </section>
+
+              {/* Ad Banner above FAQ - mobile only */}
+              <div className="my-4 sm:my-6 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:hidden">
+                <AdBanner slot="2745516861" format="auto" responsive={true} />
+              </div>
+
+              {/* FAQ Section */}
+              {seoData?.faqs && seoData.faqs.length > 0 &&
+              <section className="glass-card rounded-2xl p-6">
+                  <FAQ faqs={seoData.faqs} toolName={title} />
+                </section>
               }
 
-              {children}
-            </section>
+              {/* SEO Article Section */}
+              {seoData?.article &&
+              <ToolArticleSection article={seoData.article} toolName={title} />
+              }
+            </article>
 
-            {/* Ad Banner above FAQ */}
-            <div className="my-4 sm:my-6 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4">
-              <AdBanner slot="2745516861" format="auto" responsive={true} />
-            </div>
-
-            {/* FAQ Section */}
-            {seoData?.faqs && seoData.faqs.length > 0 &&
-            <section className="glass-card rounded-2xl p-6">
-                <FAQ faqs={seoData.faqs} toolName={title} />
-              </section>
-            }
-
-            {/* SEO Article Section */}
-            {seoData?.article &&
-            <ToolArticleSection article={seoData.article} toolName={title} />
-            }
-          </article>
+            {/* Right Sidebar Ads - desktop only */}
+            <aside className="hidden lg:block w-[300px] shrink-0 space-y-6">
+              <div className="sticky top-8 space-y-6">
+                <div className="glass-card rounded-2xl p-4">
+                  <AdBanner slot="2745516861" format="rectangle" responsive={false} />
+                </div>
+                <div className="glass-card rounded-2xl p-4">
+                  <AdBanner slot="2745516861" format="rectangle" responsive={false} />
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
       
