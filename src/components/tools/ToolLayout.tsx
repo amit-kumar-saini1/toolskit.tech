@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import { toolsSEO, getToolStructuredData, ToolArticle } from "@/lib/seoData";
 import donateQr from "@/assets/donate-qr.png";
 
@@ -150,8 +152,9 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
         keywords={seoData.keywords}
         canonicalUrl={`/tools/${slug}`}
         structuredData={structuredData} />
-
       }
+      
+      <Header />
       
       {/* Top Bar */}
       <div className="h-1.5 bg-gradient-to-r from-accent via-primary to-accent" />
@@ -202,6 +205,8 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
           </article>
         </div>
       </div>
+      
+      <Footer />
     </>);
 
 };
