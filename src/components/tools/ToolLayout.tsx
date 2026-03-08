@@ -63,7 +63,7 @@ const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolNam
         <div className="bg-muted/50 px-4 py-3 border-b border-border">
           <h3 className="font-bold text-foreground flex items-center gap-3">
             <span className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</span>
-            परिचय / Introduction
+            Introduction
           </h3>
         </div>
         <div className="p-4">
@@ -76,7 +76,7 @@ const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolNam
         <div className="bg-muted/50 px-4 py-3 border-b border-border">
           <h3 className="font-bold text-foreground flex items-center gap-3">
             <span className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</span>
-            उपयोग कैसे करें / How to Use
+            How to Use
           </h3>
         </div>
         <div className="p-4">
@@ -102,7 +102,7 @@ const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolNam
         <div className="bg-muted/50 px-4 py-3 border-b border-border">
           <h3 className="font-bold text-foreground flex items-center gap-3">
             <span className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</span>
-            मुख्य विशेषताएं / Key Features
+            Key Features
           </h3>
         </div>
         <div className="p-4">
@@ -122,12 +122,10 @@ const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolNam
       {/* Important Notice - Like Government Forms */}
       <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
         <h4 className="font-semibold text-yellow-700 dark:text-yellow-400 flex items-center gap-2 mb-2">
-          <span>⚠️</span> महत्वपूर्ण सूचना / Important Notice
+          <span>⚠️</span> Important Notice
         </h4>
         <ul className="text-sm text-muted-foreground space-y-1">
-          <li>• यह टूल 100% मुफ्त है और कोई पंजीकरण आवश्यक नहीं है।</li>
           <li>• This tool is 100% free and no registration is required.</li>
-          <li>• आपकी फाइलें आपके ब्राउज़र में प्रोसेस होती हैं, कोई डेटा अपलोड नहीं होता।</li>
           <li>• Your files are processed in your browser, no data is uploaded.</li>
         </ul>
       </div>
