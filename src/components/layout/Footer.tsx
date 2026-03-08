@@ -11,20 +11,20 @@ const XIcon = () => (
 
 const SocialLinks = () => {
   return (
-    <div className="flex items-center gap-3 mt-4">
+    <div className="flex items-center gap-2 sm:gap-3">
       <a 
         href="https://www.linkedin.com/in/amit-kumar-saini-38b6143a0/" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#0077B5] text-white hover:opacity-80 transition-opacity"
+        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#0077B5] text-white hover:opacity-80 transition-opacity"
       >
-        <Linkedin className="w-5 h-5" />
+        <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
       </a>
       <a 
         href="https://x.com/AmitSaini184544" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-10 h-10 rounded-lg bg-black text-white hover:opacity-80 transition-opacity"
+        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-black text-white hover:opacity-80 transition-opacity"
       >
         <XIcon />
       </a>
@@ -32,9 +32,9 @@ const SocialLinks = () => {
         href="https://github.com/amit-kumar-saini" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#333] text-white hover:opacity-80 transition-opacity"
+        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#333] text-white hover:opacity-80 transition-opacity"
       >
-        <Github className="w-5 h-5" />
+        <Github className="w-4 h-4 sm:w-5 sm:h-5" />
       </a>
     </div>
   );
@@ -44,29 +44,35 @@ const DonateSection = () => {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div id="donate" className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-5 border border-primary/20">
-      <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-        <Heart
-          className={`w-5 h-5 cursor-pointer transition-colors ${liked ? 'text-red-500 fill-red-500' : 'text-destructive'} animate-pulse`}
-          onClick={() => setLiked(!liked)}
-        /> Support Us
-      </h3>
-      <p className="text-sm text-muted-foreground mb-4">
-        Help us keep this free & secure for everyone!
-      </p>
-      <div className="bg-white rounded-xl p-3 w-fit shadow-lg mx-auto md:mx-0">
-        <img src={donateQr} alt="Donate QR Code" className="w-36 h-36 rounded-lg" />
+    <div id="donate" className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-primary/20">
+      <div className="flex items-center gap-3 sm:flex-col sm:items-start">
+        <div className="bg-white rounded-lg p-1.5 sm:p-3 shrink-0 shadow-md sm:mx-0">
+          <img src={donateQr} alt="Donate QR Code" className="w-20 h-20 sm:w-36 sm:h-36 rounded" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="font-bold text-sm sm:text-lg flex items-center gap-1.5 sm:gap-2">
+            <Heart
+              className={`w-4 h-4 sm:w-5 sm:h-5 cursor-pointer transition-colors ${liked ? 'text-red-500 fill-red-500' : 'text-destructive'} animate-pulse`}
+              onClick={() => setLiked(!liked)}
+            /> Support Us
+          </h3>
+          <p className="text-xs sm:text-sm text-muted-foreground mt-1 sm:mb-4">
+            Help us keep this free & secure!
+          </p>
+          <p className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-3 flex items-center gap-1">
+            📱 Scan QR to donate via UPI
+          </p>
+        </div>
       </div>
-      <p className="text-xs text-muted-foreground mt-3 flex items-center gap-1">
-        📱 Scan QR to donate via UPI
-      </p>
-      <a 
-        href="#donate" 
-        className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-primary text-primary-foreground rounded-full font-medium text-sm hover:opacity-90 transition-opacity shadow-md"
-      >
-        <Heart className="w-4 h-4" /> Donate Now
-      </a>
-      <SocialLinks />
+      <div className="flex items-center gap-3 mt-3 sm:mt-4 flex-wrap">
+        <a 
+          href="#donate" 
+          className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 bg-primary text-primary-foreground rounded-full font-medium text-xs sm:text-sm hover:opacity-90 transition-opacity shadow-md"
+        >
+          <Heart className="w-3 h-3 sm:w-4 sm:h-4" /> Donate Now
+        </a>
+        <SocialLinks />
+      </div>
     </div>
   );
 };
@@ -87,29 +93,29 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border mt-16">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+    <footer className="bg-card border-t border-border mt-8 sm:mt-16">
+      <div className="container px-3 sm:px-4 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="col-span-2 md:col-span-1 space-y-3">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-primary-foreground" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                <Wrench className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold gradient-text">ToolsKit.tech</span>
+              <span className="text-lg sm:text-xl font-bold gradient-text">ToolsKit.tech</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               Your all-in-one toolkit for everyday tasks. Fast, free, and easy to use.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Tool Categories</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Tool Categories</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {toolCategories.map((link) => (
                 <li key={link.name}>
                   <Link 
                     to={link.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -119,13 +125,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Quick Links</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link 
                     to={link.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -134,15 +140,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          <DonateSection />
+          <div className="col-span-2 md:col-span-1">
+            <DonateSection />
+          </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-border mt-6 sm:mt-8 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             © 2024 ToolsKit.tech. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-destructive" /> for productivity
+          <p className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1">
+            Made with <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-destructive" /> for productivity
           </p>
         </div>
       </div>

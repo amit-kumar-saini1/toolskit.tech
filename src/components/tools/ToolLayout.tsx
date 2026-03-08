@@ -1,10 +1,13 @@
 import { ReactNode } from "react";
+import AdBanner from "@/components/AdBanner";
 import { Link } from "react-router-dom";
 import { ArrowLeft, LucideIcon, Heart, BookOpen, ListChecks, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import { toolsSEO, getToolStructuredData, ToolArticle } from "@/lib/seoData";
 import donateQr from "@/assets/donate-qr.png";
 
@@ -20,7 +23,7 @@ const DonateBanner = () => {
   return (
     <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/20 rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-4">
       <div className="bg-white rounded-lg p-1.5 shrink-0">
-        <img src={donateQr} alt="Donate QR Code" className="w-20 h-20 rounded" />
+        <img src={donateQr} alt="Donate QR Code" className="w-20 h-20 rounded" loading="lazy" />
       </div>
       <div className="text-center sm:text-left">
         <h3 className="font-semibold flex items-center justify-center sm:justify-start gap-2 text-foreground">
@@ -148,69 +151,73 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
         keywords={seoData.keywords}
         canonicalUrl={`/tools/${slug}`}
         structuredData={structuredData} />
-
       }
       
-      <div className="min-h-screen py-8">
-        <div className="container">
-          {/* Breadcrumbs */}
-          <Breadcrumbs />
+      <Header />
+
+      <div className="min-h-screen py-4 sm:py-8">
+        <div className="container px-2 sm:px-4 lg:px-8">
+          {/* Breadcrumbs - hidden on mobile */}
+          <div className="hidden sm:block">
+            <Breadcrumbs />
+          </div>
           
           {/* Back Button */}
-          <Button variant="ghost" size="sm" asChild className="mb-6">
+          <Button variant="ghost" size="sm" asChild className="mb-4 sm:mb-6 hidden sm:inline-flex">
             <Link to="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Link>
           </Button>
 
-          {/* Main Content */}
-          <article className="max-w-4xl mx-auto space-y-6">
-            {/* Header */}
-            <header className="text-center space-y-2 py-4">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">{h1Title}</h1>
-              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
-            </header>
+          {/* Main Content with Sidebar */}
+          <div className="max-w-6xl mx-auto lg:flex lg:gap-6">
+            {/* Main Content */}
+            <article className="flex-1 min-w-0 space-y-4 sm:space-y-6">
+              {/* Header + Tool Content merged */}
+              <section className="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-6 space-y-4 sm:space-y-6">
+                <header className="text-center space-y-2">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-tight">{h1Title}</h1>
+                  <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
+                </header>
 
-            {/* H2 Sub-headings for keyword spreading */}
-            {seoData?.h2Headings && seoData.h2Headings.length > 0
+                {/* H2 Sub-headings for keyword spreading */}
+                {seoData?.h2Headings && seoData.h2Headings.length > 0
+                }
 
-
-
-
-
-
-
-
-
-
-
-
-
-            }
-
-            {/* Tool Content */}
-            <section>
-              {children}
-            </section>
-
-            {/* FAQ Section */}
-            {seoData?.faqs && seoData.faqs.length > 0 &&
-            <section className="glass-card rounded-2xl p-6">
-                <FAQ faqs={seoData.faqs} toolName={title} />
+                {children}
               </section>
-            }
 
-            {/* SEO Article Section */}
-            {seoData?.article &&
-            <ToolArticleSection article={seoData.article} toolName={title} />
-            }
+              {/* Ad Banner above FAQ - mobile only */}
+              <div className="my-4 sm:my-6 glass-card rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:hidden">
+                <AdBanner slot="9647130857" format="auto" responsive={true} />
+              </div>
 
-            {/* Donate Banner */}
-            <DonateBanner />
-          </article>
+              {/* FAQ Section */}
+              {seoData?.faqs && seoData.faqs.length > 0 &&
+              <section className="glass-card rounded-2xl p-6">
+                  <FAQ faqs={seoData.faqs} toolName={title} />
+                </section>
+              }
+
+              {/* SEO Article Section */}
+              {seoData?.article &&
+              <ToolArticleSection article={seoData.article} toolName={title} />
+              }
+            </article>
+
+            {/* Right Sidebar Ads - desktop only */}
+            <aside className="hidden lg:block w-[300px] shrink-0">
+              <div className="sticky top-8 space-y-6">
+                <AdBanner slot="2745516861" format="rectangle" responsive={false} showLabel wrapperClassName="glass-card rounded-2xl p-4" />
+                <AdBanner slot="9647130857" format="rectangle" responsive={false} showLabel wrapperClassName="glass-card rounded-2xl p-4" />
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
+      
+      <Footer />
     </>);
 
 };
