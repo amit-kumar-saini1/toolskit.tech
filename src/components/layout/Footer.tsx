@@ -24,7 +24,7 @@ const SocialLinks = () => {
         href="https://x.com/AmitSaini184544" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-10 h-10 rounded-lg bg-black text-white hover:opacity-80 transition-opacity"
+        className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-black text-white hover:opacity-80 transition-opacity"
       >
         <XIcon />
       </a>
