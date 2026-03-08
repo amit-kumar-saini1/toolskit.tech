@@ -96,7 +96,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border mt-8 sm:mt-16">
+    <footer className="bg-card border-t border-border mt-8 sm:mt-16" role="contentinfo">
       <div className="container px-3 sm:px-4 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div className="col-span-2 md:col-span-1 space-y-3">
