@@ -12,7 +12,8 @@ import {
   Type,
   Calendar,
   Hash,
-  ArrowRight
+  ArrowRight,
+  Clock
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
