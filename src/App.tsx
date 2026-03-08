@@ -40,6 +40,7 @@ const RemoveBackground = lazy(() => import("./pages/tools/RemoveBackground"));
 const KBConverter = lazy(() => import("./pages/tools/KBConverter"));
 const TimeZoneConverter = lazy(() => import("./pages/tools/TimeZoneConverter"));
 const CurrencyConverter = lazy(() => import("./pages/tools/CurrencyConverter"));
+const CryptoConverter = lazy(() => import("./pages/tools/CryptoConverter"));
 
 const queryClient = new QueryClient();
 
