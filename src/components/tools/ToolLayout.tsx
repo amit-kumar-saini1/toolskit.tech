@@ -215,7 +215,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </aside>
           </div>
         </div>
-      </div>
+      </main>
       
       <Footer />
     </>);
