@@ -171,31 +171,17 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
 
           {/* Main Content */}
           <article className="max-w-4xl mx-auto space-y-6">
-            {/* Header */}
-            <header className="text-center space-y-2 py-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-tight">{h1Title}</h1>
-              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
-            </header>
+            {/* Header + Tool Content merged */}
+            <section className="glass-card rounded-2xl p-6 space-y-6">
+              <header className="text-center space-y-2">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-tight">{h1Title}</h1>
+                <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
+              </header>
 
-            {/* H2 Sub-headings for keyword spreading */}
-            {seoData?.h2Headings && seoData.h2Headings.length > 0
+              {/* H2 Sub-headings for keyword spreading */}
+              {seoData?.h2Headings && seoData.h2Headings.length > 0
+              }
 
-
-
-
-
-
-
-
-
-
-
-
-
-            }
-
-            {/* Tool Content */}
-            <section className="glass-card rounded-2xl p-6">
               {children}
             </section>
 
