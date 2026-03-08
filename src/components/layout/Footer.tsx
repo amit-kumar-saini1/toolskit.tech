@@ -16,6 +16,7 @@ const SocialLinks = () => {
         href="https://www.linkedin.com/in/amit-kumar-saini-38b6143a0/" 
         target="_blank" 
         rel="noopener noreferrer"
+        aria-label="Visit our LinkedIn profile"
         className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#0077B5] text-white hover:opacity-80 transition-opacity"
       >
         <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
