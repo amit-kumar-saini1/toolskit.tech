@@ -158,8 +158,10 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
 
       <div className="min-h-screen py-4 sm:py-8">
         <div className="container px-2 sm:px-4 lg:px-8">
-          {/* Breadcrumbs */}
-          <Breadcrumbs />
+          {/* Breadcrumbs - hidden on mobile */}
+          <div className="hidden sm:block">
+            <Breadcrumbs />
+          </div>
           
           {/* Back Button */}
           <Button variant="ghost" size="sm" asChild className="mb-4 sm:mb-6">
