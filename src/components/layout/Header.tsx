@@ -16,7 +16,7 @@ const Header = () => {
           <span className="text-xl font-bold gradient-text">ToolsKit.tech</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
           <Link to="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             Home
           </Link>
