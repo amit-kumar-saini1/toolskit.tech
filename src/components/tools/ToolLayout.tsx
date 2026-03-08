@@ -185,9 +185,6 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
               {children}
             </section>
 
-            {/* Donate Banner */}
-            <DonateBanner />
-
             {/* FAQ Section */}
             {seoData?.faqs && seoData.faqs.length > 0 &&
             <section className="glass-card rounded-2xl p-6">
@@ -195,11 +192,13 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
               </section>
             }
 
-
             {/* SEO Article Section */}
             {seoData?.article &&
             <ToolArticleSection article={seoData.article} toolName={title} />
             }
+
+            {/* Donate Banner */}
+            <DonateBanner />
           </article>
         </div>
       </div>
