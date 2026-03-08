@@ -48,9 +48,9 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "", sh
   }, []);
 
   return (
-    <div className={`${isVisible ? 'block' : 'hidden'} ${wrapperClassName}`}>
+    <div className={`${wrapperClassName}`}>
       {showLabel && <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>}
-      <div className={`ad-container overflow-hidden ${className}`}>
+      <div className={`ad-container overflow-hidden min-h-[250px] bg-white dark:bg-white/10 rounded-lg ${className}`}>
         <ins
           ref={adRef}
           className="adsbygoogle"
