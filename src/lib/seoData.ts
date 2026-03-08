@@ -477,6 +477,49 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "Browser-Based – Works offline after loading, no data sent to servers"
       ]
     }
+  },
+  "currency-converter": {
+    title: "Free Currency Converter Online - Live Exchange Rates 2025",
+    h1Title: "Free Currency Converter - Real-Time Exchange Rates",
+    h2Headings: ["Live Currency Exchange Rates", "Convert USD to INR Online Free"],
+    description: "Free online currency converter with real-time exchange rates. Convert USD, EUR, INR, GBP & 30+ currencies instantly. 100% free, no signup, live rates updated daily.",
+    keywords: "currency converter, exchange rate, usd to inr, dollar to rupee, currency exchange, free currency converter online, live exchange rates, money converter, forex converter, convert currency",
+    faqs: [
+      {
+        question: "How accurate are the exchange rates?",
+        answer: "Our currency converter uses real-time data from the Open Exchange Rate API, updated daily. Rates reflect the latest market values and are suitable for general reference and planning."
+      },
+      {
+        question: "Is this currency converter free to use?",
+        answer: "Yes! Our currency converter is 100% free with no signup required. Convert between 30+ currencies with live exchange rates as many times as you want."
+      },
+      {
+        question: "How many currencies are supported?",
+        answer: "We support 30+ major world currencies including USD, EUR, GBP, INR, JPY, AUD, CAD, CHF, CNY, SAR, AED, and many more."
+      },
+      {
+        question: "Can I convert USD to INR?",
+        answer: "Yes! USD to INR is one of our most popular conversions. Simply select USD as source and INR as target to get the latest dollar to rupee exchange rate."
+      },
+      {
+        question: "How often are exchange rates updated?",
+        answer: "Exchange rates are updated daily from reliable financial data sources, ensuring you always get the most current conversion rates available."
+      }
+    ],
+    article: {
+      introduction: "Whether you're traveling abroad, sending money internationally, shopping from foreign websites, or just curious about currency values — our free Currency Converter gives you instant, accurate exchange rates for 30+ world currencies. Powered by real-time market data, this tool helps students, travelers, freelancers, and businesses convert currencies quickly without any signup or fees.",
+      howToUse: "First, enter the amount you want to convert in the Amount field. Next, select your source currency from the 'From' dropdown — for example USD (US Dollar). Then, choose your target currency from the 'To' dropdown — such as INR (Indian Rupee). The conversion result appears instantly with the current exchange rate. You can click the swap button to quickly reverse the conversion direction. Finally, browse the popular rates table below to see how your currency compares against other major currencies.",
+      keyFeatures: [
+        "Real-Time Exchange Rates – Daily updated rates from reliable financial APIs",
+        "30+ Currencies – Covers all major world currencies including USD, EUR, GBP, INR, JPY",
+        "Instant Conversion – Results update in real-time as you type",
+        "Swap Button – Quickly reverse source and target currencies",
+        "Popular Rates Table – See rates for 12 popular currencies at a glance",
+        "Country Flags – Easy identification with flag icons for each currency",
+        "100% Free – No signup, no limits, no hidden charges",
+        "Mobile Friendly – Works perfectly on all devices and screen sizes"
+      ]
+    }
   }
 };
 
