@@ -110,6 +110,13 @@ const tools = [
     path: "/tools/bmi-calculator",
     color: "#22c55e",
   },
+  {
+    title: "Time Zone Converter",
+    description: "Convert time between global zones",
+    icon: Clock,
+    path: "/tools/time-zone-converter",
+    color: "#0891b2",
+  },
 ];
 
 const ToolsGrid = () => {
