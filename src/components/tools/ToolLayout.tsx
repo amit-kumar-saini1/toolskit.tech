@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import { toolsSEO, getToolStructuredData, ToolArticle } from "@/lib/seoData";
 import donateQr from "@/assets/donate-qr.png";
 
