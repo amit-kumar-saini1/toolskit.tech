@@ -34,7 +34,7 @@ const SocialLinks = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#333] text-white hover:opacity-80 transition-opacity"
       >
-        <Github className="w-5 h-5" />
+        <Github className="w-4 h-4 sm:w-5 sm:h-5" />
       </a>
     </div>
   );
