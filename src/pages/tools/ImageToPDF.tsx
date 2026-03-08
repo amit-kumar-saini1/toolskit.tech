@@ -95,7 +95,7 @@ const ImageToPDF = () => {
     >
       <div className="space-y-6">
         {/* Upload Area */}
-        <label className="flex flex-col items-center justify-center py-16 px-8 border-2 border-dashed border-accent/50 rounded-xl cursor-pointer hover:border-accent transition-colors bg-accent/5">
+        <label className="flex flex-col items-center justify-center py-16 px-8 border-2 border-dashed border-accent/50 rounded-xl cursor-pointer hover:border-accent transition-colors">
           <p className="text-muted-foreground mb-4 text-base">Select Or Drag & Drop Image Here</p>
           <span className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded-lg text-sm hover:bg-secondary/90 transition-colors">
             Select Image
