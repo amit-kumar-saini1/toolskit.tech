@@ -63,7 +63,7 @@ const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolNam
         <div className="bg-muted/50 px-4 py-3 border-b border-border">
           <h3 className="font-bold text-foreground flex items-center gap-3">
             <span className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</span>
-            परिचय / Introduction
+            Introduction
           </h3>
         </div>
         <div className="p-4">
