@@ -14,7 +14,8 @@ import {
   Hash,
   ArrowRight,
   Clock,
-  TrendingUp
+  TrendingUp,
+  Bitcoin
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
@@ -124,6 +125,13 @@ const tools = [
     icon: TrendingUp,
     path: "/tools/currency-converter",
     color: "#eab308",
+  },
+  {
+    title: "Crypto Converter",
+    description: "Live crypto prices & converter",
+    icon: Bitcoin,
+    path: "/tools/crypto-converter",
+    color: "#f7931a",
   },
 ];
 
