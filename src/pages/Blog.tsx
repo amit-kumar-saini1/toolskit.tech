@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 22,
+    slug: "how-to-make-money-online-2026",
+    title: "How to Make Money Online in 2026: 20 Proven Ways Without Investment (USA, UK, Australia)",
+    excerpt: "Discover 20 legitimate ways to earn money online in 2026 — from freelancing to AI side hustles, passive income & remote jobs. Real methods used by millions in the US, UK & Australia. Start today with $0!",
+    category: "Make Money Online",
+    date: "2026-03-08",
+    readTime: "25 min read",
+    image: "https://images.unsplash.com/photo-1553729459-uj37hpka2ua5?w=600&h=400&fit=crop"
+  },
+  {
     id: 21,
     slug: "best-free-ai-tools-2026",
     title: "15 Best Free AI Tools in 2026 That Will Save You Hours Every Day (USA, UK, Australia)",
