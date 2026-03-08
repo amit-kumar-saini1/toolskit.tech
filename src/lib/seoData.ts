@@ -125,7 +125,7 @@ export const toolsSEO: Record<string, ToolSEO> = {
   "image-to-pdf": {
     title: "Free Image to PDF Converter Online - Convert JPG to PDF",
     h1Title: "Convert Images to PDF Free - JPG, PNG to PDF Converter",
-    description: "Convert images to PDF online for free. Merge multiple images into one PDF. Convert JPG, PNG, WebP to PDF instantly. No signup, no watermark, free forever.",
+    description: "Convert images to PDF online for free. Merge multiple images into one PDF. Convert JPG, PNG, WebP to PDF instantly.",
     keywords: "image to pdf, jpg to pdf, convert image to pdf, png to pdf, photo to pdf, picture to pdf, free pdf converter, multiple images to pdf",
     faqs: [
       {
