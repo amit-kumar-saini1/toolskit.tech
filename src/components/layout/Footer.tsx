@@ -125,7 +125,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           <div>
             <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Quick Links</h3>
