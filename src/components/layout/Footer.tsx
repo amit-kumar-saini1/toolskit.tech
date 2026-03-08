@@ -18,7 +18,7 @@ const SocialLinks = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#0077B5] text-white hover:opacity-80 transition-opacity"
       >
-        <Linkedin className="w-5 h-5" />
+        <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
       </a>
       <a 
         href="https://x.com/AmitSaini184544" 
