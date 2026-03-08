@@ -155,9 +155,6 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
       }
       
       <Header />
-      
-      {/* Top Bar */}
-      <div className="h-1.5 bg-gradient-to-r from-accent via-primary to-accent" />
 
       <div className="min-h-screen py-8">
         <div className="container">
