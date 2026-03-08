@@ -152,8 +152,9 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
         keywords={seoData.keywords}
         canonicalUrl={`/tools/${slug}`}
         structuredData={structuredData} />
-
       }
+      
+      <Header />
       
       {/* Top Bar */}
       <div className="h-1.5 bg-gradient-to-r from-accent via-primary to-accent" />
@@ -204,6 +205,8 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
           </article>
         </div>
       </div>
+      
+      <Footer />
     </>);
 
 };
