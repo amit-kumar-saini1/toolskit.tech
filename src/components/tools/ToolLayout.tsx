@@ -164,7 +164,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
           </div>
           
           {/* Back Button */}
-          <Button variant="ghost" size="sm" asChild className="mb-4 sm:mb-6">
+          <Button variant="ghost" size="sm" asChild className="mb-4 sm:mb-6 hidden sm:inline-flex">
             <Link to="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
