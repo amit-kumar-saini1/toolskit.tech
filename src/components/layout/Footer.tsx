@@ -127,7 +127,7 @@ const Footer = () => {
             </ul>
           </nav>
 
-          <div>
+          <nav aria-label="Quick links">
             <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Quick Links</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               {quickLinks.map((link) => (
