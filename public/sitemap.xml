@@ -132,6 +132,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://toolskit.tech/tools/currency-converter</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toolskit.tech/tools/crypto-converter</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://toolskit.tech/blog/how-to-make-passport-photo-at-home-usa</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
