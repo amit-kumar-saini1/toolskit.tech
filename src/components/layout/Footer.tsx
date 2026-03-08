@@ -141,7 +141,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           <div className="col-span-2 md:col-span-1">
             <DonateSection />

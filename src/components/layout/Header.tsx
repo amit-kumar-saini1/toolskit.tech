@@ -52,7 +52,7 @@ const Header = () => {
 
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 glass-card border-b border-border/50 p-4 animate-slide-up">
-          <nav className="flex flex-col gap-4">
+          <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
             <Link 
               to="/" 
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
