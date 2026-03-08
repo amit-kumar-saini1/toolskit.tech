@@ -155,7 +155,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
       
       <Header />
 
-      <div className="min-h-screen py-4 sm:py-8">
+      <main className="min-h-screen py-4 sm:py-8" role="main">
         <div className="container px-2 sm:px-4 lg:px-8">
           {/* Breadcrumbs - hidden on mobile */}
           <div className="hidden sm:block">
