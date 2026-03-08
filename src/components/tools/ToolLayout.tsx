@@ -119,12 +119,10 @@ const ToolArticleSection = ({ article, toolName }: {article: ToolArticle;toolNam
       {/* Important Notice - Like Government Forms */}
       <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
         <h4 className="font-semibold text-yellow-700 dark:text-yellow-400 flex items-center gap-2 mb-2">
-          <span>⚠️</span> महत्वपूर्ण सूचना / Important Notice
+          <span>⚠️</span> Important Notice
         </h4>
         <ul className="text-sm text-muted-foreground space-y-1">
-          <li>• यह टूल 100% मुफ्त है और कोई पंजीकरण आवश्यक नहीं है।</li>
           <li>• This tool is 100% free and no registration is required.</li>
-          <li>• आपकी फाइलें आपके ब्राउज़र में प्रोसेस होती हैं, कोई डेटा अपलोड नहीं होता।</li>
           <li>• Your files are processed in your browser, no data is uploaded.</li>
         </ul>
       </div>
