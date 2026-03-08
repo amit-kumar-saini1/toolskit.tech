@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 24,
+    slug: "how-to-convert-foreign-currency-online-free-2026",
+    title: "How to Convert Foreign Currency Online for Free in 2026: Complete Guide (USD, EUR, INR, GBP)",
+    excerpt: "Learn how to convert any foreign currency to your local currency online — for free! Step-by-step guide covering USD to INR, EUR to GBP, live exchange rates, and the best free currency converter tools in 2026.",
+    category: "Finance",
+    date: "2026-03-08",
+    readTime: "16 min read",
+    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=600&h=400&fit=crop"
+  },
+  {
     id: 23,
     slug: "crypto-converter-guide-bitcoin-ethereum-2026",
     title: "Free Crypto Converter: How to Convert Bitcoin, Ethereum & 20+ Coins to INR, USD in 2026",
