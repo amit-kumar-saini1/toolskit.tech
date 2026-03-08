@@ -34,6 +34,7 @@ const SocialLinks = () => {
         href="https://github.com/amit-kumar-saini" 
         target="_blank" 
         rel="noopener noreferrer"
+        aria-label="Visit our GitHub profile"
         className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#333] text-white hover:opacity-80 transition-opacity"
       >
         <Github className="w-4 h-4 sm:w-5 sm:h-5" />
