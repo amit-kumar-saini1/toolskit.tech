@@ -13,7 +13,8 @@ import {
   Calendar,
   Hash,
   ArrowRight,
-  Clock
+  Clock,
+  TrendingUp
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
@@ -116,6 +117,13 @@ const tools = [
     icon: Clock,
     path: "/tools/time-zone-converter",
     color: "#0891b2",
+  },
+  {
+    title: "Currency Converter",
+    description: "Convert currencies with live rates",
+    icon: TrendingUp,
+    path: "/tools/currency-converter",
+    color: "#eab308",
   },
 ];
 
