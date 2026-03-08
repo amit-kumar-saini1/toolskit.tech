@@ -190,7 +190,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             }
 
             {/* Tool Content */}
-            <section className="glass-card rounded-2xl p-6">
+            <section>
               {children}
             </section>
 
