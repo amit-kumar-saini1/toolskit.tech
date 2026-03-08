@@ -111,7 +111,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <nav aria-label="Tool categories">
             <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Tool Categories</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               {toolCategories.map((link) => (
