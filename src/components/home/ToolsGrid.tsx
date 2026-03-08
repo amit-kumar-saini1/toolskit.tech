@@ -14,7 +14,8 @@ import {
   Hash,
   ArrowRight,
   Clock,
-  TrendingUp
+  TrendingUp,
+  Bitcoin
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
