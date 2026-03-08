@@ -189,8 +189,8 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </section>
 
             {/* Ad Banner above FAQ */}
-            <div className="m-0 p-0">
-              <AdBanner slot="3313644457" format="auto" responsive={true} />
+            <div className="my-4 sm:my-6">
+              <AdBanner slot="2745516861" format="auto" responsive={true} />
             </div>
 
             {/* FAQ Section */}
