@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import AdBanner from "@/components/AdBanner";
 import { Link } from "react-router-dom";
 import { ArrowLeft, LucideIcon, Heart, BookOpen, ListChecks, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -186,6 +187,11 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
 
               {children}
             </section>
+
+            {/* Ad Banner above FAQ */}
+            <div className="m-0 p-0">
+              <AdBanner slot="3313644457" format="auto" responsive={true} />
+            </div>
 
             {/* FAQ Section */}
             {seoData?.faqs && seoData.faqs.length > 0 &&
