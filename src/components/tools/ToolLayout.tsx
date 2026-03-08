@@ -212,9 +212,11 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             <aside className="hidden lg:block w-[300px] shrink-0 space-y-6">
               <div className="sticky top-8 space-y-6">
                 <div className="glass-card rounded-2xl p-4">
+                  <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>
                   <AdBanner slot="2745516861" format="rectangle" responsive={false} />
                 </div>
                 <div className="glass-card rounded-2xl p-4">
+                  <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>
                   <AdBanner slot="2745516861" format="rectangle" responsive={false} />
                 </div>
               </div>
