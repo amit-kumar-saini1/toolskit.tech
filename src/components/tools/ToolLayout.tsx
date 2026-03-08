@@ -156,13 +156,13 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
       
       <Header />
 
-      <div className="min-h-screen py-8">
-        <div className="container">
+      <div className="min-h-screen py-4 sm:py-8">
+        <div className="container px-2 sm:px-4 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumbs />
           
           {/* Back Button */}
-          <Button variant="ghost" size="sm" asChild className="mb-6">
+          <Button variant="ghost" size="sm" asChild className="mb-4 sm:mb-6">
             <Link to="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
@@ -170,9 +170,9 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
           </Button>
 
           {/* Main Content */}
-          <article className="max-w-4xl mx-auto space-y-6">
+          <article className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
             {/* Header + Tool Content merged */}
-            <section className="glass-card rounded-2xl p-6 space-y-6">
+            <section className="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-6 space-y-4 sm:space-y-6">
               <header className="text-center space-y-2">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground leading-tight">{h1Title}</h1>
                 <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
