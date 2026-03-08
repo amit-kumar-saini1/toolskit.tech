@@ -13,21 +13,34 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "" }: 
 
   useEffect(() => {
     if (isLoaded.current) return;
-    
-    // Wait for container to have width before pushing ad
-    const timer = setTimeout(() => {
+
+    let attempts = 0;
+    const maxAttempts = 12;
+
+    const tryLoadAd = () => {
+      if (isLoaded.current) return;
+
       try {
         const adsbygoogle = (window as any).adsbygoogle;
-        if (adsbygoogle && adRef.current && adRef.current.offsetWidth > 0) {
+        const hasWidth = !!adRef.current && adRef.current.offsetWidth > 0;
+
+        if (adsbygoogle && hasWidth) {
           adsbygoogle.push({});
           isLoaded.current = true;
+          return;
         }
       } catch (error) {
         console.error("AdSense error:", error);
       }
-    }, 500);
-    
-    return () => clearTimeout(timer);
+
+      attempts += 1;
+      if (attempts < maxAttempts) {
+        window.setTimeout(tryLoadAd, 300);
+      }
+    };
+
+    const initialTimer = window.setTimeout(tryLoadAd, 600);
+    return () => window.clearTimeout(initialTimer);
   }, []);
 
   return (
