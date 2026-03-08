@@ -25,6 +25,7 @@ const SocialLinks = () => {
         href="https://x.com/AmitSaini184544" 
         target="_blank" 
         rel="noopener noreferrer"
+        aria-label="Visit our X (Twitter) profile"
         className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-black text-white hover:opacity-80 transition-opacity"
       >
         <XIcon />
