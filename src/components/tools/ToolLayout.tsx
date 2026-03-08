@@ -167,16 +167,9 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
           {/* Main Content */}
           <article className="max-w-4xl mx-auto space-y-6">
             {/* Header */}
-            <header className="glass-card rounded-2xl p-6">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shrink-0">
-                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
-                </div>
-                <div className="min-w-0">
-                  <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Title}</h1>
-                  <p className="text-sm sm:text-base text-muted-foreground mt-1">{seoData?.description || description}</p>
-                </div>
-              </div>
+            <header className="text-center space-y-2 py-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">{h1Title}</h1>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">{seoData?.description || description}</p>
             </header>
 
             {/* H2 Sub-headings for keyword spreading */}
