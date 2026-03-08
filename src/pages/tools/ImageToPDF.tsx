@@ -95,10 +95,11 @@ const ImageToPDF = () => {
     >
       <div className="space-y-6">
         {/* Upload Area */}
-        <label className="flex flex-col items-center justify-center h-48 border-2 border-dashed border-border rounded-xl cursor-pointer hover:border-primary transition-colors">
-          <Upload className="w-12 h-12 text-muted-foreground mb-4" />
-          <span className="text-muted-foreground">Click to upload images</span>
-          <span className="text-sm text-muted-foreground mt-1">Supports JPG, PNG, WEBP</span>
+        <label className="flex flex-col items-center justify-center py-16 px-8 border-2 border-dashed border-accent/50 rounded-xl cursor-pointer hover:border-accent transition-colors bg-accent/5">
+          <p className="text-muted-foreground mb-4 text-base">Select Or Drag & Drop Image Here</p>
+          <span className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded-lg text-sm hover:bg-secondary/90 transition-colors">
+            Select Image
+          </span>
           <input 
             type="file" 
             accept="image/*" 
