@@ -118,6 +118,13 @@ const tools = [
     path: "/tools/time-zone-converter",
     color: "#0891b2",
   },
+  {
+    title: "Currency Converter",
+    description: "Convert currencies with live rates",
+    icon: TrendingUp,
+    path: "/tools/currency-converter",
+    color: "#eab308",
+  },
 ];
 
 const ToolsGrid = () => {

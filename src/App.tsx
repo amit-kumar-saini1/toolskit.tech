@@ -78,6 +78,7 @@ const App = () => (
             <Route path="/tools/pdf-to-image" element={<PDFToImage />} />
             <Route path="/tools/remove-background" element={<RemoveBackground />} />
             <Route path="/tools/time-zone-converter" element={<TimeZoneConverter />} />
+            <Route path="/tools/currency-converter" element={<CurrencyConverter />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
