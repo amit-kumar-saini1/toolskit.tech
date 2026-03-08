@@ -23,7 +23,7 @@ const DonateBanner = () => {
   return (
     <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border border-primary/20 rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-4">
       <div className="bg-white rounded-lg p-1.5 shrink-0">
-        <img src={donateQr} alt="Donate QR Code" className="w-20 h-20 rounded" />
+        <img src={donateQr} alt="Donate QR Code" className="w-20 h-20 rounded" loading="lazy" />
       </div>
       <div className="text-center sm:text-left">
         <h3 className="font-semibold flex items-center justify-center sm:justify-start gap-2 text-foreground">
