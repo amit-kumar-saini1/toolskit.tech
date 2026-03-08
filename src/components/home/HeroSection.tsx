@@ -40,7 +40,7 @@ const HeroSection = () => {
             </Button>
             <Button variant="glass" size="xl" asChild>
               <Link to="/about">
-                Learn More
+                Learn More About ToolsKit
               </Link>
             </Button>
           </div>
