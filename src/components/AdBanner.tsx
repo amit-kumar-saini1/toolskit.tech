@@ -1,15 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface AdBannerProps {
   slot: string;
   format?: "auto" | "rectangle" | "horizontal" | "vertical";
   responsive?: boolean;
   className?: string;
+  showLabel?: boolean;
+  wrapperClassName?: string;
 }
 
-const AdBanner = ({ slot, format = "auto", responsive = true, className = "" }: AdBannerProps) => {
+const AdBanner = ({ slot, format = "auto", responsive = true, className = "", showLabel = false, wrapperClassName = "" }: AdBannerProps) => {
   const adRef = useRef<HTMLModElement>(null);
   const isLoaded = useRef(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (isLoaded.current) return;
@@ -27,6 +30,7 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "" }: 
         if (adsbygoogle && hasWidth) {
           adsbygoogle.push({});
           isLoaded.current = true;
+          setIsVisible(true);
           return;
         }
       } catch (error) {
@@ -44,16 +48,19 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "" }: 
   }, []);
 
   return (
-    <div className={`ad-container overflow-hidden ${className}`}>
-      <ins
-        ref={adRef}
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-1909827564331292"
-        data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive={responsive ? "true" : "false"}
-      />
+    <div className={`${isVisible ? 'block' : 'hidden'} ${wrapperClassName}`}>
+      {showLabel && <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>}
+      <div className={`ad-container overflow-hidden ${className}`}>
+        <ins
+          ref={adRef}
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-1909827564331292"
+          data-ad-slot={slot}
+          data-ad-format={format}
+          data-full-width-responsive={responsive ? "true" : "false"}
+        />
+      </div>
     </div>
   );
 };

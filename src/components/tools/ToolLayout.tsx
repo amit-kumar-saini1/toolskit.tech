@@ -211,14 +211,8 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             {/* Right Sidebar Ads - desktop only */}
             <aside className="hidden lg:block w-[300px] shrink-0">
               <div className="sticky top-8 space-y-6">
-                <div className="glass-card rounded-2xl p-4">
-                  <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>
-                  <AdBanner slot="2745516861" format="rectangle" responsive={false} />
-                </div>
-                <div className="glass-card rounded-2xl p-4">
-                  <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>
-                  <AdBanner slot="9647130857" format="rectangle" responsive={false} />
-                </div>
+                <AdBanner slot="2745516861" format="rectangle" responsive={false} showLabel wrapperClassName="glass-card rounded-2xl p-4" />
+                <AdBanner slot="9647130857" format="rectangle" responsive={false} showLabel wrapperClassName="glass-card rounded-2xl p-4" />
               </div>
             </aside>
           </div>
