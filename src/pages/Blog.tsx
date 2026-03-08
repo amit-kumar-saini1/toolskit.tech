@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 23,
+    slug: "crypto-converter-guide-bitcoin-ethereum-2026",
+    title: "Free Crypto Converter: How to Convert Bitcoin, Ethereum & 20+ Coins to INR, USD in 2026",
+    excerpt: "Complete guide to cryptocurrency conversion in 2026. Learn how to convert Bitcoin to INR, Ethereum to USD, check live crypto prices, understand market cap & 24h trends — all free with ToolsKit.tech Crypto Converter.",
+    category: "Crypto",
+    date: "2026-03-08",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&h=400&fit=crop"
+  },
+  {
     id: 22,
     slug: "how-to-make-money-online-2026",
     title: "How to Make Money Online in 2026: 20 Proven Ways Without Investment (USA, UK, Australia)",
