@@ -11,44 +11,59 @@ interface AdBannerProps {
 
 const AdBanner = ({ slot, format = "auto", responsive = true, className = "", showLabel = false, wrapperClassName = "" }: AdBannerProps) => {
   const adRef = useRef<HTMLModElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isLoaded = useRef(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (isLoaded.current) return;
 
+    // Use IntersectionObserver to lazy-load ads only when visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          observer.disconnect();
+          loadAd();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const loadAd = () => {
+    if (isLoaded.current) return;
     let attempts = 0;
-    const maxAttempts = 12;
+    const maxAttempts = 10;
 
     const tryLoadAd = () => {
       if (isLoaded.current) return;
-
       try {
         const adsbygoogle = (window as any).adsbygoogle;
         const hasWidth = !!adRef.current && adRef.current.offsetWidth > 0;
-
         if (adsbygoogle && hasWidth) {
           adsbygoogle.push({});
           isLoaded.current = true;
-          setIsVisible(true);
           return;
         }
       } catch (error) {
         console.error("AdSense error:", error);
       }
-
       attempts += 1;
       if (attempts < maxAttempts) {
-        window.setTimeout(tryLoadAd, 300);
+        window.setTimeout(tryLoadAd, 500);
       }
     };
 
-    const initialTimer = window.setTimeout(tryLoadAd, 600);
-    return () => window.clearTimeout(initialTimer);
-  }, []);
+    window.setTimeout(tryLoadAd, 300);
+  };
 
   return (
-    <div className={`${wrapperClassName}`}>
+    <div ref={containerRef} className={`${wrapperClassName}`}>
       {showLabel && <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>}
       <div className={`ad-container overflow-hidden min-h-[250px] bg-white dark:bg-white/10 rounded-lg ${className}`}>
         <ins
