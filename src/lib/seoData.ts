@@ -477,6 +477,92 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "Browser-Based – Works offline after loading, no data sent to servers"
       ]
     }
+  },
+  "currency-converter": {
+    title: "Free Currency Converter Online - Live Exchange Rates 2025",
+    h1Title: "Free Currency Converter - Real-Time Exchange Rates",
+    h2Headings: ["Live Currency Exchange Rates", "Convert USD to INR Online Free"],
+    description: "Free online currency converter with real-time exchange rates. Convert USD, EUR, INR, GBP & 30+ currencies instantly. 100% free, no signup, live rates updated daily.",
+    keywords: "currency converter, exchange rate, usd to inr, dollar to rupee, currency exchange, free currency converter online, live exchange rates, money converter, forex converter, convert currency",
+    faqs: [
+      {
+        question: "How accurate are the exchange rates?",
+        answer: "Our currency converter uses real-time data from the Open Exchange Rate API, updated daily. Rates reflect the latest market values and are suitable for general reference and planning."
+      },
+      {
+        question: "Is this currency converter free to use?",
+        answer: "Yes! Our currency converter is 100% free with no signup required. Convert between 30+ currencies with live exchange rates as many times as you want."
+      },
+      {
+        question: "How many currencies are supported?",
+        answer: "We support 30+ major world currencies including USD, EUR, GBP, INR, JPY, AUD, CAD, CHF, CNY, SAR, AED, and many more."
+      },
+      {
+        question: "Can I convert USD to INR?",
+        answer: "Yes! USD to INR is one of our most popular conversions. Simply select USD as source and INR as target to get the latest dollar to rupee exchange rate."
+      },
+      {
+        question: "How often are exchange rates updated?",
+        answer: "Exchange rates are updated daily from reliable financial data sources, ensuring you always get the most current conversion rates available."
+      }
+    ],
+    article: {
+      introduction: "Whether you're traveling abroad, sending money internationally, shopping from foreign websites, or just curious about currency values — our free Currency Converter gives you instant, accurate exchange rates for 30+ world currencies. Powered by real-time market data, this tool helps students, travelers, freelancers, and businesses convert currencies quickly without any signup or fees.",
+      howToUse: "First, enter the amount you want to convert in the Amount field. Next, select your source currency from the 'From' dropdown — for example USD (US Dollar). Then, choose your target currency from the 'To' dropdown — such as INR (Indian Rupee). The conversion result appears instantly with the current exchange rate. You can click the swap button to quickly reverse the conversion direction. Finally, browse the popular rates table below to see how your currency compares against other major currencies.",
+      keyFeatures: [
+        "Real-Time Exchange Rates – Daily updated rates from reliable financial APIs",
+        "30+ Currencies – Covers all major world currencies including USD, EUR, GBP, INR, JPY",
+        "Instant Conversion – Results update in real-time as you type",
+        "Swap Button – Quickly reverse source and target currencies",
+        "Popular Rates Table – See rates for 12 popular currencies at a glance",
+        "Country Flags – Easy identification with flag icons for each currency",
+        "100% Free – No signup, no limits, no hidden charges",
+        "Mobile Friendly – Works perfectly on all devices and screen sizes"
+      ]
+    }
+  },
+  "crypto-converter": {
+    title: "Free Crypto Converter Online - Live Bitcoin & Crypto Prices",
+    h1Title: "Free Crypto Converter - Live Cryptocurrency Prices",
+    h2Headings: ["Live Crypto Market Prices", "Bitcoin to INR / USD Converter"],
+    description: "Free crypto converter with real-time prices. Convert Bitcoin, Ethereum, Solana & 20+ cryptocurrencies to USD, INR, EUR instantly. Live market data, 24h changes & market cap.",
+    keywords: "crypto converter, bitcoin price, ethereum price, btc to inr, btc to usd, cryptocurrency converter, crypto to inr, bitcoin converter, live crypto prices, crypto market, solana price, dogecoin price",
+    faqs: [
+      {
+        question: "How accurate are the crypto prices?",
+        answer: "Our crypto converter uses real-time data from CoinGecko API, one of the most trusted cryptocurrency data providers. Prices are fetched live and reflect current market values."
+      },
+      {
+        question: "How many cryptocurrencies are supported?",
+        answer: "We support 20+ popular cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), Solana (SOL), XRP, Dogecoin (DOGE), Cardano (ADA), and more."
+      },
+      {
+        question: "Can I convert Bitcoin to INR?",
+        answer: "Yes! Simply select Bitcoin as your cryptocurrency and INR as your fiat currency. You'll get the latest BTC to INR price with real-time market data."
+      },
+      {
+        question: "Is the crypto converter free?",
+        answer: "100% free! No signup, no limits. Convert between any supported cryptocurrency and 10+ fiat currencies as many times as you want."
+      },
+      {
+        question: "What market data is shown?",
+        answer: "Along with price conversion, we show live market data including 24-hour price change percentage, market capitalization, and a sortable table of top cryptocurrencies."
+      }
+    ],
+    article: {
+      introduction: "Cryptocurrency markets move fast — and having a reliable, real-time crypto converter is essential for traders, investors, and enthusiasts. Our free Crypto Converter tool provides live prices for 20+ popular cryptocurrencies including Bitcoin, Ethereum, Solana, XRP, and Dogecoin. Whether you want to check how much your Bitcoin is worth in Indian Rupees, convert Ethereum to USD, or compare market caps — this tool gives you instant, accurate results powered by CoinGecko's trusted market data.",
+      howToUse: "First, enter the amount of cryptocurrency you want to convert. Next, select your cryptocurrency from the dropdown — choose from Bitcoin, Ethereum, Solana, and 17+ more coins. Then, select your target fiat currency — USD, INR, EUR, GBP, and more are available. The conversion result appears instantly with the current market price. You can also browse the live market table below to see prices, 24h changes, and market caps for all supported cryptocurrencies. Click any coin in the table to quickly select it for conversion.",
+      keyFeatures: [
+        "Real-Time Prices – Live cryptocurrency prices from CoinGecko API",
+        "20+ Cryptocurrencies – Bitcoin, Ethereum, Solana, XRP, DOGE, and more",
+        "10+ Fiat Currencies – Convert to USD, INR, EUR, GBP, JPY, and more",
+        "24h Price Changes – See which coins are trending up or down",
+        "Market Cap Data – Compare cryptocurrencies by market capitalization",
+        "One-Click Selection – Click any coin in the market table to convert",
+        "Refresh Button – Get the latest prices with one click",
+        "100% Free – No signup, no limits, no hidden charges"
+      ]
+    }
   }
 };
 

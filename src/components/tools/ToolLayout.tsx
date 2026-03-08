@@ -155,7 +155,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
       
       <Header />
 
-      <div className="min-h-screen py-4 sm:py-8">
+      <main className="min-h-screen py-4 sm:py-8" role="main">
         <div className="container px-2 sm:px-4 lg:px-8">
           {/* Breadcrumbs - hidden on mobile */}
           <div className="hidden sm:block">
@@ -207,7 +207,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </article>
 
             {/* Right Sidebar Ads - desktop only */}
-            <aside className="hidden lg:block w-[300px] shrink-0">
+            <aside className="hidden lg:block w-[300px] shrink-0" aria-label="Advertisements">
               <div className="sticky top-8 space-y-6">
                 <AdBanner slot="2745516861" format="rectangle" responsive={false} showLabel wrapperClassName="glass-card rounded-2xl p-4" />
                 <AdBanner slot="9647130857" format="rectangle" responsive={false} showLabel wrapperClassName="glass-card rounded-2xl p-4" />
@@ -215,7 +215,7 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
             </aside>
           </div>
         </div>
-      </div>
+      </main>
       
       <Footer />
     </>);

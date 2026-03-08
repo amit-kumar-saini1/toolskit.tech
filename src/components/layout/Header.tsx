@@ -16,7 +16,7 @@ const Header = () => {
           <span className="text-xl font-bold gradient-text">ToolsKit.tech</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
           <Link to="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             Home
           </Link>
@@ -43,6 +43,8 @@ const Header = () => {
           size="icon"
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </Button>
@@ -50,7 +52,7 @@ const Header = () => {
 
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 glass-card border-b border-border/50 p-4 animate-slide-up">
-          <nav className="flex flex-col gap-4">
+          <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
             <Link 
               to="/" 
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"

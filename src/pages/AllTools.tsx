@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin
 } from "lucide-react";
 
 const tools = [
@@ -105,6 +105,20 @@ const tools = [
     icon: Clock,
     path: "/tools/time-zone-converter",
     color: "#0EA5E9"
+  },
+  {
+    title: "Currency Converter",
+    description: "Convert currencies with live rates",
+    icon: TrendingUp,
+    path: "/tools/currency-converter",
+    color: "#EAB308"
+  },
+  {
+    title: "Crypto Converter",
+    description: "Live crypto prices & converter",
+    icon: Bitcoin,
+    path: "/tools/crypto-converter",
+    color: "#F7931A"
   },
 ];
 
