@@ -126,6 +126,13 @@ const tools = [
     path: "/tools/currency-converter",
     color: "#eab308",
   },
+  {
+    title: "Crypto Converter",
+    description: "Live crypto prices & converter",
+    icon: Bitcoin,
+    path: "/tools/crypto-converter",
+    color: "#f7931a",
+  },
 ];
 
 const ToolsGrid = () => {

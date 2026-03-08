@@ -80,6 +80,7 @@ const App = () => (
             <Route path="/tools/remove-background" element={<RemoveBackground />} />
             <Route path="/tools/time-zone-converter" element={<TimeZoneConverter />} />
             <Route path="/tools/currency-converter" element={<CurrencyConverter />} />
+            <Route path="/tools/crypto-converter" element={<CryptoConverter />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
