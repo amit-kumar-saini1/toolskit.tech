@@ -15,7 +15,7 @@ const blogPosts = [
     category: "Make Money Online",
     date: "2026-03-08",
     readTime: "25 min read",
-    image: "https://images.unsplash.com/photo-1553729459-uj37hpka2ua5?w=600&h=400&fit=crop"
+    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop"
   },
   {
     id: 21,
