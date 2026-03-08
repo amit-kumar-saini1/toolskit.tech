@@ -11,7 +11,7 @@ const XIcon = () => (
 
 const SocialLinks = () => {
   return (
-    <div className="flex items-center gap-3 mt-4">
+    <div className="flex items-center gap-2 sm:gap-3">
       <a 
         href="https://www.linkedin.com/in/amit-kumar-saini-38b6143a0/" 
         target="_blank" 
