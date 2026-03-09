@@ -1,11 +1,13 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import ToolLayout from "@/components/tools/ToolLayout";
 import { FileDown, Upload, Download, RotateCcw, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
 import { AdDownloadModal } from "@/components/AdDownloadModal";
+import ImageCompressorWorker from "@/workers/imageCompressor.worker?worker";
 
 const KBConverter = () => {
   const [originalImage, setOriginalImage] = useState<string | null>(null);
@@ -14,12 +16,21 @@ const KBConverter = () => {
   const [convertedSize, setConvertedSize] = useState<number>(0);
   const [targetSize, setTargetSize] = useState<number>(100);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [progress, setProgress] = useState<string>("");
+  const [progress, setProgress] = useState<number>(0);
+  const [progressText, setProgressText] = useState<string>("");
   const [fileName, setFileName] = useState("converted-image");
   const [showAdModal, setShowAdModal] = useState(false);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const originalFileRef = useRef<File | null>(null);
+  const workerRef = useRef<Worker | null>(null);
   const { toast } = useToast();
+
+  // Initialize worker
+  useEffect(() => {
+    workerRef.current = new ImageCompressorWorker();
+    return () => {
+      workerRef.current?.terminate();
+    };
+  }, []);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
@@ -30,7 +41,6 @@ const KBConverter = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      // Warn if file > 10MB
       if (file.size > 10 * 1024 * 1024) {
         toast({
           title: "File Too Large",
@@ -42,125 +52,81 @@ const KBConverter = () => {
       originalFileRef.current = file;
       setOriginalSize(file.size);
       setFileName(file.name.replace(/\.[^/.]+$/, "") + "-reduced");
-
-      // Use createObjectURL instead of readAsDataURL for large files — much faster
       const url = URL.createObjectURL(file);
       setOriginalImage(url);
       setConvertedImage(null);
       setConvertedSize(0);
+      setProgress(0);
     }
   };
 
   const convertToTargetSize = useCallback(async () => {
-    if (!originalImage) return;
+    if (!originalImage || !workerRef.current) return;
 
     setIsProcessing(true);
-    setProgress("Loading image...");
+    setProgress(0);
+    setProgressText("Preparing image...");
 
     try {
-      const img = new Image();
-      img.src = originalImage;
-
-      await new Promise<void>((resolve, reject) => {
-        img.onload = () => resolve();
-        img.onerror = reject;
-      });
-
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
+      // Create ImageBitmap from the file (transferable to worker)
+      const response = await fetch(originalImage);
+      const blob = await response.blob();
+      const imageBitmap = await createImageBitmap(blob);
 
       const targetBytes = targetSize * 1024;
 
-      // Smart starting scale — bigger images need more reduction upfront
-      const megapixels = (img.width * img.height) / 1_000_000;
-      let startScale = megapixels > 8 ? 0.5 : megapixels > 4 ? 0.7 : 1.0;
-
-      let resultBlob: Blob | null = null;
-
-      // Binary search on quality first at a fixed scale — much faster than nested loops
-      const tryQualityBinarySearch = async (scale: number): Promise<Blob | null> => {
-        const w = Math.max(1, Math.floor(img.width * scale));
-        const h = Math.max(1, Math.floor(img.height * scale));
-        canvas.width = w;
-        canvas.height = h;
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = "high";
-        ctx.clearRect(0, 0, w, h);
-        ctx.drawImage(img, 0, 0, w, h);
-
-        let lo = 0.1, hi = 0.95, bestBlob: Blob | null = null;
-
-        for (let i = 0; i < 8; i++) {
-          const mid = (lo + hi) / 2;
-          const blob = await new Promise<Blob | null>((res) =>
-            canvas.toBlob(res, "image/jpeg", mid)
-          );
-          if (!blob) break;
-
-          if (blob.size <= targetBytes) {
-            bestBlob = blob;
-            lo = mid; // try higher quality
-          } else {
-            hi = mid; // reduce quality
-          }
+      // Set up worker message handler
+      const worker = workerRef.current;
+      
+      const handleMessage = (e: MessageEvent) => {
+        const { type } = e.data;
+        
+        if (type === 'progress') {
+          setProgress(e.data.percent);
+          setProgressText(e.data.status);
+        } else if (type === 'result') {
+          const resultBlob: Blob = e.data.blob;
+          const url = URL.createObjectURL(resultBlob);
+          setConvertedImage(url);
+          setConvertedSize(resultBlob.size);
+          setIsProcessing(false);
+          setProgress(100);
+          setProgressText("");
+          toast({
+            title: "Conversion Complete!",
+            description: `Reduced from ${formatSize(originalSize)} to ${formatSize(resultBlob.size)}`,
+          });
+          worker.removeEventListener('message', handleMessage);
+        } else if (type === 'error') {
+          toast({
+            title: "Error",
+            description: e.data.message || "Failed to convert image",
+            variant: "destructive",
+          });
+          setIsProcessing(false);
+          setProgress(0);
+          setProgressText("");
+          worker.removeEventListener('message', handleMessage);
         }
-        return bestBlob;
       };
 
-      // Try scales from startScale down to 0.2
-      const scales = [];
-      for (let s = startScale; s >= 0.2; s -= 0.15) {
-        scales.push(parseFloat(s.toFixed(2)));
-      }
-      if (!scales.includes(0.2)) scales.push(0.2);
+      worker.addEventListener('message', handleMessage);
 
-      for (let i = 0; i < scales.length; i++) {
-        const s = scales[i];
-        setProgress(`Processing... (${Math.round((i / scales.length) * 100)}%)`);
+      // Send ImageBitmap to worker (transferable object — zero-copy)
+      worker.postMessage(
+        { type: 'compress', imageBitmap, targetBytes },
+        [imageBitmap] // Transfer ownership
+      );
 
-        // Yield to browser so UI stays responsive
-        await new Promise((r) => setTimeout(r, 0));
-
-        const blob = await tryQualityBinarySearch(s);
-        if (blob) {
-          resultBlob = blob;
-          break;
-        }
-      }
-
-      // Last resort: 0.15 scale at lowest quality
-      if (!resultBlob) {
-        setProgress("Finalizing...");
-        const w = Math.max(1, Math.floor(img.width * 0.15));
-        const h = Math.max(1, Math.floor(img.height * 0.15));
-        canvas.width = w;
-        canvas.height = h;
-        ctx.drawImage(img, 0, 0, w, h);
-        resultBlob = await new Promise<Blob | null>((res) =>
-          canvas.toBlob(res, "image/jpeg", 0.3)
-        );
-      }
-
-      if (resultBlob) {
-        const url = URL.createObjectURL(resultBlob);
-        setConvertedImage(url);
-        setConvertedSize(resultBlob.size);
-        toast({
-          title: "Conversion Complete!",
-          description: `Reduced from ${formatSize(originalSize)} to ${formatSize(resultBlob.size)}`,
-        });
-      }
     } catch {
       toast({
         title: "Error",
-        description: "Failed to convert image. Please try again.",
+        description: "Failed to process image. Please try again.",
         variant: "destructive",
       });
-    } finally {
       setIsProcessing(false);
-      setProgress("");
+      setProgress(0);
+      setProgressText("");
     }
   }, [originalImage, targetSize, originalSize, toast]);
 
@@ -184,7 +150,8 @@ const KBConverter = () => {
     setConvertedSize(0);
     setTargetSize(100);
     setFileName("converted-image");
-    setProgress("");
+    setProgress(0);
+    setProgressText("");
     originalFileRef.current = null;
   };
 
@@ -195,8 +162,6 @@ const KBConverter = () => {
       icon={FileDown}
       toolSlug="kb-converter"
     >
-      <canvas ref={canvasRef} className="hidden" />
-
       {!originalImage ? (
         <div className="border-2 border-dashed border-border rounded-xl p-12 text-center">
           <Upload className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
@@ -246,6 +211,17 @@ const KBConverter = () => {
             </p>
           </div>
 
+          {/* Progress Bar */}
+          {isProcessing && (
+            <div className="space-y-2">
+              <div className="flex justify-between text-sm">
+                <span className="text-muted-foreground">{progressText}</span>
+                <span className="text-primary font-medium">{progress}%</span>
+              </div>
+              <Progress value={progress} className="h-2" />
+            </div>
+          )}
+
           {/* Image Preview */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
@@ -293,7 +269,7 @@ const KBConverter = () => {
                 {isProcessing ? (
                   <>
                     <RotateCcw className="w-4 h-4 mr-2 animate-spin" />
-                    {progress || "Converting..."}
+                    Processing...
                   </>
                 ) : (
                   <>
@@ -308,7 +284,7 @@ const KBConverter = () => {
                 Download
               </Button>
             )}
-            <Button variant="outline" onClick={handleReset}>
+            <Button variant="outline" onClick={handleReset} disabled={isProcessing}>
               <RotateCcw className="w-4 h-4 mr-2" />
               Reset
             </Button>
