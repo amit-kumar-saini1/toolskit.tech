@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import ToolLayout from "@/components/tools/ToolLayout";
 import { FileDown, Upload, Download, RotateCcw, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,9 +14,11 @@ const KBConverter = () => {
   const [convertedSize, setConvertedSize] = useState<number>(0);
   const [targetSize, setTargetSize] = useState<number>(100);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [progress, setProgress] = useState<string>("");
   const [fileName, setFileName] = useState("converted-image");
   const [showAdModal, setShowAdModal] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const originalFileRef = useRef<File | null>(null);
   const { toast } = useToast();
 
   const formatSize = (bytes: number) => {
@@ -28,111 +30,142 @@ const KBConverter = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+      // Warn if file > 10MB
+      if (file.size > 10 * 1024 * 1024) {
+        toast({
+          title: "File Too Large",
+          description: "Please upload an image smaller than 10MB for best performance.",
+          variant: "destructive",
+        });
+        return;
+      }
+      originalFileRef.current = file;
       setOriginalSize(file.size);
       setFileName(file.name.replace(/\.[^/.]+$/, "") + "-reduced");
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const result = event.target?.result as string;
-        setOriginalImage(result);
-        setConvertedImage(null);
-        setConvertedSize(0);
-      };
-      reader.readAsDataURL(file);
+
+      // Use createObjectURL instead of readAsDataURL for large files — much faster
+      const url = URL.createObjectURL(file);
+      setOriginalImage(url);
+      setConvertedImage(null);
+      setConvertedSize(0);
     }
   };
 
-  const convertToTargetSize = async () => {
+  const convertToTargetSize = useCallback(async () => {
     if (!originalImage) return;
-    
+
     setIsProcessing(true);
-    
+    setProgress("Loading image...");
+
     try {
       const img = new Image();
       img.src = originalImage;
-      
-      await new Promise((resolve) => {
-        img.onload = resolve;
+
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = reject;
       });
 
       const canvas = canvasRef.current;
       if (!canvas) return;
-      
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
       const targetBytes = targetSize * 1024;
-      let quality = 0.92;
-      let scale = 1;
+
+      // Smart starting scale — bigger images need more reduction upfront
+      const megapixels = (img.width * img.height) / 1_000_000;
+      let startScale = megapixels > 8 ? 0.5 : megapixels > 4 ? 0.7 : 1.0;
+
       let resultBlob: Blob | null = null;
 
-      // Try different scales and qualities to reach target size
-      for (let s = 1; s >= 0.3; s -= 0.1) {
-        const newWidth = Math.floor(img.width * s);
-        const newHeight = Math.floor(img.height * s);
-        
-        canvas.width = newWidth;
-        canvas.height = newHeight;
-        
-        // Use high quality rendering
+      // Binary search on quality first at a fixed scale — much faster than nested loops
+      const tryQualityBinarySearch = async (scale: number): Promise<Blob | null> => {
+        const w = Math.max(1, Math.floor(img.width * scale));
+        const h = Math.max(1, Math.floor(img.height * scale));
+        canvas.width = w;
+        canvas.height = h;
         ctx.imageSmoothingEnabled = true;
         ctx.imageSmoothingQuality = "high";
-        ctx.drawImage(img, 0, 0, newWidth, newHeight);
+        ctx.clearRect(0, 0, w, h);
+        ctx.drawImage(img, 0, 0, w, h);
 
-        // Try different qualities at this scale
-        for (let q = 0.92; q >= 0.5; q -= 0.05) {
-          const blob = await new Promise<Blob | null>((resolve) => {
-            canvas.toBlob(resolve, "image/jpeg", q);
-          });
+        let lo = 0.1, hi = 0.95, bestBlob: Blob | null = null;
 
-          if (blob && blob.size <= targetBytes) {
-            resultBlob = blob;
-            quality = q;
-            scale = s;
-            break;
+        for (let i = 0; i < 8; i++) {
+          const mid = (lo + hi) / 2;
+          const blob = await new Promise<Blob | null>((res) =>
+            canvas.toBlob(res, "image/jpeg", mid)
+          );
+          if (!blob) break;
+
+          if (blob.size <= targetBytes) {
+            bestBlob = blob;
+            lo = mid; // try higher quality
+          } else {
+            hi = mid; // reduce quality
           }
         }
+        return bestBlob;
+      };
 
-        if (resultBlob) break;
+      // Try scales from startScale down to 0.2
+      const scales = [];
+      for (let s = startScale; s >= 0.2; s -= 0.15) {
+        scales.push(parseFloat(s.toFixed(2)));
+      }
+      if (!scales.includes(0.2)) scales.push(0.2);
+
+      for (let i = 0; i < scales.length; i++) {
+        const s = scales[i];
+        setProgress(`Processing... (${Math.round((i / scales.length) * 100)}%)`);
+
+        // Yield to browser so UI stays responsive
+        await new Promise((r) => setTimeout(r, 0));
+
+        const blob = await tryQualityBinarySearch(s);
+        if (blob) {
+          resultBlob = blob;
+          break;
+        }
       }
 
-      // If still too large, use the smallest we got
+      // Last resort: 0.15 scale at lowest quality
       if (!resultBlob) {
-        canvas.width = Math.floor(img.width * 0.3);
-        canvas.height = Math.floor(img.height * 0.3);
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = "high";
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        
-        resultBlob = await new Promise<Blob | null>((resolve) => {
-          canvas.toBlob(resolve, "image/jpeg", 0.5);
-        });
+        setProgress("Finalizing...");
+        const w = Math.max(1, Math.floor(img.width * 0.15));
+        const h = Math.max(1, Math.floor(img.height * 0.15));
+        canvas.width = w;
+        canvas.height = h;
+        ctx.drawImage(img, 0, 0, w, h);
+        resultBlob = await new Promise<Blob | null>((res) =>
+          canvas.toBlob(res, "image/jpeg", 0.3)
+        );
       }
 
       if (resultBlob) {
         const url = URL.createObjectURL(resultBlob);
         setConvertedImage(url);
         setConvertedSize(resultBlob.size);
-        
         toast({
           title: "Conversion Complete!",
           description: `Reduced from ${formatSize(originalSize)} to ${formatSize(resultBlob.size)}`,
         });
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
-        description: "Failed to convert image",
+        description: "Failed to convert image. Please try again.",
         variant: "destructive",
       });
     } finally {
       setIsProcessing(false);
+      setProgress("");
     }
-  };
+  }, [originalImage, targetSize, originalSize, toast]);
 
   const handleDownloadClick = () => {
-    if (convertedImage) {
-      setShowAdModal(true);
-    }
+    if (convertedImage) setShowAdModal(true);
   };
 
   const handleActualDownload = () => {
@@ -151,6 +184,8 @@ const KBConverter = () => {
     setConvertedSize(0);
     setTargetSize(100);
     setFileName("converted-image");
+    setProgress("");
+    originalFileRef.current = null;
   };
 
   return (
@@ -161,13 +196,13 @@ const KBConverter = () => {
       toolSlug="kb-converter"
     >
       <canvas ref={canvasRef} className="hidden" />
-      
+
       {!originalImage ? (
         <div className="border-2 border-dashed border-border rounded-xl p-12 text-center">
           <Upload className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
           <p className="text-lg font-medium mb-2">Upload an Image</p>
           <p className="text-sm text-muted-foreground mb-4">
-            Supports JPG, PNG, WebP
+            Supports JPG, PNG, WebP • Max 10MB
           </p>
           <Input
             type="file"
@@ -219,6 +254,7 @@ const KBConverter = () => {
                 src={originalImage}
                 alt="Original"
                 className="w-full rounded-lg border border-border"
+                loading="lazy"
               />
             </div>
             {convertedImage && (
@@ -228,6 +264,7 @@ const KBConverter = () => {
                   src={convertedImage}
                   alt="Converted"
                   className="w-full rounded-lg border border-border"
+                  loading="lazy"
                 />
               </div>
             )}
@@ -248,15 +285,15 @@ const KBConverter = () => {
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-3">
             {!convertedImage ? (
-              <Button 
-                onClick={convertToTargetSize} 
+              <Button
+                onClick={convertToTargetSize}
                 className="flex-1"
                 disabled={isProcessing}
               >
                 {isProcessing ? (
                   <>
                     <RotateCcw className="w-4 h-4 mr-2 animate-spin" />
-                    Converting...
+                    {progress || "Converting..."}
                   </>
                 ) : (
                   <>
@@ -279,7 +316,6 @@ const KBConverter = () => {
         </div>
       )}
 
-      {/* Ad Download Modal */}
       <AdDownloadModal
         isOpen={showAdModal}
         onClose={() => setShowAdModal(false)}
