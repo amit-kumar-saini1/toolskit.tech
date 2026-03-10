@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 25,
+    slug: "edit-photos-like-pro-free-ai-tools-2026",
+    title: "How to Edit Photos Like a Pro Without Photoshop: 10 Free AI Tools in 2026",
+    excerpt: "Stop paying for Photoshop! Discover 10 incredible free AI-powered photo editing tools in 2026 — remove backgrounds, compress images, crop photos, add text & more. No skills needed, works on any device.",
+    category: "AI Tools",
+    date: "2026-03-10",
+    readTime: "20 min read",
+    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=400&fit=crop"
+  },
+  {
     id: 24,
     slug: "how-to-convert-foreign-currency-online-free-2026",
     title: "How to Convert Foreign Currency Online for Free in 2026: Complete Guide (USD, EUR, INR, GBP)",

@@ -47,17 +47,33 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
     
-    <!-- Font - preload for faster rendering -->
+    <!-- Font - preconnect only, load after paint -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
     
     <!-- DNS prefetch for ads -->
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
     
-    <!-- Google AdSense - defer loading -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292" crossorigin="anonymous"></script>
+    <!-- Defer Google Fonts & AdSense until after page load -->
+    <script>
+      window.addEventListener('load', function() {
+        // Load fonts after 100ms
+        setTimeout(function() {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap';
+          document.head.appendChild(link);
+        }, 100);
+        // Load AdSense after 3s
+        setTimeout(function() {
+          var s = document.createElement('script');
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292';
+          s.async = true;
+          s.crossOrigin = 'anonymous';
+          document.head.appendChild(s);
+        }, 3000);
+      });
+    </script>
     <!-- Bing serch consol -->
     <meta name="msvalidate.01" content="79620B965645F4DFAEE352E47E2F04D7" />
     <!-- Structured Data / JSON-LD -->
