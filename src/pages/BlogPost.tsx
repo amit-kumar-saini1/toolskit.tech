@@ -28,7 +28,7 @@ const blogPostsData: Record<string, BlogPostData> = {
     title: "How to Convert Foreign Currency Online for Free in 2026: Complete Guide (USD, EUR, INR, GBP)",
     excerpt: "Learn how to convert any foreign currency to your local currency online — for free! Step-by-step guide covering USD to INR, EUR to GBP, and more.",
     category: "Finance",
-    date: "2026-03-08",
+    date: "2026-03-10",
     readTime: "16 min read",
     image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=1200&h=600&fit=crop",
     relatedTool: "/tools/currency-converter",
