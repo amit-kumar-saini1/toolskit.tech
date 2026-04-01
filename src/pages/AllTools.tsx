@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator
 } from "lucide-react";
 
 const tools = [
