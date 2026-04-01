@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator
 } from "lucide-react";
 
 const tools = [
@@ -119,6 +119,20 @@ const tools = [
     icon: Bitcoin,
     path: "/tools/crypto-converter",
     color: "#F7931A"
+  },
+  {
+    title: "Pincode Lookup",
+    description: "Find post office & area details by pincode",
+    icon: MapPin,
+    path: "/tools/pincode-lookup",
+    color: "#E11D48"
+  },
+  {
+    title: "Loan EMI Calculator",
+    description: "Calculate monthly EMI for any loan",
+    icon: Calculator,
+    path: "/tools/loan-emi-calculator",
+    color: "#2563EB"
   },
 ];
 

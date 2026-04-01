@@ -593,6 +593,73 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "100% Free – No signup, no limits, no hidden charges"
       ]
     }
+  },
+  "pincode-lookup": {
+    title: "Indian Pincode Lookup & Search by Location - Find Pincode Online Free",
+    h1Title: "Pincode Lookup - Find Pincode by Location or Search by Pincode",
+    description: "Find Indian pincode by state, district & post office. Search pincode details instantly. Get post office name, district, state, delivery status. Free pincode finder tool.",
+    keywords: "pincode lookup, find pincode, pincode search, indian pincode, pincode finder, post office pincode, area pincode, search pincode by location, find pincode by address, pincode by state district, india post pincode, pin code search, postal code india",
+    faqs: [
+      {
+        question: "How do I find the pincode of my area?",
+        answer: "You can either enter your 6-digit pincode directly to get full details, or use the 'Search by Location' tab to select your state, district, and post office to find the exact pincode."
+      },
+      {
+        question: "What details can I get from a pincode?",
+        answer: "You can find the post office name, branch type, district, state, division, region, circle, block, delivery status, and country for any Indian pincode."
+      },
+      {
+        question: "Is this pincode data accurate and up-to-date?",
+        answer: "Yes! We fetch data directly from India Post's official API (api.postalpincode.in), so the information is always accurate and current."
+      },
+      {
+        question: "Can I search pincode by post office name?",
+        answer: "Yes! Use the 'Search by Location' tab and type your post office name to find its pincode instantly."
+      }
+    ],
+    article: {
+      introduction: "Finding the correct pincode (PIN code) is essential for sending letters, parcels, filling government forms, and online shopping in India. Our free Pincode Lookup tool lets you search pincodes in two ways — enter a pincode to get full area details, or select your state, district, and post office to find the pincode. This tool uses India Post's official API to provide accurate, real-time postal data for all 6-digit Indian pincodes. Whether you're filling out exam forms for SSC, UPSC, or Agniveer, ordering online, or sending documents by post, having the right pincode ensures your mail reaches the correct destination. India has over 150,000 post offices, each with a unique 6-digit PIN (Postal Index Number) code that helps India Post sort and deliver mail efficiently.",
+      howToUse: "Start by choosing your search method. First, to search by pincode, enter any 6-digit Indian pincode in the search box and click Search — you'll instantly see all post offices, district, state, and delivery details. Next, to find a pincode by location, click the 'Search by Location' tab, then select your state from the dropdown. Then select your district, and finally choose your post office to see its pincode. The location search fetches data from India Post's official database, so all results are accurate and up-to-date. Finally, you can use either method as many times as you want — it's completely free with no limits.",
+      keyFeatures: [
+        "Search by Pincode – Enter 6-digit code to get complete area details",
+        "Search by Location – Find pincode by selecting state, district & post office",
+        "India Post Official Data – Real-time data from India Post's API",
+        "Complete Details – Post office name, branch type, district, state, division, region",
+        "Delivery Status – Know if your area has delivery service",
+        "150,000+ Post Offices – Covers all Indian post offices",
+        "Mobile Friendly – Works perfectly on phones and tablets",
+        "100% Free – No signup, no limits, no hidden charges"
+      ]
+    }
+  },
+  "loan-emi-calculator": {
+    title: "Free Loan EMI Calculator Online – Home, Car & Personal Loan EMI",
+    h1Title: "Loan EMI Calculator – Calculate Monthly EMI Instantly",
+    description: "Free online EMI calculator for home loan, car loan & personal loan. Enter amount, interest rate & tenure to get monthly EMI, total interest & payment breakdown.",
+    keywords: "emi calculator, loan emi calculator, home loan emi calculator, car loan emi, personal loan emi, emi calculator online, loan calculator india, monthly emi calculator, housing loan emi, loan interest calculator, emi calculation formula, loan repayment calculator, free emi calculator online, home loan calculator 2026, car loan interest calculator, personal loan emi calculator india, monthly installment calculator, loan tenure calculator",
+    faqs: [
+      { question: "What is EMI?", answer: "EMI (Equated Monthly Installment) is a fixed monthly payment made to repay a loan over a set period. It includes both principal repayment and interest." },
+      { question: "How is EMI calculated?", answer: "EMI is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n – 1), where P is principal, r is monthly interest rate, and n is total number of months." },
+      { question: "Does higher tenure reduce EMI?", answer: "Yes, a longer tenure reduces your monthly EMI but increases the total interest paid over the loan period." },
+      { question: "What is a good interest rate for a home loan in India?", answer: "As of 2026, home loan interest rates in India range from 8% to 10% depending on the bank and your credit score." },
+      { question: "Can I prepay my loan to reduce EMI?", answer: "Yes, most banks allow partial prepayment which reduces your outstanding principal and can lower your EMI or tenure." },
+      { question: "Is this EMI calculator accurate?", answer: "Yes, this calculator uses the standard EMI formula used by all banks. Results are accurate for fixed-rate loans." },
+      { question: "What is the difference between flat rate and reducing balance EMI?", answer: "Flat rate calculates interest on the full loan amount throughout. Reducing balance (used here) calculates interest on the remaining principal, which is more common and cost-effective." },
+      { question: "How much loan can I get on my salary?", answer: "Generally, banks offer loans where EMI does not exceed 40-50% of your monthly net income. Use this calculator to check affordable EMI amounts." }
+    ],
+    article: {
+      introduction: "An EMI (Equated Monthly Installment) calculator helps you plan your loan repayment by calculating the exact monthly payment based on loan amount, interest rate, and tenure. Whether you're planning a home loan, car loan, or personal loan, knowing your EMI in advance helps you budget effectively and choose the right loan offer.",
+      howToUse: "First, enter your loan amount using the slider or input field. Next, set the annual interest rate offered by your bank. Then, choose the loan tenure in years. The calculator instantly shows your monthly EMI, total interest payable, and total payment amount with a visual breakdown.",
+      keyFeatures: [
+        "Instant EMI calculation for any loan amount",
+        "Visual principal vs interest breakdown bar",
+        "Supports home loan, car loan & personal loan",
+        "Adjustable sliders for easy input",
+        "Shows total interest and total payment",
+        "100% free, no signup required",
+        "Works offline in your browser"
+      ]
+    }
   }
 };
 
