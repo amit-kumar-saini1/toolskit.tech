@@ -631,6 +631,35 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "100% Free – No signup, no limits, no hidden charges"
       ]
     }
+  },
+  "loan-emi-calculator": {
+    title: "Free Loan EMI Calculator Online – Home, Car & Personal Loan EMI",
+    h1Title: "Loan EMI Calculator – Calculate Monthly EMI Instantly",
+    description: "Free online EMI calculator for home loan, car loan & personal loan. Enter amount, interest rate & tenure to get monthly EMI, total interest & payment breakdown.",
+    keywords: "emi calculator, loan emi calculator, home loan emi calculator, car loan emi, personal loan emi, emi calculator online, loan calculator india, monthly emi calculator, housing loan emi, loan interest calculator, emi calculation formula, loan repayment calculator, free emi calculator online, home loan calculator 2026, car loan interest calculator, personal loan emi calculator india, monthly installment calculator, loan tenure calculator",
+    faqs: [
+      { question: "What is EMI?", answer: "EMI (Equated Monthly Installment) is a fixed monthly payment made to repay a loan over a set period. It includes both principal repayment and interest." },
+      { question: "How is EMI calculated?", answer: "EMI is calculated using the formula: EMI = P × r × (1+r)^n / ((1+r)^n – 1), where P is principal, r is monthly interest rate, and n is total number of months." },
+      { question: "Does higher tenure reduce EMI?", answer: "Yes, a longer tenure reduces your monthly EMI but increases the total interest paid over the loan period." },
+      { question: "What is a good interest rate for a home loan in India?", answer: "As of 2026, home loan interest rates in India range from 8% to 10% depending on the bank and your credit score." },
+      { question: "Can I prepay my loan to reduce EMI?", answer: "Yes, most banks allow partial prepayment which reduces your outstanding principal and can lower your EMI or tenure." },
+      { question: "Is this EMI calculator accurate?", answer: "Yes, this calculator uses the standard EMI formula used by all banks. Results are accurate for fixed-rate loans." },
+      { question: "What is the difference between flat rate and reducing balance EMI?", answer: "Flat rate calculates interest on the full loan amount throughout. Reducing balance (used here) calculates interest on the remaining principal, which is more common and cost-effective." },
+      { question: "How much loan can I get on my salary?", answer: "Generally, banks offer loans where EMI does not exceed 40-50% of your monthly net income. Use this calculator to check affordable EMI amounts." }
+    ],
+    article: {
+      introduction: "An EMI (Equated Monthly Installment) calculator helps you plan your loan repayment by calculating the exact monthly payment based on loan amount, interest rate, and tenure. Whether you're planning a home loan, car loan, or personal loan, knowing your EMI in advance helps you budget effectively and choose the right loan offer.",
+      howToUse: "First, enter your loan amount using the slider or input field. Next, set the annual interest rate offered by your bank. Then, choose the loan tenure in years. The calculator instantly shows your monthly EMI, total interest payable, and total payment amount with a visual breakdown.",
+      keyFeatures: [
+        "Instant EMI calculation for any loan amount",
+        "Visual principal vs interest breakdown bar",
+        "Supports home loan, car loan & personal loan",
+        "Adjustable sliders for easy input",
+        "Shows total interest and total payment",
+        "100% free, no signup required",
+        "Works offline in your browser"
+      ]
+    }
   }
 };
 

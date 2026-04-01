@@ -42,6 +42,7 @@ const TimeZoneConverter = lazy(() => import("./pages/tools/TimeZoneConverter"));
 const CurrencyConverter = lazy(() => import("./pages/tools/CurrencyConverter"));
 const CryptoConverter = lazy(() => import("./pages/tools/CryptoConverter"));
 const PincodeLookup = lazy(() => import("./pages/tools/PincodeLookup"));
+const LoanEMICalculator = lazy(() => import("./pages/tools/LoanEMICalculator"));
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ const App = () => (
             <Route path="/tools/currency-converter" element={<CurrencyConverter />} />
             <Route path="/tools/crypto-converter" element={<CryptoConverter />} />
             <Route path="/tools/pincode-lookup" element={<PincodeLookup />} />
+            <Route path="/tools/loan-emi-calculator" element={<LoanEMICalculator />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />

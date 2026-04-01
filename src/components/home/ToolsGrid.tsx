@@ -141,6 +141,13 @@ const tools = [
     path: "/tools/pincode-lookup",
     color: "#e11d48",
   },
+  {
+    title: "Loan EMI Calculator",
+    description: "Calculate monthly EMI for any loan",
+    icon: Calculator,
+    path: "/tools/loan-emi-calculator",
+    color: "#2563eb",
+  },
 ];
 
 const ToolsGrid = () => {

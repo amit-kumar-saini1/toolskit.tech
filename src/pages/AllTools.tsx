@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator
 } from "lucide-react";
 
 const tools = [
@@ -126,6 +126,13 @@ const tools = [
     icon: MapPin,
     path: "/tools/pincode-lookup",
     color: "#E11D48"
+  },
+  {
+    title: "Loan EMI Calculator",
+    description: "Calculate monthly EMI for any loan",
+    icon: Calculator,
+    path: "/tools/loan-emi-calculator",
+    color: "#2563EB"
   },
 ];
 
