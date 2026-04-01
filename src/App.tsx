@@ -84,6 +84,7 @@ const App = () => (
             <Route path="/tools/currency-converter" element={<CurrencyConverter />} />
             <Route path="/tools/crypto-converter" element={<CryptoConverter />} />
             <Route path="/tools/pincode-lookup" element={<PincodeLookup />} />
+            <Route path="/tools/loan-emi-calculator" element={<LoanEMICalculator />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
