@@ -15,7 +15,8 @@ import {
   ArrowRight,
   Clock,
   TrendingUp,
-  Bitcoin
+    Bitcoin,
+    MapPin
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
@@ -132,6 +133,13 @@ const tools = [
     icon: Bitcoin,
     path: "/tools/crypto-converter",
     color: "#f7931a",
+  },
+  {
+    title: "Pincode Lookup",
+    description: "Find area details by Indian pincode",
+    icon: MapPin,
+    path: "/tools/pincode-lookup",
+    color: "#e11d48",
   },
 ];
 
