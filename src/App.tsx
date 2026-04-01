@@ -42,6 +42,7 @@ const TimeZoneConverter = lazy(() => import("./pages/tools/TimeZoneConverter"));
 const CurrencyConverter = lazy(() => import("./pages/tools/CurrencyConverter"));
 const CryptoConverter = lazy(() => import("./pages/tools/CryptoConverter"));
 const PincodeLookup = lazy(() => import("./pages/tools/PincodeLookup"));
+const LoanEMICalculator = lazy(() => import("./pages/tools/LoanEMICalculator"));
 
 const queryClient = new QueryClient();
 
