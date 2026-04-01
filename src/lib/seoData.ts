@@ -593,6 +593,44 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "100% Free – No signup, no limits, no hidden charges"
       ]
     }
+  },
+  "pincode-lookup": {
+    title: "Indian Pincode Lookup & Search by Location - Find Pincode Online Free",
+    h1Title: "Pincode Lookup - Find Pincode by Location or Search by Pincode",
+    description: "Find Indian pincode by state, district & post office. Search pincode details instantly. Get post office name, district, state, delivery status. Free pincode finder tool.",
+    keywords: "pincode lookup, find pincode, pincode search, indian pincode, pincode finder, post office pincode, area pincode, search pincode by location, find pincode by address, pincode by state district, india post pincode, pin code search, postal code india",
+    faqs: [
+      {
+        question: "How do I find the pincode of my area?",
+        answer: "You can either enter your 6-digit pincode directly to get full details, or use the 'Search by Location' tab to select your state, district, and post office to find the exact pincode."
+      },
+      {
+        question: "What details can I get from a pincode?",
+        answer: "You can find the post office name, branch type, district, state, division, region, circle, block, delivery status, and country for any Indian pincode."
+      },
+      {
+        question: "Is this pincode data accurate and up-to-date?",
+        answer: "Yes! We fetch data directly from India Post's official API (api.postalpincode.in), so the information is always accurate and current."
+      },
+      {
+        question: "Can I search pincode by post office name?",
+        answer: "Yes! Use the 'Search by Location' tab and type your post office name to find its pincode instantly."
+      }
+    ],
+    article: {
+      introduction: "Finding the correct pincode (PIN code) is essential for sending letters, parcels, filling government forms, and online shopping in India. Our free Pincode Lookup tool lets you search pincodes in two ways — enter a pincode to get full area details, or select your state, district, and post office to find the pincode. This tool uses India Post's official API to provide accurate, real-time postal data for all 6-digit Indian pincodes. Whether you're filling out exam forms for SSC, UPSC, or Agniveer, ordering online, or sending documents by post, having the right pincode ensures your mail reaches the correct destination. India has over 150,000 post offices, each with a unique 6-digit PIN (Postal Index Number) code that helps India Post sort and deliver mail efficiently.",
+      howToUse: "Start by choosing your search method. First, to search by pincode, enter any 6-digit Indian pincode in the search box and click Search — you'll instantly see all post offices, district, state, and delivery details. Next, to find a pincode by location, click the 'Search by Location' tab, then select your state from the dropdown. Then select your district, and finally choose your post office to see its pincode. The location search fetches data from India Post's official database, so all results are accurate and up-to-date. Finally, you can use either method as many times as you want — it's completely free with no limits.",
+      keyFeatures: [
+        "Search by Pincode – Enter 6-digit code to get complete area details",
+        "Search by Location – Find pincode by selecting state, district & post office",
+        "India Post Official Data – Real-time data from India Post's API",
+        "Complete Details – Post office name, branch type, district, state, division, region",
+        "Delivery Status – Know if your area has delivery service",
+        "150,000+ Post Offices – Covers all Indian post offices",
+        "Mobile Friendly – Works perfectly on phones and tablets",
+        "100% Free – No signup, no limits, no hidden charges"
+      ]
+    }
   }
 };
 
