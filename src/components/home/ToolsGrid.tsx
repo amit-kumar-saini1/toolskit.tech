@@ -15,7 +15,8 @@ import {
   ArrowRight,
   Clock,
   TrendingUp,
-  Bitcoin
+    Bitcoin,
+    MapPin
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
