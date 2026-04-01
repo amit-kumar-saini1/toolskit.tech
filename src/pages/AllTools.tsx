@@ -120,6 +120,13 @@ const tools = [
     path: "/tools/crypto-converter",
     color: "#F7931A"
   },
+  {
+    title: "Pincode Lookup",
+    description: "Find post office & area details by pincode",
+    icon: MapPin,
+    path: "/tools/pincode-lookup",
+    color: "#E11D48"
+  },
 ];
 
 const AllTools = () => {

@@ -82,6 +82,7 @@ const App = () => (
             <Route path="/tools/time-zone-converter" element={<TimeZoneConverter />} />
             <Route path="/tools/currency-converter" element={<CurrencyConverter />} />
             <Route path="/tools/crypto-converter" element={<CryptoConverter />} />
+            <Route path="/tools/pincode-lookup" element={<PincodeLookup />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />

@@ -134,6 +134,13 @@ const tools = [
     path: "/tools/crypto-converter",
     color: "#f7931a",
   },
+  {
+    title: "Pincode Lookup",
+    description: "Find area details by Indian pincode",
+    icon: MapPin,
+    path: "/tools/pincode-lookup",
+    color: "#e11d48",
+  },
 ];
 
 const ToolsGrid = () => {
