@@ -148,6 +148,13 @@ const tools = [
     path: "/tools/loan-emi-calculator",
     color: "#2563eb",
   },
+  {
+    title: "SIP Calculator",
+    description: "Calculate mutual fund SIP returns",
+    icon: TrendingUp,
+    path: "/tools/sip-calculator",
+    color: "#16a34a",
+  },
 ];
 
 const ToolsGrid = () => {

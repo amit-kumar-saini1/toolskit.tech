@@ -660,6 +660,35 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "Works offline in your browser"
       ]
     }
+  },
+  "sip-calculator": {
+    title: "Free SIP Calculator Online - Mutual Fund Returns Calculator India",
+    h1Title: "SIP Calculator - Calculate Mutual Fund Monthly Investment Returns",
+    description: "Free SIP calculator to estimate mutual fund returns. Calculate how much your monthly SIP investment will grow over time with compound interest. No signup needed.",
+    keywords: "sip calculator, mutual fund calculator, sip return calculator, monthly investment calculator, sip investment calculator, mutual fund sip calculator, sip calculator india, systematic investment plan calculator",
+    faqs: [
+      { question: "What is SIP?", answer: "SIP (Systematic Investment Plan) is a method of investing a fixed amount regularly in mutual funds. It helps build wealth over time through the power of compounding." },
+      { question: "How is SIP return calculated?", answer: "SIP returns are calculated using the compound interest formula: FV = P × ((1+r)^n – 1) / r × (1+r), where P is monthly investment, r is monthly return rate, and n is total months." },
+      { question: "What is a good return rate for SIP?", answer: "Equity mutual funds in India have historically given 12-15% annual returns over 10+ years. Debt funds typically give 6-8%. Past performance doesn't guarantee future returns." },
+      { question: "Is SIP better than lump sum investment?", answer: "SIP reduces risk through rupee cost averaging — you buy more units when prices are low and fewer when high. It's ideal for salaried individuals who invest regularly." },
+      { question: "Can I change my SIP amount?", answer: "Yes, most mutual fund platforms allow you to increase, decrease, pause, or stop your SIP anytime without any penalty." },
+      { question: "What is the minimum SIP amount?", answer: "Most mutual funds in India allow SIP starting from ₹500 per month. Some funds accept as low as ₹100." },
+      { question: "Are SIP returns taxable?", answer: "Yes, equity SIP gains are taxed as STCG (15%) if redeemed within 1 year, and LTCG (10% above ₹1 lakh) if held over 1 year." },
+      { question: "How long should I invest in SIP?", answer: "For best results, invest for at least 5-10 years. Longer durations benefit more from compounding and reduce market volatility risk." }
+    ],
+    article: {
+      introduction: "A SIP (Systematic Investment Plan) calculator helps you estimate how much your regular monthly investment in mutual funds will grow over time. By entering your monthly investment amount, expected annual return rate, and investment duration, you can instantly see the future value of your investment, total amount invested, and estimated returns.",
+      howToUse: "Enter your monthly SIP amount using the slider or input field. Set the expected annual return rate (12% is a common estimate for equity funds). Choose your investment duration in years. The calculator instantly shows your total future value, invested amount, and estimated returns with a visual breakdown.",
+      keyFeatures: [
+        "Instant SIP return calculation with compounding",
+        "Visual invested amount vs returns breakdown",
+        "Adjustable sliders for easy mobile use",
+        "Supports any monthly amount from ₹500 to ₹5 Lakh",
+        "Calculate returns for up to 40 years",
+        "100% free, no signup required",
+        "Works offline in your browser"
+      ]
+    }
   }
 };
 
