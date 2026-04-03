@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 26,
+    slug: "sip-se-crorepati-kaise-bane-2026",
+    title: "SIP से Crorepati कैसे बनें 2026 — ₹5000 Monthly SIP से करोड़पति बनने का पूरा प्लान",
+    excerpt: "जानिए कैसे सिर्फ ₹5000 की Monthly SIP से आप 20-25 साल में करोड़पति बन सकते हैं। Nifty 50 रिटर्न, SIP Calculator, स्टेप-बाय-स्टेप गाइड हिंदी में।",
+    category: "Finance",
+    date: "2026-04-02",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop"
+  },
+  {
     id: 25,
     slug: "edit-photos-like-pro-free-ai-tools-2026",
     title: "How to Edit Photos Like a Pro Without Photoshop: 10 Free AI Tools in 2026",

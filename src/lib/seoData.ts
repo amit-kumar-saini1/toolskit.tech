@@ -701,6 +701,32 @@ export const toolsSEO: Record<string, ToolSEO> = {
         "Hindi aur English dono mein samjhe"
       ]
     }
+  },
+  "fd-calculator": {
+    title: "FD Calculator 2026 — Fixed Deposit Maturity & Interest Calculator Online",
+    h1Title: "FD Calculator — Fixed Deposit Interest & Maturity Calculator",
+    description: "Free FD Calculator 2026 — Fixed Deposit maturity amount, interest calculate karein. SIP vs FD comparison ke saath. Best FD interest rate calculator online.",
+    keywords: "fd calculator, fixed deposit calculator, fd interest calculator, fd maturity calculator, fd calculator online, fd vs sip, fixed deposit interest rate 2026, fd calculator india, bank fd calculator",
+    faqs: [
+      { question: "FD Calculator kaise use kare?", answer: "Principal amount daalein, interest rate set karein, time period choose karein — calculator turant maturity amount aur total interest dikhayega." },
+      { question: "FD mein kitna interest milta hai 2026 mein?", answer: "2026 mein major banks ke FD rates: SBI (6.50-7.10%), HDFC Bank (7.00-7.40%), Post Office FD (7.50%). Senior citizens ko 0.25-0.50% extra milta hai." },
+      { question: "FD vs SIP mein kya better hai?", answer: "FD mein guaranteed return milta hai (6-7.5%). SIP mein historically 12-15% return mila hai lekin market risk hota hai." },
+      { question: "₹5 lakh ki FD pe 5 saal mein kitna milega?", answer: "₹5 lakh ki FD 7% interest rate pe 5 saal mein approximately ₹7.01 lakh ban jayegi (quarterly compounding)." },
+      { question: "FD pe tax kaise lagta hai?", answer: "FD interest pe TDS lagta hai agar annual interest ₹40,000 se zyada ho. Interest aapki income mein add hoke tax slab ke hisaab se taxable hota hai." },
+      { question: "Senior citizens ko FD mein kitna extra milta hai?", answer: "Senior citizens (60+) ko regular rate se 0.25% se 0.50% extra interest milta hai." }
+    ],
+    article: {
+      introduction: "Fixed Deposit (FD) India ki sabse popular aur safe investment options mein se ek hai. Is free FD Calculator 2026 se aap turant apni FD ki maturity amount, total interest, aur SIP ke saath comparison dekh sakte hain.",
+      howToUse: "Principal amount daalein, interest rate set karein, time period choose karein. SIP vs FD tab pe click karke comparison dekhein.",
+      keyFeatures: [
+        "Instant FD maturity calculation",
+        "SIP vs FD comparison",
+        "Visual principal vs interest breakdown",
+        "Pre-calculated FD returns table",
+        "100% free, no signup required",
+        "Works offline in your browser"
+      ]
+    }
   }
 };
 

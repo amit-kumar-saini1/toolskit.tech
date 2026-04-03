@@ -16,7 +16,8 @@ import {
   Clock,
   TrendingUp,
     Bitcoin,
-    MapPin
+    MapPin,
+    Landmark
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
@@ -154,6 +155,13 @@ const tools = [
     icon: TrendingUp,
     path: "/tools/sip-calculator",
     color: "#16a34a",
+  },
+  {
+    title: "FD Calculator",
+    description: "FD maturity & SIP vs FD comparison",
+    icon: Landmark,
+    path: "/tools/fd-calculator",
+    color: "#7c3aed",
   },
 ];
 

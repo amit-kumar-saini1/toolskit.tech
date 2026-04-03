@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark
 } from "lucide-react";
 
 const tools = [
@@ -140,6 +140,13 @@ const tools = [
     icon: TrendingUp,
     path: "/tools/sip-calculator",
     color: "#16A34A"
+  },
+  {
+    title: "FD Calculator",
+    description: "Fixed deposit maturity & interest calculator",
+    icon: Landmark,
+    path: "/tools/fd-calculator",
+    color: "#7C3AED"
   },
 ];
 
