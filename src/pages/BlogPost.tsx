@@ -6739,8 +6739,8 @@ const BlogPost = () => {
         ogType="article"
         ogImage={post.image.replace('w=600&h=400', 'w=1200&h=630')}
         structuredData={postStructuredData}
-        articlePublishedTime={post.date}
-        articleModifiedTime={post.date}
+        articlePublishedTime={post.date + "T00:00:00+05:30"}
+        articleModifiedTime={post.date + "T00:00:00+05:30"}
       />
       <Header />
 
