@@ -6694,20 +6694,33 @@ const BlogPost = () => {
   const postStructuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://toolskit.tech/blog/${post.slug}`
+    },
     "headline": post.title,
     "description": post.excerpt,
-    "image": post.image,
-    "datePublished": post.date,
+    "image": {
+      "@type": "ImageObject",
+      "url": post.image.replace('w=600&h=400', 'w=1200&h=630'),
+      "width": 1200,
+      "height": 630
+    },
+    "datePublished": post.date + "T00:00:00+05:30",
+    "dateModified": post.date + "T00:00:00+05:30",
     "author": {
-      "@type": "Organization",
-      "name": "ToolsKit.tech"
+      "@type": "Person",
+      "name": "ToolsKit Team",
+      "url": "https://toolskit.tech/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "ToolsKit.tech",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://storage.googleapis.com/gpt-engineer-file-uploads/di7j8UAQsIVOsCbK58eG1NP3xrh2/uploads/1765097322356-mast logo.png"
+        "url": "https://storage.googleapis.com/gpt-engineer-file-uploads/di7j8UAQsIVOsCbK58eG1NP3xrh2/uploads/1765097322356-mast logo.png",
+        "width": 600,
+        "height": 60
       }
     }
   };
