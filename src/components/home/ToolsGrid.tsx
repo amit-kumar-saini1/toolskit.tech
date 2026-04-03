@@ -156,6 +156,13 @@ const tools = [
     path: "/tools/sip-calculator",
     color: "#16a34a",
   },
+  {
+    title: "FD Calculator",
+    description: "FD maturity & SIP vs FD comparison",
+    icon: Landmark,
+    path: "/tools/fd-calculator",
+    color: "#7c3aed",
+  },
 ];
 
 const ToolsGrid = () => {

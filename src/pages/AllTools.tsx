@@ -141,6 +141,13 @@ const tools = [
     path: "/tools/sip-calculator",
     color: "#16A34A"
   },
+  {
+    title: "FD Calculator",
+    description: "Fixed deposit maturity & interest calculator",
+    icon: Landmark,
+    path: "/tools/fd-calculator",
+    color: "#7C3AED"
+  },
 ];
 
 const AllTools = () => {

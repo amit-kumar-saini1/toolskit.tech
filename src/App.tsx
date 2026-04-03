@@ -88,6 +88,7 @@ const App = () => (
             <Route path="/tools/pincode-lookup" element={<PincodeLookup />} />
             <Route path="/tools/loan-emi-calculator" element={<LoanEMICalculator />} />
             <Route path="/tools/sip-calculator" element={<SIPCalculator />} />
+            <Route path="/tools/fd-calculator" element={<FDCalculator />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
