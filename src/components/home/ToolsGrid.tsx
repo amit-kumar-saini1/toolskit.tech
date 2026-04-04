@@ -17,7 +17,8 @@ import {
   TrendingUp,
     Bitcoin,
     MapPin,
-    Landmark
+    Landmark,
+    PiggyBank
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
