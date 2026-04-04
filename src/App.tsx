@@ -90,6 +90,7 @@ const App = () => (
             <Route path="/tools/loan-emi-calculator" element={<LoanEMICalculator />} />
             <Route path="/tools/sip-calculator" element={<SIPCalculator />} />
             <Route path="/tools/fd-calculator" element={<FDCalculator />} />
+            <Route path="/tools/ppf-calculator" element={<PPFCalculator />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />

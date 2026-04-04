@@ -164,6 +164,13 @@ const tools = [
     path: "/tools/fd-calculator",
     color: "#7c3aed",
   },
+  {
+    title: "PPF Calculator",
+    description: "PPF maturity & tax-free returns",
+    icon: PiggyBank,
+    path: "/tools/ppf-calculator",
+    color: "#0d9488",
+  },
 ];
 
 const ToolsGrid = () => {

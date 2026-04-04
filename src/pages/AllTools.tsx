@@ -148,6 +148,13 @@ const tools = [
     path: "/tools/fd-calculator",
     color: "#7C3AED"
   },
+  {
+    title: "PPF Calculator",
+    description: "Public Provident Fund maturity calculator",
+    icon: PiggyBank,
+    path: "/tools/ppf-calculator",
+    color: "#0D9488"
+  },
 ];
 
 const AllTools = () => {
