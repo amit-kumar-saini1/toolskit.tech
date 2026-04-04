@@ -67,7 +67,7 @@ const PPFCalculator = () => {
   const interestPercent = ppfResult.amount > 0 ? (ppfResult.interest / ppfResult.amount) * 100 : 0;
 
   return (
-    <ToolLayout toolKey="ppf-calculator" icon={PiggyBank}>
+    <ToolLayout title="PPF Calculator" description="Calculate Public Provident Fund maturity amount, interest earned & compare with SIP" icon={PiggyBank} toolSlug="ppf-calculator">
       <div className="max-w-4xl mx-auto space-y-8">
         <Tabs defaultValue="calculator" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
