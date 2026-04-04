@@ -758,3 +758,32 @@ export const getToolStructuredData = (toolSlug: string, toolName: string, toolDe
     }
   };
 };
+
+// PPF Calculator SEO
+toolsSEO["ppf-calculator"] = {
+  title: "PPF Calculator 2026 — Public Provident Fund Maturity Calculator Free",
+  h1Title: "PPF Calculator — Public Provident Fund Returns Calculator",
+  description: "Free PPF calculator 2026. Calculate PPF maturity amount, interest earned, year-wise growth. Compare PPF vs SIP vs FD. Tax-free returns under Section 80C.",
+  keywords: "ppf calculator, ppf calculator 2026, ppf maturity calculator, public provident fund calculator, ppf interest rate, ppf returns, ppf vs sip, ppf vs fd, ppf tax benefit, ppf calculator hindi",
+  faqs: [
+    { question: "PPF में कितना invest कर सकते हैं?", answer: "PPF में minimum ₹500 और maximum ₹1,50,000 per year invest कर सकते हैं। यह limit per person है — अगर आपने बच्चे के नाम पर भी PPF खोला है तो दोनों की combined limit ₹1.5L ही रहेगी।" },
+    { question: "PPF की interest rate 2026 में कितनी है?", answer: "April 2026 में PPF interest rate 7.1% per annum है। यह rate सरकार हर quarter review करती है। Interest annually compound होता है।" },
+    { question: "PPF कितने साल में mature होता है?", answer: "PPF का lock-in period 15 साल है। Maturity के बाद आप 5-5 साल के blocks में extend कर सकते हैं — with or without contribution।" },
+    { question: "PPF tax-free है?", answer: "हाँ! PPF को EEE (Exempt-Exempt-Exempt) status मिला है — investment पर 80C deduction, interest tax-free, और maturity amount भी पूरी तरह tax-free है।" },
+    { question: "PPF vs FD — कौन बेहतर?", answer: "PPF ज़्यादा returns देता है (7.1% vs ~6.5% FD) और पूरी तरह tax-free है। FD पर interest taxable है। But FD में liquidity ज़्यादा है — PPF 15 साल lock-in है।" },
+    { question: "PPF में loan कब मिलता है?", answer: "PPF account के 3rd year से 6th year के बीच आप loan ले सकते हैं — maximum 25% of balance (2nd year end तक का)। Interest rate PPF rate + 1% होता है।" },
+    { question: "₹1.5 लाख per year PPF में 15 साल बाद कितना मिलेगा?", answer: "7.1% rate पर ₹1,50,000/year invest करने पर 15 साल बाद approximately ₹43.2 लाख मिलेंगे — जिसमें ₹22.5 लाख invested और ₹20.7 लाख interest होगा।" },
+    { question: "PPF account कहाँ खोल सकते हैं?", answer: "PPF account Post Office या किसी भी nationalized bank (SBI, PNB, BOB etc.) में खोल सकते हैं। Online भी open हो सकता है — SBI, ICICI, HDFC सब support करते हैं।" },
+  ],
+  article: {
+    introduction: "PPF (Public Provident Fund) भारत सरकार की सबसे safe और tax-efficient long-term savings scheme है। इस free PPF calculator से maturity amount, interest earned और year-wise growth instantly calculate करें।",
+    howToUse: "1. Yearly investment amount डालें (₹500 to ₹1,50,000)\n2. Interest rate set करें (current: 7.1%)\n3. Time period choose करें (minimum 15 years)\n4. Instantly देखें — maturity amount, total interest, और year-wise breakdown\n5. SIP vs PPF tab में comparison देखें",
+    keyFeatures: [
+      "PPF maturity calculator with year-wise breakdown",
+      "SIP vs PPF side-by-side comparison",
+      "Pre-calculated returns table for quick reference",
+      "Tax benefit calculation under Section 80C",
+      "Mobile-friendly sliders for easy input",
+    ],
+  },
+};
