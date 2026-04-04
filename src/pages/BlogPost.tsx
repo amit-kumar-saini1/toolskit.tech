@@ -73,7 +73,7 @@ const blogPostsData: Record<string, BlogPostData> = {
 
 **Nifty 50 ने पिछले 20+ साल में औसतन 12-15% सालाना रिटर्न दिया है।** यही वजह है कि SIP experts Nifty 50 Index Fund को long-term wealth creation के लिए सबसे अच्छा मानते हैं।
 
-👉 **[Nifty 50 Live Data देखें — NSE India](https://www.nseindia.com/products-services/equity-market-indices)** (External Link)
+👉 **[Nifty 50 Live Data देखें — NSE India](https://www.nseindia.com/)** (External Link)
 
 [AD_BANNER]
 
@@ -198,7 +198,7 @@ const blogPostsData: Record<string, BlogPostData> = {
 
 **शुरुआत के लिए Nifty 50 Index Fund सबसे बेहतर है।** जब experience आ जाए तो Nifty Next 50 भी add कर सकते हैं।
 
-👉 **[NSE India पर Nifty 50 Companies की पूरी लिस्ट देखें →](https://www.nseindia.com/products-services/equity-market-indices)**
+👉 **[NSE India पर Nifty 50 Companies की पूरी लिस्ट देखें →](https://www.nseindia.com/)**
 
 ---
 
@@ -262,7 +262,7 @@ A: हाँ! NRI भी भारत में Mutual Fund SIP कर सकत
 
 👉 **[ToolsKit.tech SIP Calculator से अपना wealth plan बनाएं →](/tools/sip-calculator)**
 
-👉 **[Nifty 50 Live Performance देखें — NSE India →](https://www.nseindia.com/products-services/equity-market-indices)**
+👉 **[Nifty 50 Live Performance देखें — NSE India →](https://www.nseindia.com/)**
 
 ---
 
