@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark, PiggyBank
 } from "lucide-react";
 
 const tools = [
@@ -147,6 +147,13 @@ const tools = [
     icon: Landmark,
     path: "/tools/fd-calculator",
     color: "#7C3AED"
+  },
+  {
+    title: "PPF Calculator",
+    description: "Public Provident Fund maturity calculator",
+    icon: PiggyBank,
+    path: "/tools/ppf-calculator",
+    color: "#0D9488"
   },
 ];
 

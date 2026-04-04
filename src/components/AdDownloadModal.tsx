@@ -40,22 +40,35 @@ export const AdDownloadModal = ({
     }
   }, [isOpen]);
 
-  // Initialize AdSense after fresh <ins> is rendered and has dimensions
+  // Initialize AdSense after fresh <ins> is rendered and script is loaded
   useEffect(() => {
     if (!isOpen || adLoadedRef.current) return;
 
-    const timer = setTimeout(() => {
+    const tryPushAd = () => {
       try {
         if (adRef.current && adRef.current.offsetWidth > 0) {
           (window.adsbygoogle = window.adsbygoogle || []).push({});
           adLoadedRef.current = true;
+          return true;
         }
       } catch (e) {
         console.error("AdSense error:", e);
+        return true; // stop retrying on error
       }
-    }, 600);
+      return false;
+    };
 
-    return () => clearTimeout(timer);
+    // Retry every 500ms for up to 10 seconds to wait for AdSense script
+    let attempts = 0;
+    const maxAttempts = 20;
+    const interval = setInterval(() => {
+      attempts++;
+      if (tryPushAd() || attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 500);
+
+    return () => clearInterval(interval);
   }, [isOpen, adKey]);
 
   const handleComplete = useCallback(() => {
