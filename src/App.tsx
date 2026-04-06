@@ -92,6 +92,7 @@ const App = () => (
             <Route path="/tools/sip-calculator" element={<SIPCalculator />} />
             <Route path="/tools/fd-calculator" element={<FDCalculator />} />
             <Route path="/tools/ppf-calculator" element={<PPFCalculator />} />
+            <Route path="/tools/etsy-fee-calculator" element={<EtsyFeeCalculator />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />

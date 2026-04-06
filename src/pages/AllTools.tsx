@@ -155,6 +155,13 @@ const tools = [
     path: "/tools/ppf-calculator",
     color: "#0D9488"
   },
+  {
+    title: "Etsy Fee Calculator",
+    description: "Calculate Etsy fees & profit instantly",
+    icon: ShoppingBag,
+    path: "/tools/etsy-fee-calculator",
+    color: "#F56A00"
+  },
 ];
 
 const AllTools = () => {
