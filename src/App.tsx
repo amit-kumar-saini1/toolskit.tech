@@ -46,6 +46,7 @@ const LoanEMICalculator = lazy(() => import("./pages/tools/LoanEMICalculator"));
 const SIPCalculator = lazy(() => import("./pages/tools/SIPCalculator"));
 const FDCalculator = lazy(() => import("./pages/tools/FDCalculator"));
 const PPFCalculator = lazy(() => import("./pages/tools/PPFCalculator"));
+const EtsyFeeCalculator = lazy(() => import("./pages/tools/EtsyFeeCalculator"));
 
 const queryClient = new QueryClient();
 
@@ -91,6 +92,7 @@ const App = () => (
             <Route path="/tools/sip-calculator" element={<SIPCalculator />} />
             <Route path="/tools/fd-calculator" element={<FDCalculator />} />
             <Route path="/tools/ppf-calculator" element={<PPFCalculator />} />
+            <Route path="/tools/etsy-fee-calculator" element={<EtsyFeeCalculator />} />
             
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />

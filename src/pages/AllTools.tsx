@@ -4,7 +4,7 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark, PiggyBank
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark, PiggyBank, ShoppingBag
 } from "lucide-react";
 
 const tools = [
@@ -154,6 +154,13 @@ const tools = [
     icon: PiggyBank,
     path: "/tools/ppf-calculator",
     color: "#0D9488"
+  },
+  {
+    title: "Etsy Fee Calculator",
+    description: "Calculate Etsy fees & profit instantly",
+    icon: ShoppingBag,
+    path: "/tools/etsy-fee-calculator",
+    color: "#F56A00"
   },
 ];
 
