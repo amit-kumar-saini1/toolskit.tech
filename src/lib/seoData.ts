@@ -817,5 +817,4 @@ toolsSEO["etsy-fee-calculator"] = {
         "100% free — no signup required, instant results",
       ],
     },
-  },
 };
