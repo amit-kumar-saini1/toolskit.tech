@@ -786,7 +786,9 @@ toolsSEO["ppf-calculator"] = {
       "Mobile-friendly sliders for easy input",
     ],
   },
-  "etsy-fee-calculator": {
+};
+
+toolsSEO["etsy-fee-calculator"] = {
     title: "Etsy Fee Calculator 2026 — Calculate Etsy Fees & Profit Instantly",
     h1Title: "Etsy Fee Calculator 2026 — Know Your Exact Profit",
     h2Headings: ["Etsy Seller Fee Calculator", "Etsy Profit Margin Calculator", "Etsy Transaction Fee Breakdown", "Etsy Payment Processing Fees"],
