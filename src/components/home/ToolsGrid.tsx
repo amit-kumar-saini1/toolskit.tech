@@ -18,7 +18,8 @@ import {
     Bitcoin,
     MapPin,
     Landmark,
-    PiggyBank
+    PiggyBank,
+    ShoppingBag
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
