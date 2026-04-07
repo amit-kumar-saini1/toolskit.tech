@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 27,
+    slug: "optimize-product-images-etsy-ebay-amazon-2026",
+    title: "How to Optimize Product Images for Etsy, eBay & Amazon: Free Guide to Boost Sales (2026)",
+    excerpt: "Learn how to compress, crop, remove backgrounds, and resize product photos for Etsy, eBay, and Amazon listings — completely free. Increase clicks, rank higher, and sell more with optimized images.",
+    category: "E-commerce",
+    date: "2026-04-07",
+    readTime: "20 min read",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
+  },
+  {
     id: 26,
     slug: "sip-se-crorepati-kaise-bane-2026",
     title: "SIP से Crorepati कैसे बनें 2026 — ₹5000 Monthly SIP से करोड़पति बनने का पूरा प्लान",
