@@ -1,7 +1,6 @@
 import { useState, useMemo } from "react";
 import ToolLayout from "@/components/tools/ToolLayout";
 import { toolsSEO } from "@/lib/seoData";
-import FAQ from "@/components/FAQ";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
