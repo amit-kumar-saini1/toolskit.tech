@@ -64,6 +64,7 @@ const EtsyFeeCalculator = () => {
       title={seo.h1Title}
       description={seo.description}
       icon={ShoppingBag}
+      toolSlug="etsy-fee-calculator"
     >
       <Tabs defaultValue="calculator" className="w-full">
         <TabsList className="grid w-full grid-cols-2 mb-6">
