@@ -202,19 +202,6 @@ const EtsyFeeCalculator = () => {
         </TabsContent>
       </Tabs>
 
-      {/* SEO Content */}
-      {seo.article && (
-        <div className="mt-10 prose prose-sm max-w-none text-muted-foreground">
-          <h2 className="text-xl font-bold text-foreground">About Etsy Fee Calculator</h2>
-          <p>{seo.article.introduction}</p>
-          <h2 className="text-xl font-bold text-foreground mt-6">How to Use</h2>
-          <p className="whitespace-pre-line">{seo.article.howToUse}</p>
-          <h2 className="text-xl font-bold text-foreground mt-6">Key Features</h2>
-          <ul>{seo.article.keyFeatures.map((f, i) => <li key={i}>{f}</li>)}</ul>
-        </div>
-      )}
-
-      <FAQ faqs={seo.faqs} toolName="Etsy Fee Calculator" />
     </ToolLayout>
   );
 };
