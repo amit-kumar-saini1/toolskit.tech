@@ -787,3 +787,34 @@ toolsSEO["ppf-calculator"] = {
     ],
   },
 };
+
+toolsSEO["etsy-fee-calculator"] = {
+    title: "Etsy Fee Calculator 2026 — Calculate Etsy Fees & Profit Instantly",
+    h1Title: "Etsy Fee Calculator 2026 — Know Your Exact Profit",
+    h2Headings: ["Etsy Seller Fee Calculator", "Etsy Profit Margin Calculator", "Etsy Transaction Fee Breakdown", "Etsy Payment Processing Fees"],
+    description: "Free Etsy fee calculator 2026. Calculate listing fees, transaction fees, payment processing & profit margins instantly. Supports USD, GBP, EUR, INR, CAD, AUD for global Etsy sellers.",
+    keywords: "etsy fee calculator, etsy profit calculator, etsy fees 2026, etsy seller calculator, how much does etsy charge, etsy transaction fee, etsy listing fee, etsy payment processing fee, etsy offsite ads fee, etsy seller fees, etsy fee breakdown, etsy cost calculator, etsy pricing calculator, etsy revenue calculator, etsy commission calculator, sell on etsy fees, etsy fee structure, etsy shop fees, calculate etsy fees, etsy profit margin",
+    faqs: [
+      { question: "How much does Etsy charge per sale?", answer: "Etsy charges three main fees per sale: a $0.20 listing fee, a 6.5% transaction fee on the total sale price (including shipping), and a payment processing fee that varies by country (typically 3% + $0.25 in the US). If applicable, there's also a 15% offsite ads fee." },
+      { question: "What is Etsy's transaction fee in 2026?", answer: "Etsy's transaction fee in 2026 is 6.5% of the total order amount, which includes the item price and any shipping charges. This fee is automatically deducted from your payment." },
+      { question: "How does Etsy's listing fee work?", answer: "Etsy charges $0.20 per listing. Each listing is active for 4 months or until the item sells. When an item sells, the listing fee is charged again for renewal. Multi-quantity listings are charged once for listing but per-item for other fees." },
+      { question: "What is Etsy's offsite ads fee?", answer: "Etsy's offsite ads fee is 15% of the sale price for shops earning less than $10,000/year in revenue, and 12% for shops earning more. This fee only applies when a buyer clicks on an Etsy offsite ad (on Google, Facebook, etc.) and makes a purchase within 30 days." },
+      { question: "Does Etsy charge fees on shipping?", answer: "Yes, Etsy's 6.5% transaction fee applies to the total order amount including shipping charges. However, the listing fee does not apply to shipping." },
+      { question: "How much profit do Etsy sellers actually make?", answer: "Profit varies widely, but typical Etsy fees total about 10-15% of your sale price (before offsite ads). To calculate your exact profit, subtract Etsy fees and your item cost (materials, labor, packaging) from the sale price using our calculator above." },
+      { question: "Are Etsy fees different in different countries?", answer: "Etsy's listing fee ($0.20) and transaction fee (6.5%) are the same globally, but payment processing fees vary by country. For example, US sellers pay 3% + $0.25, UK sellers pay 4% + £0.20, and Indian sellers pay 3.45% + ₹7." },
+      { question: "Can I use this calculator for digital products on Etsy?", answer: "Yes! This calculator works for both physical and digital products. For digital products, simply set the shipping charge and item cost to 0, since there's no shipping or material cost involved." },
+    ],
+    article: {
+      introduction: "Selling on Etsy is exciting, but understanding the fee structure is crucial for pricing your products profitably. Etsy charges multiple fees including listing fees, transaction fees, payment processing fees, and optional offsite advertising fees. Our free Etsy Fee Calculator helps you instantly see exactly how much Etsy will take from each sale, so you can price your handmade items, vintage goods, or digital downloads with confidence. Whether you sell in USD, GBP, EUR, INR, or other currencies, this calculator gives you accurate, country-specific fee calculations. Stop guessing and start knowing your exact profit per sale.",
+      howToUse: "1. Select your currency (USD, GBP, EUR, INR, CAD, or AUD)\n2. Enter your item's selling price\n3. Add shipping charges (set to 0 for free shipping or digital items)\n4. Enter your item cost (materials, labor, packaging)\n5. Set the quantity if selling multiple units\n6. Toggle Offsite Ads if applicable to your shop\n7. Instantly see your net profit, margin %, and complete fee breakdown\n8. Check the Fee Breakdown tab for a quick reference table at different price points",
+      keyFeatures: [
+        "Complete Etsy 2026 fee structure — listing, transaction, processing, and offsite ads",
+        "Multi-currency support — USD, GBP, EUR, INR, CAD, AUD with country-specific processing rates",
+        "Real-time profit calculation with margin percentage",
+        "Quick reference fee table for common price points",
+        "Offsite ads toggle for accurate fee estimation",
+        "Works for physical products, digital downloads, and vintage items",
+        "100% free — no signup required, instant results",
+      ],
+    },
+};
