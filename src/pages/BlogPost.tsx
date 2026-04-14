@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
 import Footer from "@/components/layout/Footer";
 import AdBanner from "@/components/AdBanner";
 import SEO from "@/components/SEO";

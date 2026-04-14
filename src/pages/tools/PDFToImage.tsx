@@ -54,7 +54,8 @@ const PDFToImage = () => {
         await page.render({
           canvasContext: context,
           viewport: viewport,
-        }).promise;
+          canvas,
+        } as any).promise;
 
         extractedImages.push(canvas.toDataURL("image/png"));
       }
