@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
 import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
@@ -7,6 +8,16 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
+  {
+    id: 28,
+    slug: "best-investment-plans-india-2026",
+    title: "Best Investment Plans in India 2026: SIP, FD, PPF, Mutual Funds — कहाँ लगाएं पैसा? (Complete Guide)",
+    excerpt: "2026 में सबसे अच्छा Investment Plan कौन सा है? SIP, FD, PPF, Mutual Funds, Gold, NPS — सभी की तुलना, रिटर्न, और फ्री कैलकुलेटर। पैसा कहाँ लगाएं — पूरी जानकारी हिंदी में।",
+    category: "Finance",
+    date: "2026-04-13",
+    readTime: "22 min read",
+    image: blogInvestmentImage
+  },
   {
     id: 27,
     slug: "optimize-product-images-etsy-ebay-amazon-2026",
