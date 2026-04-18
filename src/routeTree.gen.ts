@@ -19,14 +19,22 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ToolsUnitConverterRouteImport } from './routes/tools.unit-converter'
 import { Route as ToolsTimeZoneConverterRouteImport } from './routes/tools.time-zone-converter'
 import { Route as ToolsTextOnPhotoRouteImport } from './routes/tools.text-on-photo'
+import { Route as ToolsSipCalculatorRouteImport } from './routes/tools.sip-calculator'
 import { Route as ToolsRemoveBackgroundRouteImport } from './routes/tools.remove-background'
 import { Route as ToolsQrGeneratorRouteImport } from './routes/tools.qr-generator'
+import { Route as ToolsPpfCalculatorRouteImport } from './routes/tools.ppf-calculator'
+import { Route as ToolsPincodeLookupRouteImport } from './routes/tools.pincode-lookup'
 import { Route as ToolsPdfToImageRouteImport } from './routes/tools.pdf-to-image'
 import { Route as ToolsNumberConverterRouteImport } from './routes/tools.number-converter'
+import { Route as ToolsLoanEmiCalculatorRouteImport } from './routes/tools.loan-emi-calculator'
 import { Route as ToolsKbConverterRouteImport } from './routes/tools.kb-converter'
 import { Route as ToolsImageToPdfRouteImport } from './routes/tools.image-to-pdf'
 import { Route as ToolsImageCropperRouteImport } from './routes/tools.image-cropper'
 import { Route as ToolsImageCompressorRouteImport } from './routes/tools.image-compressor'
+import { Route as ToolsFdCalculatorRouteImport } from './routes/tools.fd-calculator'
+import { Route as ToolsEtsyFeeCalculatorRouteImport } from './routes/tools.etsy-fee-calculator'
+import { Route as ToolsCurrencyConverterRouteImport } from './routes/tools.currency-converter'
+import { Route as ToolsCryptoConverterRouteImport } from './routes/tools.crypto-converter'
 import { Route as ToolsColorPickerRouteImport } from './routes/tools.color-picker'
 import { Route as ToolsBmiCalculatorRouteImport } from './routes/tools.bmi-calculator'
 import { Route as ToolsAgeCalculatorRouteImport } from './routes/tools.age-calculator'
@@ -82,6 +90,11 @@ const ToolsTextOnPhotoRoute = ToolsTextOnPhotoRouteImport.update({
   path: '/tools/text-on-photo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsSipCalculatorRoute = ToolsSipCalculatorRouteImport.update({
+  id: '/tools/sip-calculator',
+  path: '/tools/sip-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsRemoveBackgroundRoute = ToolsRemoveBackgroundRouteImport.update({
   id: '/tools/remove-background',
   path: '/tools/remove-background',
@@ -92,6 +105,16 @@ const ToolsQrGeneratorRoute = ToolsQrGeneratorRouteImport.update({
   path: '/tools/qr-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsPpfCalculatorRoute = ToolsPpfCalculatorRouteImport.update({
+  id: '/tools/ppf-calculator',
+  path: '/tools/ppf-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPincodeLookupRoute = ToolsPincodeLookupRouteImport.update({
+  id: '/tools/pincode-lookup',
+  path: '/tools/pincode-lookup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsPdfToImageRoute = ToolsPdfToImageRouteImport.update({
   id: '/tools/pdf-to-image',
   path: '/tools/pdf-to-image',
@@ -100,6 +123,11 @@ const ToolsPdfToImageRoute = ToolsPdfToImageRouteImport.update({
 const ToolsNumberConverterRoute = ToolsNumberConverterRouteImport.update({
   id: '/tools/number-converter',
   path: '/tools/number-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsLoanEmiCalculatorRoute = ToolsLoanEmiCalculatorRouteImport.update({
+  id: '/tools/loan-emi-calculator',
+  path: '/tools/loan-emi-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsKbConverterRoute = ToolsKbConverterRouteImport.update({
@@ -120,6 +148,26 @@ const ToolsImageCropperRoute = ToolsImageCropperRouteImport.update({
 const ToolsImageCompressorRoute = ToolsImageCompressorRouteImport.update({
   id: '/tools/image-compressor',
   path: '/tools/image-compressor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsFdCalculatorRoute = ToolsFdCalculatorRouteImport.update({
+  id: '/tools/fd-calculator',
+  path: '/tools/fd-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsEtsyFeeCalculatorRoute = ToolsEtsyFeeCalculatorRouteImport.update({
+  id: '/tools/etsy-fee-calculator',
+  path: '/tools/etsy-fee-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCurrencyConverterRoute = ToolsCurrencyConverterRouteImport.update({
+  id: '/tools/currency-converter',
+  path: '/tools/currency-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCryptoConverterRoute = ToolsCryptoConverterRouteImport.update({
+  id: '/tools/crypto-converter',
+  path: '/tools/crypto-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsColorPickerRoute = ToolsColorPickerRouteImport.update({
@@ -153,14 +201,22 @@ export interface FileRoutesByFullPath {
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
   '/tools/color-picker': typeof ToolsColorPickerRoute
+  '/tools/crypto-converter': typeof ToolsCryptoConverterRoute
+  '/tools/currency-converter': typeof ToolsCurrencyConverterRoute
+  '/tools/etsy-fee-calculator': typeof ToolsEtsyFeeCalculatorRoute
+  '/tools/fd-calculator': typeof ToolsFdCalculatorRoute
   '/tools/image-compressor': typeof ToolsImageCompressorRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
   '/tools/kb-converter': typeof ToolsKbConverterRoute
+  '/tools/loan-emi-calculator': typeof ToolsLoanEmiCalculatorRoute
   '/tools/number-converter': typeof ToolsNumberConverterRoute
   '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
+  '/tools/pincode-lookup': typeof ToolsPincodeLookupRoute
+  '/tools/ppf-calculator': typeof ToolsPpfCalculatorRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
   '/tools/remove-background': typeof ToolsRemoveBackgroundRoute
+  '/tools/sip-calculator': typeof ToolsSipCalculatorRoute
   '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
   '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
@@ -177,14 +233,22 @@ export interface FileRoutesByTo {
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
   '/tools/color-picker': typeof ToolsColorPickerRoute
+  '/tools/crypto-converter': typeof ToolsCryptoConverterRoute
+  '/tools/currency-converter': typeof ToolsCurrencyConverterRoute
+  '/tools/etsy-fee-calculator': typeof ToolsEtsyFeeCalculatorRoute
+  '/tools/fd-calculator': typeof ToolsFdCalculatorRoute
   '/tools/image-compressor': typeof ToolsImageCompressorRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
   '/tools/kb-converter': typeof ToolsKbConverterRoute
+  '/tools/loan-emi-calculator': typeof ToolsLoanEmiCalculatorRoute
   '/tools/number-converter': typeof ToolsNumberConverterRoute
   '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
+  '/tools/pincode-lookup': typeof ToolsPincodeLookupRoute
+  '/tools/ppf-calculator': typeof ToolsPpfCalculatorRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
   '/tools/remove-background': typeof ToolsRemoveBackgroundRoute
+  '/tools/sip-calculator': typeof ToolsSipCalculatorRoute
   '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
   '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
@@ -202,14 +266,22 @@ export interface FileRoutesById {
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
   '/tools/color-picker': typeof ToolsColorPickerRoute
+  '/tools/crypto-converter': typeof ToolsCryptoConverterRoute
+  '/tools/currency-converter': typeof ToolsCurrencyConverterRoute
+  '/tools/etsy-fee-calculator': typeof ToolsEtsyFeeCalculatorRoute
+  '/tools/fd-calculator': typeof ToolsFdCalculatorRoute
   '/tools/image-compressor': typeof ToolsImageCompressorRoute
   '/tools/image-cropper': typeof ToolsImageCropperRoute
   '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
   '/tools/kb-converter': typeof ToolsKbConverterRoute
+  '/tools/loan-emi-calculator': typeof ToolsLoanEmiCalculatorRoute
   '/tools/number-converter': typeof ToolsNumberConverterRoute
   '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
+  '/tools/pincode-lookup': typeof ToolsPincodeLookupRoute
+  '/tools/ppf-calculator': typeof ToolsPpfCalculatorRoute
   '/tools/qr-generator': typeof ToolsQrGeneratorRoute
   '/tools/remove-background': typeof ToolsRemoveBackgroundRoute
+  '/tools/sip-calculator': typeof ToolsSipCalculatorRoute
   '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
   '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
@@ -228,14 +300,22 @@ export interface FileRouteTypes {
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
     | '/tools/color-picker'
+    | '/tools/crypto-converter'
+    | '/tools/currency-converter'
+    | '/tools/etsy-fee-calculator'
+    | '/tools/fd-calculator'
     | '/tools/image-compressor'
     | '/tools/image-cropper'
     | '/tools/image-to-pdf'
     | '/tools/kb-converter'
+    | '/tools/loan-emi-calculator'
     | '/tools/number-converter'
     | '/tools/pdf-to-image'
+    | '/tools/pincode-lookup'
+    | '/tools/ppf-calculator'
     | '/tools/qr-generator'
     | '/tools/remove-background'
+    | '/tools/sip-calculator'
     | '/tools/text-on-photo'
     | '/tools/time-zone-converter'
     | '/tools/unit-converter'
@@ -252,14 +332,22 @@ export interface FileRouteTypes {
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
     | '/tools/color-picker'
+    | '/tools/crypto-converter'
+    | '/tools/currency-converter'
+    | '/tools/etsy-fee-calculator'
+    | '/tools/fd-calculator'
     | '/tools/image-compressor'
     | '/tools/image-cropper'
     | '/tools/image-to-pdf'
     | '/tools/kb-converter'
+    | '/tools/loan-emi-calculator'
     | '/tools/number-converter'
     | '/tools/pdf-to-image'
+    | '/tools/pincode-lookup'
+    | '/tools/ppf-calculator'
     | '/tools/qr-generator'
     | '/tools/remove-background'
+    | '/tools/sip-calculator'
     | '/tools/text-on-photo'
     | '/tools/time-zone-converter'
     | '/tools/unit-converter'
@@ -276,14 +364,22 @@ export interface FileRouteTypes {
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
     | '/tools/color-picker'
+    | '/tools/crypto-converter'
+    | '/tools/currency-converter'
+    | '/tools/etsy-fee-calculator'
+    | '/tools/fd-calculator'
     | '/tools/image-compressor'
     | '/tools/image-cropper'
     | '/tools/image-to-pdf'
     | '/tools/kb-converter'
+    | '/tools/loan-emi-calculator'
     | '/tools/number-converter'
     | '/tools/pdf-to-image'
+    | '/tools/pincode-lookup'
+    | '/tools/ppf-calculator'
     | '/tools/qr-generator'
     | '/tools/remove-background'
+    | '/tools/sip-calculator'
     | '/tools/text-on-photo'
     | '/tools/time-zone-converter'
     | '/tools/unit-converter'
@@ -301,14 +397,22 @@ export interface RootRouteChildren {
   ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
   ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
   ToolsColorPickerRoute: typeof ToolsColorPickerRoute
+  ToolsCryptoConverterRoute: typeof ToolsCryptoConverterRoute
+  ToolsCurrencyConverterRoute: typeof ToolsCurrencyConverterRoute
+  ToolsEtsyFeeCalculatorRoute: typeof ToolsEtsyFeeCalculatorRoute
+  ToolsFdCalculatorRoute: typeof ToolsFdCalculatorRoute
   ToolsImageCompressorRoute: typeof ToolsImageCompressorRoute
   ToolsImageCropperRoute: typeof ToolsImageCropperRoute
   ToolsImageToPdfRoute: typeof ToolsImageToPdfRoute
   ToolsKbConverterRoute: typeof ToolsKbConverterRoute
+  ToolsLoanEmiCalculatorRoute: typeof ToolsLoanEmiCalculatorRoute
   ToolsNumberConverterRoute: typeof ToolsNumberConverterRoute
   ToolsPdfToImageRoute: typeof ToolsPdfToImageRoute
+  ToolsPincodeLookupRoute: typeof ToolsPincodeLookupRoute
+  ToolsPpfCalculatorRoute: typeof ToolsPpfCalculatorRoute
   ToolsQrGeneratorRoute: typeof ToolsQrGeneratorRoute
   ToolsRemoveBackgroundRoute: typeof ToolsRemoveBackgroundRoute
+  ToolsSipCalculatorRoute: typeof ToolsSipCalculatorRoute
   ToolsTextOnPhotoRoute: typeof ToolsTextOnPhotoRoute
   ToolsTimeZoneConverterRoute: typeof ToolsTimeZoneConverterRoute
   ToolsUnitConverterRoute: typeof ToolsUnitConverterRoute
@@ -388,6 +492,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsTextOnPhotoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/sip-calculator': {
+      id: '/tools/sip-calculator'
+      path: '/tools/sip-calculator'
+      fullPath: '/tools/sip-calculator'
+      preLoaderRoute: typeof ToolsSipCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/remove-background': {
       id: '/tools/remove-background'
       path: '/tools/remove-background'
@@ -402,6 +513,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsQrGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/ppf-calculator': {
+      id: '/tools/ppf-calculator'
+      path: '/tools/ppf-calculator'
+      fullPath: '/tools/ppf-calculator'
+      preLoaderRoute: typeof ToolsPpfCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/pincode-lookup': {
+      id: '/tools/pincode-lookup'
+      path: '/tools/pincode-lookup'
+      fullPath: '/tools/pincode-lookup'
+      preLoaderRoute: typeof ToolsPincodeLookupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/pdf-to-image': {
       id: '/tools/pdf-to-image'
       path: '/tools/pdf-to-image'
@@ -414,6 +539,13 @@ declare module '@tanstack/react-router' {
       path: '/tools/number-converter'
       fullPath: '/tools/number-converter'
       preLoaderRoute: typeof ToolsNumberConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/loan-emi-calculator': {
+      id: '/tools/loan-emi-calculator'
+      path: '/tools/loan-emi-calculator'
+      fullPath: '/tools/loan-emi-calculator'
+      preLoaderRoute: typeof ToolsLoanEmiCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/kb-converter': {
@@ -442,6 +574,34 @@ declare module '@tanstack/react-router' {
       path: '/tools/image-compressor'
       fullPath: '/tools/image-compressor'
       preLoaderRoute: typeof ToolsImageCompressorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/fd-calculator': {
+      id: '/tools/fd-calculator'
+      path: '/tools/fd-calculator'
+      fullPath: '/tools/fd-calculator'
+      preLoaderRoute: typeof ToolsFdCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/etsy-fee-calculator': {
+      id: '/tools/etsy-fee-calculator'
+      path: '/tools/etsy-fee-calculator'
+      fullPath: '/tools/etsy-fee-calculator'
+      preLoaderRoute: typeof ToolsEtsyFeeCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/currency-converter': {
+      id: '/tools/currency-converter'
+      path: '/tools/currency-converter'
+      fullPath: '/tools/currency-converter'
+      preLoaderRoute: typeof ToolsCurrencyConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/crypto-converter': {
+      id: '/tools/crypto-converter'
+      path: '/tools/crypto-converter'
+      fullPath: '/tools/crypto-converter'
+      preLoaderRoute: typeof ToolsCryptoConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/color-picker': {
@@ -485,14 +645,22 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
   ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
   ToolsColorPickerRoute: ToolsColorPickerRoute,
+  ToolsCryptoConverterRoute: ToolsCryptoConverterRoute,
+  ToolsCurrencyConverterRoute: ToolsCurrencyConverterRoute,
+  ToolsEtsyFeeCalculatorRoute: ToolsEtsyFeeCalculatorRoute,
+  ToolsFdCalculatorRoute: ToolsFdCalculatorRoute,
   ToolsImageCompressorRoute: ToolsImageCompressorRoute,
   ToolsImageCropperRoute: ToolsImageCropperRoute,
   ToolsImageToPdfRoute: ToolsImageToPdfRoute,
   ToolsKbConverterRoute: ToolsKbConverterRoute,
+  ToolsLoanEmiCalculatorRoute: ToolsLoanEmiCalculatorRoute,
   ToolsNumberConverterRoute: ToolsNumberConverterRoute,
   ToolsPdfToImageRoute: ToolsPdfToImageRoute,
+  ToolsPincodeLookupRoute: ToolsPincodeLookupRoute,
+  ToolsPpfCalculatorRoute: ToolsPpfCalculatorRoute,
   ToolsQrGeneratorRoute: ToolsQrGeneratorRoute,
   ToolsRemoveBackgroundRoute: ToolsRemoveBackgroundRoute,
+  ToolsSipCalculatorRoute: ToolsSipCalculatorRoute,
   ToolsTextOnPhotoRoute: ToolsTextOnPhotoRoute,
   ToolsTimeZoneConverterRoute: ToolsTimeZoneConverterRoute,
   ToolsUnitConverterRoute: ToolsUnitConverterRoute,
