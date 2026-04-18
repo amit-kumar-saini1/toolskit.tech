@@ -16,6 +16,20 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as ToolsUnitConverterRouteImport } from './routes/tools.unit-converter'
+import { Route as ToolsTimeZoneConverterRouteImport } from './routes/tools.time-zone-converter'
+import { Route as ToolsTextOnPhotoRouteImport } from './routes/tools.text-on-photo'
+import { Route as ToolsRemoveBackgroundRouteImport } from './routes/tools.remove-background'
+import { Route as ToolsQrGeneratorRouteImport } from './routes/tools.qr-generator'
+import { Route as ToolsPdfToImageRouteImport } from './routes/tools.pdf-to-image'
+import { Route as ToolsNumberConverterRouteImport } from './routes/tools.number-converter'
+import { Route as ToolsKbConverterRouteImport } from './routes/tools.kb-converter'
+import { Route as ToolsImageToPdfRouteImport } from './routes/tools.image-to-pdf'
+import { Route as ToolsImageCropperRouteImport } from './routes/tools.image-cropper'
+import { Route as ToolsImageCompressorRouteImport } from './routes/tools.image-compressor'
+import { Route as ToolsColorPickerRouteImport } from './routes/tools.color-picker'
+import { Route as ToolsBmiCalculatorRouteImport } from './routes/tools.bmi-calculator'
+import { Route as ToolsAgeCalculatorRouteImport } from './routes/tools.age-calculator'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TermsRoute = TermsRouteImport.update({
@@ -53,6 +67,76 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsUnitConverterRoute = ToolsUnitConverterRouteImport.update({
+  id: '/tools/unit-converter',
+  path: '/tools/unit-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsTimeZoneConverterRoute = ToolsTimeZoneConverterRouteImport.update({
+  id: '/tools/time-zone-converter',
+  path: '/tools/time-zone-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsTextOnPhotoRoute = ToolsTextOnPhotoRouteImport.update({
+  id: '/tools/text-on-photo',
+  path: '/tools/text-on-photo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRemoveBackgroundRoute = ToolsRemoveBackgroundRouteImport.update({
+  id: '/tools/remove-background',
+  path: '/tools/remove-background',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsQrGeneratorRoute = ToolsQrGeneratorRouteImport.update({
+  id: '/tools/qr-generator',
+  path: '/tools/qr-generator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsPdfToImageRoute = ToolsPdfToImageRouteImport.update({
+  id: '/tools/pdf-to-image',
+  path: '/tools/pdf-to-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsNumberConverterRoute = ToolsNumberConverterRouteImport.update({
+  id: '/tools/number-converter',
+  path: '/tools/number-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsKbConverterRoute = ToolsKbConverterRouteImport.update({
+  id: '/tools/kb-converter',
+  path: '/tools/kb-converter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageToPdfRoute = ToolsImageToPdfRouteImport.update({
+  id: '/tools/image-to-pdf',
+  path: '/tools/image-to-pdf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageCropperRoute = ToolsImageCropperRouteImport.update({
+  id: '/tools/image-cropper',
+  path: '/tools/image-cropper',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsImageCompressorRoute = ToolsImageCompressorRouteImport.update({
+  id: '/tools/image-compressor',
+  path: '/tools/image-compressor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsColorPickerRoute = ToolsColorPickerRouteImport.update({
+  id: '/tools/color-picker',
+  path: '/tools/color-picker',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsBmiCalculatorRoute = ToolsBmiCalculatorRouteImport.update({
+  id: '/tools/bmi-calculator',
+  path: '/tools/bmi-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsAgeCalculatorRoute = ToolsAgeCalculatorRouteImport.update({
+  id: '/tools/age-calculator',
+  path: '/tools/age-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog/$slug',
   path: '/blog/$slug',
@@ -66,6 +150,20 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
+  '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
+  '/tools/color-picker': typeof ToolsColorPickerRoute
+  '/tools/image-compressor': typeof ToolsImageCompressorRoute
+  '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
+  '/tools/kb-converter': typeof ToolsKbConverterRoute
+  '/tools/number-converter': typeof ToolsNumberConverterRoute
+  '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
+  '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/remove-background': typeof ToolsRemoveBackgroundRoute
+  '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
+  '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
+  '/tools/unit-converter': typeof ToolsUnitConverterRoute
   '/blog/': typeof BlogIndexRoute
   '/tools/': typeof ToolsIndexRoute
 }
@@ -76,6 +174,20 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
+  '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
+  '/tools/color-picker': typeof ToolsColorPickerRoute
+  '/tools/image-compressor': typeof ToolsImageCompressorRoute
+  '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
+  '/tools/kb-converter': typeof ToolsKbConverterRoute
+  '/tools/number-converter': typeof ToolsNumberConverterRoute
+  '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
+  '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/remove-background': typeof ToolsRemoveBackgroundRoute
+  '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
+  '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
+  '/tools/unit-converter': typeof ToolsUnitConverterRoute
   '/blog': typeof BlogIndexRoute
   '/tools': typeof ToolsIndexRoute
 }
@@ -87,6 +199,20 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
+  '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
+  '/tools/color-picker': typeof ToolsColorPickerRoute
+  '/tools/image-compressor': typeof ToolsImageCompressorRoute
+  '/tools/image-cropper': typeof ToolsImageCropperRoute
+  '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
+  '/tools/kb-converter': typeof ToolsKbConverterRoute
+  '/tools/number-converter': typeof ToolsNumberConverterRoute
+  '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
+  '/tools/qr-generator': typeof ToolsQrGeneratorRoute
+  '/tools/remove-background': typeof ToolsRemoveBackgroundRoute
+  '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
+  '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
+  '/tools/unit-converter': typeof ToolsUnitConverterRoute
   '/blog/': typeof BlogIndexRoute
   '/tools/': typeof ToolsIndexRoute
 }
@@ -99,6 +225,20 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/terms'
     | '/blog/$slug'
+    | '/tools/age-calculator'
+    | '/tools/bmi-calculator'
+    | '/tools/color-picker'
+    | '/tools/image-compressor'
+    | '/tools/image-cropper'
+    | '/tools/image-to-pdf'
+    | '/tools/kb-converter'
+    | '/tools/number-converter'
+    | '/tools/pdf-to-image'
+    | '/tools/qr-generator'
+    | '/tools/remove-background'
+    | '/tools/text-on-photo'
+    | '/tools/time-zone-converter'
+    | '/tools/unit-converter'
     | '/blog/'
     | '/tools/'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +249,20 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/terms'
     | '/blog/$slug'
+    | '/tools/age-calculator'
+    | '/tools/bmi-calculator'
+    | '/tools/color-picker'
+    | '/tools/image-compressor'
+    | '/tools/image-cropper'
+    | '/tools/image-to-pdf'
+    | '/tools/kb-converter'
+    | '/tools/number-converter'
+    | '/tools/pdf-to-image'
+    | '/tools/qr-generator'
+    | '/tools/remove-background'
+    | '/tools/text-on-photo'
+    | '/tools/time-zone-converter'
+    | '/tools/unit-converter'
     | '/blog'
     | '/tools'
   id:
@@ -119,6 +273,20 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/terms'
     | '/blog/$slug'
+    | '/tools/age-calculator'
+    | '/tools/bmi-calculator'
+    | '/tools/color-picker'
+    | '/tools/image-compressor'
+    | '/tools/image-cropper'
+    | '/tools/image-to-pdf'
+    | '/tools/kb-converter'
+    | '/tools/number-converter'
+    | '/tools/pdf-to-image'
+    | '/tools/qr-generator'
+    | '/tools/remove-background'
+    | '/tools/text-on-photo'
+    | '/tools/time-zone-converter'
+    | '/tools/unit-converter'
     | '/blog/'
     | '/tools/'
   fileRoutesById: FileRoutesById
@@ -130,6 +298,20 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
+  ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
+  ToolsColorPickerRoute: typeof ToolsColorPickerRoute
+  ToolsImageCompressorRoute: typeof ToolsImageCompressorRoute
+  ToolsImageCropperRoute: typeof ToolsImageCropperRoute
+  ToolsImageToPdfRoute: typeof ToolsImageToPdfRoute
+  ToolsKbConverterRoute: typeof ToolsKbConverterRoute
+  ToolsNumberConverterRoute: typeof ToolsNumberConverterRoute
+  ToolsPdfToImageRoute: typeof ToolsPdfToImageRoute
+  ToolsQrGeneratorRoute: typeof ToolsQrGeneratorRoute
+  ToolsRemoveBackgroundRoute: typeof ToolsRemoveBackgroundRoute
+  ToolsTextOnPhotoRoute: typeof ToolsTextOnPhotoRoute
+  ToolsTimeZoneConverterRoute: typeof ToolsTimeZoneConverterRoute
+  ToolsUnitConverterRoute: typeof ToolsUnitConverterRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
 }
@@ -185,6 +367,104 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/unit-converter': {
+      id: '/tools/unit-converter'
+      path: '/tools/unit-converter'
+      fullPath: '/tools/unit-converter'
+      preLoaderRoute: typeof ToolsUnitConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/time-zone-converter': {
+      id: '/tools/time-zone-converter'
+      path: '/tools/time-zone-converter'
+      fullPath: '/tools/time-zone-converter'
+      preLoaderRoute: typeof ToolsTimeZoneConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/text-on-photo': {
+      id: '/tools/text-on-photo'
+      path: '/tools/text-on-photo'
+      fullPath: '/tools/text-on-photo'
+      preLoaderRoute: typeof ToolsTextOnPhotoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/remove-background': {
+      id: '/tools/remove-background'
+      path: '/tools/remove-background'
+      fullPath: '/tools/remove-background'
+      preLoaderRoute: typeof ToolsRemoveBackgroundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/qr-generator': {
+      id: '/tools/qr-generator'
+      path: '/tools/qr-generator'
+      fullPath: '/tools/qr-generator'
+      preLoaderRoute: typeof ToolsQrGeneratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/pdf-to-image': {
+      id: '/tools/pdf-to-image'
+      path: '/tools/pdf-to-image'
+      fullPath: '/tools/pdf-to-image'
+      preLoaderRoute: typeof ToolsPdfToImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/number-converter': {
+      id: '/tools/number-converter'
+      path: '/tools/number-converter'
+      fullPath: '/tools/number-converter'
+      preLoaderRoute: typeof ToolsNumberConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/kb-converter': {
+      id: '/tools/kb-converter'
+      path: '/tools/kb-converter'
+      fullPath: '/tools/kb-converter'
+      preLoaderRoute: typeof ToolsKbConverterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-to-pdf': {
+      id: '/tools/image-to-pdf'
+      path: '/tools/image-to-pdf'
+      fullPath: '/tools/image-to-pdf'
+      preLoaderRoute: typeof ToolsImageToPdfRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-cropper': {
+      id: '/tools/image-cropper'
+      path: '/tools/image-cropper'
+      fullPath: '/tools/image-cropper'
+      preLoaderRoute: typeof ToolsImageCropperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/image-compressor': {
+      id: '/tools/image-compressor'
+      path: '/tools/image-compressor'
+      fullPath: '/tools/image-compressor'
+      preLoaderRoute: typeof ToolsImageCompressorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/color-picker': {
+      id: '/tools/color-picker'
+      path: '/tools/color-picker'
+      fullPath: '/tools/color-picker'
+      preLoaderRoute: typeof ToolsColorPickerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/bmi-calculator': {
+      id: '/tools/bmi-calculator'
+      path: '/tools/bmi-calculator'
+      fullPath: '/tools/bmi-calculator'
+      preLoaderRoute: typeof ToolsBmiCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/age-calculator': {
+      id: '/tools/age-calculator'
+      path: '/tools/age-calculator'
+      fullPath: '/tools/age-calculator'
+      preLoaderRoute: typeof ToolsAgeCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/blog/$slug'
@@ -202,9 +482,32 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
+  ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
+  ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
+  ToolsColorPickerRoute: ToolsColorPickerRoute,
+  ToolsImageCompressorRoute: ToolsImageCompressorRoute,
+  ToolsImageCropperRoute: ToolsImageCropperRoute,
+  ToolsImageToPdfRoute: ToolsImageToPdfRoute,
+  ToolsKbConverterRoute: ToolsKbConverterRoute,
+  ToolsNumberConverterRoute: ToolsNumberConverterRoute,
+  ToolsPdfToImageRoute: ToolsPdfToImageRoute,
+  ToolsQrGeneratorRoute: ToolsQrGeneratorRoute,
+  ToolsRemoveBackgroundRoute: ToolsRemoveBackgroundRoute,
+  ToolsTextOnPhotoRoute: ToolsTextOnPhotoRoute,
+  ToolsTimeZoneConverterRoute: ToolsTimeZoneConverterRoute,
+  ToolsUnitConverterRoute: ToolsUnitConverterRoute,
   BlogIndexRoute: BlogIndexRoute,
   ToolsIndexRoute: ToolsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
