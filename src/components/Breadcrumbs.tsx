@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@tanstack/react-router";
 import { ChevronRight, Home } from "lucide-react";
 
 interface BreadcrumbItem {
@@ -12,7 +12,7 @@ const Breadcrumbs = () => {
 
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const breadcrumbs: BreadcrumbItem[] = [{ label: "Home", path: "/" }];
-    
+
     let currentPath = "";
     pathnames.forEach((segment) => {
       currentPath += `/${segment}`;
@@ -32,21 +32,22 @@ const Breadcrumbs = () => {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": breadcrumbs.map((crumb, index) => ({
+    itemListElement: breadcrumbs.map((crumb, index) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "name": crumb.label,
-      "item": `https://toolskit.tech${crumb.path}`
-    }))
+      position: index + 1,
+      name: crumb.label,
+      item: `https://toolskit.tech${crumb.path}`,
+    })),
   };
 
   if (pathnames.length === 0) return null;
 
   return (
     <>
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <nav aria-label="Breadcrumb" className="mb-4">
         <ol className="flex items-center flex-wrap gap-1 text-sm text-muted-foreground">
           {breadcrumbs.map((crumb, index) => (

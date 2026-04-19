@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { Wrench, Menu, X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -53,36 +53,36 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 glass-card border-b border-border/50 p-4 animate-slide-up">
           <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              to="/tools" 
+            <Link
+              to="/tools"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               All Tools
             </Link>
-            <Link 
-              to="/blog" 
+            <Link
+              to="/blog"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
-            <a 
-              href="#donate" 
+            <a
+              href="#donate"
               className="flex items-center gap-1.5 text-sm font-medium text-destructive hover:text-destructive/80 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
