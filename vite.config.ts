@@ -12,23 +12,6 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     target: "es2022",
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          "vendor-react": ["react", "react-dom", "react-router-dom"],
-          "vendor-ui": [
-            "@radix-ui/react-dialog",
-            "@radix-ui/react-tooltip",
-            "@radix-ui/react-popover",
-            "@radix-ui/react-select",
-            "@radix-ui/react-tabs",
-            "@radix-ui/react-accordion",
-          ],
-          "vendor-pdf": ["jspdf", "pdfjs-dist"],
-          "vendor-qr": ["qrcode"],
-        },
-      },
-    },
     chunkSizeWarningLimit: 600,
     minify: "esbuild",
     cssCodeSplit: true,
