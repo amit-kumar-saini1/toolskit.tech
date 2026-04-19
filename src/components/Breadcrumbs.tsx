@@ -1,4 +1,4 @@
-import { Link, useLocation } from "@tanstack/react-router";
+import { useLocation } from "@tanstack/react-router";
 import { ChevronRight, Home } from "lucide-react";
 
 interface BreadcrumbItem {
@@ -58,13 +58,13 @@ const Breadcrumbs = () => {
                   {crumb.label}
                 </span>
               ) : (
-                <Link
-                  to={crumb.path}
+                <a
+                  href={crumb.path}
                   className="hover:text-primary transition-colors flex items-center gap-1"
                 >
                   {index === 0 && <Home className="w-3.5 h-3.5" />}
                   {crumb.label}
-                </Link>
+                </a>
               )}
             </li>
           ))}

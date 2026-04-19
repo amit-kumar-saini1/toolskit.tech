@@ -80,49 +80,33 @@ const DonateSection = () => {
   );
 };
 
+// NOTE (Phase 1): Non-home routes Phase 2 me banenge — tab tak plain <a>.
 const Footer = () => {
   const toolCategories = [
-    { name: "Image Tools", to: "/tools", search: { category: "image" } },
-    { name: "PDF Tools", to: "/tools", search: { category: "pdf" } },
-    { name: "Calculators", to: "/tools", search: { category: "calculator" } },
-    { name: "Utilities", to: "/tools", search: { category: "utility" } },
-  ] as const;
+    { name: "Image Tools", href: "/tools?category=image" },
+    { name: "PDF Tools", href: "/tools?category=pdf" },
+    { name: "Calculators", href: "/tools?category=calculator" },
+    { name: "Utilities", href: "/tools?category=utility" },
+  ];
 
   const quickLinks = [
-    { name: "About Us", to: "/about" },
-    { name: "Privacy Policy", to: "/privacy" },
-    { name: "Terms of Service", to: "/terms" },
-    { name: "Contact", to: "/contact" },
-  ] as const;
-
-  return (
-    <footer className="bg-card border-t border-border mt-8 sm:mt-16" role="contentinfo">
-      <div className="container px-3 sm:px-4 lg:px-8 py-8 sm:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-          <div className="col-span-2 md:col-span-1 space-y-3">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Wrench className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
-              </div>
-              <span className="text-lg sm:text-xl font-bold gradient-text">ToolsKit.tech</span>
-            </Link>
-            <p className="text-xs sm:text-sm text-muted-foreground">
-              Your all-in-one toolkit for everyday tasks. Fast, free, and easy to use.
-            </p>
-          </div>
-
+    { name: "About Us", href: "/about" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Contact", href: "/contact" },
+  ];
+...
           <nav aria-label="Tool categories">
             <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Tool Categories</h3>
             <ul className="space-y-1.5 sm:space-y-2">
               {toolCategories.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.to}
-                    search={link.search}
+                  <a
+                    href={link.href}
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -133,12 +117,12 @@ const Footer = () => {
             <ul className="space-y-1.5 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.to}
+                  <a
+                    href={link.href}
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
