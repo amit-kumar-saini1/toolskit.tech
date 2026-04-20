@@ -30,6 +30,9 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      // Migration shim: legacy pages still import from "react-router-dom".
+      // Resolve them to a TanStack Router-backed compat layer.
+      "react-router-dom": path.resolve(__dirname, "./src/lib/router-compat.tsx"),
     },
   },
 }));
