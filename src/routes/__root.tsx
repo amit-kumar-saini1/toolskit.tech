@@ -6,6 +6,9 @@ import {
   Scripts,
   createRootRoute,
 } from "@tanstack/react-router";
+import { HelmetProvider } from "react-helmet-async";
+import AppProviders from "@/App";
+import ScrollToTop from "@/components/ScrollToTop";
 import "@/index.css";
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
@@ -15,7 +18,12 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <HelmetProvider>
+          <AppProviders>
+            <ScrollToTop />
+            {children}
+          </AppProviders>
+        </HelmetProvider>
         <Scripts />
       </body>
     </html>
@@ -28,6 +36,14 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "ToolsKit.tech – Free Online Tools" },
+      {
+        name: "description",
+        content:
+          "ToolsKit.tech offers 50+ free online tools: PDF converter, image compressor, background remover, QR generator and more. No signup required.",
+      },
+    ],
+    links: [
+      { rel: "icon", href: "/favicon.ico" },
     ],
   }),
   component: () => (
