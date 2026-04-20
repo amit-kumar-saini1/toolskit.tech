@@ -80,20 +80,19 @@ const DonateSection = () => {
   );
 };
 
-// NOTE (Phase 1): Non-home routes Phase 2 me banenge — tab tak plain <a>.
 const Footer = () => {
-  const toolCategories = [
-    { name: "Image Tools", href: "/tools?category=image" },
-    { name: "PDF Tools", href: "/tools?category=pdf" },
-    { name: "Calculators", href: "/tools?category=calculator" },
-    { name: "Utilities", href: "/tools?category=utility" },
+  const toolCategories: { name: string; to: string }[] = [
+    { name: "All Image Tools", to: "/tools" },
+    { name: "All PDF Tools", to: "/tools" },
+    { name: "All Calculators", to: "/tools" },
+    { name: "All Tools", to: "/tools" },
   ];
 
-  const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Contact", href: "/contact" },
+  const quickLinks: { name: string; to: string }[] = [
+    { name: "About Us", to: "/about" },
+    { name: "Privacy Policy", to: "/privacy" },
+    { name: "Terms of Service", to: "/terms" },
+    { name: "Contact", to: "/contact" },
   ];
 
   return (
@@ -117,12 +116,12 @@ const Footer = () => {
             <ul className="space-y-1.5 sm:space-y-2">
               {toolCategories.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.to}
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -133,12 +132,12 @@ const Footer = () => {
             <ul className="space-y-1.5 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.to}
                     className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
