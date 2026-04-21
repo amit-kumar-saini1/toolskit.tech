@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import AllTools from "@/pages/AllTools";
 
-export const Route = createFileRoute("/tools")({
+export const Route = createFileRoute("/tools/")({
   head: () => ({
     meta: [
       { title: "All Free Online Tools – ToolsKit.tech" },
