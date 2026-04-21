@@ -13,11 +13,11 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ToolsUnitConverterRouteImport } from './routes/tools.unit-converter'
 import { Route as ToolsTimeZoneConverterRouteImport } from './routes/tools.time-zone-converter'
 import { Route as ToolsTextOnPhotoRouteImport } from './routes/tools.text-on-photo'
@@ -62,11 +62,6 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -85,6 +80,11 @@ const IndexRoute = IndexRouteImport.update({
 const ToolsIndexRoute = ToolsIndexRouteImport.update({
   id: '/tools/',
   path: '/tools/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsUnitConverterRoute = ToolsUnitConverterRouteImport.update({
@@ -207,7 +207,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -235,13 +234,13 @@ export interface FileRoutesByFullPath {
   '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
   '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
+  '/blog/': typeof BlogIndexRoute
   '/tools/': typeof ToolsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -269,6 +268,7 @@ export interface FileRoutesByTo {
   '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
   '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
+  '/blog': typeof BlogIndexRoute
   '/tools': typeof ToolsIndexRoute
 }
 export interface FileRoutesById {
@@ -276,7 +276,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -304,6 +303,7 @@ export interface FileRoutesById {
   '/tools/text-on-photo': typeof ToolsTextOnPhotoRoute
   '/tools/time-zone-converter': typeof ToolsTimeZoneConverterRoute
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
+  '/blog/': typeof BlogIndexRoute
   '/tools/': typeof ToolsIndexRoute
 }
 export interface FileRouteTypes {
@@ -312,7 +312,6 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/privacy'
     | '/sitemap.xml'
@@ -340,13 +339,13 @@ export interface FileRouteTypes {
     | '/tools/text-on-photo'
     | '/tools/time-zone-converter'
     | '/tools/unit-converter'
+    | '/blog/'
     | '/tools/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/$'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/privacy'
     | '/sitemap.xml'
@@ -374,13 +373,13 @@ export interface FileRouteTypes {
     | '/tools/text-on-photo'
     | '/tools/time-zone-converter'
     | '/tools/unit-converter'
+    | '/blog'
     | '/tools'
   id:
     | '__root__'
     | '/'
     | '/$'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/privacy'
     | '/sitemap.xml'
@@ -408,6 +407,7 @@ export interface FileRouteTypes {
     | '/tools/text-on-photo'
     | '/tools/time-zone-converter'
     | '/tools/unit-converter'
+    | '/blog/'
     | '/tools/'
   fileRoutesById: FileRoutesById
 }
@@ -415,7 +415,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -442,6 +441,7 @@ export interface RootRouteChildren {
   ToolsTextOnPhotoRoute: typeof ToolsTextOnPhotoRoute
   ToolsTimeZoneConverterRoute: typeof ToolsTimeZoneConverterRoute
   ToolsUnitConverterRoute: typeof ToolsUnitConverterRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
 }
 
@@ -475,13 +475,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -508,6 +501,13 @@ declare module '@tanstack/react-router' {
       path: '/tools'
       fullPath: '/tools/'
       preLoaderRoute: typeof ToolsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tools/unit-converter': {
@@ -674,21 +674,10 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface BlogRouteChildren {
-  BlogSlugRoute: typeof BlogSlugRoute
-}
-
-const BlogRouteChildren: BlogRouteChildren = {
-  BlogSlugRoute: BlogSlugRoute,
-}
-
-const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
-  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -715,6 +704,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsTextOnPhotoRoute: ToolsTextOnPhotoRoute,
   ToolsTimeZoneConverterRoute: ToolsTimeZoneConverterRoute,
   ToolsUnitConverterRoute: ToolsUnitConverterRoute,
+  BlogIndexRoute: BlogIndexRoute,
   ToolsIndexRoute: ToolsIndexRoute,
 }
 export const routeTree = rootRouteImport

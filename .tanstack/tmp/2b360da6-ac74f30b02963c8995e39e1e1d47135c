@@ -28,7 +28,7 @@ const blogStructuredData = {
   })),
 };
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => {
     const base = buildPageHead({
       title: "Blog – Tips & Tutorials for Free Online Tools | ToolsKit.tech",
