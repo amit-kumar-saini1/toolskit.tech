@@ -6,7 +6,6 @@ import {
   Scripts,
   createRootRoute,
 } from "@tanstack/react-router";
-import { HelmetProvider } from "react-helmet-async";
 import AppProviders from "@/App";
 import ScrollToTop from "@/components/ScrollToTop";
 import "@/index.css";
@@ -18,12 +17,10 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        <HelmetProvider>
-          <AppProviders>
-            <ScrollToTop />
-            {children}
-          </AppProviders>
-        </HelmetProvider>
+        <AppProviders>
+          <ScrollToTop />
+          {children}
+        </AppProviders>
         <Scripts />
       </body>
     </html>

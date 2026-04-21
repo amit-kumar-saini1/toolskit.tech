@@ -1,10 +1,6 @@
-import { createRoot } from "react-dom/client";
-import { HelmetProvider } from "react-helmet-async";
-import App from "./App.tsx";
-import "./index.css";
-
-createRoot(document.getElementById("root")!).render(
-  <HelmetProvider>
-    <App />
-  </HelmetProvider>
-);
+/**
+ * Legacy SPA entry — TanStack Start now boots via its own SSR/CSR entry
+ * (see src/router.tsx and src/routes/__root.tsx). Kept as a no-op so that
+ * any stale reference in index.html does not crash the build.
+ */
+export {};

@@ -88,114 +88,114 @@ const ToolsIndexRoute = ToolsIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsUnitConverterRoute = ToolsUnitConverterRouteImport.update({
-  id: '/tools/unit-converter',
-  path: '/tools/unit-converter',
-  getParentRoute: () => rootRouteImport,
+  id: '/unit-converter',
+  path: '/unit-converter',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsTimeZoneConverterRoute = ToolsTimeZoneConverterRouteImport.update({
-  id: '/tools/time-zone-converter',
-  path: '/tools/time-zone-converter',
-  getParentRoute: () => rootRouteImport,
+  id: '/time-zone-converter',
+  path: '/time-zone-converter',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsTextOnPhotoRoute = ToolsTextOnPhotoRouteImport.update({
-  id: '/tools/text-on-photo',
-  path: '/tools/text-on-photo',
-  getParentRoute: () => rootRouteImport,
+  id: '/text-on-photo',
+  path: '/text-on-photo',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsSipCalculatorRoute = ToolsSipCalculatorRouteImport.update({
-  id: '/tools/sip-calculator',
-  path: '/tools/sip-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/sip-calculator',
+  path: '/sip-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsRemoveBackgroundRoute = ToolsRemoveBackgroundRouteImport.update({
-  id: '/tools/remove-background',
-  path: '/tools/remove-background',
-  getParentRoute: () => rootRouteImport,
+  id: '/remove-background',
+  path: '/remove-background',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsQrGeneratorRoute = ToolsQrGeneratorRouteImport.update({
-  id: '/tools/qr-generator',
-  path: '/tools/qr-generator',
-  getParentRoute: () => rootRouteImport,
+  id: '/qr-generator',
+  path: '/qr-generator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsPpfCalculatorRoute = ToolsPpfCalculatorRouteImport.update({
-  id: '/tools/ppf-calculator',
-  path: '/tools/ppf-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/ppf-calculator',
+  path: '/ppf-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsPincodeLookupRoute = ToolsPincodeLookupRouteImport.update({
-  id: '/tools/pincode-lookup',
-  path: '/tools/pincode-lookup',
-  getParentRoute: () => rootRouteImport,
+  id: '/pincode-lookup',
+  path: '/pincode-lookup',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsPdfToImageRoute = ToolsPdfToImageRouteImport.update({
-  id: '/tools/pdf-to-image',
-  path: '/tools/pdf-to-image',
-  getParentRoute: () => rootRouteImport,
+  id: '/pdf-to-image',
+  path: '/pdf-to-image',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsNumberConverterRoute = ToolsNumberConverterRouteImport.update({
-  id: '/tools/number-converter',
-  path: '/tools/number-converter',
-  getParentRoute: () => rootRouteImport,
+  id: '/number-converter',
+  path: '/number-converter',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsLoanEmiCalculatorRoute = ToolsLoanEmiCalculatorRouteImport.update({
-  id: '/tools/loan-emi-calculator',
-  path: '/tools/loan-emi-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/loan-emi-calculator',
+  path: '/loan-emi-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsKbConverterRoute = ToolsKbConverterRouteImport.update({
-  id: '/tools/kb-converter',
-  path: '/tools/kb-converter',
-  getParentRoute: () => rootRouteImport,
+  id: '/kb-converter',
+  path: '/kb-converter',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsImageToPdfRoute = ToolsImageToPdfRouteImport.update({
-  id: '/tools/image-to-pdf',
-  path: '/tools/image-to-pdf',
-  getParentRoute: () => rootRouteImport,
+  id: '/image-to-pdf',
+  path: '/image-to-pdf',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsImageCropperRoute = ToolsImageCropperRouteImport.update({
-  id: '/tools/image-cropper',
-  path: '/tools/image-cropper',
-  getParentRoute: () => rootRouteImport,
+  id: '/image-cropper',
+  path: '/image-cropper',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsImageCompressorRoute = ToolsImageCompressorRouteImport.update({
-  id: '/tools/image-compressor',
-  path: '/tools/image-compressor',
-  getParentRoute: () => rootRouteImport,
+  id: '/image-compressor',
+  path: '/image-compressor',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsFdCalculatorRoute = ToolsFdCalculatorRouteImport.update({
-  id: '/tools/fd-calculator',
-  path: '/tools/fd-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/fd-calculator',
+  path: '/fd-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsEtsyFeeCalculatorRoute = ToolsEtsyFeeCalculatorRouteImport.update({
-  id: '/tools/etsy-fee-calculator',
-  path: '/tools/etsy-fee-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/etsy-fee-calculator',
+  path: '/etsy-fee-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsCurrencyConverterRoute = ToolsCurrencyConverterRouteImport.update({
-  id: '/tools/currency-converter',
-  path: '/tools/currency-converter',
-  getParentRoute: () => rootRouteImport,
+  id: '/currency-converter',
+  path: '/currency-converter',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsCryptoConverterRoute = ToolsCryptoConverterRouteImport.update({
-  id: '/tools/crypto-converter',
-  path: '/tools/crypto-converter',
-  getParentRoute: () => rootRouteImport,
+  id: '/crypto-converter',
+  path: '/crypto-converter',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsColorPickerRoute = ToolsColorPickerRouteImport.update({
-  id: '/tools/color-picker',
-  path: '/tools/color-picker',
-  getParentRoute: () => rootRouteImport,
+  id: '/color-picker',
+  path: '/color-picker',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsBmiCalculatorRoute = ToolsBmiCalculatorRouteImport.update({
-  id: '/tools/bmi-calculator',
-  path: '/tools/bmi-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/bmi-calculator',
+  path: '/bmi-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const ToolsAgeCalculatorRoute = ToolsAgeCalculatorRouteImport.update({
-  id: '/tools/age-calculator',
-  path: '/tools/age-calculator',
-  getParentRoute: () => rootRouteImport,
+  id: '/age-calculator',
+  path: '/age-calculator',
+  getParentRoute: () => ToolsRoute,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
@@ -420,28 +420,6 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
-  ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
-  ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
-  ToolsColorPickerRoute: typeof ToolsColorPickerRoute
-  ToolsCryptoConverterRoute: typeof ToolsCryptoConverterRoute
-  ToolsCurrencyConverterRoute: typeof ToolsCurrencyConverterRoute
-  ToolsEtsyFeeCalculatorRoute: typeof ToolsEtsyFeeCalculatorRoute
-  ToolsFdCalculatorRoute: typeof ToolsFdCalculatorRoute
-  ToolsImageCompressorRoute: typeof ToolsImageCompressorRoute
-  ToolsImageCropperRoute: typeof ToolsImageCropperRoute
-  ToolsImageToPdfRoute: typeof ToolsImageToPdfRoute
-  ToolsKbConverterRoute: typeof ToolsKbConverterRoute
-  ToolsLoanEmiCalculatorRoute: typeof ToolsLoanEmiCalculatorRoute
-  ToolsNumberConverterRoute: typeof ToolsNumberConverterRoute
-  ToolsPdfToImageRoute: typeof ToolsPdfToImageRoute
-  ToolsPincodeLookupRoute: typeof ToolsPincodeLookupRoute
-  ToolsPpfCalculatorRoute: typeof ToolsPpfCalculatorRoute
-  ToolsQrGeneratorRoute: typeof ToolsQrGeneratorRoute
-  ToolsRemoveBackgroundRoute: typeof ToolsRemoveBackgroundRoute
-  ToolsSipCalculatorRoute: typeof ToolsSipCalculatorRoute
-  ToolsTextOnPhotoRoute: typeof ToolsTextOnPhotoRoute
-  ToolsTimeZoneConverterRoute: typeof ToolsTimeZoneConverterRoute
-  ToolsUnitConverterRoute: typeof ToolsUnitConverterRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
 }
 
@@ -512,157 +490,157 @@ declare module '@tanstack/react-router' {
     }
     '/tools/unit-converter': {
       id: '/tools/unit-converter'
-      path: '/tools/unit-converter'
+      path: '/unit-converter'
       fullPath: '/tools/unit-converter'
       preLoaderRoute: typeof ToolsUnitConverterRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/time-zone-converter': {
       id: '/tools/time-zone-converter'
-      path: '/tools/time-zone-converter'
+      path: '/time-zone-converter'
       fullPath: '/tools/time-zone-converter'
       preLoaderRoute: typeof ToolsTimeZoneConverterRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/text-on-photo': {
       id: '/tools/text-on-photo'
-      path: '/tools/text-on-photo'
+      path: '/text-on-photo'
       fullPath: '/tools/text-on-photo'
       preLoaderRoute: typeof ToolsTextOnPhotoRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/sip-calculator': {
       id: '/tools/sip-calculator'
-      path: '/tools/sip-calculator'
+      path: '/sip-calculator'
       fullPath: '/tools/sip-calculator'
       preLoaderRoute: typeof ToolsSipCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/remove-background': {
       id: '/tools/remove-background'
-      path: '/tools/remove-background'
+      path: '/remove-background'
       fullPath: '/tools/remove-background'
       preLoaderRoute: typeof ToolsRemoveBackgroundRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/qr-generator': {
       id: '/tools/qr-generator'
-      path: '/tools/qr-generator'
+      path: '/qr-generator'
       fullPath: '/tools/qr-generator'
       preLoaderRoute: typeof ToolsQrGeneratorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/ppf-calculator': {
       id: '/tools/ppf-calculator'
-      path: '/tools/ppf-calculator'
+      path: '/ppf-calculator'
       fullPath: '/tools/ppf-calculator'
       preLoaderRoute: typeof ToolsPpfCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/pincode-lookup': {
       id: '/tools/pincode-lookup'
-      path: '/tools/pincode-lookup'
+      path: '/pincode-lookup'
       fullPath: '/tools/pincode-lookup'
       preLoaderRoute: typeof ToolsPincodeLookupRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/pdf-to-image': {
       id: '/tools/pdf-to-image'
-      path: '/tools/pdf-to-image'
+      path: '/pdf-to-image'
       fullPath: '/tools/pdf-to-image'
       preLoaderRoute: typeof ToolsPdfToImageRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/number-converter': {
       id: '/tools/number-converter'
-      path: '/tools/number-converter'
+      path: '/number-converter'
       fullPath: '/tools/number-converter'
       preLoaderRoute: typeof ToolsNumberConverterRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/loan-emi-calculator': {
       id: '/tools/loan-emi-calculator'
-      path: '/tools/loan-emi-calculator'
+      path: '/loan-emi-calculator'
       fullPath: '/tools/loan-emi-calculator'
       preLoaderRoute: typeof ToolsLoanEmiCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/kb-converter': {
       id: '/tools/kb-converter'
-      path: '/tools/kb-converter'
+      path: '/kb-converter'
       fullPath: '/tools/kb-converter'
       preLoaderRoute: typeof ToolsKbConverterRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/image-to-pdf': {
       id: '/tools/image-to-pdf'
-      path: '/tools/image-to-pdf'
+      path: '/image-to-pdf'
       fullPath: '/tools/image-to-pdf'
       preLoaderRoute: typeof ToolsImageToPdfRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/image-cropper': {
       id: '/tools/image-cropper'
-      path: '/tools/image-cropper'
+      path: '/image-cropper'
       fullPath: '/tools/image-cropper'
       preLoaderRoute: typeof ToolsImageCropperRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/image-compressor': {
       id: '/tools/image-compressor'
-      path: '/tools/image-compressor'
+      path: '/image-compressor'
       fullPath: '/tools/image-compressor'
       preLoaderRoute: typeof ToolsImageCompressorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/fd-calculator': {
       id: '/tools/fd-calculator'
-      path: '/tools/fd-calculator'
+      path: '/fd-calculator'
       fullPath: '/tools/fd-calculator'
       preLoaderRoute: typeof ToolsFdCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/etsy-fee-calculator': {
       id: '/tools/etsy-fee-calculator'
-      path: '/tools/etsy-fee-calculator'
+      path: '/etsy-fee-calculator'
       fullPath: '/tools/etsy-fee-calculator'
       preLoaderRoute: typeof ToolsEtsyFeeCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/currency-converter': {
       id: '/tools/currency-converter'
-      path: '/tools/currency-converter'
+      path: '/currency-converter'
       fullPath: '/tools/currency-converter'
       preLoaderRoute: typeof ToolsCurrencyConverterRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/crypto-converter': {
       id: '/tools/crypto-converter'
-      path: '/tools/crypto-converter'
+      path: '/crypto-converter'
       fullPath: '/tools/crypto-converter'
       preLoaderRoute: typeof ToolsCryptoConverterRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/color-picker': {
       id: '/tools/color-picker'
-      path: '/tools/color-picker'
+      path: '/color-picker'
       fullPath: '/tools/color-picker'
       preLoaderRoute: typeof ToolsColorPickerRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/bmi-calculator': {
       id: '/tools/bmi-calculator'
-      path: '/tools/bmi-calculator'
+      path: '/bmi-calculator'
       fullPath: '/tools/bmi-calculator'
       preLoaderRoute: typeof ToolsBmiCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/tools/age-calculator': {
       id: '/tools/age-calculator'
-      path: '/tools/age-calculator'
+      path: '/age-calculator'
       fullPath: '/tools/age-calculator'
       preLoaderRoute: typeof ToolsAgeCalculatorRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof ToolsRoute
     }
     '/blog/$slug': {
       id: '/blog/$slug'
@@ -693,28 +671,6 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
-  ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
-  ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
-  ToolsColorPickerRoute: ToolsColorPickerRoute,
-  ToolsCryptoConverterRoute: ToolsCryptoConverterRoute,
-  ToolsCurrencyConverterRoute: ToolsCurrencyConverterRoute,
-  ToolsEtsyFeeCalculatorRoute: ToolsEtsyFeeCalculatorRoute,
-  ToolsFdCalculatorRoute: ToolsFdCalculatorRoute,
-  ToolsImageCompressorRoute: ToolsImageCompressorRoute,
-  ToolsImageCropperRoute: ToolsImageCropperRoute,
-  ToolsImageToPdfRoute: ToolsImageToPdfRoute,
-  ToolsKbConverterRoute: ToolsKbConverterRoute,
-  ToolsLoanEmiCalculatorRoute: ToolsLoanEmiCalculatorRoute,
-  ToolsNumberConverterRoute: ToolsNumberConverterRoute,
-  ToolsPdfToImageRoute: ToolsPdfToImageRoute,
-  ToolsPincodeLookupRoute: ToolsPincodeLookupRoute,
-  ToolsPpfCalculatorRoute: ToolsPpfCalculatorRoute,
-  ToolsQrGeneratorRoute: ToolsQrGeneratorRoute,
-  ToolsRemoveBackgroundRoute: ToolsRemoveBackgroundRoute,
-  ToolsSipCalculatorRoute: ToolsSipCalculatorRoute,
-  ToolsTextOnPhotoRoute: ToolsTextOnPhotoRoute,
-  ToolsTimeZoneConverterRoute: ToolsTimeZoneConverterRoute,
-  ToolsUnitConverterRoute: ToolsUnitConverterRoute,
   ToolsIndexRoute: ToolsIndexRoute,
 }
 export const routeTree = rootRouteImport
