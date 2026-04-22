@@ -1,6 +1,5 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -43,13 +42,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Contact Us - ToolsKit.tech | Get Support & Feedback"
-        description="Contact ToolsKit.tech for support, feedback, or inquiries. We're here to help with our free online tools including image compressor, PDF converter, QR generator, and more."
-        keywords="contact toolskit, toolskit support, toolskit help, toolskit feedback, online tools support, free tools contact"
-        canonicalUrl="/contact"
-        structuredData={structuredData}
-      />
       <Header />
       
       <main className="container py-12">
