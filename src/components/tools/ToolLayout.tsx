@@ -1,14 +1,13 @@
 import { ReactNode } from "react";
 import AdBanner from "@/components/AdBanner";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { ArrowLeft, LucideIcon, Heart, BookOpen, ListChecks, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import SEO from "@/components/SEO";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQ from "@/components/FAQ";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { toolsSEO, getToolStructuredData, ToolArticle } from "@/lib/seoData";
+import { toolsSEO, ToolArticle } from "@/lib/seoData";
 import donateQr from "@/assets/donate-qr.png";
 
 interface ToolLayoutProps {
@@ -137,22 +136,12 @@ const ToolLayout = ({ title, description, icon: Icon, children, toolSlug }: Tool
   // Get SEO data for this tool
   const slug = toolSlug || title.toLowerCase().replace(/\s+/g, "-");
   const seoData = toolsSEO[slug];
-  const structuredData = getToolStructuredData(slug, seoData?.h1Title || title, seoData?.description || description);
 
   // Use SEO-optimized H1 title if available
   const h1Title = seoData?.h1Title || title;
 
   return (
     <>
-      {seoData &&
-      <SEO
-        title={seoData.title}
-        description={seoData.description}
-        keywords={seoData.keywords}
-        canonicalUrl={`/tools/${slug}`}
-        structuredData={structuredData} />
-      }
-      
       <Header />
 
       <main className="min-h-screen py-4 sm:py-8" role="main">

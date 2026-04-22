@@ -2,70 +2,70 @@
 
 ## Project info 
 
-**URL**: [http://toolskit.tech/]
+Free online tools — image compression, QR generator, PDF/image converters, calculators (SIP, FD, PPF, EMI, BMI, Age), unit/currency/crypto converters, and more. Built with TanStack Start (SSR) on Cloudflare Pages.
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+- **Framework**: TanStack Start v1 (React 19, SSR/SSG)
+- **Build tool**: Vite 7
+- **Styling**: Tailwind CSS v4 (via `src/styles.css`)
+- **UI**: shadcn/ui + Radix
+- **Routing**: TanStack Router (file-based, type-safe)
+- **Deployment**: Cloudflare Pages (Edge Workers, `nodejs_compat`)
 
-**Use Lovable**
+## Local Development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 20+ and `bun` (or npm).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install
+bun install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Dev server (with HMR)
+bun run dev
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Production build
+bun run build
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Preview production build
+bun run start
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+src/
+  routes/         # File-based routes (auto-generates routeTree.gen.ts)
+  pages/          # Page components imported by routes
+  components/     # Reusable UI + layout
+  lib/            # Helpers (toolHead, seoData, blogMeta, utils)
+  assets/         # Imported images
+  styles.css      # Tailwind v4 + design tokens
+```
 
-**Use GitHub Codespaces**
+Do **not** edit `src/routeTree.gen.ts` — it is auto-generated.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+This project deploys to **Cloudflare Pages**.
 
-This project is built with:
+- Build command: `bun run build`
+- Output directory: `.output/public`
+- Compatibility flag: `nodejs_compat`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Repo Sync (GitHub Actions)
 
-## How can I deploy this project?
+Every push to `main` in the source (Lovable) repo is automatically mirrored to the hosting repo's `blogs` branch via `.github/workflows/sync.yml`.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**Setup required (one-time):**
 
-## Can I connect a custom domain to my Lovable project?
+1. Create a GitHub Personal Access Token (Fine-grained or Classic) with **Contents: Read & Write** on the hosting repo `amit-kumar-saini1/toolskit.tech`.
+2. In **this** (source) repo, go to **Settings → Secrets and variables → Actions → New repository secret**.
+3. Name it `HOSTING_REPO_PAT` and paste the token value.
+4. Done — next push to `main` will trigger sync. You can also run it manually from the **Actions** tab → *Sync to Hosting Repo* → *Run workflow*.
 
-Yes, you can!
+The workflow uses `rsync --delete` so the hosting `blogs` branch always mirrors the source repo exactly (excluding `.git` and the workflow file itself).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
+
+© ToolsKit.tech — All rights reserved.
