@@ -2,8 +2,8 @@ import Header from "@/components/layout/Header";
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
 import Footer from "@/components/layout/Footer";
 import AdBanner from "@/components/AdBanner";
-import SEO from "@/components/SEO";
-import { Link, useParams, Navigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag, Share2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7371,11 +7371,18 @@ Explore all our **[free online tools](/tools)** — everything is 100% free, wor
 };
 
 const BlogPost = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams({ strict: false }) as { slug?: string };
+  const navigate = useNavigate();
   const post = slug ? blogPostsData[slug] : null;
 
+  useEffect(() => {
+    if (!post) {
+      navigate({ to: "/blog", replace: true });
+    }
+  }, [post, navigate]);
+
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return null;
   }
 
   const shareUrl = `https://toolskit.tech/blog/${slug}`;
@@ -7409,57 +7416,12 @@ const BlogPost = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
   };
 
-  const postStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://toolskit.tech/blog/${post.slug}`
-    },
-    "headline": post.title,
-    "description": post.excerpt,
-    "image": {
-      "@type": "ImageObject",
-      "url": post.image.replace('w=600&h=400', 'w=1200&h=630'),
-      "width": 1200,
-      "height": 630
-    },
-    "datePublished": post.date + "T00:00:00+05:30",
-    "dateModified": post.date + "T00:00:00+05:30",
-    "author": {
-      "@type": "Person",
-      "name": "ToolsKit Team",
-      "url": "https://toolskit.tech/about"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ToolsKit.tech",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://storage.googleapis.com/gpt-engineer-file-uploads/di7j8UAQsIVOsCbK58eG1NP3xrh2/uploads/1765097322356-mast logo.png",
-        "width": 600,
-        "height": 60
-      }
-    }
-  };
-
   // Get related posts (excluding current)
   const allPosts = Object.values(blogPostsData);
   const relatedPosts = allPosts.filter(p => p.slug !== slug).slice(0, 3);
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title={`${post.title} | ToolsKit.tech Blog`}
-        description={post.excerpt}
-        keywords={`${post.category.toLowerCase()}, online tools, free tools, ${post.title.toLowerCase()}`}
-        canonicalUrl={`/blog/${post.slug}`}
-        ogType="article"
-        ogImage={post.image.replace('w=600&h=400', 'w=1200&h=630')}
-        structuredData={postStructuredData}
-        articlePublishedTime={post.date + "T00:00:00+05:30"}
-        articleModifiedTime={post.date + "T00:00:00+05:30"}
-      />
       <Header />
 
       <main className="container py-8 max-w-4xl">
@@ -7552,13 +7514,13 @@ const BlogPost = () => {
                     );
                   } else {
                     return (
-                      <Link 
+                      <a
                         key={`link-${index}-${keyIndex++}`}
-                        to={linkUrl}
+                        href={linkUrl}
                         className="text-primary hover:underline font-medium"
                       >
                         {content}
-                      </Link>
+                      </a>
                     );
                   }
                 };
@@ -7647,11 +7609,11 @@ const BlogPost = () => {
               <p className="text-muted-foreground mb-4">
                 Put what you learned into practice with our free {post.category.toLowerCase()} tool.
               </p>
-              <Link to={post.relatedTool}>
+              <a href={post.relatedTool}>
                 <Button variant="gradient">
                   Try Now <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
-              </Link>
+              </a>
             </div>
           )}
         </article>
@@ -7663,7 +7625,8 @@ const BlogPost = () => {
             {relatedPosts.map((relatedPost) => (
               <Link 
                 key={relatedPost.id} 
-                to={`/blog/${relatedPost.slug}`}
+                to="/blog/$slug"
+                params={{ slug: relatedPost.slug }}
                 className="group"
               >
                 <div className="aspect-video rounded-lg overflow-hidden mb-3">

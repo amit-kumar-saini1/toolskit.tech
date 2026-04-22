@@ -1,8 +1,7 @@
 import Header from "@/components/layout/Header";
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -291,31 +290,8 @@ const blogPosts = [
 ];
 
 const Blog = () => {
-  const blogStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "ToolsKit.tech Blog",
-    "description": "Tips, tutorials, and guides for using free online tools effectively.",
-    "url": "https://toolskit.tech/blog",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ToolsKit.tech",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://storage.googleapis.com/gpt-engineer-file-uploads/di7j8UAQsIVOsCbK58eG1NP3xrh2/uploads/1765097322356-mast logo.png"
-      }
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Blog - ToolsKit.tech | Tips & Tutorials for Free Online Tools"
-        description="Read our latest articles, tips, and tutorials on using free online tools. Learn about image compression, QR codes, PDF conversion, and more."
-        keywords="online tools blog, image compression tips, QR code guide, PDF converter tutorial, free tools tips"
-        canonicalUrl="/blog"
-        structuredData={blogStructuredData}
-      />
       <Header />
       
       <main className="container py-12">
@@ -346,7 +322,7 @@ const Blog = () => {
                 {blogPosts[0].category}
               </Badge>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors">
-                <Link to={`/blog/${blogPosts[0].slug}`}>
+                <Link to="/blog/$slug" params={{ slug: blogPosts[0].slug }}>
                   {blogPosts[0].title}
                 </Link>
               </h2>
@@ -368,7 +344,8 @@ const Blog = () => {
                 </span>
               </div>
               <Link 
-                to={`/blog/${blogPosts[0].slug}`}
+                to="/blog/$slug"
+                params={{ slug: blogPosts[0].slug }}
                 className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
               >
                 Read Article <ArrowRight className="w-4 h-4" />
@@ -394,7 +371,7 @@ const Blog = () => {
                   {post.category}
                 </Badge>
                 <h3 className="text-lg font-semibold line-clamp-2 hover:text-primary transition-colors">
-                  <Link to={`/blog/${post.slug}`}>
+                  <Link to="/blog/$slug" params={{ slug: post.slug }}>
                     {post.title}
                   </Link>
                 </h3>
