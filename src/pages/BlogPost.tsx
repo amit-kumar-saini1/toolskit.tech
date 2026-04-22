@@ -7371,11 +7371,18 @@ Explore all our **[free online tools](/tools)** — everything is 100% free, wor
 };
 
 const BlogPost = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams({ strict: false }) as { slug?: string };
+  const navigate = useNavigate();
   const post = slug ? blogPostsData[slug] : null;
 
+  useEffect(() => {
+    if (!post) {
+      navigate({ to: "/blog", replace: true });
+    }
+  }, [post, navigate]);
+
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return null;
   }
 
   const shareUrl = `https://toolskit.tech/blog/${slug}`;
