@@ -322,7 +322,7 @@ const Blog = () => {
                 {blogPosts[0].category}
               </Badge>
               <h2 className="text-2xl md:text-3xl font-bold mb-4 hover:text-primary transition-colors">
-                <Link to={`/blog/${blogPosts[0].slug}`}>
+                <Link to="/blog/$slug" params={{ slug: blogPosts[0].slug }}>
                   {blogPosts[0].title}
                 </Link>
               </h2>
@@ -344,7 +344,8 @@ const Blog = () => {
                 </span>
               </div>
               <Link 
-                to={`/blog/${blogPosts[0].slug}`}
+                to="/blog/$slug"
+                params={{ slug: blogPosts[0].slug }}
                 className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
               >
                 Read Article <ArrowRight className="w-4 h-4" />
@@ -370,7 +371,7 @@ const Blog = () => {
                   {post.category}
                 </Badge>
                 <h3 className="text-lg font-semibold line-clamp-2 hover:text-primary transition-colors">
-                  <Link to={`/blog/${post.slug}`}>
+                  <Link to="/blog/$slug" params={{ slug: post.slug }}>
                     {post.title}
                   </Link>
                 </h3>
