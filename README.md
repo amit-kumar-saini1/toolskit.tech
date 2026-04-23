@@ -2,7 +2,7 @@
 
 **Live site**: https://toolskit.tech
 
-Free online tools — image compression, QR generator, PDF/image converters, calculators (SIP, FD, PPF, EMI, BMI, Age), unit/currency/crypto converters, and more. Built with TanStack Start (SSR) on Cloudflare Pages.
+Free online tools — image compression, QR generator, PDF/image converters, calculators (SIP, FD, PPF, EMI, BMI, Age), unit/currency/crypto converters, and more. Built with TanStack Start (SSR) on Cloudflare Pages .
 
 ## Tech Stack
 
