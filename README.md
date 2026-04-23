@@ -50,8 +50,13 @@ Do **not** edit `src/routeTree.gen.ts` — it is auto-generated.
 This project deploys to **Cloudflare Pages**.
 
 - Build command: `bun run build`
-- Output directory: `.output/public`
+- Output directory: `dist/client`
 - Compatibility flag: `nodejs_compat`
+
+The build emits a static client bundle plus an SSR worker. A postbuild
+script (`scripts/cf-pages.mjs`) copies the SSR worker to
+`dist/client/_worker.js` and writes `_routes.json` so Cloudflare Pages
+serves static assets directly and routes everything else through SSR.
 
 ## Repo Sync (GitHub Actions)
 
