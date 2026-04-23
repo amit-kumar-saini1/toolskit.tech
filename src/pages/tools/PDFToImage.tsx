@@ -7,10 +7,10 @@ import ToolLayout from "@/components/tools/ToolLayout";
 import { AdDownloadModal } from "@/components/AdDownloadModal";
 import { toast } from "sonner";
 import * as pdfjsLib from "pdfjs-dist";
-import { version } from "pdfjs-dist";
+// Bundle the worker locally via Vite's ?url import — avoids CDN/version mismatch issues
+import pdfWorkerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url";
 
-// Set worker source
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${version}/pdf.worker.min.mjs`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 
 const PDFToImage = () => {
   const [images, setImages] = useState<string[]>([]);
