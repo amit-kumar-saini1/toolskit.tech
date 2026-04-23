@@ -60,16 +60,16 @@ serves static assets directly and routes everything else through SSR.
 
 ## Repo Sync (GitHub Actions)
 
-Every push to `main` in the source (Lovable) repo is automatically mirrored to the hosting repo's `blogs` branch via `.github/workflows/sync.yml`.
+Every push to `main` is automatically mirrored to the `blogs` branch in the
+**same** repo via `.github/workflows/sync.yml`. Cloudflare Pages (or any other
+consumer) can deploy from `blogs` while Lovable continues writing to `main`.
 
-**Setup required (one-time):**
-
-1. Create a GitHub Personal Access Token (Fine-grained or Classic) with **Contents: Read & Write** on the hosting repo `amit-kumar-saini1/toolskit.tech`.
-2. In **this** (source) repo, go to **Settings → Secrets and variables → Actions → New repository secret**.
-3. Name it `HOSTING_REPO_PAT` and paste the token value.
-4. Done — next push to `main` will trigger sync. You can also run it manually from the **Actions** tab → *Sync to Hosting Repo* → *Run workflow*.
-
-The workflow uses `rsync --delete` so the hosting `blogs` branch always mirrors the source repo exactly (excluding `.git` and the workflow file itself).
+- **No PAT / secret required** — uses the built-in `GITHUB_TOKEN` with
+  `contents: write` permission scoped to this repo.
+- **Force-push**: `blogs` is always overwritten to match `main` exactly. Do
+  **not** commit directly to `blogs`; commits there will be lost on the next
+  sync.
+- **Manual run**: Actions tab → *Sync main → blogs* → *Run workflow*.
 
 ## License
 
