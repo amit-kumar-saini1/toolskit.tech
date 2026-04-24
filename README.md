@@ -19,7 +19,7 @@ Requires Node.js 20+ and `bun` (or npm).
 
 ```sh
 # Install
-bun install
+bun install     .
 
 # Dev server (with HMR)
 bun run dev
