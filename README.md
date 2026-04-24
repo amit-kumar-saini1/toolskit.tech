@@ -60,7 +60,7 @@ serves static assets directly and routes everything else through SSR.
 
 ## Repo Sync (GitHub Actions)
 
-Every push to `main` is automatically mirrored to the `blogs` branch in the
+Every push to `main` is automatically mirrored to the `blogs` branch in the   .
 **same** repo via `.github/workflows/sync.yml`. Cloudflare Pages (or any other
 consumer) can deploy from `blogs` while Lovable continues writing to `main`.
 
