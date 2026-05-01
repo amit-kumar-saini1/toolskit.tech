@@ -8,6 +8,26 @@ import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
   {
+    id: 30,
+    slug: "ozempic-vs-mounjaro-weight-loss-2026",
+    title: "Ozempic vs Mounjaro vs Wegovy 2026: Which Weight Loss Drug Actually Works? (Doctor-Reviewed Guide for US, UK, Canada & Australia)",
+    excerpt: "Ozempic, Wegovy, Mounjaro, Zepbound — which GLP-1 weight loss medication is right for you in 2026? Compare cost, side effects, results, insurance coverage, and BMI eligibility for the US, UK, Canada & Australia.",
+    category: "Health",
+    date: "2026-04-28",
+    readTime: "24 min read",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=630&fit=crop"
+  },
+  {
+    id: 29,
+    slug: "intermittent-fasting-weight-loss-guide-2026",
+    title: "Intermittent Fasting for Weight Loss in 2026: The Complete Science-Backed Guide (16:8, OMAD & 5:2)",
+    excerpt: "Lose 1-2 lbs per week with intermittent fasting in 2026. Doctor-reviewed guide to 16:8, OMAD, 5:2 schedules, what to eat, BMI tracking, and avoiding the biggest mistakes — for the US, UK, Canada & Australia.",
+    category: "Health",
+    date: "2026-04-26",
+    readTime: "20 min read",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=630&fit=crop"
+  },
+  {
     id: 28,
     slug: "best-investment-plans-india-2026",
     title: "Best Investment Plans in India 2026: SIP, FD, PPF, Mutual Funds — कहाँ लगाएं पैसा? (Complete Guide)",
