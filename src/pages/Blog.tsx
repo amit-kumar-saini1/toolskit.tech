@@ -1,5 +1,5 @@
 import Header from "@/components/layout/Header";
-import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
+import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
 import Footer from "@/components/layout/Footer";
 import { Link } from "@tanstack/react-router";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
