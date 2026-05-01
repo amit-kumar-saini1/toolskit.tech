@@ -1,6 +1,6 @@
 // AUTO-GENERATED metadata for blog posts (used for SSR head())
 // Full content lives in src/pages/BlogPost.tsx
-import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
+import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
 
 export interface BlogPostMeta {
   id: number;

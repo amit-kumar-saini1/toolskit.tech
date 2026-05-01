@@ -1,5 +1,5 @@
 import Header from "@/components/layout/Header";
-import blogInvestmentImage from "@/assets/blog-investment-plans-2026.jpg";
+import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
 import Footer from "@/components/layout/Footer";
 import AdBanner from "@/components/AdBanner";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
@@ -7482,6 +7482,10 @@ const BlogPost = () => {
             <img
               src={post.image}
               alt={post.title}
+              width={1200}
+              height={630}
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
