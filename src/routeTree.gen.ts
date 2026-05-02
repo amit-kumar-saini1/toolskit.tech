@@ -28,6 +28,7 @@ import { Route as ToolsPpfCalculatorRouteImport } from './routes/tools.ppf-calcu
 import { Route as ToolsPincodeLookupRouteImport } from './routes/tools.pincode-lookup'
 import { Route as ToolsPdfToImageRouteImport } from './routes/tools.pdf-to-image'
 import { Route as ToolsNumberConverterRouteImport } from './routes/tools.number-converter'
+import { Route as ToolsMortgageCalculatorRouteImport } from './routes/tools.mortgage-calculator'
 import { Route as ToolsLoanEmiCalculatorRouteImport } from './routes/tools.loan-emi-calculator'
 import { Route as ToolsKbConverterRouteImport } from './routes/tools.kb-converter'
 import { Route as ToolsImageToPdfRouteImport } from './routes/tools.image-to-pdf'
@@ -137,6 +138,11 @@ const ToolsNumberConverterRoute = ToolsNumberConverterRouteImport.update({
   path: '/tools/number-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsMortgageCalculatorRoute = ToolsMortgageCalculatorRouteImport.update({
+  id: '/tools/mortgage-calculator',
+  path: '/tools/mortgage-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ToolsLoanEmiCalculatorRoute = ToolsLoanEmiCalculatorRouteImport.update({
   id: '/tools/loan-emi-calculator',
   path: '/tools/loan-emi-calculator',
@@ -224,6 +230,7 @@ export interface FileRoutesByFullPath {
   '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
   '/tools/kb-converter': typeof ToolsKbConverterRoute
   '/tools/loan-emi-calculator': typeof ToolsLoanEmiCalculatorRoute
+  '/tools/mortgage-calculator': typeof ToolsMortgageCalculatorRoute
   '/tools/number-converter': typeof ToolsNumberConverterRoute
   '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
   '/tools/pincode-lookup': typeof ToolsPincodeLookupRoute
@@ -258,6 +265,7 @@ export interface FileRoutesByTo {
   '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
   '/tools/kb-converter': typeof ToolsKbConverterRoute
   '/tools/loan-emi-calculator': typeof ToolsLoanEmiCalculatorRoute
+  '/tools/mortgage-calculator': typeof ToolsMortgageCalculatorRoute
   '/tools/number-converter': typeof ToolsNumberConverterRoute
   '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
   '/tools/pincode-lookup': typeof ToolsPincodeLookupRoute
@@ -293,6 +301,7 @@ export interface FileRoutesById {
   '/tools/image-to-pdf': typeof ToolsImageToPdfRoute
   '/tools/kb-converter': typeof ToolsKbConverterRoute
   '/tools/loan-emi-calculator': typeof ToolsLoanEmiCalculatorRoute
+  '/tools/mortgage-calculator': typeof ToolsMortgageCalculatorRoute
   '/tools/number-converter': typeof ToolsNumberConverterRoute
   '/tools/pdf-to-image': typeof ToolsPdfToImageRoute
   '/tools/pincode-lookup': typeof ToolsPincodeLookupRoute
@@ -329,6 +338,7 @@ export interface FileRouteTypes {
     | '/tools/image-to-pdf'
     | '/tools/kb-converter'
     | '/tools/loan-emi-calculator'
+    | '/tools/mortgage-calculator'
     | '/tools/number-converter'
     | '/tools/pdf-to-image'
     | '/tools/pincode-lookup'
@@ -363,6 +373,7 @@ export interface FileRouteTypes {
     | '/tools/image-to-pdf'
     | '/tools/kb-converter'
     | '/tools/loan-emi-calculator'
+    | '/tools/mortgage-calculator'
     | '/tools/number-converter'
     | '/tools/pdf-to-image'
     | '/tools/pincode-lookup'
@@ -397,6 +408,7 @@ export interface FileRouteTypes {
     | '/tools/image-to-pdf'
     | '/tools/kb-converter'
     | '/tools/loan-emi-calculator'
+    | '/tools/mortgage-calculator'
     | '/tools/number-converter'
     | '/tools/pdf-to-image'
     | '/tools/pincode-lookup'
@@ -432,6 +444,7 @@ export interface RootRouteChildren {
   ToolsImageToPdfRoute: typeof ToolsImageToPdfRoute
   ToolsKbConverterRoute: typeof ToolsKbConverterRoute
   ToolsLoanEmiCalculatorRoute: typeof ToolsLoanEmiCalculatorRoute
+  ToolsMortgageCalculatorRoute: typeof ToolsMortgageCalculatorRoute
   ToolsNumberConverterRoute: typeof ToolsNumberConverterRoute
   ToolsPdfToImageRoute: typeof ToolsPdfToImageRoute
   ToolsPincodeLookupRoute: typeof ToolsPincodeLookupRoute
@@ -581,6 +594,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsNumberConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/mortgage-calculator': {
+      id: '/tools/mortgage-calculator'
+      path: '/tools/mortgage-calculator'
+      fullPath: '/tools/mortgage-calculator'
+      preLoaderRoute: typeof ToolsMortgageCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tools/loan-emi-calculator': {
       id: '/tools/loan-emi-calculator'
       path: '/tools/loan-emi-calculator'
@@ -696,6 +716,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsImageToPdfRoute: ToolsImageToPdfRoute,
   ToolsKbConverterRoute: ToolsKbConverterRoute,
   ToolsLoanEmiCalculatorRoute: ToolsLoanEmiCalculatorRoute,
+  ToolsMortgageCalculatorRoute: ToolsMortgageCalculatorRoute,
   ToolsNumberConverterRoute: ToolsNumberConverterRoute,
   ToolsPdfToImageRoute: ToolsPdfToImageRoute,
   ToolsPincodeLookupRoute: ToolsPincodeLookupRoute,

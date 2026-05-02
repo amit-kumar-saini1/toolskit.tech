@@ -9,6 +9,13 @@ import {
 
 const tools = [
   {
+    title: "Mortgage Calculator",
+    description: "Estimate home loan payments, PMI, taxes & interest",
+    icon: Calculator,
+    path: "/tools/mortgage-calculator",
+    color: "#0F766E"
+  },
+  {
     title: "Image to PDF",
     description: "Convert images to PDF documents",
     icon: FileImage,
