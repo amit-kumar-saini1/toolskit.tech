@@ -26,6 +26,13 @@ import { Button } from "@/components/ui/button";
 
 const tools = [
   {
+    title: "Mortgage Calculator",
+    description: "Estimate home loan payments, PMI & taxes",
+    icon: Calculator,
+    path: "/tools/mortgage-calculator",
+    color: "#0f766e",
+  },
+  {
     title: "Image to PDF",
     description: "Convert images to PDF documents instantly",
     icon: FileImage,

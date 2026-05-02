@@ -889,3 +889,36 @@ toolsSEO["etsy-fee-calculator"] = {
       ],
     },
 };
+
+toolsSEO["mortgage-calculator"] = {
+  title: "Mortgage Calculator 2026 - Monthly Payment Estimate",
+  h1Title: "Mortgage Calculator — Estimate Your Monthly House Payment",
+  h2Headings: [
+    "Mortgage Payment Calculator with Taxes and Insurance",
+    "Home Loan Calculator for US Buyers",
+    "PMI, Property Tax, and HOA Cost Estimator",
+    "Mortgage Amortization Schedule Calculator",
+  ],
+  description: "Free mortgage calculator for US home buyers. Estimate monthly payment, PMI, taxes, insurance, HOA, loan interest, and amortization schedule instantly.",
+  keywords: "mortgage calculator, mortgage payment calculator, home loan calculator, house payment calculator, mortgage calculator with taxes and insurance, pmi calculator, amortization calculator, refinance calculator, us mortgage calculator, monthly mortgage payment, mortgage rates calculator, home affordability calculator",
+  faqs: [
+    { question: "How is my monthly mortgage payment calculated?", answer: "The calculator estimates principal and interest from the loan amount, interest rate, and loan term. It then adds property tax, homeowners insurance, HOA fees, and PMI when the down payment is below 20%." },
+    { question: "What is PMI on a mortgage?", answer: "PMI means private mortgage insurance. Many US lenders require PMI when your down payment is less than 20%. This calculator estimates PMI at 0.6% of the loan amount per year." },
+    { question: "Does this mortgage calculator include property tax and insurance?", answer: "Yes. You can enter annual property tax and homeowners insurance to estimate a more realistic total monthly house payment." },
+    { question: "Can I use this for a 15-year or 30-year mortgage?", answer: "Yes. Enter any loan term from 1 to 40 years. You can compare 15-year and 30-year mortgage payments by changing the loan term field." },
+    { question: "Is this calculator useful for US, UK, Canada, and Australia traffic?", answer: "The default currency is USD and the terms are optimized for US mortgage searches, but the principal and interest formula works for most fixed-rate home loans globally." },
+  ],
+  article: {
+    introduction: "A mortgage is usually the biggest financial decision for a home buyer, and small changes in interest rate, down payment, tax, or insurance can change the monthly payment by hundreds of dollars. This free Mortgage Calculator helps US home buyers estimate a realistic house payment before applying for a home loan. It includes principal and interest, property tax, homeowners insurance, HOA fees, PMI, total interest, total cost, and a first 10-year amortization table. Mortgage-related searches are high-value because users are actively comparing lenders, refinancing, insurance, credit scores, and real estate costs. This tool is built to answer those searches quickly with a clean, mobile-friendly calculator.",
+    howToUse: "1. Enter the home price you plan to buy\n2. Add your down payment amount\n3. Enter the mortgage interest rate offered by your lender\n4. Choose the loan term, such as 15 or 30 years\n5. Add annual property tax, homeowners insurance, and HOA fees if applicable\n6. Review the estimated monthly payment, loan amount, total interest, PMI, and amortization table",
+    keyFeatures: [
+      "Monthly mortgage payment with principal and interest",
+      "Property tax, homeowners insurance, HOA, and PMI included",
+      "Down payment percentage automatically calculated",
+      "Total interest and total home cost estimate",
+      "First 10 years amortization schedule",
+      "Optimized for high-CPC mortgage, home loan, refinance, and insurance keywords",
+      "Works instantly in the browser with no signup required",
+    ],
+  },
+};
