@@ -12,6 +12,7 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/contact", priority: "0.5", changefreq: "monthly" },
   { path: "/privacy", priority: "0.3", changefreq: "yearly" },
   { path: "/terms", priority: "0.3", changefreq: "yearly" },
+  { path: "/kb-resize-pixel", priority: "0.7", changefreq: "monthly" },
 ];
 
 function buildSitemap(): string {

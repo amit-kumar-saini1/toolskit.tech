@@ -44,13 +44,7 @@ export const Route = createRootRoute({
       { rel: "icon", href: "/favicon.ico" },
       { rel: "preconnect", href: "https://pagead2.googlesyndication.com" },
     ],
-    scripts: [
-      {
-        async: true,
-        crossOrigin: "anonymous",
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292",
-      } as any,
-    ],
+    scripts: [],
   }),
   component: () => (
     <RootDocument>

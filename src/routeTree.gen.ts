@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
@@ -56,6 +57,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KbResizePixelRoute = KbResizePixelRouteImport.update({
+  id: '/kb-resize-pixel',
+  path: '/kb-resize-pixel',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -214,6 +220,7 @@ export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/kb-resize-pixel': typeof KbResizePixelRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -249,6 +256,7 @@ export interface FileRoutesByTo {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/kb-resize-pixel': typeof KbResizePixelRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -285,6 +293,7 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/kb-resize-pixel': typeof KbResizePixelRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -322,6 +331,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contact'
+    | '/kb-resize-pixel'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -357,6 +367,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contact'
+    | '/kb-resize-pixel'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -392,6 +403,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contact'
+    | '/kb-resize-pixel'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -428,6 +440,7 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  KbResizePixelRoute: typeof KbResizePixelRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
@@ -480,6 +493,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kb-resize-pixel': {
+      id: '/kb-resize-pixel'
+      path: '/kb-resize-pixel'
+      fullPath: '/kb-resize-pixel'
+      preLoaderRoute: typeof KbResizePixelRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -700,6 +720,7 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  KbResizePixelRoute: KbResizePixelRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
