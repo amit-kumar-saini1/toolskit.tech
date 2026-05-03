@@ -38,9 +38,18 @@ export const Route = createRootRoute({
         content:
           "ToolsKit.tech offers 50+ free online tools: PDF converter, image compressor, background remover, QR generator and more. No signup required.",
       },
+      { name: "google-adsense-account", content: "ca-pub-1909827564331292" },
     ],
     links: [
       { rel: "icon", href: "/favicon.ico" },
+      { rel: "preconnect", href: "https://pagead2.googlesyndication.com" },
+    ],
+    scripts: [
+      {
+        async: true,
+        crossOrigin: "anonymous",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292",
+      } as any,
     ],
   }),
   component: () => (

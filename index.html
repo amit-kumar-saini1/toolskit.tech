@@ -54,7 +54,7 @@
     <!-- DNS prefetch for ads -->
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
     
-    <!-- Defer Google Fonts & AdSense until after page load -->
+    <!-- Defer Google Fonts until after page load -->
     <script>
       window.addEventListener('load', function() {
         // Load fonts after 100ms
@@ -64,14 +64,6 @@
           link.href = 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap';
           document.head.appendChild(link);
         }, 100);
-        // Load AdSense after 3s
-        setTimeout(function() {
-          var s = document.createElement('script');
-          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292';
-          s.async = true;
-          s.crossOrigin = 'anonymous';
-          document.head.appendChild(s);
-        }, 1000);
       });
     </script>
     <!-- Bing serch consol -->
