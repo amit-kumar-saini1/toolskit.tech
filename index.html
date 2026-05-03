@@ -54,7 +54,7 @@
     <!-- DNS prefetch for ads -->
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
     
-    <!-- Defer Google Fonts & AdSense until after page load -->
+    <!-- Defer Google Fonts until after page load -->
     <script>
       window.addEventListener('load', function() {
         // Load fonts after 100ms
@@ -64,14 +64,6 @@
           link.href = 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap';
           document.head.appendChild(link);
         }, 100);
-        // Load AdSense after 3s
-        setTimeout(function() {
-          var s = document.createElement('script');
-          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1909827564331292';
-          s.async = true;
-          s.crossOrigin = 'anonymous';
-          document.head.appendChild(s);
-        }, 1000);
       });
     </script>
     <!-- Bing serch consol -->
@@ -106,16 +98,8 @@
       ]
     }
     </script>
-    <!-- OG/Twitter title & description managed by React Helmet -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FFBL49HVN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8FFBL49HVN');
-</script>
+  <!-- OG/Twitter title & description managed by React Helmet -->
+  <!-- GA & AdSense are injected client-side via AdSenseLoader (works under SSR) -->
   <meta property="og:title" content="ToolsKit.tech - 100% Free Online Tools | No Signup | PDF, Image, QR &amp; More">
   <meta name="twitter:title" content="ToolsKit.tech - 100% Free Online Tools | No Signup | PDF, Image, QR &amp; More">
   <meta property="og:description" content="ToolsKit.tech - Best free online tools website. 50+ free tools: PDF converter, image compressor, background remover, QR generator, age calculator. 100% free, no signup, fast &amp; secure. Use unlimited!">

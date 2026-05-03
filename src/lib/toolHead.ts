@@ -49,7 +49,8 @@ export function buildToolHead(slug: string): RouteHead {
 
   const title = seo.title;
   const description = seo.description;
-  const ogImage = BRAND_OG_IMAGE;
+  const ogImage = seo.ogImage ?? BRAND_OG_IMAGE;
+  const ogImageAlt = seo.ogImageAlt ?? title;
 
   const softwareSchema = getToolStructuredData(
     slug,
@@ -89,6 +90,7 @@ export function buildToolHead(slug: string): RouteHead {
       { property: "og:image", content: ogImage },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: ogImageAlt },
       { property: "og:site_name", content: "ToolsKit.tech" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
