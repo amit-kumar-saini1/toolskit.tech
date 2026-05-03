@@ -13,6 +13,8 @@ export interface ToolSEO {
   keywords: string;
   faqs: { question: string; answer: string }[];
   article?: ToolArticle;
+  ogImage?: string;
+  ogImageAlt?: string;
 }
 
 export const toolsSEO: Record<string, ToolSEO> = {
@@ -891,15 +893,17 @@ toolsSEO["etsy-fee-calculator"] = {
 };
 
 toolsSEO["mortgage-calculator"] = {
-  title: "Mortgage Calculator 2026 - Monthly Payment Estimate",
-  h1Title: "Mortgage Calculator — Estimate Your Monthly House Payment",
+  title: "Mortgage Calculator 2026 — Monthly Payment, PMI & Tax Estimator",
+  h1Title: "Mortgage Calculator 2026 — Estimate Your Monthly House Payment",
+  ogImage: "https://toolskit.tech/og-mortgage-calculator.jpg",
+  ogImageAlt: "Mortgage Calculator 2026 — estimate monthly home loan payment, PMI, taxes, and insurance",
   h2Headings: [
     "Mortgage Payment Calculator with Taxes and Insurance",
     "Home Loan Calculator for US Buyers",
     "PMI, Property Tax, and HOA Cost Estimator",
     "Mortgage Amortization Schedule Calculator",
   ],
-  description: "Free mortgage calculator for US home buyers. Estimate monthly payment, PMI, taxes, insurance, HOA, loan interest, and amortization schedule instantly.",
+  description: "Free 2026 mortgage calculator for US, UK, Canada & Australia home buyers. Instantly estimate monthly payment, PMI, property tax, insurance, HOA & full amortization.",
   keywords: "mortgage calculator, mortgage payment calculator, home loan calculator, house payment calculator, mortgage calculator with taxes and insurance, pmi calculator, amortization calculator, refinance calculator, us mortgage calculator, monthly mortgage payment, mortgage rates calculator, home affordability calculator",
   faqs: [
     { question: "How is my monthly mortgage payment calculated?", answer: "The calculator estimates principal and interest from the loan amount, interest rate, and loan term. It then adds property tax, homeowners insurance, HOA fees, and PMI when the down payment is below 20%." },
