@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import AdBanner from "@/components/AdBanner";
@@ -48,6 +49,42 @@ export const Route = createFileRoute("/kb-resize-pixel")({
   },
   component: KbResizePixelPage,
 });
+
+function AutorelaxedAd() {
+  const ref = useRef<HTMLModElement>(null);
+  const loaded = useRef(false);
+  useEffect(() => {
+    if (loaded.current) return;
+    const tryPush = (n = 0) => {
+      if (loaded.current) return;
+      const ag = (window as any).adsbygoogle;
+      if (ag && ref.current && ref.current.offsetWidth > 0) {
+        try {
+          ag.push({});
+          loaded.current = true;
+        } catch (e) {
+          /* ignore */
+        }
+        return;
+      }
+      if (n < 12) window.setTimeout(() => tryPush(n + 1), 500);
+    };
+    tryPush();
+  }, []);
+  return (
+    <div className="my-6">
+      <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>
+      <ins
+        ref={ref}
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-1909827564331292"
+        data-ad-slot="6789447857"
+      />
+    </div>
+  );
+}
 
 function KbResizePixelPage() {
   return (
@@ -163,6 +200,8 @@ function KbResizePixelPage() {
             <div className="my-6">
               <AdBanner slot="2745516861" format="auto" responsive showLabel />
             </div>
+
+            <AutorelaxedAd />
 
             <h2>Tips for keeping quality high</h2>
             <p>
