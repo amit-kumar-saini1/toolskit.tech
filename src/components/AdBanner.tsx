@@ -13,8 +13,16 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "", sh
   const adRef = useRef<HTMLModElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isLoaded = useRef(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Render <ins> only on client to ensure AdSense always initialises
+  // after hydration (fully client-side rendering for ads).
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
+    if (!mounted) return;
     if (isLoaded.current) return;
 
     // Use IntersectionObserver to lazy-load ads only when visible
@@ -33,7 +41,7 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "", sh
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [mounted]);
 
   const loadAd = () => {
     if (isLoaded.current) return;
@@ -66,15 +74,17 @@ const AdBanner = ({ slot, format = "auto", responsive = true, className = "", sh
     <div ref={containerRef} className={`${wrapperClassName}`}>
       {showLabel && <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>}
       <div className={`ad-container overflow-hidden min-h-[100px] sm:min-h-[250px] bg-white dark:bg-white/10 rounded-lg ${className}`}>
-        <ins
-          ref={adRef}
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-1909827564331292"
-          data-ad-slot={slot}
-          data-ad-format={format}
-          data-full-width-responsive={responsive ? "true" : "false"}
-        />
+        {mounted && (
+          <ins
+            ref={adRef}
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-1909827564331292"
+            data-ad-slot={slot}
+            data-ad-format={format}
+            data-full-width-responsive={responsive ? "true" : "false"}
+          />
+        )}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import AdBanner from "@/components/AdBanner";
 import { buildPageHead } from "@/lib/toolHead";
+import KbResizePixelTool from "@/components/KbResizePixelTool";
 
 export const Route = createFileRoute("/kb-resize-pixel")({
   head: () => {
@@ -65,6 +66,15 @@ function KbResizePixelPage() {
               browser.
             </p>
           </header>
+
+          {/* Working in-page tool */}
+          <section
+            id="tool"
+            aria-label="KB Resize Pixel Tool"
+            className="rounded-2xl border border-border bg-card p-4 md:p-6"
+          >
+            <KbResizePixelTool />
+          </section>
 
           <section className="prose prose-sm md:prose-base max-w-none text-foreground">
             <h2>Why KB and pixel size matter in the United States</h2>
