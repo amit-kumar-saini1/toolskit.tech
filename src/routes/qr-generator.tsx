@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { QrCode, Download, Copy } from "lucide-react";
+import { QrCode, Download, Copy, X } from "lucide-react";
 import QRCode from "qrcode";
 import { toast } from "sonner";
 import Header from "@/components/layout/Header";
@@ -227,13 +227,25 @@ function QRGeneratorPage() {
                 <div className="space-y-4 max-w-xl mx-auto">
                   <div className="space-y-2">
                     <Label htmlFor="qr-text">Enter URL or Text</Label>
-                    <Input
-                      id="qr-text"
-                      value={text}
-                      onChange={(e) => setText(e.target.value)}
-                      placeholder="https://example.com or any text"
-                      className="h-12"
-                    />
+                    <div className="relative">
+                      <Input
+                        id="qr-text"
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                        placeholder="https://example.com or any text"
+                        className="h-12 pr-12"
+                      />
+                      {text && (
+                        <button
+                          type="button"
+                          onClick={() => setText("")}
+                          aria-label="Clear input"
+                          className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          <X className="w-4 h-4" />
+                        </button>
+                      )}
+                    </div>
                   </div>
 
                   <div className="flex flex-col items-center gap-4 pt-2">
