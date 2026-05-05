@@ -114,6 +114,46 @@ function AutorelaxedAd() {
   );
 }
 
+function SidebarAd() {
+  const ref = useRef<HTMLModElement>(null);
+  const loaded = useRef(false);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    if (!mounted || loaded.current) return;
+    const tryPush = (n = 0) => {
+      if (loaded.current) return;
+      const ag = (window as any).adsbygoogle;
+      if (ag && ref.current && ref.current.offsetWidth > 0) {
+        try {
+          ag.push({});
+          loaded.current = true;
+        } catch {
+          /* ignore */
+        }
+        return;
+      }
+      if (n < 12) window.setTimeout(() => tryPush(n + 1), 500);
+    };
+    tryPush();
+  }, [mounted]);
+  return (
+    <div className="bg-card border border-border rounded-xl p-2">
+      <p className="text-[10px] text-muted-foreground text-center mb-1">Advertisement</p>
+      {mounted && (
+        <ins
+          ref={ref}
+          className="adsbygoogle"
+          style={{ display: "block", minHeight: "500px" }}
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-1909827564331292"
+          data-ad-slot="6789447857"
+        />
+      )}
+    </div>
+  );
+}
+
 function QRGeneratorPage() {
   const [text, setText] = useState("https://toolskit.tech");
   const [fileName, setFileName] = useState("qrcode");
@@ -396,17 +436,20 @@ function QRGeneratorPage() {
 
             {/* Right sidebar — related tool links like screenshot */}
             <aside aria-label="Related tools" className="space-y-3">
-              <div className="bg-card border border-border rounded-xl p-3 grid grid-cols-2 gap-2 sticky top-4">
-                {RELATED_TOOLS.map((t) => (
-                  <Link
-                    key={t.to}
-                    to={t.to}
-                    className="block text-center text-sm md:text-base font-semibold text-primary hover:bg-primary/5 border border-border rounded-lg px-2 py-3 transition-colors"
-                  >
-                    {t.hot && <span className="text-destructive mr-1">●</span>}
-                    {t.label}
-                  </Link>
-                ))}
+              <div className="sticky top-4 space-y-3">
+                <div className="bg-card border border-border rounded-xl p-2 grid grid-cols-2 gap-1.5">
+                  {RELATED_TOOLS.map((t) => (
+                    <Link
+                      key={t.to}
+                      to={t.to}
+                      className="block text-center text-xs md:text-sm font-semibold text-primary hover:bg-primary/5 border border-border rounded-lg px-1.5 py-1.5 transition-colors leading-tight"
+                    >
+                      {t.hot && <span className="text-destructive mr-1">●</span>}
+                      {t.label}
+                    </Link>
+                  ))}
+                </div>
+                <SidebarAd />
               </div>
             </aside>
           </div>
