@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -52,6 +53,11 @@ const TermsRoute = TermsRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QrGeneratorRoute = QrGeneratorRouteImport.update({
+  id: '/qr-generator',
+  path: '/qr-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -222,6 +228,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/privacy': typeof PrivacyRoute
+  '/qr-generator': typeof QrGeneratorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -258,6 +265,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/privacy': typeof PrivacyRoute
+  '/qr-generator': typeof QrGeneratorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -295,6 +303,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/privacy': typeof PrivacyRoute
+  '/qr-generator': typeof QrGeneratorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -333,6 +342,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/kb-resize-pixel'
     | '/privacy'
+    | '/qr-generator'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -369,6 +379,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/kb-resize-pixel'
     | '/privacy'
+    | '/qr-generator'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -405,6 +416,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/kb-resize-pixel'
     | '/privacy'
+    | '/qr-generator'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -442,6 +454,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
   PrivacyRoute: typeof PrivacyRoute
+  QrGeneratorRoute: typeof QrGeneratorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -486,6 +499,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qr-generator': {
+      id: '/qr-generator'
+      path: '/qr-generator'
+      fullPath: '/qr-generator'
+      preLoaderRoute: typeof QrGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -722,6 +742,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   KbResizePixelRoute: KbResizePixelRoute,
   PrivacyRoute: PrivacyRoute,
+  QrGeneratorRoute: QrGeneratorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
