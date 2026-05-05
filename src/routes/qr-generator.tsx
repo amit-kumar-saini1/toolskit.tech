@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { QrCode, Download, Copy, X } from "lucide-react";
+import { QrCode, Download, Copy, X, ClipboardPaste } from "lucide-react";
 import QRCode from "qrcode";
 import { toast } from "sonner";
 import Header from "@/components/layout/Header";
@@ -233,18 +233,38 @@ function QRGeneratorPage() {
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         placeholder="https://example.com or any text"
-                        className="h-12 pr-12"
+                        className="h-12 pr-20"
                       />
-                      {text && (
+                      <div className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center gap-1">
                         <button
                           type="button"
-                          onClick={() => setText("")}
-                          aria-label="Clear input"
-                          className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                          onClick={async () => {
+                            try {
+                              const t = await navigator.clipboard.readText();
+                              if (t) {
+                                setText(t);
+                                toast.success("Pasted from clipboard");
+                              }
+                            } catch {
+                              toast.error("Clipboard access denied");
+                            }
+                          }}
+                          aria-label="Paste from clipboard"
+                          className="p-1.5 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
                         >
-                          <X className="w-4 h-4" />
+                          <ClipboardPaste className="w-4 h-4" />
                         </button>
-                      )}
+                        {text && (
+                          <button
+                            type="button"
+                            onClick={() => setText("")}
+                            aria-label="Clear input"
+                            className="p-1.5 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
 
