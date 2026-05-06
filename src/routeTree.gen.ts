@@ -11,9 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RemoveBackgroundRouteImport } from './routes/remove-background'
 import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
+import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
+import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
@@ -55,6 +59,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RemoveBackgroundRoute = RemoveBackgroundRouteImport.update({
+  id: '/remove-background',
+  path: '/remove-background',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QrGeneratorRoute = QrGeneratorRouteImport.update({
   id: '/qr-generator',
   path: '/qr-generator',
@@ -65,9 +74,24 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PdfToImageRoute = PdfToImageRouteImport.update({
+  id: '/pdf-to-image',
+  path: '/pdf-to-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KbResizePixelRoute = KbResizePixelRouteImport.update({
   id: '/kb-resize-pixel',
   path: '/kb-resize-pixel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImageToPdfRoute = ImageToPdfRouteImport.update({
+  id: '/image-to-pdf',
+  path: '/image-to-pdf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImageCompressorRoute = ImageCompressorRouteImport.update({
+  id: '/image-compressor',
+  path: '/image-compressor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -226,9 +250,13 @@ export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/image-compressor': typeof ImageCompressorRoute
+  '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/pdf-to-image': typeof PdfToImageRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
+  '/remove-background': typeof RemoveBackgroundRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -263,9 +291,13 @@ export interface FileRoutesByTo {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/image-compressor': typeof ImageCompressorRoute
+  '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/pdf-to-image': typeof PdfToImageRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
+  '/remove-background': typeof RemoveBackgroundRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -301,9 +333,13 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/image-compressor': typeof ImageCompressorRoute
+  '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/pdf-to-image': typeof PdfToImageRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
+  '/remove-background': typeof RemoveBackgroundRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -340,9 +376,13 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contact'
+    | '/image-compressor'
+    | '/image-to-pdf'
     | '/kb-resize-pixel'
+    | '/pdf-to-image'
     | '/privacy'
     | '/qr-generator'
+    | '/remove-background'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -377,9 +417,13 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contact'
+    | '/image-compressor'
+    | '/image-to-pdf'
     | '/kb-resize-pixel'
+    | '/pdf-to-image'
     | '/privacy'
     | '/qr-generator'
+    | '/remove-background'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -414,9 +458,13 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contact'
+    | '/image-compressor'
+    | '/image-to-pdf'
     | '/kb-resize-pixel'
+    | '/pdf-to-image'
     | '/privacy'
     | '/qr-generator'
+    | '/remove-background'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -452,9 +500,13 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  ImageCompressorRoute: typeof ImageCompressorRoute
+  ImageToPdfRoute: typeof ImageToPdfRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
+  PdfToImageRoute: typeof PdfToImageRoute
   PrivacyRoute: typeof PrivacyRoute
   QrGeneratorRoute: typeof QrGeneratorRoute
+  RemoveBackgroundRoute: typeof RemoveBackgroundRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -501,6 +553,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/remove-background': {
+      id: '/remove-background'
+      path: '/remove-background'
+      fullPath: '/remove-background'
+      preLoaderRoute: typeof RemoveBackgroundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/qr-generator': {
       id: '/qr-generator'
       path: '/qr-generator'
@@ -515,11 +574,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pdf-to-image': {
+      id: '/pdf-to-image'
+      path: '/pdf-to-image'
+      fullPath: '/pdf-to-image'
+      preLoaderRoute: typeof PdfToImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/kb-resize-pixel': {
       id: '/kb-resize-pixel'
       path: '/kb-resize-pixel'
       fullPath: '/kb-resize-pixel'
       preLoaderRoute: typeof KbResizePixelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/image-to-pdf': {
+      id: '/image-to-pdf'
+      path: '/image-to-pdf'
+      fullPath: '/image-to-pdf'
+      preLoaderRoute: typeof ImageToPdfRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/image-compressor': {
+      id: '/image-compressor'
+      path: '/image-compressor'
+      fullPath: '/image-compressor'
+      preLoaderRoute: typeof ImageCompressorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -740,9 +820,13 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  ImageCompressorRoute: ImageCompressorRoute,
+  ImageToPdfRoute: ImageToPdfRoute,
   KbResizePixelRoute: KbResizePixelRoute,
+  PdfToImageRoute: PdfToImageRoute,
   PrivacyRoute: PrivacyRoute,
   QrGeneratorRoute: QrGeneratorRoute,
+  RemoveBackgroundRoute: RemoveBackgroundRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
