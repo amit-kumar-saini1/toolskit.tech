@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
+import blogPentagonImage from "@/assets/blog-pentagon-2026.jpg";
 import Footer from "@/components/layout/Footer";
 import AdBanner from "@/components/AdBanner";
 import { Link, useParams, useNavigate } from "@tanstack/react-router";
@@ -23,6 +24,174 @@ interface BlogPostData {
 }
 
 const blogPostsData: Record<string, BlogPostData> = {
+  "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026": {
+    id: 31,
+    slug: "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026",
+    title: "Pentagon: दुनिया का सबसे ताकतवर Defense Headquarter — 15 चौंकाने वाले राज़ जो शायद ही आप जानते हों (2026)",
+    excerpt: "Pentagon (अमेरिका का रक्षा विभाग HQ) के 15 ऐसे रहस्य जो दुनिया को हैरान कर देते हैं — साइज़, बजट $886 अरब, 9/11 हमला, गुप्त सुरंगें, सबसे बड़ा office building। पूरी जानकारी हिंदी में 2026।",
+    category: "World",
+    date: "2026-05-10",
+    readTime: "16 min read",
+    image: blogPentagonImage,
+    relatedTool: "/tools/currency-converter",
+    content: `
+## Pentagon क्या है? — अमेरिका का "रक्षा विभाग" जिसके आगे दुनिया झुकती है
+
+अगर आपने कभी Hollywood movie देखी है — **Mission Impossible**, **Transformers**, **Captain America** — तो एक **पाँच कोनों वाली विशाल इमारत** ज़रूर देखी होगी। यही है **The Pentagon** — **United States Department of Defense (US रक्षा विभाग)** का मुख्यालय, जो **Arlington, Virginia** में स्थित है और जहाँ से पूरी दुनिया की **सबसे ताकतवर सेना** को कमांड किया जाता है।
+
+2026 में Pentagon का **defense budget $886 बिलियन डॉलर** है — यानी India, China, Russia, UK, France, Japan की सेनाओं के बजट को **जोड़ने पर भी कम** पड़ता है।
+
+👉 इतना बड़ा बजट dollars में है — अपनी कमाई को USD में convert करें: **[Free Currency Converter →](/tools/currency-converter)**
+
+[AD_BANNER]
+
+## Pentagon के बारे में 15 चौंकाने वाले Facts (2026 Updated)
+
+### 1. दुनिया की सबसे बड़ी Office Building
+
+Pentagon का कुल **floor area 6.5 million square feet (60 हेक्टेयर)** है — यह **Empire State Building से 3 गुना बड़ा** है। इसमें **5 sides, 5 floors, 5 ring corridors** और बीच में **5 acre का खुला आँगन** है — इसी वजह से नाम पड़ा "Pentagon" (पंचभुज)।
+
+| Specification | Value |
+|---|---|
+| Total Area | 6,500,000 sq ft |
+| Employees | 26,000+ daily |
+| Corridors | 17.5 miles (28 km) |
+| Stairways | 131 |
+| Toilets | 284 |
+| Construction Cost (1943) | $83 million (आज ~$1.5 billion) |
+
+### 2. सिर्फ 16 महीने में बना — World War II के दौरान
+
+Pentagon का निर्माण **11 September 1941** को शुरू हुआ और **15 January 1943** को पूरा हुआ — सिर्फ **16 महीने में**। उस समय **13,000 मज़दूर दिन-रात** काम करते थे।
+
+### 3. हर corridor सिर्फ 7 मिनट में पार हो जाता है
+
+डिज़ाइन ऐसा है कि कोई भी कर्मचारी **building के किसी भी कोने में 7 मिनट के अंदर** पहुँच सकता है — चाहे वो किसी भी floor पर हो।
+
+### 4. 9/11 हमला — Pentagon पर सीधी टक्कर
+
+**11 September 2001** को **American Airlines Flight 77** को आतंकवादियों ने hijack कर के Pentagon की **west wing** से टकरा दिया। **184 लोग मारे गए** (125 Pentagon में + 59 plane में)। हैरानी की बात — टकराव वाला हिस्सा **उस वक्त renovation में था**, इसलिए जान-माल का नुकसान बहुत कम हुआ।
+
+### 5. सिर्फ **1 साल में** दोबारा बना दिया गया
+
+9/11 के ठीक **एक साल बाद, 11 September 2002** को क्षतिग्रस्त हिस्सा पूरी तरह दोबारा बन गया — इसे **"Phoenix Project"** नाम दिया गया।
+
+### 6. भीतर एक पूरा शहर बसा है
+
+Pentagon के अंदर **bank, post office, medical clinic, fire department, indoor mall, Starbucks, Subway, McDonald's** — सब कुछ है। कर्मचारी पूरे दिन building से बाहर निकले बिना काम कर सकते हैं।
+
+### 7. Defense Budget: दुनिया का सबसे बड़ा
+
+| देश | 2026 Defense Budget (USD) |
+|---|---|
+| 🇺🇸 USA (Pentagon) | **$886 Billion** |
+| 🇨🇳 China | $296 Billion |
+| 🇷🇺 Russia | $109 Billion |
+| 🇮🇳 India | $83.6 Billion |
+| 🇬🇧 UK | $74.9 Billion |
+
+👉 ये figures रोज़ बदलते हैं currency rates के साथ — **[Live Currency Converter use करें](/tools/currency-converter)** और **[USD-INR की calculation](/tools/currency-converter)** करें।
+
+### 8. गुप्त सुरंगों का जाल (Secret Tunnels)
+
+Pentagon के नीचे **classified underground tunnels** हैं जो **White House, CIA HQ (Langley), और Raven Rock Mountain Complex (R-Site)** तक जाती हैं। R-Site को "Underground Pentagon" कहा जाता है — परमाणु युद्ध की स्थिति में पूरी सरकार वहाँ shift हो सकती है।
+
+### 9. Pentagon में 4,200 घड़ियाँ हैं
+
+हर एक घड़ी **atomic clock** से synchronized रहती है ताकि **military operations में 1 second का भी फर्क न पड़े**।
+
+### 10. Color-Coded Corridors
+
+Building इतनी बड़ी है कि अंदर खो जाना आसान है — इसलिए हर **ring (A-E)** और **corridor (1-10)** अलग color से coded है।
+
+### 11. Pentagon Police — अपनी अलग force
+
+**Pentagon Force Protection Agency (PFPA)** के पास **1,000+ officers** हैं, K-9 dogs, anti-drone systems, और **air defense missiles** तक मौजूद हैं।
+
+### 12. World की सबसे advanced Cyber Command
+
+**US Cyber Command (USCYBERCOM)** Pentagon से operate होती है — जो **दुनिया भर के cyber attacks** को real-time detect और counter करती है।
+
+### 13. Top Secret "Tank" Room
+
+**"The Tank"** एक soundproof, signal-proof room है जहाँ **Joint Chiefs of Staff** सबसे sensitive military decisions लेते हैं — यहाँ कोई phone, smartwatch नहीं ले जा सकता।
+
+### 14. UFO Files यहीं पर हैं
+
+2023-2025 में Pentagon की **AARO (All-domain Anomaly Resolution Office)** ने **800+ UFO sightings** की investigation की रिपोर्ट जारी की — दुनिया भर के UFO data का central archive Pentagon में है।
+
+### 15. आम लोग भी Tour कर सकते हैं
+
+हाँ! **Free Pentagon Tour** available है — पर पहले **online booking + background check (14-90 days)** ज़रूरी है। **pentagontours.osd.mil** पर apply करें।
+
+---
+
+## Pentagon vs भारत का "साउथ ब्लॉक" (रक्षा मंत्रालय)
+
+| Feature | 🇺🇸 Pentagon | 🇮🇳 South Block (Raksha Mantralaya) |
+|---|---|---|
+| Location | Arlington, Virginia | New Delhi, Raisina Hills |
+| Area | 6.5 million sq ft | ~5 lakh sq ft |
+| Employees | 26,000+ | ~3,000 |
+| Defense Budget 2026 | $886 Billion | $83.6 Billion |
+| Built | 1943 | 1931 |
+| Architect | George Bergstrom | Herbert Baker |
+
+---
+
+## Pentagon में काम करने वाले कौन-कौन हैं?
+
+- **Secretary of Defense** (सर्वोच्च civilian head)
+- **Joint Chiefs of Staff** (Army, Navy, Air Force, Marines, Space Force के chiefs)
+- **26,000+ military and civilian employees**
+- **3,000+ support staff** (security, maintenance, food service)
+
+---
+
+## क्या Pentagon पर हमला हो सकता है?
+
+आज के Pentagon में **multi-layer defense** है:
+
+- **Anti-missile shields**
+- **No-Fly Zone (15-mile radius)**
+- **Anti-drone laser systems**
+- **24/7 fighter jet patrol** (Andrews Air Force Base से)
+- **Underground bunkers** जो **nuclear blast** झेल सकते हैं
+
+---
+
+## FAQ — Pentagon के बारे में Top Questions
+
+**Q1. Pentagon का नाम Pentagon क्यों पड़ा?**  
+क्योंकि इसकी **5 sides (पंचभुजाकार)** हैं।
+
+**Q2. Pentagon किसने design किया?**  
+Architect **George Bergstrom** ने, सिर्फ **34 दिनों में** drawings तैयार किए थे।
+
+**Q3. Pentagon में कितने bathroom हैं?**  
+**284 bathrooms** — original design में दोगुने बनवाए गए थे क्योंकि 1940s में Virginia में अभी **segregation laws** थे (gore-kale अलग bathrooms)।
+
+**Q4. क्या Pentagon में कोई आम भारतीय जा सकता है?**  
+हाँ — **Pentagon Tour book** करके, पर visa और background check ज़रूरी है।
+
+**Q5. India का Pentagon कौन सा है?**  
+**South Block, New Delhi** — जहाँ **रक्षा मंत्रालय (Ministry of Defence)** स्थित है।
+
+---
+
+## निष्कर्ष — Pentagon क्यों है दुनिया की सबसे ताकतवर इमारत?
+
+Pentagon सिर्फ एक building नहीं — यह **अमेरिकी military power का symbol** है। **$886 billion budget**, **13 lakh active soldiers**, **5,500 nuclear warheads**, **11 aircraft carriers** — सब कुछ यहीं से control होता है।
+
+भारत भी अपने defense budget को तेज़ी से बढ़ा रहा है (2026 में $83.6 billion) — और **South Block** + नया बन रहा **National Security Building** आने वाले समय में Pentagon जैसा role निभाएगा।
+
+👉 **पैसों की बात आए तो हमेशा सही rate चेक करें** — Use our **[Free Currency Converter](/tools/currency-converter)** to convert USD ↔ INR ↔ EUR live rates पर।
+
+👉 और पढ़ें: **[2026 के Best Investment Plans India →](/blog/best-investment-plans-india-2026)** — अपनी कमाई को सही जगह invest करें।
+
+**Bookmark करें [ToolsKit.tech](/)** — रोज़ाना ज्ञानवर्धक blogs और 20+ free online tools के लिए।
+`,
+  },
   "ozempic-vs-mounjaro-weight-loss-2026": {
     id: 30,
     slug: "ozempic-vs-mounjaro-weight-loss-2026",

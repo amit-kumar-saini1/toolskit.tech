@@ -1,6 +1,7 @@
 // AUTO-GENERATED metadata for blog posts (used for SSR head())
 // Full content lives in src/pages/BlogPost.tsx
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
+import blogPentagonImage from "@/assets/blog-pentagon-2026.jpg";
 
 export interface BlogPostMeta {
   id: number;
@@ -14,6 +15,16 @@ export interface BlogPostMeta {
 }
 
 export const blogPostsMeta: Record<string, BlogPostMeta> = {
+  "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026": {
+    id: 31,
+    slug: "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026",
+    title: "Pentagon: दुनिया का सबसे ताकतवर Defense Headquarter — 15 चौंकाने वाले राज़ जो शायद ही आप जानते हों (2026)",
+    excerpt: "Pentagon (अमेरिका का रक्षा विभाग HQ) के 15 ऐसे रहस्य जो दुनिया को हैरान कर देते हैं — साइज़, बजट $886 अरब, 9/11 हमला, गुप्त सुरंगें, सबसे बड़ा office building। पूरी जानकारी हिंदी में 2026।",
+    category: "World",
+    date: "2026-05-10",
+    readTime: "16 min read",
+    image: blogPentagonImage,
+  },
   "ozempic-vs-mounjaro-weight-loss-2026": {
     id: 30,
     slug: "ozempic-vs-mounjaro-weight-loss-2026",

@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
+import blogPentagonImage from "@/assets/blog-pentagon-2026.jpg";
 import Footer from "@/components/layout/Footer";
 import { Link } from "@tanstack/react-router";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
@@ -7,6 +8,16 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const blogPosts = [
+  {
+    id: 31,
+    slug: "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026",
+    title: "Pentagon: दुनिया का सबसे ताकतवर Defense Headquarter — 15 चौंकाने वाले राज़ जो शायद ही आप जानते हों (2026)",
+    excerpt: "Pentagon (अमेरिका का रक्षा विभाग HQ) के 15 ऐसे रहस्य जो दुनिया को हैरान कर देते हैं — साइज़, बजट $886 अरब, 9/11 हमला, गुप्त सुरंगें, सबसे बड़ा office building। पूरी जानकारी हिंदी में 2026।",
+    category: "World",
+    date: "2026-05-10",
+    readTime: "16 min read",
+    image: blogPentagonImage
+  },
   {
     id: 30,
     slug: "ozempic-vs-mounjaro-weight-loss-2026",
