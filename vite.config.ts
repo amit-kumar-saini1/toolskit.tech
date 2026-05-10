@@ -22,7 +22,11 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [
-    tanstackStart(),
+    tanstackStart({
+      router: {
+        autoCodeSplitting: true,
+      } as any,
+    }),
     tsconfigPaths(),
     react(),
     mode === "development" && componentTagger(),
