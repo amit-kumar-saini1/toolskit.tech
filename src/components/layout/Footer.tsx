@@ -50,7 +50,7 @@ const DonateSection = () => {
     <div id="donate" className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-primary/20">
       <div className="flex items-center gap-3 sm:flex-col sm:items-start">
         <div className="bg-white rounded-lg p-1.5 sm:p-3 shrink-0 shadow-md sm:mx-0">
-          <img src={donateQr} alt="Donate QR Code" className="w-20 h-20 sm:w-36 sm:h-36 rounded" />
+          <img src={donateQr} alt="Donate QR Code" width={144} height={144} loading="lazy" decoding="async" className="w-20 h-20 sm:w-36 sm:h-36 rounded" />
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="font-bold text-sm sm:text-lg flex items-center gap-1.5 sm:gap-2">
