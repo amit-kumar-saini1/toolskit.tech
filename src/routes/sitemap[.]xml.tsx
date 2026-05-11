@@ -18,6 +18,7 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/image-to-pdf", priority: "0.9", changefreq: "weekly" },
   { path: "/pdf-to-image", priority: "0.9", changefreq: "weekly" },
   { path: "/remove-background", priority: "0.9", changefreq: "weekly" },
+  { path: "/age-calculator", priority: "0.9", changefreq: "weekly" },
 ];
 
 function buildSitemap(): string {
