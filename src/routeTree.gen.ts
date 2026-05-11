@@ -19,6 +19,7 @@ import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AgeCalculatorRouteImport } from './routes/age-calculator'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
@@ -97,6 +98,11 @@ const ImageCompressorRoute = ImageCompressorRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgeCalculatorRoute = AgeCalculatorRouteImport.update({
+  id: '/age-calculator',
+  path: '/age-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -249,6 +255,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/age-calculator': typeof AgeCalculatorRoute
   '/contact': typeof ContactRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-to-pdf': typeof ImageToPdfRoute
@@ -290,6 +297,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/age-calculator': typeof AgeCalculatorRoute
   '/contact': typeof ContactRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-to-pdf': typeof ImageToPdfRoute
@@ -332,6 +340,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/age-calculator': typeof AgeCalculatorRoute
   '/contact': typeof ContactRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-to-pdf': typeof ImageToPdfRoute
@@ -375,6 +384,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/age-calculator'
     | '/contact'
     | '/image-compressor'
     | '/image-to-pdf'
@@ -416,6 +426,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/age-calculator'
     | '/contact'
     | '/image-compressor'
     | '/image-to-pdf'
@@ -457,6 +468,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/age-calculator'
     | '/contact'
     | '/image-compressor'
     | '/image-to-pdf'
@@ -499,6 +511,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
+  AgeCalculatorRoute: typeof AgeCalculatorRoute
   ContactRoute: typeof ContactRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
   ImageToPdfRoute: typeof ImageToPdfRoute
@@ -607,6 +620,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/age-calculator': {
+      id: '/age-calculator'
+      path: '/age-calculator'
+      fullPath: '/age-calculator'
+      preLoaderRoute: typeof AgeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -819,6 +839,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
+  AgeCalculatorRoute: AgeCalculatorRoute,
   ContactRoute: ContactRoute,
   ImageCompressorRoute: ImageCompressorRoute,
   ImageToPdfRoute: ImageToPdfRoute,
