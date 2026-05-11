@@ -16,12 +16,17 @@ interface AgeResult {
 
 export default function AgeCalculatorWidget() {
   const [birthDate, setBirthDate] = useState("");
+  const [asOnDate, setAsOnDate] = useState(() => new Date().toISOString().split("T")[0]);
   const [result, setResult] = useState<AgeResult | null>(null);
 
   const calculateAge = () => {
-    if (!birthDate) return;
+    if (!birthDate || !asOnDate) return;
     const birth = new Date(birthDate);
-    const today = new Date();
+    const today = new Date(asOnDate);
+    if (today < birth) {
+      setResult(null);
+      return;
+    }
     let years = today.getFullYear() - birth.getFullYear();
     let months = today.getMonth() - birth.getMonth();
     let days = today.getDate() - birth.getDate();
@@ -46,7 +51,7 @@ export default function AgeCalculatorWidget() {
 
   return (
     <div className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         <div className="space-y-2">
           <Label htmlFor="age-birthdate">Date of Birth</Label>
           <Input
@@ -54,6 +59,16 @@ export default function AgeCalculatorWidget() {
             type="date"
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
+            className="h-12"
+          />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="age-ason">Age as on Date</Label>
+          <Input
+            id="age-ason"
+            type="date"
+            value={asOnDate}
+            onChange={(e) => setAsOnDate(e.target.value)}
             className="h-12"
           />
         </div>
