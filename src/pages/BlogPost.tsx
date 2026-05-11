@@ -1403,10 +1403,10 @@ A: Descriptive file names with keywords (like "vintage-leather-wallet-brown.jpg"
     id: 26,
     slug: "sip-se-crorepati-kaise-bane-2026",
     title: "SIP से Crorepati कैसे बनें 2026 — ₹5000 Monthly SIP से करोड़पति बनने का पूरा प्लान",
-    excerpt: "जानिए कैसे सिर्फ ₹5000 की Monthly SIP से आप 20-25 साल में करोड़पति बन सकते हैं। Nifty 50 रिटर्न, SIP Calculator, स्टेप-बाय-स्टेप गाइड हिंदी में — 2026 अपडेटेड।",
+    excerpt: "₹5000 Monthly SIP से 20-25 साल में करोड़पति बनने का पूरा फॉर्मूला — Step-Up SIP, Top 5 Index Funds 2026, नए LTCG 12.5% Tax Rules, और 7 common mistakes जो लोग करते हैं। हिंदी में।",
     category: "Finance",
     date: "2026-04-02",
-    readTime: "18 min read",
+    readTime: "20 min read",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop",
     relatedTool: "/tools/sip-calculator",
     content: `
@@ -1595,11 +1595,58 @@ A: Descriptive file names with keywords (like "vintage-leather-wallet-brown.jpg"
 
 ### Equity Mutual Fund (SIP) Tax Rules:
 
-- **1 साल से कम** (STCG): 15% tax
-- **1 साल से ज्यादा** (LTCG): 10% tax (₹1 लाख से ज्यादा profit पर)
-- **ELSS Fund**: Section 80C में ₹1.5 लाख तक tax deduction
+Budget 2024 के बाद Equity Mutual Fund पर tax rules बदल गए हैं — 2026 में ये rules लागू हैं:
 
-**उदाहरण:** अगर SIP से ₹5 लाख profit हुआ (1 साल+ बाद), तो ₹1 लाख exempt + बाकी ₹4 लाख पर 10% = **₹40,000 tax**। FD में यही ₹5 लाख पर आपके slab के हिसाब से 30% तक tax लग सकता है!
+- **1 साल से कम** (STCG): **20% tax** (पहले 15% था)
+- **1 साल से ज्यादा** (LTCG): **12.5% tax** (पहले 10% था) — **₹1.25 लाख तक profit पर कोई tax नहीं** (पहले limit ₹1 लाख थी)
+- **ELSS Fund**: Section 80C में ₹1.5 लाख तक tax deduction (Old Tax Regime में)
+- **New Tax Regime** चुनने पर 80C deduction नहीं मिलता
+
+**उदाहरण:** अगर SIP से ₹5 लाख LTCG profit हुआ, तो **₹1.25 लाख exempt** + बाकी ₹3.75 लाख पर 12.5% = **₹46,875 tax**। यही ₹5 लाख FD interest पर 30% slab में **₹1.5 लाख तक tax** लग सकता है — SIP अब भी कहीं ज्यादा tax-efficient है।
+
+---
+
+## Step-Up SIP — असली Wealth Multiplier
+
+अधिकतर लोग एक ही amount पर SIP चलाते रहते हैं। लेकिन हर साल आपकी salary बढ़ती है, तो SIP क्यों नहीं? **Step-Up SIP** में हर साल आप SIP को **10% बढ़ा देते हैं** — और result चौंकाने वाला है।
+
+| Strategy | शुरुआती SIP | 25 साल बाद Corpus (12% return) |
+|----------|------------|-------------------------------|
+| Normal SIP (कोई बढ़ोतरी नहीं) | ₹5,000 | ₹95 लाख |
+| Step-Up SIP (10% सालाना) | ₹5,000 | ₹2.65 करोड़ |
+| Step-Up SIP (15% सालाना) | ₹5,000 | ₹4.10 करोड़ |
+| Normal SIP | ₹10,000 | ₹1.90 करोड़ |
+| Step-Up SIP (10%) | ₹10,000 | ₹5.30 करोड़ |
+
+**सिर्फ हर साल 10% SIP बढ़ाने से 25 साल में wealth लगभग 3 गुना हो जाती है।** यही असली करोड़पति formula है।
+
+👉 **[SIP Calculator में Step-Up मोड try करें →](/tools/sip-calculator)**
+
+---
+
+## 7 Common SIP Mistakes — जो ज़्यादातर Indians करते हैं
+
+1. **Market गिरने पर SIP बंद कर देना** — असल में यही सबसे ज्यादा units खरीदने का मौका होता है।
+2. **Regular Plan में invest करना** — Direct Plan के मुक़ाबले 1-1.5% कम return मिलता है (25 साल में लाखों का फर्क)।
+3. **हर 6 महीने में Fund बदलना** — Mutual Fund एक "set & forget" product है, trading नहीं।
+4. **Insurance और Investment mix करना** — ULIP और Endowment plans से दूर रहें, term insurance + SIP अलग रखें।
+5. **Goal के बिना SIP** — रिटायरमेंट, बच्चों की पढ़ाई, घर — हर goal की अलग SIP होनी चाहिए।
+6. **Emergency Fund न रखना** — फिर मजबूरी में SIP तोड़नी पड़ती है, compounding टूट जाती है।
+7. **Step-Up SIP न करना** — सबसे बड़ी गलती। ऊपर का table दोबारा देखें।
+
+---
+
+## Top 5 Nifty 50 Index Funds — 2026 के लिए Best
+
+| Fund Name | Expense Ratio (Direct) | 5Y CAGR |
+|-----------|------------------------|---------|
+| UTI Nifty 50 Index Fund | 0.20% | ~13% |
+| HDFC Nifty 50 Index Fund | 0.20% | ~13% |
+| ICICI Prudential Nifty 50 Index Fund | 0.17% | ~13% |
+| SBI Nifty 50 Index Fund | 0.18% | ~13% |
+| Navi Nifty 50 Index Fund | 0.06% | ~13% |
+
+**Tip:** Index Funds का return लगभग same होता है — सबसे कम **expense ratio** वाला fund चुनें। ज़्यादा फर्क वहीं पड़ता है।
 
 ---
 
@@ -8151,7 +8198,67 @@ const BlogPost = () => {
 
           {/* Article Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
-            {post.content.split('\n').map((paragraph, index) => {
+            {(() => {
+              // Group consecutive markdown table lines into blocks so we can
+              // render them as proper <table> instead of leaking "|---|---|"
+              // as raw paragraph text.
+              const lines = post.content.split('\n');
+              type Block =
+                | { kind: 'line'; text: string; index: number }
+                | { kind: 'table'; rows: string[][]; index: number };
+              const blocks: Block[] = [];
+              let i = 0;
+              const isTableRow = (s: string) => /^\s*\|.*\|\s*$/.test(s);
+              const isSeparator = (s: string) => /^\s*\|?\s*[:\-\s|]+\s*$/.test(s) && s.includes('-');
+              while (i < lines.length) {
+                const line = lines[i];
+                if (isTableRow(line) && i + 1 < lines.length && isSeparator(lines[i + 1])) {
+                  const rows: string[][] = [];
+                  // header
+                  rows.push(line.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim()));
+                  i += 2; // skip separator
+                  while (i < lines.length && isTableRow(lines[i]) && !isSeparator(lines[i])) {
+                    rows.push(lines[i].trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim()));
+                    i += 1;
+                  }
+                  blocks.push({ kind: 'table', rows, index: i });
+                  continue;
+                }
+                blocks.push({ kind: 'line', text: line, index: i });
+                i += 1;
+              }
+              return blocks.map((block) => {
+                if (block.kind === 'table') {
+                  const [header, ...body] = block.rows;
+                  return (
+                    <div key={`tbl-${block.index}`} className="my-6 overflow-x-auto">
+                      <table className="w-full border-collapse text-sm">
+                        <thead>
+                          <tr className="bg-muted">
+                            {header.map((h, hi) => (
+                              <th key={hi} className="border border-border px-3 py-2 text-left font-semibold">
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {body.map((row, ri) => (
+                            <tr key={ri} className={ri % 2 === 0 ? 'bg-background' : 'bg-muted/30'}>
+                              {row.map((cell, ci) => (
+                                <td key={ci} className="border border-border px-3 py-2 align-top">
+                                  {cell.replace(/\*\*/g, '')}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                }
+                const paragraph = block.text;
+                const index = block.index;
               // Helper function to parse markdown links and bold text
               const parseInlineFormatting = (text: string): React.ReactNode[] => {
                 const parts: React.ReactNode[] = [];
@@ -8262,7 +8369,8 @@ const BlogPost = () => {
                 return <li key={index} className="ml-4 list-decimal">{parseInlineFormatting(paragraph.replace(/^\d+\.\s/, ''))}</li>;
               }
               return <p key={index} className="my-4 text-muted-foreground leading-relaxed">{parseInlineFormatting(paragraph)}</p>;
-            })}
+              });
+            })()}
           </div>
 
           {/* Related Tool CTA */}
