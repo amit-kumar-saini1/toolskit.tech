@@ -20,11 +20,28 @@ export const DEFAULT_RELATED_TOOLS: RelatedTool[] = [
 
 export function AutorelaxedAd() {
   const ref = useRef<HTMLModElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
   const loaded = useRef(false);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (!mounted || loaded.current) return;
+    if (!wrapRef.current || typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "400px" },
+    );
+    io.observe(wrapRef.current);
+    return () => io.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!visible || loaded.current) return;
     const tryPush = (n = 0) => {
       if (loaded.current) return;
       const ag = (window as any).adsbygoogle;
@@ -40,11 +57,11 @@ export function AutorelaxedAd() {
       if (n < 12) window.setTimeout(() => tryPush(n + 1), 500);
     };
     tryPush();
-  }, [mounted]);
+  }, [visible]);
   return (
-    <div className="my-6">
+    <div ref={wrapRef} className="my-6 min-h-[120px]">
       <p className="text-xs text-muted-foreground text-center mb-2">Advertisement</p>
-      {mounted && (
+      {visible && (
         <ins
           ref={ref}
           className="adsbygoogle"
@@ -60,11 +77,28 @@ export function AutorelaxedAd() {
 
 export function SidebarAd() {
   const ref = useRef<HTMLModElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
   const loaded = useRef(false);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (!mounted || loaded.current) return;
+    if (!wrapRef.current || typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "400px" },
+    );
+    io.observe(wrapRef.current);
+    return () => io.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!visible || loaded.current) return;
     const tryPush = (n = 0) => {
       if (loaded.current) return;
       const ag = (window as any).adsbygoogle;
@@ -80,11 +114,11 @@ export function SidebarAd() {
       if (n < 12) window.setTimeout(() => tryPush(n + 1), 500);
     };
     tryPush();
-  }, [mounted]);
+  }, [visible]);
   return (
-    <div className="bg-card border border-border rounded-xl p-2">
+    <div ref={wrapRef} className="bg-card border border-border rounded-xl p-2 min-h-[120px]">
       <p className="text-[10px] text-muted-foreground text-center mb-1">Advertisement</p>
-      {mounted && (
+      {visible && (
         <ins
           ref={ref}
           className="adsbygoogle"
