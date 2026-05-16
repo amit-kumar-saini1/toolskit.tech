@@ -1,0 +1,38 @@
+# ToolsKit.tech
+
+> 50+ free online tools — PDF converter, image compressor, background remover, QR generator, age calculator, and more. No signup, fast, secure.
+
+ToolsKit.tech provides free, browser-based utilities for everyday tasks: image and PDF processing, calculators (financial, age, BMI), converters (units, currency, time zones), and generators (QR codes). All tools run client-side without uploading user data.
+
+## Pages
+
+- [Home](/): Overview of all free tools.
+- [All Tools](/tools): Browse the complete tool catalog.
+- [Blog](/blog): Tips and tutorials for using free online tools.
+- [About](/about): About ToolsKit.tech.
+- [Contact](/contact): Get in touch.
+
+## Tools
+
+- [Image Compressor](/tools/image-compressor): Reduce image file size without losing quality.
+- [Image to PDF](/tools/image-to-pdf): Convert images to PDF documents.
+- [PDF to Image](/tools/pdf-to-image): Convert PDF pages to images.
+- [Remove Background](/tools/remove-background): Remove image backgrounds with AI.
+- [QR Code Generator](/tools/qr-generator): Create QR codes for any text or URL.
+- [Age Calculator](/age-calculator): Calculate age in years, months, and days.
+- [BMI Calculator](/tools/bmi-calculator): Calculate body mass index.
+- [SIP Calculator](/tools/sip-calculator): Estimate mutual fund SIP returns.
+- [FD Calculator](/tools/fd-calculator): Calculate fixed deposit maturity.
+- [PPF Calculator](/tools/ppf-calculator): Estimate PPF maturity amount.
+- [Loan EMI Calculator](/tools/loan-emi-calculator): Calculate loan monthly installments.
+- [Image Cropper](/tools/image-cropper): Crop images online.
+- [Color Picker](/tools/color-picker): Pick colors from images.
+- [Unit Converter](/tools/unit-converter): Convert between units of measurement.
+- [KB Converter](/tools/kb-converter): Resize images to specific KB size.
+- [Text on Photo](/tools/text-on-photo): Add text overlays to images.
+- [Name and Date on Photo](/name-and-date-on-photo): Add name and date overlay to photos.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms)
