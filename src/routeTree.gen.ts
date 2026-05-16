@@ -15,6 +15,7 @@ import { Route as RemoveBackgroundRouteImport } from './routes/remove-background
 import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
+import { Route as PagesRouteImport } from './routes/pages'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
@@ -79,6 +80,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const PdfToImageRoute = PdfToImageRouteImport.update({
   id: '/pdf-to-image',
   path: '/pdf-to-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesRoute = PagesRouteImport.update({
+  id: '/pages',
+  path: '/pages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NameAndDateOnPhotoRoute = NameAndDateOnPhotoRouteImport.update({
@@ -267,6 +273,7 @@ export interface FileRoutesByFullPath {
   '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -310,6 +317,7 @@ export interface FileRoutesByTo {
   '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -354,6 +362,7 @@ export interface FileRoutesById {
   '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -399,6 +408,7 @@ export interface FileRouteTypes {
     | '/image-to-pdf'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/pages'
     | '/pdf-to-image'
     | '/privacy'
     | '/qr-generator'
@@ -442,6 +452,7 @@ export interface FileRouteTypes {
     | '/image-to-pdf'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/pages'
     | '/pdf-to-image'
     | '/privacy'
     | '/qr-generator'
@@ -485,6 +496,7 @@ export interface FileRouteTypes {
     | '/image-to-pdf'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/pages'
     | '/pdf-to-image'
     | '/privacy'
     | '/qr-generator'
@@ -529,6 +541,7 @@ export interface RootRouteChildren {
   ImageToPdfRoute: typeof ImageToPdfRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
+  PagesRoute: typeof PagesRoute
   PdfToImageRoute: typeof PdfToImageRoute
   PrivacyRoute: typeof PrivacyRoute
   QrGeneratorRoute: typeof QrGeneratorRoute
@@ -605,6 +618,13 @@ declare module '@tanstack/react-router' {
       path: '/pdf-to-image'
       fullPath: '/pdf-to-image'
       preLoaderRoute: typeof PdfToImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pages': {
+      id: '/pages'
+      path: '/pages'
+      fullPath: '/pages'
+      preLoaderRoute: typeof PagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/name-and-date-on-photo': {
@@ -865,6 +885,7 @@ const rootRouteChildren: RootRouteChildren = {
   ImageToPdfRoute: ImageToPdfRoute,
   KbResizePixelRoute: KbResizePixelRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
+  PagesRoute: PagesRoute,
   PdfToImageRoute: PdfToImageRoute,
   PrivacyRoute: PrivacyRoute,
   QrGeneratorRoute: QrGeneratorRoute,

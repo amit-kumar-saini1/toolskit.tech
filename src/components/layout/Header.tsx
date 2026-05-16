@@ -22,6 +22,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
           <Link to="/" className={linkClass}>Home</Link>
           <Link to="/tools" className={linkClass}>All Tools</Link>
+          <Link to="/pages" className={linkClass}>Pages</Link>
           <Link to="/blog" className={linkClass}>Blog</Link>
           <Link to="/about" className={linkClass}>About</Link>
           <a
@@ -51,6 +52,7 @@ const Header = () => {
           <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
             <Link to="/" className={linkClass} onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/tools" className={linkClass} onClick={() => setIsMenuOpen(false)}>All Tools</Link>
+            <Link to="/pages" className={linkClass} onClick={() => setIsMenuOpen(false)}>Pages</Link>
             <Link to="/blog" className={linkClass} onClick={() => setIsMenuOpen(false)}>Blog</Link>
             <Link to="/about" className={linkClass} onClick={() => setIsMenuOpen(false)}>About</Link>
             <a
