@@ -11,14 +11,20 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SipCalculatorRouteImport } from './routes/sip-calculator'
 import { Route as RemoveBackgroundRouteImport } from './routes/remove-background'
 import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PpfCalculatorRouteImport } from './routes/ppf-calculator'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
+import { Route as PagesRouteImport } from './routes/pages'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
+import { Route as ImageCropperRouteImport } from './routes/image-cropper'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
+import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
+import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AgeCalculatorRouteImport } from './routes/age-calculator'
 import { Route as AboutRouteImport } from './routes/about'
@@ -61,6 +67,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SipCalculatorRoute = SipCalculatorRouteImport.update({
+  id: '/sip-calculator',
+  path: '/sip-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RemoveBackgroundRoute = RemoveBackgroundRouteImport.update({
   id: '/remove-background',
   path: '/remove-background',
@@ -76,9 +87,19 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PpfCalculatorRoute = PpfCalculatorRouteImport.update({
+  id: '/ppf-calculator',
+  path: '/ppf-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PdfToImageRoute = PdfToImageRouteImport.update({
   id: '/pdf-to-image',
   path: '/pdf-to-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PagesRoute = PagesRouteImport.update({
+  id: '/pages',
+  path: '/pages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NameAndDateOnPhotoRoute = NameAndDateOnPhotoRouteImport.update({
@@ -96,9 +117,24 @@ const ImageToPdfRoute = ImageToPdfRouteImport.update({
   path: '/image-to-pdf',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImageCropperRoute = ImageCropperRouteImport.update({
+  id: '/image-cropper',
+  path: '/image-cropper',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImageCompressorRoute = ImageCompressorRouteImport.update({
   id: '/image-compressor',
   path: '/image-compressor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FdCalculatorRoute = FdCalculatorRouteImport.update({
+  id: '/fd-calculator',
+  path: '/fd-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EtsyFeeCalculatorRoute = EtsyFeeCalculatorRouteImport.update({
+  id: '/etsy-fee-calculator',
+  path: '/etsy-fee-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -263,14 +299,20 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
   '/contact': typeof ContactRoute
+  '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
+  '/fd-calculator': typeof FdCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
+  '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
   '/remove-background': typeof RemoveBackgroundRoute
+  '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -306,14 +348,20 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
   '/contact': typeof ContactRoute
+  '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
+  '/fd-calculator': typeof FdCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
+  '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
   '/remove-background': typeof RemoveBackgroundRoute
+  '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -350,14 +398,20 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
   '/contact': typeof ContactRoute
+  '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
+  '/fd-calculator': typeof FdCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
+  '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
   '/remove-background': typeof RemoveBackgroundRoute
+  '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -395,14 +449,20 @@ export interface FileRouteTypes {
     | '/about'
     | '/age-calculator'
     | '/contact'
+    | '/etsy-fee-calculator'
+    | '/fd-calculator'
     | '/image-compressor'
+    | '/image-cropper'
     | '/image-to-pdf'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/pages'
     | '/pdf-to-image'
+    | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
     | '/remove-background'
+    | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -438,14 +498,20 @@ export interface FileRouteTypes {
     | '/about'
     | '/age-calculator'
     | '/contact'
+    | '/etsy-fee-calculator'
+    | '/fd-calculator'
     | '/image-compressor'
+    | '/image-cropper'
     | '/image-to-pdf'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/pages'
     | '/pdf-to-image'
+    | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
     | '/remove-background'
+    | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -481,14 +547,20 @@ export interface FileRouteTypes {
     | '/about'
     | '/age-calculator'
     | '/contact'
+    | '/etsy-fee-calculator'
+    | '/fd-calculator'
     | '/image-compressor'
+    | '/image-cropper'
     | '/image-to-pdf'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/pages'
     | '/pdf-to-image'
+    | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
     | '/remove-background'
+    | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
     | '/blog/$slug'
@@ -525,14 +597,20 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AgeCalculatorRoute: typeof AgeCalculatorRoute
   ContactRoute: typeof ContactRoute
+  EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
+  FdCalculatorRoute: typeof FdCalculatorRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
+  ImageCropperRoute: typeof ImageCropperRoute
   ImageToPdfRoute: typeof ImageToPdfRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
+  PagesRoute: typeof PagesRoute
   PdfToImageRoute: typeof PdfToImageRoute
+  PpfCalculatorRoute: typeof PpfCalculatorRoute
   PrivacyRoute: typeof PrivacyRoute
   QrGeneratorRoute: typeof QrGeneratorRoute
   RemoveBackgroundRoute: typeof RemoveBackgroundRoute
+  SipCalculatorRoute: typeof SipCalculatorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -579,6 +657,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sip-calculator': {
+      id: '/sip-calculator'
+      path: '/sip-calculator'
+      fullPath: '/sip-calculator'
+      preLoaderRoute: typeof SipCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/remove-background': {
       id: '/remove-background'
       path: '/remove-background'
@@ -600,11 +685,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ppf-calculator': {
+      id: '/ppf-calculator'
+      path: '/ppf-calculator'
+      fullPath: '/ppf-calculator'
+      preLoaderRoute: typeof PpfCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pdf-to-image': {
       id: '/pdf-to-image'
       path: '/pdf-to-image'
       fullPath: '/pdf-to-image'
       preLoaderRoute: typeof PdfToImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pages': {
+      id: '/pages'
+      path: '/pages'
+      fullPath: '/pages'
+      preLoaderRoute: typeof PagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/name-and-date-on-photo': {
@@ -628,11 +727,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImageToPdfRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/image-cropper': {
+      id: '/image-cropper'
+      path: '/image-cropper'
+      fullPath: '/image-cropper'
+      preLoaderRoute: typeof ImageCropperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/image-compressor': {
       id: '/image-compressor'
       path: '/image-compressor'
       fullPath: '/image-compressor'
       preLoaderRoute: typeof ImageCompressorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fd-calculator': {
+      id: '/fd-calculator'
+      path: '/fd-calculator'
+      fullPath: '/fd-calculator'
+      preLoaderRoute: typeof FdCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/etsy-fee-calculator': {
+      id: '/etsy-fee-calculator'
+      path: '/etsy-fee-calculator'
+      fullPath: '/etsy-fee-calculator'
+      preLoaderRoute: typeof EtsyFeeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -861,14 +981,20 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AgeCalculatorRoute: AgeCalculatorRoute,
   ContactRoute: ContactRoute,
+  EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
+  FdCalculatorRoute: FdCalculatorRoute,
   ImageCompressorRoute: ImageCompressorRoute,
+  ImageCropperRoute: ImageCropperRoute,
   ImageToPdfRoute: ImageToPdfRoute,
   KbResizePixelRoute: KbResizePixelRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
+  PagesRoute: PagesRoute,
   PdfToImageRoute: PdfToImageRoute,
+  PpfCalculatorRoute: PpfCalculatorRoute,
   PrivacyRoute: PrivacyRoute,
   QrGeneratorRoute: QrGeneratorRoute,
   RemoveBackgroundRoute: RemoveBackgroundRoute,
+  SipCalculatorRoute: SipCalculatorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
