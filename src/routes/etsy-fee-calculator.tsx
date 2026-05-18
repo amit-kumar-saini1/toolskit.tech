@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import EtsyFeeCalculator from "@/pages/tools/EtsyFeeCalculator";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import SeoToolShell from "@/components/seo/SeoToolShell";
+import { EtsyFeeCalculatorWidget } from "@/pages/tools/EtsyFeeCalculator";
 import { buildPageHead } from "@/lib/toolHead";
 
 export const Route = createFileRoute("/etsy-fee-calculator")({
@@ -22,5 +23,61 @@ export const Route = createFileRoute("/etsy-fee-calculator")({
     };
     return { ...base, scripts: [...base.scripts, { type: "application/ld+json", children: JSON.stringify(faqLd) }] };
   },
-  component: EtsyFeeCalculator,
+  component: Page,
 });
+
+function Page() {
+  return (
+    <SeoToolShell
+      currentPath="/etsy-fee-calculator"
+      h1="Etsy Fee Calculator – Seller Fees & Profit 2026"
+      subtitle="Calculate Etsy listing, transaction, processing and offsite ads fees in USD, GBP, EUR, CAD, AUD or INR."
+      tool={<EtsyFeeCalculatorWidget />}
+      content={<Content />}
+    />
+  );
+}
+
+function Content() {
+  return (
+    <>
+      <h2>What is the Etsy Fee Calculator?</h2>
+      <p>
+        The Etsy Fee Calculator is a free tool that computes every fee Etsy
+        charges sellers — listing fee, 6.5% transaction fee, payment
+        processing fee and the optional 15% offsite ads fee — so you can see
+        the real profit on every sale before you list.
+      </p>
+
+      <h2>Etsy fee structure (2026)</h2>
+      <ul>
+        <li><b>Listing fee:</b> $0.20 per listing, renewed every 4 months or after each sale.</li>
+        <li><b>Transaction fee:</b> 6.5% of item price + shipping.</li>
+        <li><b>Payment processing:</b> country-specific (e.g. 3% + $0.25 in the US).</li>
+        <li><b>Offsite ads:</b> 15% — mandatory for shops earning over $10,000/year.</li>
+      </ul>
+
+      <h2>How to use this Etsy Fee Calculator</h2>
+      <ol>
+        <li><b>Pick your currency</b> — USD, GBP, EUR, CAD, AUD or INR.</li>
+        <li><b>Enter item price, shipping and your item cost (COGS).</b></li>
+        <li><b>Set quantity</b> if selling more than one unit.</li>
+        <li><b>Toggle Offsite Ads</b> if it applies to your shop.</li>
+        <li><b>See net profit and margin instantly</b> in the result card.</li>
+      </ol>
+
+      <h2>Why every Etsy seller needs a fee calculator</h2>
+      <p>
+        Etsy's stacked fees can quietly eat 25–35% of your sale price. The
+        Etsy Fee Calculator above shows exactly where every dollar goes so you
+        can price products for real profit, not surprise losses.
+      </p>
+
+      <p className="mt-6">
+        More free tools on ToolsKit:
+        <Link to="/image-cropper" className="text-primary underline mx-1">Image Cropper</Link>,
+        <Link to="/sip-calculator" className="text-primary underline mx-1">SIP Calculator</Link>.
+      </p>
+    </>
+  );
+}

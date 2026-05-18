@@ -36,7 +36,7 @@ const PPF_EXAMPLES = [
   { yearly: "₹1,50,000/yr", y15: "₹43.2L", y25: "₹1.02Cr", interest15: "₹20.7L" },
 ];
 
-const PPFCalculator = () => {
+export const PPFCalculatorWidget = () => {
   const [yearlyInvestment, setYearlyInvestment] = useState(150000);
   const [interestRate, setInterestRate] = useState(7.1);
   const [timePeriod, setTimePeriod] = useState(15);
@@ -67,7 +67,6 @@ const PPFCalculator = () => {
   const interestPercent = ppfResult.amount > 0 ? (ppfResult.interest / ppfResult.amount) * 100 : 0;
 
   return (
-    <ToolLayout title="PPF Calculator" description="Calculate Public Provident Fund maturity amount, interest earned & compare with SIP" icon={PiggyBank} toolSlug="ppf-calculator">
       <div className="max-w-4xl mx-auto space-y-8">
         <Tabs defaultValue="calculator" className="w-full">
           <TabsList className="grid w-full grid-cols-3">
@@ -335,8 +334,13 @@ const PPFCalculator = () => {
           </p>
         </div>
       </div>
-    </ToolLayout>
   );
 };
+
+const PPFCalculator = () => (
+  <ToolLayout title="PPF Calculator" description="Calculate Public Provident Fund maturity amount, interest earned & compare with SIP" icon={PiggyBank} toolSlug="ppf-calculator">
+    <PPFCalculatorWidget />
+  </ToolLayout>
+);
 
 export default PPFCalculator;

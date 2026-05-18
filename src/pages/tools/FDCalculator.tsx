@@ -34,7 +34,7 @@ const FD_EXAMPLES = [
   { amount: "₹10 Lakh", y1: "₹10.72L", y3: "₹12.30L", y5: "₹14.03L" },
 ];
 
-const FDCalculator = () => {
+export const FDCalculatorWidget = () => {
   const [principal, setPrincipal] = useState(500000);
   const [interestRate, setInterestRate] = useState(7);
   const [timePeriod, setTimePeriod] = useState(5);
@@ -56,12 +56,7 @@ const FDCalculator = () => {
   const interestPercent = fdResult ? (fdResult.interest / fdResult.amount) * 100 : 0;
 
   return (
-    <ToolLayout
-      title="FD Calculator"
-      description="Fixed Deposit maturity amount calculate karein — FD vs SIP comparison ke saath. Free FD interest calculator 2026."
-      icon={Landmark}
-      toolSlug="fd-calculator"
-    >
+    <div>
       <Tabs defaultValue="calculator" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="calculator">FD Calculator</TabsTrigger>
@@ -357,8 +352,19 @@ const FDCalculator = () => {
           Investment se pehle bank se confirm karein.
         </p>
       </div>
-    </ToolLayout>
+    </div>
   );
 };
+
+const FDCalculator = () => (
+  <ToolLayout
+    title="FD Calculator"
+    description="Fixed Deposit maturity amount calculate karein — FD vs SIP comparison ke saath. Free FD interest calculator 2026."
+    icon={Landmark}
+    toolSlug="fd-calculator"
+  >
+    <FDCalculatorWidget />
+  </ToolLayout>
+);
 
 export default FDCalculator;

@@ -7,7 +7,6 @@ const SITE = "https://toolskit.tech";
 const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/", priority: "1.0", changefreq: "daily" },
   { path: "/tools", priority: "0.9", changefreq: "weekly" },
-  { path: "/pages", priority: "0.9", changefreq: "weekly" },
   { path: "/blog", priority: "0.9", changefreq: "daily" },
   { path: "/about", priority: "0.6", changefreq: "monthly" },
   { path: "/contact", priority: "0.5", changefreq: "monthly" },

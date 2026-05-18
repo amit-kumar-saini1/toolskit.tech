@@ -23,7 +23,7 @@ const SIP_EXAMPLES = [
   { amount: 10000, years: 30, rate: 12, value: "₹3.53 Cr" },
 ];
 
-const SIPCalculator = () => {
+export const SIPCalculatorWidget = () => {
   const [monthlyInvestment, setMonthlyInvestment] = useState(5000);
   const [expectedReturn, setExpectedReturn] = useState(12);
   const [timePeriod, setTimePeriod] = useState(10);
@@ -45,12 +45,6 @@ const SIPCalculator = () => {
   const investedPercent = result ? (result.totalInvested / result.futureValue) * 100 : 0;
 
   return (
-    <ToolLayout
-      title="SIP Calculator"
-      description="₹5000 monthly SIP se 10, 20, 30 saal mein kitna paisa banega? Free mutual fund SIP return calculator 2026 — SIP se crorepati bane!"
-      icon={TrendingUp}
-      toolSlug="sip-calculator"
-    >
       <div className="space-y-5">
         {/* Monthly Investment */}
         <div className="space-y-2.5">
@@ -268,8 +262,18 @@ const SIPCalculator = () => {
           </p>
         </div>
       </div>
-    </ToolLayout>
   );
 };
+
+const SIPCalculator = () => (
+  <ToolLayout
+    title="SIP Calculator"
+    description="₹5000 monthly SIP se 10, 20, 30 saal mein kitna paisa banega? Free mutual fund SIP return calculator 2026 — SIP se crorepati bane!"
+    icon={TrendingUp}
+    toolSlug="sip-calculator"
+  >
+    <SIPCalculatorWidget />
+  </ToolLayout>
+);
 
 export default SIPCalculator;
