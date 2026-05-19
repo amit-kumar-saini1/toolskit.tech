@@ -31,8 +31,7 @@ const OFFSITE_ADS_RATE = 0.15;
 
 const quickPrices = [10, 25, 50, 100, 250, 500];
 
-const EtsyFeeCalculator = () => {
-  const seo = toolsSEO["etsy-fee-calculator"];
+export const EtsyFeeCalculatorWidget = () => {
   const [currency, setCurrency] = useState("USD");
   const [itemPrice, setItemPrice] = useState(25);
   const [shippingCharge, setShippingCharge] = useState(5);
@@ -60,12 +59,6 @@ const EtsyFeeCalculator = () => {
   const fmt = (n: number) => `${config.symbol}${n.toFixed(2)}`;
 
   return (
-    <ToolLayout
-      title={seo.h1Title}
-      description={seo.description}
-      icon={ShoppingBag}
-      toolSlug="etsy-fee-calculator"
-    >
       <Tabs defaultValue="calculator" className="w-full">
         <TabsList className="grid w-full grid-cols-2 mb-6">
           <TabsTrigger value="calculator">Calculator</TabsTrigger>
@@ -201,7 +194,14 @@ const EtsyFeeCalculator = () => {
           </Card>
         </TabsContent>
       </Tabs>
+  );
+};
 
+const EtsyFeeCalculator = () => {
+  const seo = toolsSEO["etsy-fee-calculator"];
+  return (
+    <ToolLayout title={seo.h1Title} description={seo.description} icon={ShoppingBag} toolSlug="etsy-fee-calculator">
+      <EtsyFeeCalculatorWidget />
     </ToolLayout>
   );
 };

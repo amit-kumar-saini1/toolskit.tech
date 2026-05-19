@@ -7,7 +7,7 @@ import ToolLayout from "@/components/tools/ToolLayout";
 import { AdDownloadModal } from "@/components/AdDownloadModal";
 import { toast } from "sonner";
 
-const ImageCropper = () => {
+export const ImageCropperWidget = () => {
   const [image, setImage] = useState<string | null>(null);
   const [cropArea, setCropArea] = useState({ x: 0, y: 0, width: 200, height: 200 });
   const [isDragging, setIsDragging] = useState(false);
@@ -119,12 +119,7 @@ const ImageCropper = () => {
   };
 
   return (
-    <ToolLayout
-      title="Image Cropper"
-      description="Crop and resize your images easily"
-      icon={Crop}
-      toolSlug="image-cropper"
-    >
+    <>
       {!image ? (
         <label className="flex flex-col items-center justify-center h-64 border-2 border-dashed border-border rounded-xl cursor-pointer hover:border-primary transition-colors">
           <Upload className="w-12 h-12 text-muted-foreground mb-4" />
@@ -204,8 +199,19 @@ const ImageCropper = () => {
           />
         </div>
       )}
-    </ToolLayout>
+    </>
   );
 };
+
+const ImageCropper = () => (
+  <ToolLayout
+    title="Image Cropper"
+    description="Crop and resize your images easily"
+    icon={Crop}
+    toolSlug="image-cropper"
+  >
+    <ImageCropperWidget />
+  </ToolLayout>
+);
 
 export default ImageCropper;

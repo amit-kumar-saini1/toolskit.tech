@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WebpToJpgRouteImport } from './routes/webp-to-jpg'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SipCalculatorRouteImport } from './routes/sip-calculator'
@@ -20,9 +21,11 @@ import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
 import { Route as PagesRouteImport } from './routes/pages'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
+import { Route as JpgToPngRouteImport } from './routes/jpg-to-png'
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
 import { Route as ImageCropperRouteImport } from './routes/image-cropper'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
+import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
 import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -57,6 +60,11 @@ import { Route as ToolsBmiCalculatorRouteImport } from './routes/tools.bmi-calcu
 import { Route as ToolsAgeCalculatorRouteImport } from './routes/tools.age-calculator'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const WebpToJpgRoute = WebpToJpgRouteImport.update({
+  id: '/webp-to-jpg',
+  path: '/webp-to-jpg',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -112,6 +120,11 @@ const KbResizePixelRoute = KbResizePixelRouteImport.update({
   path: '/kb-resize-pixel',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JpgToPngRoute = JpgToPngRouteImport.update({
+  id: '/jpg-to-png',
+  path: '/jpg-to-png',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImageToPdfRoute = ImageToPdfRouteImport.update({
   id: '/image-to-pdf',
   path: '/image-to-pdf',
@@ -125,6 +138,11 @@ const ImageCropperRoute = ImageCropperRouteImport.update({
 const ImageCompressorRoute = ImageCompressorRouteImport.update({
   id: '/image-compressor',
   path: '/image-compressor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GstCalculatorRoute = GstCalculatorRouteImport.update({
+  id: '/gst-calculator',
+  path: '/gst-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FdCalculatorRoute = FdCalculatorRouteImport.update({
@@ -301,9 +319,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gst-calculator': typeof GstCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/pages': typeof PagesRoute
@@ -315,6 +335,7 @@ export interface FileRoutesByFullPath {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/webp-to-jpg': typeof WebpToJpgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -350,9 +371,11 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gst-calculator': typeof GstCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/pages': typeof PagesRoute
@@ -364,6 +387,7 @@ export interface FileRoutesByTo {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/webp-to-jpg': typeof WebpToJpgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -400,9 +424,11 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gst-calculator': typeof GstCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/pages': typeof PagesRoute
@@ -414,6 +440,7 @@ export interface FileRoutesById {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/webp-to-jpg': typeof WebpToJpgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -451,9 +478,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gst-calculator'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
     | '/pages'
@@ -465,6 +494,7 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/webp-to-jpg'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -500,9 +530,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gst-calculator'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
     | '/pages'
@@ -514,6 +546,7 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/webp-to-jpg'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -549,9 +582,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gst-calculator'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
     | '/pages'
@@ -563,6 +598,7 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/webp-to-jpg'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -599,9 +635,11 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
   FdCalculatorRoute: typeof FdCalculatorRoute
+  GstCalculatorRoute: typeof GstCalculatorRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
   ImageCropperRoute: typeof ImageCropperRoute
   ImageToPdfRoute: typeof ImageToPdfRoute
+  JpgToPngRoute: typeof JpgToPngRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
   PagesRoute: typeof PagesRoute
@@ -613,6 +651,7 @@ export interface RootRouteChildren {
   SipCalculatorRoute: typeof SipCalculatorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  WebpToJpgRoute: typeof WebpToJpgRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
   ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
@@ -643,6 +682,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/webp-to-jpg': {
+      id: '/webp-to-jpg'
+      path: '/webp-to-jpg'
+      fullPath: '/webp-to-jpg'
+      preLoaderRoute: typeof WebpToJpgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -720,6 +766,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KbResizePixelRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jpg-to-png': {
+      id: '/jpg-to-png'
+      path: '/jpg-to-png'
+      fullPath: '/jpg-to-png'
+      preLoaderRoute: typeof JpgToPngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/image-to-pdf': {
       id: '/image-to-pdf'
       path: '/image-to-pdf'
@@ -739,6 +792,13 @@ declare module '@tanstack/react-router' {
       path: '/image-compressor'
       fullPath: '/image-compressor'
       preLoaderRoute: typeof ImageCompressorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gst-calculator': {
+      id: '/gst-calculator'
+      path: '/gst-calculator'
+      fullPath: '/gst-calculator'
+      preLoaderRoute: typeof GstCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fd-calculator': {
@@ -983,9 +1043,11 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
   FdCalculatorRoute: FdCalculatorRoute,
+  GstCalculatorRoute: GstCalculatorRoute,
   ImageCompressorRoute: ImageCompressorRoute,
   ImageCropperRoute: ImageCropperRoute,
   ImageToPdfRoute: ImageToPdfRoute,
+  JpgToPngRoute: JpgToPngRoute,
   KbResizePixelRoute: KbResizePixelRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
   PagesRoute: PagesRoute,
@@ -997,6 +1059,7 @@ const rootRouteChildren: RootRouteChildren = {
   SipCalculatorRoute: SipCalculatorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  WebpToJpgRoute: WebpToJpgRoute,
   BlogSlugRoute: BlogSlugRoute,
   ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
   ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
