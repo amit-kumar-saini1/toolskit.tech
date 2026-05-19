@@ -25,7 +25,11 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/image-cropper", priority: "0.9", changefreq: "weekly" },
   { path: "/ppf-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/fd-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/webp-to-jpg", priority: "0.9", changefreq: "weekly" },
+  { path: "/jpg-to-png", priority: "0.9", changefreq: "weekly" },
+  { path: "/gst-calculator", priority: "0.9", changefreq: "weekly" },
 ];
+
 
 function buildSitemap(): string {
   const today = new Date().toISOString().split("T")[0];
