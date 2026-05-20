@@ -1,7 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import SeoToolShell from "@/components/seo/SeoToolShell";
-import ImageConvertWidget from "@/components/tools/widgets/WebpToJpgWidget";
 import { buildPageHead } from "@/lib/toolHead";
+
+const ImageConvertWidget = lazy(
+  () => import("@/components/tools/widgets/WebpToJpgWidget"),
+);
 
 export const Route = createFileRoute("/webp-to-jpg")({
   head: () => {
@@ -34,12 +38,14 @@ function Page() {
       h1="WebP to JPG Converter"
       subtitle="Convert WebP images to JPG online — free, fast, and 100% private."
       tool={
-        <ImageConvertWidget
-          fromLabel="WebP"
-          targetMime="image/jpeg"
-          targetExt="jpg"
-          accept="image/webp"
-        />
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted rounded-xl" />}>
+          <ImageConvertWidget
+            fromLabel="WebP"
+            targetMime="image/jpeg"
+            targetExt="jpg"
+            accept="image/webp"
+          />
+        </Suspense>
       }
       content={
         <>
