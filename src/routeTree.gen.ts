@@ -17,14 +17,17 @@ import { Route as RemoveBackgroundRouteImport } from './routes/remove-background
 import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PpfCalculatorRouteImport } from './routes/ppf-calculator'
+import { Route as PngToJpgRouteImport } from './routes/png-to-jpg'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
 import { Route as PagesRouteImport } from './routes/pages'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as JpgToPngRouteImport } from './routes/jpg-to-png'
+import { Route as IncomeTaxCalculatorRouteImport } from './routes/income-tax-calculator'
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
 import { Route as ImageCropperRouteImport } from './routes/image-cropper'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
+import { Route as HraCalculatorRouteImport } from './routes/hra-calculator'
 import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
 import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
@@ -100,6 +103,11 @@ const PpfCalculatorRoute = PpfCalculatorRouteImport.update({
   path: '/ppf-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PngToJpgRoute = PngToJpgRouteImport.update({
+  id: '/png-to-jpg',
+  path: '/png-to-jpg',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PdfToImageRoute = PdfToImageRouteImport.update({
   id: '/pdf-to-image',
   path: '/pdf-to-image',
@@ -125,6 +133,11 @@ const JpgToPngRoute = JpgToPngRouteImport.update({
   path: '/jpg-to-png',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IncomeTaxCalculatorRoute = IncomeTaxCalculatorRouteImport.update({
+  id: '/income-tax-calculator',
+  path: '/income-tax-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImageToPdfRoute = ImageToPdfRouteImport.update({
   id: '/image-to-pdf',
   path: '/image-to-pdf',
@@ -138,6 +151,11 @@ const ImageCropperRoute = ImageCropperRouteImport.update({
 const ImageCompressorRoute = ImageCompressorRouteImport.update({
   id: '/image-compressor',
   path: '/image-compressor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HraCalculatorRoute = HraCalculatorRouteImport.update({
+  id: '/hra-calculator',
+  path: '/hra-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GstCalculatorRoute = GstCalculatorRouteImport.update({
@@ -320,14 +338,17 @@ export interface FileRoutesByFullPath {
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
+  '/hra-calculator': typeof HraCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -372,14 +393,17 @@ export interface FileRoutesByTo {
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
+  '/hra-calculator': typeof HraCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -425,14 +449,17 @@ export interface FileRoutesById {
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
+  '/hra-calculator': typeof HraCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -479,14 +506,17 @@ export interface FileRouteTypes {
     | '/etsy-fee-calculator'
     | '/fd-calculator'
     | '/gst-calculator'
+    | '/hra-calculator'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
     | '/pages'
     | '/pdf-to-image'
+    | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
@@ -531,14 +561,17 @@ export interface FileRouteTypes {
     | '/etsy-fee-calculator'
     | '/fd-calculator'
     | '/gst-calculator'
+    | '/hra-calculator'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
     | '/pages'
     | '/pdf-to-image'
+    | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
@@ -583,14 +616,17 @@ export interface FileRouteTypes {
     | '/etsy-fee-calculator'
     | '/fd-calculator'
     | '/gst-calculator'
+    | '/hra-calculator'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
     | '/pages'
     | '/pdf-to-image'
+    | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
@@ -636,14 +672,17 @@ export interface RootRouteChildren {
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
   FdCalculatorRoute: typeof FdCalculatorRoute
   GstCalculatorRoute: typeof GstCalculatorRoute
+  HraCalculatorRoute: typeof HraCalculatorRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
   ImageCropperRoute: typeof ImageCropperRoute
   ImageToPdfRoute: typeof ImageToPdfRoute
+  IncomeTaxCalculatorRoute: typeof IncomeTaxCalculatorRoute
   JpgToPngRoute: typeof JpgToPngRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
   PagesRoute: typeof PagesRoute
   PdfToImageRoute: typeof PdfToImageRoute
+  PngToJpgRoute: typeof PngToJpgRoute
   PpfCalculatorRoute: typeof PpfCalculatorRoute
   PrivacyRoute: typeof PrivacyRoute
   QrGeneratorRoute: typeof QrGeneratorRoute
@@ -738,6 +777,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PpfCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/png-to-jpg': {
+      id: '/png-to-jpg'
+      path: '/png-to-jpg'
+      fullPath: '/png-to-jpg'
+      preLoaderRoute: typeof PngToJpgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pdf-to-image': {
       id: '/pdf-to-image'
       path: '/pdf-to-image'
@@ -773,6 +819,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JpgToPngRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/income-tax-calculator': {
+      id: '/income-tax-calculator'
+      path: '/income-tax-calculator'
+      fullPath: '/income-tax-calculator'
+      preLoaderRoute: typeof IncomeTaxCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/image-to-pdf': {
       id: '/image-to-pdf'
       path: '/image-to-pdf'
@@ -792,6 +845,13 @@ declare module '@tanstack/react-router' {
       path: '/image-compressor'
       fullPath: '/image-compressor'
       preLoaderRoute: typeof ImageCompressorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hra-calculator': {
+      id: '/hra-calculator'
+      path: '/hra-calculator'
+      fullPath: '/hra-calculator'
+      preLoaderRoute: typeof HraCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gst-calculator': {
@@ -1044,14 +1104,17 @@ const rootRouteChildren: RootRouteChildren = {
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
   FdCalculatorRoute: FdCalculatorRoute,
   GstCalculatorRoute: GstCalculatorRoute,
+  HraCalculatorRoute: HraCalculatorRoute,
   ImageCompressorRoute: ImageCompressorRoute,
   ImageCropperRoute: ImageCropperRoute,
   ImageToPdfRoute: ImageToPdfRoute,
+  IncomeTaxCalculatorRoute: IncomeTaxCalculatorRoute,
   JpgToPngRoute: JpgToPngRoute,
   KbResizePixelRoute: KbResizePixelRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
   PagesRoute: PagesRoute,
   PdfToImageRoute: PdfToImageRoute,
+  PngToJpgRoute: PngToJpgRoute,
   PpfCalculatorRoute: PpfCalculatorRoute,
   PrivacyRoute: PrivacyRoute,
   QrGeneratorRoute: QrGeneratorRoute,
