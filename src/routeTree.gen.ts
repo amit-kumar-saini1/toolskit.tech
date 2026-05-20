@@ -32,6 +32,7 @@ import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
 import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CompoundInterestCalculatorRouteImport } from './routes/compound-interest-calculator'
 import { Route as AgeCalculatorRouteImport } from './routes/age-calculator'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
@@ -178,6 +179,12 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompoundInterestCalculatorRoute =
+  CompoundInterestCalculatorRouteImport.update({
+    id: '/compound-interest-calculator',
+    path: '/compound-interest-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AgeCalculatorRoute = AgeCalculatorRouteImport.update({
   id: '/age-calculator',
   path: '/age-calculator',
@@ -334,6 +341,7 @@ export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
+  '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
@@ -389,6 +397,7 @@ export interface FileRoutesByTo {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
+  '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
@@ -445,6 +454,7 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
+  '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
@@ -502,6 +512,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/age-calculator'
+    | '/compound-interest-calculator'
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
@@ -557,6 +568,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/age-calculator'
+    | '/compound-interest-calculator'
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
@@ -612,6 +624,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/age-calculator'
+    | '/compound-interest-calculator'
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
@@ -668,6 +681,7 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   AgeCalculatorRoute: typeof AgeCalculatorRoute
+  CompoundInterestCalculatorRoute: typeof CompoundInterestCalculatorRoute
   ContactRoute: typeof ContactRoute
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
   FdCalculatorRoute: typeof FdCalculatorRoute
@@ -880,6 +894,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compound-interest-calculator': {
+      id: '/compound-interest-calculator'
+      path: '/compound-interest-calculator'
+      fullPath: '/compound-interest-calculator'
+      preLoaderRoute: typeof CompoundInterestCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/age-calculator': {
@@ -1100,6 +1121,7 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   AgeCalculatorRoute: AgeCalculatorRoute,
+  CompoundInterestCalculatorRoute: CompoundInterestCalculatorRoute,
   ContactRoute: ContactRoute,
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
   FdCalculatorRoute: FdCalculatorRoute,

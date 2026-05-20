@@ -1,7 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import SeoToolShell from "@/components/seo/SeoToolShell";
-import IncomeTaxCalculatorWidget from "@/components/tools/widgets/IncomeTaxCalculatorWidget";
 import { buildPageHead } from "@/lib/toolHead";
+
+const IncomeTaxCalculatorWidget = lazy(
+  () => import("@/components/tools/widgets/IncomeTaxCalculatorWidget"),
+);
 
 export const Route = createFileRoute("/income-tax-calculator")({
   head: () => {
@@ -33,7 +37,11 @@ function Page() {
       currentPath="/income-tax-calculator"
       h1="Income Tax Calculator FY 2025-26"
       subtitle="Calculate your income tax under the New & Old Regime — accurate, free, instant."
-      tool={<IncomeTaxCalculatorWidget />}
+      tool={
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted rounded-xl" />}>
+          <IncomeTaxCalculatorWidget />
+        </Suspense>
+      }
       content={
         <>
           <h2>Income Tax Slabs — New Regime (FY 2025-26)</h2>

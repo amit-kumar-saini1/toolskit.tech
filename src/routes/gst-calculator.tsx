@@ -1,7 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import SeoToolShell from "@/components/seo/SeoToolShell";
-import GstCalculatorWidget from "@/components/tools/widgets/GstCalculatorWidget";
 import { buildPageHead } from "@/lib/toolHead";
+
+const GstCalculatorWidget = lazy(
+  () => import("@/components/tools/widgets/GstCalculatorWidget"),
+);
 
 export const Route = createFileRoute("/gst-calculator")({
   head: () => {
@@ -33,7 +37,11 @@ function Page() {
       currentPath="/gst-calculator"
       h1="GST Calculator — Add or Remove GST Online"
       subtitle="Quickly calculate GST in India with CGST / SGST breakdown — free, instant, accurate."
-      tool={<GstCalculatorWidget />}
+      tool={
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted rounded-xl" />}>
+          <GstCalculatorWidget />
+        </Suspense>
+      }
       content={
         <>
           <h2>What is GST?</h2>

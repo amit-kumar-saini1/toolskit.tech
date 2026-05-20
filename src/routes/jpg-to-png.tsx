@@ -1,7 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import SeoToolShell from "@/components/seo/SeoToolShell";
-import ImageConvertWidget from "@/components/tools/widgets/WebpToJpgWidget";
 import { buildPageHead } from "@/lib/toolHead";
+
+const ImageConvertWidget = lazy(
+  () => import("@/components/tools/widgets/WebpToJpgWidget"),
+);
 
 export const Route = createFileRoute("/jpg-to-png")({
   head: () => {
@@ -33,12 +37,14 @@ function Page() {
       h1="JPG to PNG Converter"
       subtitle="Convert JPG / JPEG images to high-quality PNG online — free and private."
       tool={
-        <ImageConvertWidget
-          fromLabel="JPG / JPEG"
-          targetMime="image/png"
-          targetExt="png"
-          accept="image/jpeg"
-        />
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted rounded-xl" />}>
+          <ImageConvertWidget
+            fromLabel="JPG / JPEG"
+            targetMime="image/png"
+            targetExt="png"
+            accept="image/jpeg"
+          />
+        </Suspense>
       }
       content={
         <>

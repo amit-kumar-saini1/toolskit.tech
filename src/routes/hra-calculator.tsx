@@ -1,7 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import SeoToolShell from "@/components/seo/SeoToolShell";
-import HraCalculatorWidget from "@/components/tools/widgets/HraCalculatorWidget";
 import { buildPageHead } from "@/lib/toolHead";
+
+const HraCalculatorWidget = lazy(
+  () => import("@/components/tools/widgets/HraCalculatorWidget"),
+);
 
 export const Route = createFileRoute("/hra-calculator")({
   head: () => {
@@ -33,7 +37,11 @@ function Page() {
       currentPath="/hra-calculator"
       h1="HRA Calculator — House Rent Allowance Exemption"
       subtitle="Calculate your HRA tax exemption instantly — FY 2025-26 ready, 100% accurate."
-      tool={<HraCalculatorWidget />}
+      tool={
+        <Suspense fallback={<div className="h-64 animate-pulse bg-muted rounded-xl" />}>
+          <HraCalculatorWidget />
+        </Suspense>
+      }
       content={
         <>
           <h2>What is HRA?</h2>

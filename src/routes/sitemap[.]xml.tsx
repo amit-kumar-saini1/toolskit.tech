@@ -31,6 +31,7 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/png-to-jpg", priority: "0.9", changefreq: "weekly" },
   { path: "/hra-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/income-tax-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/compound-interest-calculator", priority: "0.9", changefreq: "weekly" },
 ];
 
 
