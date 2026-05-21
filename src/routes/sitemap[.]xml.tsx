@@ -36,6 +36,7 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/nps-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/percentage-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/gratuity-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/word-counter", priority: "0.9", changefreq: "weekly" },
 ];
 
 

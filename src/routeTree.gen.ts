@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WordCounterRouteImport } from './routes/word-counter'
 import { Route as WebpToJpgRouteImport } from './routes/webp-to-jpg'
 import { Route as TipCalculatorRouteImport } from './routes/tip-calculator'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -68,6 +69,11 @@ import { Route as ToolsBmiCalculatorRouteImport } from './routes/tools.bmi-calcu
 import { Route as ToolsAgeCalculatorRouteImport } from './routes/tools.age-calculator'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const WordCounterRoute = WordCounterRouteImport.update({
+  id: '/word-counter',
+  path: '/word-counter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WebpToJpgRoute = WebpToJpgRouteImport.update({
   id: '/webp-to-jpg',
   path: '/webp-to-jpg',
@@ -393,6 +399,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -453,6 +460,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -514,6 +522,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -576,6 +585,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -636,6 +646,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -696,6 +707,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -757,6 +769,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   TipCalculatorRoute: typeof TipCalculatorRoute
   WebpToJpgRoute: typeof WebpToJpgRoute
+  WordCounterRoute: typeof WordCounterRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
   ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
@@ -787,6 +800,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/word-counter': {
+      id: '/word-counter'
+      path: '/word-counter'
+      fullPath: '/word-counter'
+      preLoaderRoute: typeof WordCounterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/webp-to-jpg': {
       id: '/webp-to-jpg'
       path: '/webp-to-jpg'
@@ -1229,6 +1249,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   TipCalculatorRoute: TipCalculatorRoute,
   WebpToJpgRoute: WebpToJpgRoute,
+  WordCounterRoute: WordCounterRoute,
   BlogSlugRoute: BlogSlugRoute,
   ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
   ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
