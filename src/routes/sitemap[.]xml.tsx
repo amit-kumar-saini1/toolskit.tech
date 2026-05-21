@@ -32,6 +32,10 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/hra-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/income-tax-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/compound-interest-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/tip-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/nps-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/percentage-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/gratuity-calculator", priority: "0.9", changefreq: "weekly" },
 ];
 
 
