@@ -9,7 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WordCounterRouteImport } from './routes/word-counter'
 import { Route as WebpToJpgRouteImport } from './routes/webp-to-jpg'
+import { Route as TipCalculatorRouteImport } from './routes/tip-calculator'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SipCalculatorRouteImport } from './routes/sip-calculator'
@@ -18,8 +20,10 @@ import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PpfCalculatorRouteImport } from './routes/ppf-calculator'
 import { Route as PngToJpgRouteImport } from './routes/png-to-jpg'
+import { Route as PercentageCalculatorRouteImport } from './routes/percentage-calculator'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
 import { Route as PagesRouteImport } from './routes/pages'
+import { Route as NpsCalculatorRouteImport } from './routes/nps-calculator'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as JpgToPngRouteImport } from './routes/jpg-to-png'
@@ -29,6 +33,7 @@ import { Route as ImageCropperRouteImport } from './routes/image-cropper'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
 import { Route as HraCalculatorRouteImport } from './routes/hra-calculator'
 import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
+import { Route as GratuityCalculatorRouteImport } from './routes/gratuity-calculator'
 import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -64,9 +69,19 @@ import { Route as ToolsBmiCalculatorRouteImport } from './routes/tools.bmi-calcu
 import { Route as ToolsAgeCalculatorRouteImport } from './routes/tools.age-calculator'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const WordCounterRoute = WordCounterRouteImport.update({
+  id: '/word-counter',
+  path: '/word-counter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WebpToJpgRoute = WebpToJpgRouteImport.update({
   id: '/webp-to-jpg',
   path: '/webp-to-jpg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TipCalculatorRoute = TipCalculatorRouteImport.update({
+  id: '/tip-calculator',
+  path: '/tip-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -109,6 +124,11 @@ const PngToJpgRoute = PngToJpgRouteImport.update({
   path: '/png-to-jpg',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PercentageCalculatorRoute = PercentageCalculatorRouteImport.update({
+  id: '/percentage-calculator',
+  path: '/percentage-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PdfToImageRoute = PdfToImageRouteImport.update({
   id: '/pdf-to-image',
   path: '/pdf-to-image',
@@ -117,6 +137,11 @@ const PdfToImageRoute = PdfToImageRouteImport.update({
 const PagesRoute = PagesRouteImport.update({
   id: '/pages',
   path: '/pages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NpsCalculatorRoute = NpsCalculatorRouteImport.update({
+  id: '/nps-calculator',
+  path: '/nps-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NameAndDateOnPhotoRoute = NameAndDateOnPhotoRouteImport.update({
@@ -162,6 +187,11 @@ const HraCalculatorRoute = HraCalculatorRouteImport.update({
 const GstCalculatorRoute = GstCalculatorRouteImport.update({
   id: '/gst-calculator',
   path: '/gst-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GratuityCalculatorRoute = GratuityCalculatorRouteImport.update({
+  id: '/gratuity-calculator',
+  path: '/gratuity-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FdCalculatorRoute = FdCalculatorRouteImport.update({
@@ -345,6 +375,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
   '/hra-calculator': typeof HraCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
@@ -354,8 +385,10 @@ export interface FileRoutesByFullPath {
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/nps-calculator': typeof NpsCalculatorRoute
   '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/percentage-calculator': typeof PercentageCalculatorRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -364,7 +397,9 @@ export interface FileRoutesByFullPath {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -401,6 +436,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
   '/hra-calculator': typeof HraCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
@@ -410,8 +446,10 @@ export interface FileRoutesByTo {
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/nps-calculator': typeof NpsCalculatorRoute
   '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/percentage-calculator': typeof PercentageCalculatorRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -420,7 +458,9 @@ export interface FileRoutesByTo {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -458,6 +498,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
   '/hra-calculator': typeof HraCalculatorRoute
   '/image-compressor': typeof ImageCompressorRoute
@@ -467,8 +508,10 @@ export interface FileRoutesById {
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/nps-calculator': typeof NpsCalculatorRoute
   '/pages': typeof PagesRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/percentage-calculator': typeof PercentageCalculatorRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -477,7 +520,9 @@ export interface FileRoutesById {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -516,6 +561,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gratuity-calculator'
     | '/gst-calculator'
     | '/hra-calculator'
     | '/image-compressor'
@@ -525,8 +571,10 @@ export interface FileRouteTypes {
     | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/nps-calculator'
     | '/pages'
     | '/pdf-to-image'
+    | '/percentage-calculator'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -535,7 +583,9 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -572,6 +622,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gratuity-calculator'
     | '/gst-calculator'
     | '/hra-calculator'
     | '/image-compressor'
@@ -581,8 +632,10 @@ export interface FileRouteTypes {
     | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/nps-calculator'
     | '/pages'
     | '/pdf-to-image'
+    | '/percentage-calculator'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -591,7 +644,9 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -628,6 +683,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gratuity-calculator'
     | '/gst-calculator'
     | '/hra-calculator'
     | '/image-compressor'
@@ -637,8 +693,10 @@ export interface FileRouteTypes {
     | '/jpg-to-png'
     | '/kb-resize-pixel'
     | '/name-and-date-on-photo'
+    | '/nps-calculator'
     | '/pages'
     | '/pdf-to-image'
+    | '/percentage-calculator'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -647,7 +705,9 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -685,6 +745,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
   FdCalculatorRoute: typeof FdCalculatorRoute
+  GratuityCalculatorRoute: typeof GratuityCalculatorRoute
   GstCalculatorRoute: typeof GstCalculatorRoute
   HraCalculatorRoute: typeof HraCalculatorRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
@@ -694,8 +755,10 @@ export interface RootRouteChildren {
   JpgToPngRoute: typeof JpgToPngRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
+  NpsCalculatorRoute: typeof NpsCalculatorRoute
   PagesRoute: typeof PagesRoute
   PdfToImageRoute: typeof PdfToImageRoute
+  PercentageCalculatorRoute: typeof PercentageCalculatorRoute
   PngToJpgRoute: typeof PngToJpgRoute
   PpfCalculatorRoute: typeof PpfCalculatorRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -704,7 +767,9 @@ export interface RootRouteChildren {
   SipCalculatorRoute: typeof SipCalculatorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  TipCalculatorRoute: typeof TipCalculatorRoute
   WebpToJpgRoute: typeof WebpToJpgRoute
+  WordCounterRoute: typeof WordCounterRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
   ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
@@ -735,11 +800,25 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/word-counter': {
+      id: '/word-counter'
+      path: '/word-counter'
+      fullPath: '/word-counter'
+      preLoaderRoute: typeof WordCounterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/webp-to-jpg': {
       id: '/webp-to-jpg'
       path: '/webp-to-jpg'
       fullPath: '/webp-to-jpg'
       preLoaderRoute: typeof WebpToJpgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tip-calculator': {
+      id: '/tip-calculator'
+      path: '/tip-calculator'
+      fullPath: '/tip-calculator'
+      preLoaderRoute: typeof TipCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -798,6 +877,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PngToJpgRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/percentage-calculator': {
+      id: '/percentage-calculator'
+      path: '/percentage-calculator'
+      fullPath: '/percentage-calculator'
+      preLoaderRoute: typeof PercentageCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pdf-to-image': {
       id: '/pdf-to-image'
       path: '/pdf-to-image'
@@ -810,6 +896,13 @@ declare module '@tanstack/react-router' {
       path: '/pages'
       fullPath: '/pages'
       preLoaderRoute: typeof PagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nps-calculator': {
+      id: '/nps-calculator'
+      path: '/nps-calculator'
+      fullPath: '/nps-calculator'
+      preLoaderRoute: typeof NpsCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/name-and-date-on-photo': {
@@ -873,6 +966,13 @@ declare module '@tanstack/react-router' {
       path: '/gst-calculator'
       fullPath: '/gst-calculator'
       preLoaderRoute: typeof GstCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gratuity-calculator': {
+      id: '/gratuity-calculator'
+      path: '/gratuity-calculator'
+      fullPath: '/gratuity-calculator'
+      preLoaderRoute: typeof GratuityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fd-calculator': {
@@ -1125,6 +1225,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
   FdCalculatorRoute: FdCalculatorRoute,
+  GratuityCalculatorRoute: GratuityCalculatorRoute,
   GstCalculatorRoute: GstCalculatorRoute,
   HraCalculatorRoute: HraCalculatorRoute,
   ImageCompressorRoute: ImageCompressorRoute,
@@ -1134,8 +1235,10 @@ const rootRouteChildren: RootRouteChildren = {
   JpgToPngRoute: JpgToPngRoute,
   KbResizePixelRoute: KbResizePixelRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
+  NpsCalculatorRoute: NpsCalculatorRoute,
   PagesRoute: PagesRoute,
   PdfToImageRoute: PdfToImageRoute,
+  PercentageCalculatorRoute: PercentageCalculatorRoute,
   PngToJpgRoute: PngToJpgRoute,
   PpfCalculatorRoute: PpfCalculatorRoute,
   PrivacyRoute: PrivacyRoute,
@@ -1144,7 +1247,9 @@ const rootRouteChildren: RootRouteChildren = {
   SipCalculatorRoute: SipCalculatorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  TipCalculatorRoute: TipCalculatorRoute,
   WebpToJpgRoute: WebpToJpgRoute,
+  WordCounterRoute: WordCounterRoute,
   BlogSlugRoute: BlogSlugRoute,
   ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
   ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
