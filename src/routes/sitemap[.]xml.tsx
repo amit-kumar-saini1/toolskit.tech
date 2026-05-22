@@ -37,6 +37,10 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/percentage-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/gratuity-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/word-counter", priority: "0.9", changefreq: "weekly" },
+  { path: "/bmi-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/loan-emi-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/password-generator", priority: "0.9", changefreq: "weekly" },
+  { path: "/discount-calculator", priority: "0.9", changefreq: "weekly" },
 ];
 
 
