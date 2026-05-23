@@ -20,6 +20,7 @@ import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PpfCalculatorRouteImport } from './routes/ppf-calculator'
 import { Route as PngToJpgRouteImport } from './routes/png-to-jpg'
+import { Route as PhotoCropperRouteImport } from './routes/photo-cropper'
 import { Route as PercentageCalculatorRouteImport } from './routes/percentage-calculator'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
 import { Route as PasswordGeneratorRouteImport } from './routes/password-generator'
@@ -27,6 +28,7 @@ import { Route as PagesRouteImport } from './routes/pages'
 import { Route as NpsCalculatorRouteImport } from './routes/nps-calculator'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
 import { Route as LoanEmiCalculatorRouteImport } from './routes/loan-emi-calculator'
+import { Route as KbToMbConverterRouteImport } from './routes/kb-to-mb-converter'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as JpgToPngRouteImport } from './routes/jpg-to-png'
 import { Route as IncomeTaxCalculatorRouteImport } from './routes/income-tax-calculator'
@@ -128,6 +130,11 @@ const PngToJpgRoute = PngToJpgRouteImport.update({
   path: '/png-to-jpg',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PhotoCropperRoute = PhotoCropperRouteImport.update({
+  id: '/photo-cropper',
+  path: '/photo-cropper',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PercentageCalculatorRoute = PercentageCalculatorRouteImport.update({
   id: '/percentage-calculator',
   path: '/percentage-calculator',
@@ -161,6 +168,11 @@ const NameAndDateOnPhotoRoute = NameAndDateOnPhotoRouteImport.update({
 const LoanEmiCalculatorRoute = LoanEmiCalculatorRouteImport.update({
   id: '/loan-emi-calculator',
   path: '/loan-emi-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KbToMbConverterRoute = KbToMbConverterRouteImport.update({
+  id: '/kb-to-mb-converter',
+  path: '/kb-to-mb-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KbResizePixelRoute = KbResizePixelRouteImport.update({
@@ -410,6 +422,7 @@ export interface FileRoutesByFullPath {
   '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/kb-to-mb-converter': typeof KbToMbConverterRoute
   '/loan-emi-calculator': typeof LoanEmiCalculatorRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/nps-calculator': typeof NpsCalculatorRoute
@@ -417,6 +430,7 @@ export interface FileRoutesByFullPath {
   '/password-generator': typeof PasswordGeneratorRoute
   '/pdf-to-image': typeof PdfToImageRoute
   '/percentage-calculator': typeof PercentageCalculatorRoute
+  '/photo-cropper': typeof PhotoCropperRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -475,6 +489,7 @@ export interface FileRoutesByTo {
   '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/kb-to-mb-converter': typeof KbToMbConverterRoute
   '/loan-emi-calculator': typeof LoanEmiCalculatorRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/nps-calculator': typeof NpsCalculatorRoute
@@ -482,6 +497,7 @@ export interface FileRoutesByTo {
   '/password-generator': typeof PasswordGeneratorRoute
   '/pdf-to-image': typeof PdfToImageRoute
   '/percentage-calculator': typeof PercentageCalculatorRoute
+  '/photo-cropper': typeof PhotoCropperRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -541,6 +557,7 @@ export interface FileRoutesById {
   '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/kb-to-mb-converter': typeof KbToMbConverterRoute
   '/loan-emi-calculator': typeof LoanEmiCalculatorRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
   '/nps-calculator': typeof NpsCalculatorRoute
@@ -548,6 +565,7 @@ export interface FileRoutesById {
   '/password-generator': typeof PasswordGeneratorRoute
   '/pdf-to-image': typeof PdfToImageRoute
   '/percentage-calculator': typeof PercentageCalculatorRoute
+  '/photo-cropper': typeof PhotoCropperRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -608,6 +626,7 @@ export interface FileRouteTypes {
     | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
+    | '/kb-to-mb-converter'
     | '/loan-emi-calculator'
     | '/name-and-date-on-photo'
     | '/nps-calculator'
@@ -615,6 +634,7 @@ export interface FileRouteTypes {
     | '/password-generator'
     | '/pdf-to-image'
     | '/percentage-calculator'
+    | '/photo-cropper'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -673,6 +693,7 @@ export interface FileRouteTypes {
     | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
+    | '/kb-to-mb-converter'
     | '/loan-emi-calculator'
     | '/name-and-date-on-photo'
     | '/nps-calculator'
@@ -680,6 +701,7 @@ export interface FileRouteTypes {
     | '/password-generator'
     | '/pdf-to-image'
     | '/percentage-calculator'
+    | '/photo-cropper'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -738,6 +760,7 @@ export interface FileRouteTypes {
     | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
+    | '/kb-to-mb-converter'
     | '/loan-emi-calculator'
     | '/name-and-date-on-photo'
     | '/nps-calculator'
@@ -745,6 +768,7 @@ export interface FileRouteTypes {
     | '/password-generator'
     | '/pdf-to-image'
     | '/percentage-calculator'
+    | '/photo-cropper'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -804,6 +828,7 @@ export interface RootRouteChildren {
   IncomeTaxCalculatorRoute: typeof IncomeTaxCalculatorRoute
   JpgToPngRoute: typeof JpgToPngRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
+  KbToMbConverterRoute: typeof KbToMbConverterRoute
   LoanEmiCalculatorRoute: typeof LoanEmiCalculatorRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
   NpsCalculatorRoute: typeof NpsCalculatorRoute
@@ -811,6 +836,7 @@ export interface RootRouteChildren {
   PasswordGeneratorRoute: typeof PasswordGeneratorRoute
   PdfToImageRoute: typeof PdfToImageRoute
   PercentageCalculatorRoute: typeof PercentageCalculatorRoute
+  PhotoCropperRoute: typeof PhotoCropperRoute
   PngToJpgRoute: typeof PngToJpgRoute
   PpfCalculatorRoute: typeof PpfCalculatorRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -929,6 +955,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PngToJpgRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/photo-cropper': {
+      id: '/photo-cropper'
+      path: '/photo-cropper'
+      fullPath: '/photo-cropper'
+      preLoaderRoute: typeof PhotoCropperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/percentage-calculator': {
       id: '/percentage-calculator'
       path: '/percentage-calculator'
@@ -976,6 +1009,13 @@ declare module '@tanstack/react-router' {
       path: '/loan-emi-calculator'
       fullPath: '/loan-emi-calculator'
       preLoaderRoute: typeof LoanEmiCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kb-to-mb-converter': {
+      id: '/kb-to-mb-converter'
+      path: '/kb-to-mb-converter'
+      fullPath: '/kb-to-mb-converter'
+      preLoaderRoute: typeof KbToMbConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kb-resize-pixel': {
@@ -1316,6 +1356,7 @@ const rootRouteChildren: RootRouteChildren = {
   IncomeTaxCalculatorRoute: IncomeTaxCalculatorRoute,
   JpgToPngRoute: JpgToPngRoute,
   KbResizePixelRoute: KbResizePixelRoute,
+  KbToMbConverterRoute: KbToMbConverterRoute,
   LoanEmiCalculatorRoute: LoanEmiCalculatorRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
   NpsCalculatorRoute: NpsCalculatorRoute,
@@ -1323,6 +1364,7 @@ const rootRouteChildren: RootRouteChildren = {
   PasswordGeneratorRoute: PasswordGeneratorRoute,
   PdfToImageRoute: PdfToImageRoute,
   PercentageCalculatorRoute: PercentageCalculatorRoute,
+  PhotoCropperRoute: PhotoCropperRoute,
   PngToJpgRoute: PngToJpgRoute,
   PpfCalculatorRoute: PpfCalculatorRoute,
   PrivacyRoute: PrivacyRoute,
