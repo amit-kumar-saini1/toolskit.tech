@@ -35,6 +35,7 @@ import { Route as IncomeTaxCalculatorRouteImport } from './routes/income-tax-cal
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
 import { Route as ImageCropperRouteImport } from './routes/image-cropper'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
+import { Route as IlovepdfRouteImport } from './routes/ilovepdf'
 import { Route as HraCalculatorRouteImport } from './routes/hra-calculator'
 import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
 import { Route as GratuityCalculatorRouteImport } from './routes/gratuity-calculator'
@@ -203,6 +204,11 @@ const ImageCropperRoute = ImageCropperRouteImport.update({
 const ImageCompressorRoute = ImageCompressorRouteImport.update({
   id: '/image-compressor',
   path: '/image-compressor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IlovepdfRoute = IlovepdfRouteImport.update({
+  id: '/ilovepdf',
+  path: '/ilovepdf',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HraCalculatorRoute = HraCalculatorRouteImport.update({
@@ -416,6 +422,7 @@ export interface FileRoutesByFullPath {
   '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
   '/hra-calculator': typeof HraCalculatorRoute
+  '/ilovepdf': typeof IlovepdfRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
@@ -483,6 +490,7 @@ export interface FileRoutesByTo {
   '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
   '/hra-calculator': typeof HraCalculatorRoute
+  '/ilovepdf': typeof IlovepdfRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
@@ -551,6 +559,7 @@ export interface FileRoutesById {
   '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
   '/hra-calculator': typeof HraCalculatorRoute
+  '/ilovepdf': typeof IlovepdfRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
@@ -620,6 +629,7 @@ export interface FileRouteTypes {
     | '/gratuity-calculator'
     | '/gst-calculator'
     | '/hra-calculator'
+    | '/ilovepdf'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
@@ -687,6 +697,7 @@ export interface FileRouteTypes {
     | '/gratuity-calculator'
     | '/gst-calculator'
     | '/hra-calculator'
+    | '/ilovepdf'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
@@ -754,6 +765,7 @@ export interface FileRouteTypes {
     | '/gratuity-calculator'
     | '/gst-calculator'
     | '/hra-calculator'
+    | '/ilovepdf'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
@@ -822,6 +834,7 @@ export interface RootRouteChildren {
   GratuityCalculatorRoute: typeof GratuityCalculatorRoute
   GstCalculatorRoute: typeof GstCalculatorRoute
   HraCalculatorRoute: typeof HraCalculatorRoute
+  IlovepdfRoute: typeof IlovepdfRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
   ImageCropperRoute: typeof ImageCropperRoute
   ImageToPdfRoute: typeof ImageToPdfRoute
@@ -1058,6 +1071,13 @@ declare module '@tanstack/react-router' {
       path: '/image-compressor'
       fullPath: '/image-compressor'
       preLoaderRoute: typeof ImageCompressorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ilovepdf': {
+      id: '/ilovepdf'
+      path: '/ilovepdf'
+      fullPath: '/ilovepdf'
+      preLoaderRoute: typeof IlovepdfRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hra-calculator': {
@@ -1350,6 +1370,7 @@ const rootRouteChildren: RootRouteChildren = {
   GratuityCalculatorRoute: GratuityCalculatorRoute,
   GstCalculatorRoute: GstCalculatorRoute,
   HraCalculatorRoute: HraCalculatorRoute,
+  IlovepdfRoute: IlovepdfRoute,
   ImageCompressorRoute: ImageCompressorRoute,
   ImageCropperRoute: ImageCropperRoute,
   ImageToPdfRoute: ImageToPdfRoute,
