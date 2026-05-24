@@ -2,6 +2,7 @@
 // Full content lives in src/pages/BlogPost.tsx
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
 import blogPentagonImage from "@/assets/blog-pentagon-2026.jpg";
+import blogCockroachImage from "@/assets/blog-cockroach-janata-party.png";
 
 export interface BlogPostMeta {
   id: number;
@@ -15,6 +16,16 @@ export interface BlogPostMeta {
 }
 
 export const blogPostsMeta: Record<string, BlogPostMeta> = {
+  "cockroach-janta-party-kya-hai-cjp-abhijeet-dipke-2026": {
+    id: 33,
+    slug: "cockroach-janta-party-kya-hai-cjp-abhijeet-dipke-2026",
+    title: "Cockroach Janta Party (CJP) क्या है? 1 लाख+ Members, AI Memes और Abhijeet Dipke की पूरी कहानी — क्यों Gen Z खुद को 'कॉकरोच' कह रहा है (2026)",
+    excerpt: "भारत की नई वायरल 'Cockroach Janta Party' (CJP) — Boston University के छात्र Abhijeet Dipke ने 5 दिन में 1 लाख+ Members जोड़े, 15 मिलियन views, 'Main Bhi Cockroach' slogan और CJI की टिप्पणी से जन्मा satirical political movement। पूरी कहानी, manifesto, उद्देश्य और Gen Z का गुस्सा — हिंदी में।",
+    category: "Trending",
+    date: "2026-05-24",
+    readTime: "12 min read",
+    image: blogCockroachImage,
+  },
   "traffic-kyu-gir-raha-hai-seo-fix-guide-2026": {
     id: 32,
     slug: "traffic-kyu-gir-raha-hai-seo-fix-guide-2026",
