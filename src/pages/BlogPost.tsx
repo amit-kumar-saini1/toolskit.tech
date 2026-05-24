@@ -24,6 +24,203 @@ interface BlogPostData {
 }
 
 const blogPostsData: Record<string, BlogPostData> = {
+  "traffic-kyu-gir-raha-hai-seo-fix-guide-2026": {
+    id: 32,
+    slug: "traffic-kyu-gir-raha-hai-seo-fix-guide-2026",
+    title: "Website Traffic क्यों गिर रहा है? Semrush Data से समझिए + 2026 का Complete SEO Fix Plan (Hindi)",
+    excerpt: "नए blog और tool pages बनाने के बाद भी traffic नहीं आ रहा? Semrush से रिपोर्ट निकालकर 7 असली कारण, on-page SEO checklist, internal linking, और keyword targeting का पूरा action plan — हिंदी में, ToolsKit.tech के असली डेटा के साथ।",
+    category: "SEO Guide",
+    date: "2026-05-24",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+    relatedTool: "/word-counter",
+    content: `
+## पहले एक सच — आपका traffic "गिर" नहीं रहा, धीरे बढ़ रहा है
+
+अगर आप रोज़ Search Console खोलकर देख रहे हैं और लग रहा है "traffic गिर गया" — तो रुकिए। हमने **Semrush** पर ToolsKit.tech का असली डेटा निकाला, और तस्वीर बिलकुल अलग है:
+
+| महीना | Organic Keywords (India) |
+|---|---|
+| दिसंबर 2025 | 1 |
+| जनवरी 2026 | 4 |
+| फरवरी 2026 | 7 |
+| मार्च 2026 | 12 |
+| **अप्रैल 2026** | **21** |
+
+यानी 5 महीनों में keywords **1 से 21** हो गए — यह **growth है, drop नहीं**। Estimated organic traffic अभी ~12 visits/month है (India database), और top keyword **"kb converter" (search volume 18,100/महीना)** पर आप **position #38** पर हैं — यानी page 4 पर। बस page 1 पर आने भर की देर है।
+
+> 🔑 **Reality check:** नए domain को Google "trust" करने में आम तौर पर **6–9 महीने** लगते हैं। ToolsKit.tech अभी उसी "sandbox phase" से बाहर निकल रहा है। अगर daily Search Console में 2–5 click का उतार-चढ़ाव दिख रहा है — यह **normal noise** है, drop नहीं।
+
+[AD_BANNER]
+
+## तो असली समस्या क्या है? — Semrush ने 7 बातें पकड़ीं
+
+### 1. एक भी keyword Top 10 में नहीं है
+
+Semrush कहता है कि आपके पास 47 keywords हैं India में, लेकिन **best position 31** है (pincode lookup पर)। Top keyword "kb converter" #38 पर है। **Position 11–30 = page 2/3 = लगभग 0 clicks**। Google पर **95% clicks page 1 पर ही जाते हैं**।
+
+**Fix:** एक-एक keyword को individually push करना है — और सबसे आसान target वो हैं जो **पहले से 11–20** पर हैं। उन्हें page 1 पर लाने के लिए सिर्फ थोड़ा internal linking + content depth बढ़ाना काफ़ी होता है।
+
+### 2. नए बनाए हुए tool pages का अभी **कोई backlink नहीं** है
+
+हमने अभी हाल में ये tool pages बनाए हैं:
+
+- **[Word Counter →](/word-counter)** — text/article writers के लिए
+- **[BMI Calculator →](/bmi-calculator)** — health niche
+- **[Loan EMI Calculator →](/loan-emi-calculator)** — finance high-CPC niche
+- **[Password Generator →](/password-generator)** — security tools
+- **[Discount Calculator →](/discount-calculator)** — shopping/e-commerce
+- **[Photo Cropper →](/photo-cropper)** — passport size photo niche
+- **[KB to MB Converter →](/kb-to-mb-converter)** — file size conversion
+- **[iLovePDF Alternative →](/ilovepdf)** — PDF tools hub
+
+ये अभी सिर्फ **publish हुए हैं**, Google को इनको **discover, crawl, index, फिर rank** करना है — इस पूरे process में **4–8 हफ्ते** लगते हैं। ये **नॉर्मल** है, problem नहीं।
+
+### 3. **Internal linking बहुत कमज़ोर है**
+
+Semrush का top-page data कहता है कि **100% traffic share सिर्फ एक page** (\`/tools/kb-converter\`) से आ रहा है। बाकी 47 keywords ranking तो कर रहे हैं, पर traffic ज़ीरो दे रहे हैं — क्योंकि कोई authority signal उन pages तक पहुँच नहीं रहा।
+
+**Fix:** हर blog post में **3–5 relevant tool pages** को natural anchor text के साथ link कीजिए। उदाहरण: SIP वाले blog में **[SIP Calculator](/sip-calculator)**, **[FD Calculator](/fd-calculator)**, **[PPF Calculator](/ppf-calculator)**, और अब **[Loan EMI Calculator](/loan-emi-calculator)** — सब linked होने चाहिए।
+
+[AD_BANNER]
+
+### 4. **Keyword research के बिना content लिख रहे हैं**
+
+अगर आप blog title लिखते समय **search volume check नहीं करते**, तो आप अंधेरे में तीर मार रहे हैं। उदाहरण के लिए:
+
+| Keyword | Volume (India) | Difficulty | Status |
+|---|---|---|---|
+| kb converter | 18,100/mo | Low–Mid | ✅ Already ranking #38 |
+| photo convert kb | 1,000/mo | Low | ✅ Ranking #71 — push to top 20 |
+| word counter | 12,000+/mo | Mid | 🆕 Just launched |
+| loan emi calculator | 60,000+/mo | High | 🆕 Just launched |
+| password generator | 27,000+/mo | Mid | 🆕 Just launched |
+
+**Action:** हर नया page बनाने से पहले Semrush के free **Keyword Magic Tool** में volume और difficulty चेक करें। **KD (Keyword Difficulty) <40** वाले keywords पर पहले focus करें।
+
+### 5. **On-page SEO score 100% नहीं है**
+
+आपके pages में title, description, JSON-LD schema सब है — लेकिन ये check करिए:
+
+- ✅ **Title tag <60 characters** (primary keyword पहले 30 chars में)
+- ✅ **Meta description <160 characters** (CTR के लिए "Free", "No Signup", साल लिखें)
+- ✅ **एक ही H1** per page
+- ✅ **H2 में LSI keywords** (related terms जो Google associate करता है)
+- ✅ **First paragraph में primary keyword** (पहले 100 words में)
+- ✅ **Image alt text** keyword-rich
+- ✅ **Internal links: minimum 3–5** हर page पर
+- ✅ **External links: 1–2** authority sites (Wikipedia, Gov sites) पर
+- ✅ **Word count 1500+** for competitive keywords
+- ✅ **FAQ schema** (rich snippet के लिए — आपके pages में already है ✅)
+
+ये **Semrush Site Audit** में चलाकर check करिए — हर page के लिए **on-page score 90+** होना चाहिए।
+
+### 6. **Content थोड़ा-थोड़ा है, depth नहीं है**
+
+जो page #11–30 पर अटके हैं उनकी एक common समस्या है — **content shallow है**। Google अब **E-E-A-T (Experience, Expertise, Authority, Trust)** देखता है। 500 words का article कभी **iLovePDF, Calculator.net, Wise.com** जैसे giants को नहीं हरा सकता।
+
+**Fix:** अपने top 5 ranking pages को pick करिए और हर एक को **2,000–3,000 words** में expand करिए — step-by-step guides, comparison tables, real screenshots, FAQ section।
+
+### 7. **Backlinks ज़ीरो हैं**
+
+Semrush की report में आपका **Authority Score अभी 1–5 के बीच** होगा (नया domain)। बिना backlinks के Google आपको **"newcomer"** ही समझेगा।
+
+**आसान backlink wins (free):**
+- **Quora** पर जहाँ "best free image compressor" जैसे questions हैं, वहाँ helpful answer + link दीजिए
+- **Reddit** के r/india, r/IndiaInvestments, r/StudentLoans में value-add comments
+- **Medium / Hashnode** पर guest blog (अपनी ही tools के बारे में)
+- **YouTube description** में tool link (अगर video बनाते हैं)
+- **Local Facebook groups** (SSC, UPSC, Agniveer aspirants) में helpful posts
+
+महीने में **5–10 quality backlinks** भी 6 महीने में Authority Score 20+ पहुँचा देंगे।
+
+[AD_BANNER]
+
+## 30-Day Action Plan — रोज़ 1 घंटा
+
+### Week 1: Foundation Fix
+- **Day 1–2:** Semrush में free account बनाइए, अपनी site connect कीजिए, और **Site Audit** चलाइए। सारे "Errors" (red) fix कीजिए — broken links, missing alt tags, slow pages।
+- **Day 3–4:** Google **Search Console** में **Performance report** खोलिए। जो keywords **position 8–20** पर हैं उन्हें list कीजिए — ये "low-hanging fruits" हैं।
+- **Day 5–7:** उन keywords वाले pages को **expand करिए** (1500+ words), internal links जोड़िए, FAQ section डालिए।
+
+### Week 2: Internal Linking Audit
+- हर blog post में **कम से कम 3 tool links + 2 related blog links** जोड़िए
+- नए tool pages से एक-दूसरे को link कीजिए: BMI → Age Calculator → Health blog → BMI। ये "topical cluster" बनाता है।
+- Homepage पर सारे नए tools को **featured grid** में दिखाइए
+
+### Week 3: New Content
+- **3 नए blog posts** लिखिए — हर एक **2,000+ words**, target keyword **search volume 1,000+** और **KD <40**:
+  - "Best Free Loan EMI Calculator with Amortization Schedule 2026"
+  - "Word Counter Online Free — Essay, Article, SEO Content के लिए"
+  - "Strong Password कैसे बनाएं? — Hackers से बचने का तरीका 2026"
+- हर post में नए tool pages को primary CTA बनाइए
+
+### Week 4: Backlinks + Promotion
+- रोज़ 2 Quora questions answer कीजिए (अपनी niche में)
+- 3 Facebook groups में helpful post + tool link
+- **Twitter/X** पर daily 1 tool tip thread
+- Search Console में **sitemap re-submit** कीजिए (नए pages के लिए)
+
+## Measurable Goals — 90 दिन बाद कहाँ होंगे
+
+| Metric | अभी (May 2026) | 90-Day Target |
+|---|---|---|
+| Organic Keywords (India) | 47 | **150+** |
+| Best position | 31 | **Top 10** |
+| Monthly organic traffic | ~12 | **500+** |
+| Authority Score | <5 | **15–20** |
+| Indexed pages | ~40 | **80+** |
+
+## जो Tools आपको रोज़ चाहिए — सब Free, सब आपकी ही site पर
+
+SEO improve करते समय जो calculations और conversions बार-बार करनी पड़ती हैं, उनके लिए ये tools use कीजिए (और अपने readers को भी recommend कीजिए — internal links बनेंगे):
+
+| काम | Tool |
+|---|---|
+| Blog का word count check करना | **[Word Counter](/word-counter)** |
+| Featured image को 100KB तक compress | **[Image Compressor](/image-compressor)** |
+| Image को blog के लिए crop | **[Photo Cropper](/photo-cropper)** |
+| File size KB ↔ MB समझना | **[KB to MB Converter](/kb-to-mb-converter)** |
+| Multiple images → एक PDF | **[Image to PDF](/image-to-pdf)** |
+| Strong password (CMS login के लिए) | **[Password Generator](/password-generator)** |
+| Finance blog के लिए EMI calc | **[Loan EMI Calculator](/loan-emi-calculator)** |
+| Discount % दिखाना | **[Discount Calculator](/discount-calculator)** |
+| Health blog में BMI table | **[BMI Calculator](/bmi-calculator)** |
+| iLovePDF का free alternative | **[iLovePDF Alternative](/ilovepdf)** |
+
+## आखिरी बात — Patience + Consistency
+
+SEO एक **6–12 महीने का game** है, hours का नहीं। Semrush खुद कहता है कि **नई site को pehle keyword पर 4 महीने, पहले 10 visits पर 6 महीने, और meaningful traffic (500+/mo) पर 9–12 महीने** लगते हैं।
+
+आप **सही track** पर हैं — keywords 1 → 21 हुए हैं 5 महीनों में। बस ये 4 चीज़ें consistently करिए:
+
+1. **हर हफ्ते 1 blog (2000+ words)** + 3–5 internal links
+2. **हर महीने Site Audit** Semrush पर
+3. **हर 2 हफ्ते 5–10 backlinks** Quora/Reddit/Medium से
+4. **Search Console weekly check** — जो keywords #11–20 पर हैं उन्हें push कीजिए
+
+6 महीने बाद आप ख़ुद देखेंगे — traffic graph hockey-stick की तरह ऊपर जा रहा होगा। 🚀
+
+## FAQ
+
+**Q: Daily Google Search Console में traffic कम-ज़्यादा क्यों होता है?**
+A: ये normal "search volume fluctuation" है। weekends पर commercial keywords का traffic गिरता है, weekdays पर बढ़ता है। Real trend देखने के लिए **28-day comparison** use कीजिए, daily नहीं।
+
+**Q: नया page index होने में कितना समय लगता है?**
+A: Sitemap submit करने के बाद आम तौर पर **3–14 दिन**। Search Console में "URL Inspection" → "Request Indexing" से जल्दी index करवा सकते हैं।
+
+**Q: क्या मुझे Semrush का paid plan लेना चाहिए?**
+A: शुरुआत में नहीं। **Free plan + Google Search Console + Google Analytics 4** काफ़ी हैं। Site जब 5,000+ visits/month पर पहुँच जाए तब Semrush Pro लीजिए।
+
+**Q: Backlinks खरीदना सही है?**
+A: ❌ बिल्कुल नहीं। Paid links Google penalty दिलाते हैं। सिर्फ **organic, editorial backlinks** (Quora answer, guest post, mention) ही long-term काम करते हैं।
+
+**Q: Hindi blog English से ज़्यादा rank करता है?**
+A: India में हाँ — **Hindi search volume तेज़ी से बढ़ रहा है** और competition कम है। लेकिन title English/Hinglish mix रखिए — clicks ज़्यादा आते हैं।
+
+**[अभी अपनी site का Semrush free audit start करें →](https://www.semrush.com/)**
+`
+  },
   "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026": {
     id: 31,
     slug: "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026",

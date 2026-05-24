@@ -15,6 +15,16 @@ export interface BlogPostMeta {
 }
 
 export const blogPostsMeta: Record<string, BlogPostMeta> = {
+  "traffic-kyu-gir-raha-hai-seo-fix-guide-2026": {
+    id: 32,
+    slug: "traffic-kyu-gir-raha-hai-seo-fix-guide-2026",
+    title: "Website Traffic क्यों गिर रहा है? Semrush Data से समझिए + 2026 का Complete SEO Fix Plan (Hindi)",
+    excerpt: "नए blog और tool pages बनाने के बाद भी traffic नहीं आ रहा? Semrush से रिपोर्ट निकालकर 7 असली कारण, on-page SEO checklist, internal linking, और keyword targeting का पूरा action plan — हिंदी में, ToolsKit.tech के असली डेटा के साथ।",
+    category: "SEO Guide",
+    date: "2026-05-24",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+  },
   "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026": {
     id: 31,
     slug: "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026",
