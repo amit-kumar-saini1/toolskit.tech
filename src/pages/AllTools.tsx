@@ -4,10 +4,17 @@ import ToolCard from "@/components/home/ToolCard";
 import { 
   FileImage, FileText, Crop, Minimize2, Eraser, 
   Calendar, QrCode, Palette, ArrowRightLeft, Type,
-  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark, PiggyBank, ShoppingBag
+  Binary, Heart, FileDown, Clock, TrendingUp, Bitcoin, MapPin, Calculator, Landmark, PiggyBank, ShoppingBag, Sparkles
 } from "lucide-react";
 
 const tools = [
+  {
+    title: "Photo Remini (AI Enhancer)",
+    description: "Enhance blurry/old photos to HD — free Remini alternative",
+    icon: Sparkles,
+    path: "/photo-remini",
+    color: "#A855F7"
+  },
   {
     title: "Mortgage Calculator",
     description: "Estimate home loan payments, PMI, taxes & interest",

@@ -20,6 +20,7 @@ import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PpfCalculatorRouteImport } from './routes/ppf-calculator'
 import { Route as PngToJpgRouteImport } from './routes/png-to-jpg'
+import { Route as PhotoReminiRouteImport } from './routes/photo-remini'
 import { Route as PhotoCropperRouteImport } from './routes/photo-cropper'
 import { Route as PercentageCalculatorRouteImport } from './routes/percentage-calculator'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
@@ -129,6 +130,11 @@ const PpfCalculatorRoute = PpfCalculatorRouteImport.update({
 const PngToJpgRoute = PngToJpgRouteImport.update({
   id: '/png-to-jpg',
   path: '/png-to-jpg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoReminiRoute = PhotoReminiRouteImport.update({
+  id: '/photo-remini',
+  path: '/photo-remini',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhotoCropperRoute = PhotoCropperRouteImport.update({
@@ -438,6 +444,7 @@ export interface FileRoutesByFullPath {
   '/pdf-to-image': typeof PdfToImageRoute
   '/percentage-calculator': typeof PercentageCalculatorRoute
   '/photo-cropper': typeof PhotoCropperRoute
+  '/photo-remini': typeof PhotoReminiRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -506,6 +513,7 @@ export interface FileRoutesByTo {
   '/pdf-to-image': typeof PdfToImageRoute
   '/percentage-calculator': typeof PercentageCalculatorRoute
   '/photo-cropper': typeof PhotoCropperRoute
+  '/photo-remini': typeof PhotoReminiRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -575,6 +583,7 @@ export interface FileRoutesById {
   '/pdf-to-image': typeof PdfToImageRoute
   '/percentage-calculator': typeof PercentageCalculatorRoute
   '/photo-cropper': typeof PhotoCropperRoute
+  '/photo-remini': typeof PhotoReminiRoute
   '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
@@ -645,6 +654,7 @@ export interface FileRouteTypes {
     | '/pdf-to-image'
     | '/percentage-calculator'
     | '/photo-cropper'
+    | '/photo-remini'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -713,6 +723,7 @@ export interface FileRouteTypes {
     | '/pdf-to-image'
     | '/percentage-calculator'
     | '/photo-cropper'
+    | '/photo-remini'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -781,6 +792,7 @@ export interface FileRouteTypes {
     | '/pdf-to-image'
     | '/percentage-calculator'
     | '/photo-cropper'
+    | '/photo-remini'
     | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
@@ -850,6 +862,7 @@ export interface RootRouteChildren {
   PdfToImageRoute: typeof PdfToImageRoute
   PercentageCalculatorRoute: typeof PercentageCalculatorRoute
   PhotoCropperRoute: typeof PhotoCropperRoute
+  PhotoReminiRoute: typeof PhotoReminiRoute
   PngToJpgRoute: typeof PngToJpgRoute
   PpfCalculatorRoute: typeof PpfCalculatorRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -966,6 +979,13 @@ declare module '@tanstack/react-router' {
       path: '/png-to-jpg'
       fullPath: '/png-to-jpg'
       preLoaderRoute: typeof PngToJpgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photo-remini': {
+      id: '/photo-remini'
+      path: '/photo-remini'
+      fullPath: '/photo-remini'
+      preLoaderRoute: typeof PhotoReminiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/photo-cropper': {
@@ -1386,6 +1406,7 @@ const rootRouteChildren: RootRouteChildren = {
   PdfToImageRoute: PdfToImageRoute,
   PercentageCalculatorRoute: PercentageCalculatorRoute,
   PhotoCropperRoute: PhotoCropperRoute,
+  PhotoReminiRoute: PhotoReminiRoute,
   PngToJpgRoute: PngToJpgRoute,
   PpfCalculatorRoute: PpfCalculatorRoute,
   PrivacyRoute: PrivacyRoute,

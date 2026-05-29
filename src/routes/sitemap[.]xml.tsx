@@ -44,6 +44,7 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/photo-cropper", priority: "0.9", changefreq: "weekly" },
   { path: "/kb-to-mb-converter", priority: "0.9", changefreq: "weekly" },
   { path: "/ilovepdf", priority: "0.9", changefreq: "weekly" },
+  { path: "/photo-remini", priority: "0.9", changefreq: "weekly" },
 ];
 
 
