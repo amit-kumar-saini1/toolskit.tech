@@ -1,11 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { lazy, Suspense } from "react";
 import SeoToolShell from "@/components/seo/SeoToolShell";
 import { buildPageHead } from "@/lib/toolHead";
-
-const PhotoReminiWidget = lazy(
-  () => import("@/components/tools/widgets/PhotoReminiWidget"),
-);
+import PhotoReminiWidget from "@/components/tools/widgets/PhotoReminiWidget";
+import beforeAfterImg from "@/assets/photo-remini-before-after.png";
 
 export const Route = createFileRoute("/photo-remini")({
   head: () => {
@@ -41,12 +38,26 @@ function Page() {
       h1="Photo Remini — AI Photo Enhancer"
       subtitle="Enhance blurry, old or low-resolution photos to HD quality online — free, private and instant. The fastest browser-based Remini alternative."
       tool={
-        <Suspense fallback={<div className="h-64 animate-pulse bg-muted rounded-xl" />}>
-          <PhotoReminiWidget />
-        </Suspense>
+        <PhotoReminiWidget />
       }
       content={
         <>
+          <figure className="not-prose my-2">
+            <img
+              src={beforeAfterImg}
+              alt="Photo Remini before and after — blurry portrait enhanced to HD quality with sharp details, freckles and color"
+              width={1600}
+              height={900}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto rounded-xl border border-border shadow-sm"
+            />
+            <figcaption className="text-center text-xs text-muted-foreground mt-2">
+              Before vs After — real result from Photo Remini AI Enhancer
+            </figcaption>
+          </figure>
+
           <h2>What Is Photo Remini?</h2>
           <p>
             <b>Photo Remini</b> is a free online <b>AI photo enhancer</b> that turns blurry, old or low-resolution images into sharp, HD-quality photos right inside your browser. The original Remini app (by Bending Spoons) is loved by millions for restoring childhood photos, fixing pixelated WhatsApp DPs and upscaling Instagram selfies — but it is a paid mobile app, charges a subscription, and adds watermarks on the free tier. ToolsKit.tech Photo Remini gives you the same "before → after" magic, with <b>no signup, no watermark, no download caps</b> and no need to install any APK.
