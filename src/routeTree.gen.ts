@@ -44,6 +44,7 @@ import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
 import { Route as DiscountCalculatorRouteImport } from './routes/discount-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CompressImageTo50kbRouteImport } from './routes/compress-image-to-50kb'
 import { Route as CompoundInterestCalculatorRouteImport } from './routes/compound-interest-calculator'
 import { Route as BmiCalculatorRouteImport } from './routes/bmi-calculator'
 import { Route as AgeCalculatorRouteImport } from './routes/age-calculator'
@@ -252,6 +253,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompressImageTo50kbRoute = CompressImageTo50kbRouteImport.update({
+  id: '/compress-image-to-50kb',
+  path: '/compress-image-to-50kb',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CompoundInterestCalculatorRoute =
   CompoundInterestCalculatorRouteImport.update({
     id: '/compound-interest-calculator',
@@ -421,6 +427,7 @@ export interface FileRoutesByFullPath {
   '/age-calculator': typeof AgeCalculatorRoute
   '/bmi-calculator': typeof BmiCalculatorRoute
   '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
+  '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
   '/discount-calculator': typeof DiscountCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
@@ -490,6 +497,7 @@ export interface FileRoutesByTo {
   '/age-calculator': typeof AgeCalculatorRoute
   '/bmi-calculator': typeof BmiCalculatorRoute
   '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
+  '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
   '/discount-calculator': typeof DiscountCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
@@ -560,6 +568,7 @@ export interface FileRoutesById {
   '/age-calculator': typeof AgeCalculatorRoute
   '/bmi-calculator': typeof BmiCalculatorRoute
   '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
+  '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
   '/discount-calculator': typeof DiscountCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
@@ -631,6 +640,7 @@ export interface FileRouteTypes {
     | '/age-calculator'
     | '/bmi-calculator'
     | '/compound-interest-calculator'
+    | '/compress-image-to-50kb'
     | '/contact'
     | '/discount-calculator'
     | '/etsy-fee-calculator'
@@ -700,6 +710,7 @@ export interface FileRouteTypes {
     | '/age-calculator'
     | '/bmi-calculator'
     | '/compound-interest-calculator'
+    | '/compress-image-to-50kb'
     | '/contact'
     | '/discount-calculator'
     | '/etsy-fee-calculator'
@@ -769,6 +780,7 @@ export interface FileRouteTypes {
     | '/age-calculator'
     | '/bmi-calculator'
     | '/compound-interest-calculator'
+    | '/compress-image-to-50kb'
     | '/contact'
     | '/discount-calculator'
     | '/etsy-fee-calculator'
@@ -839,6 +851,7 @@ export interface RootRouteChildren {
   AgeCalculatorRoute: typeof AgeCalculatorRoute
   BmiCalculatorRoute: typeof BmiCalculatorRoute
   CompoundInterestCalculatorRoute: typeof CompoundInterestCalculatorRoute
+  CompressImageTo50kbRoute: typeof CompressImageTo50kbRoute
   ContactRoute: typeof ContactRoute
   DiscountCalculatorRoute: typeof DiscountCalculatorRoute
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
@@ -1149,6 +1162,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/compress-image-to-50kb': {
+      id: '/compress-image-to-50kb'
+      path: '/compress-image-to-50kb'
+      fullPath: '/compress-image-to-50kb'
+      preLoaderRoute: typeof CompressImageTo50kbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/compound-interest-calculator': {
       id: '/compound-interest-calculator'
       path: '/compound-interest-calculator'
@@ -1383,6 +1403,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgeCalculatorRoute: AgeCalculatorRoute,
   BmiCalculatorRoute: BmiCalculatorRoute,
   CompoundInterestCalculatorRoute: CompoundInterestCalculatorRoute,
+  CompressImageTo50kbRoute: CompressImageTo50kbRoute,
   ContactRoute: ContactRoute,
   DiscountCalculatorRoute: DiscountCalculatorRoute,
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
