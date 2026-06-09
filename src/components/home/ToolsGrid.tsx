@@ -34,6 +34,13 @@ const tools = [
     color: "#a855f7",
   },
   {
+    title: "Compress Image to 50KB",
+    description: "Reduce JPG/PNG to exactly 50KB for SSC, UPSC & exam forms",
+    icon: FileDown,
+    path: "/compress-image-to-50kb",
+    color: "#22c55e",
+  },
+  {
     title: "Mortgage Calculator",
     description: "Estimate home loan payments, PMI & taxes",
     icon: Calculator,
