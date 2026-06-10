@@ -46,6 +46,7 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/ilovepdf", priority: "0.9", changefreq: "weekly" },
   { path: "/photo-remini", priority: "0.9", changefreq: "weekly" },
   { path: "/compress-image-to-50kb", priority: "0.9", changefreq: "weekly" },
+  { path: "/ecommerce-profit-calculator", priority: "0.9", changefreq: "weekly" },
 ];
 
 

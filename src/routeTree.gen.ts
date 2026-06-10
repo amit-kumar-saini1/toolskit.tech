@@ -42,6 +42,7 @@ import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
 import { Route as GratuityCalculatorRouteImport } from './routes/gratuity-calculator'
 import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
+import { Route as EcommerceProfitCalculatorRouteImport } from './routes/ecommerce-profit-calculator'
 import { Route as DiscountCalculatorRouteImport } from './routes/discount-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CompressImageTo50kbRouteImport } from './routes/compress-image-to-50kb'
@@ -243,6 +244,12 @@ const EtsyFeeCalculatorRoute = EtsyFeeCalculatorRouteImport.update({
   path: '/etsy-fee-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EcommerceProfitCalculatorRoute =
+  EcommerceProfitCalculatorRouteImport.update({
+    id: '/ecommerce-profit-calculator',
+    path: '/ecommerce-profit-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DiscountCalculatorRoute = DiscountCalculatorRouteImport.update({
   id: '/discount-calculator',
   path: '/discount-calculator',
@@ -430,6 +437,7 @@ export interface FileRoutesByFullPath {
   '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
   '/discount-calculator': typeof DiscountCalculatorRoute
+  '/ecommerce-profit-calculator': typeof EcommerceProfitCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
   '/gratuity-calculator': typeof GratuityCalculatorRoute
@@ -500,6 +508,7 @@ export interface FileRoutesByTo {
   '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
   '/discount-calculator': typeof DiscountCalculatorRoute
+  '/ecommerce-profit-calculator': typeof EcommerceProfitCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
   '/gratuity-calculator': typeof GratuityCalculatorRoute
@@ -571,6 +580,7 @@ export interface FileRoutesById {
   '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
   '/discount-calculator': typeof DiscountCalculatorRoute
+  '/ecommerce-profit-calculator': typeof EcommerceProfitCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
   '/gratuity-calculator': typeof GratuityCalculatorRoute
@@ -643,6 +653,7 @@ export interface FileRouteTypes {
     | '/compress-image-to-50kb'
     | '/contact'
     | '/discount-calculator'
+    | '/ecommerce-profit-calculator'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
     | '/gratuity-calculator'
@@ -713,6 +724,7 @@ export interface FileRouteTypes {
     | '/compress-image-to-50kb'
     | '/contact'
     | '/discount-calculator'
+    | '/ecommerce-profit-calculator'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
     | '/gratuity-calculator'
@@ -783,6 +795,7 @@ export interface FileRouteTypes {
     | '/compress-image-to-50kb'
     | '/contact'
     | '/discount-calculator'
+    | '/ecommerce-profit-calculator'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
     | '/gratuity-calculator'
@@ -854,6 +867,7 @@ export interface RootRouteChildren {
   CompressImageTo50kbRoute: typeof CompressImageTo50kbRoute
   ContactRoute: typeof ContactRoute
   DiscountCalculatorRoute: typeof DiscountCalculatorRoute
+  EcommerceProfitCalculatorRoute: typeof EcommerceProfitCalculatorRoute
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
   FdCalculatorRoute: typeof FdCalculatorRoute
   GratuityCalculatorRoute: typeof GratuityCalculatorRoute
@@ -1148,6 +1162,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EtsyFeeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ecommerce-profit-calculator': {
+      id: '/ecommerce-profit-calculator'
+      path: '/ecommerce-profit-calculator'
+      fullPath: '/ecommerce-profit-calculator'
+      preLoaderRoute: typeof EcommerceProfitCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/discount-calculator': {
       id: '/discount-calculator'
       path: '/discount-calculator'
@@ -1406,6 +1427,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompressImageTo50kbRoute: CompressImageTo50kbRoute,
   ContactRoute: ContactRoute,
   DiscountCalculatorRoute: DiscountCalculatorRoute,
+  EcommerceProfitCalculatorRoute: EcommerceProfitCalculatorRoute,
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
   FdCalculatorRoute: FdCalculatorRoute,
   GratuityCalculatorRoute: GratuityCalculatorRoute,

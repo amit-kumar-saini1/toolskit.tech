@@ -3,6 +3,7 @@
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
 import blogPentagonImage from "@/assets/blog-pentagon-2026.jpg";
 import blogCockroachImage from "@/assets/blog-cockroach-janata-party.png";
+import blogEcommerceProfitImage from "@/assets/blog-ecommerce-profit-2026.jpg";
 
 export interface BlogPostMeta {
   id: number;
@@ -16,6 +17,16 @@ export interface BlogPostMeta {
 }
 
 export const blogPostsMeta: Record<string, BlogPostMeta> = {
+  "ecommerce-profit-calculator-amazon-shopify-2026": {
+    id: 34,
+    slug: "ecommerce-profit-calculator-amazon-shopify-2026",
+    title: "Ecommerce Profit Calculator 2026: Amazon, Shopify, eBay Sellers ने Real Profit ऐसे निकाला (Free Tool + Live Examples)",
+    excerpt: "Amazon FBA, Shopify, eBay, Etsy, Flipkart और Meesho sellers की असली कमाई कैसे निकालें — fees, ads, shipping, returns सब जोड़कर। 2026 का सबसे honest ecommerce profit calculator और 7 real case studies।",
+    category: "Ecommerce",
+    date: "2026-06-10",
+    readTime: "15 min read",
+    image: blogEcommerceProfitImage,
+  },
   "cockroach-janta-party-kya-hai-cjp-abhijeet-dipke-2026": {
     id: 33,
     slug: "cockroach-janta-party-kya-hai-cjp-abhijeet-dipke-2026",
