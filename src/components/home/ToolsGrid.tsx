@@ -19,20 +19,12 @@ import {
     MapPin,
     Landmark,
     PiggyBank,
-    ShoppingBag,
-    Sparkles
+    ShoppingBag
 } from "lucide-react";
 import ToolCard from "./ToolCard";
 import { Button } from "@/components/ui/button";
 
 const tools = [
-  {
-    title: "Photo Remini (AI Enhancer)",
-    description: "Enhance blurry & old photos to HD — free Remini alternative",
-    icon: Sparkles,
-    path: "/photo-remini",
-    color: "#a855f7",
-  },
   {
     title: "Mortgage Calculator",
     description: "Estimate home loan payments, PMI & taxes",
