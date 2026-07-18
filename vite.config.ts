@@ -4,6 +4,7 @@ import path from "path";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { componentTagger } from "lovable-tagger";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/tanstack/vite";
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -27,6 +28,7 @@ export default defineConfig(({ mode }) => ({
         autoCodeSplitting: true,
       } as any,
     }),
+    mcpPlugin(),
     tsconfigPaths(),
     react(),
     mode === "development" && componentTagger(),

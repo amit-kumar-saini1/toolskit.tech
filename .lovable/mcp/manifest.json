@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "sdk_version": "0.23.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "toolskit-mcp",
+      "version": "0.1.0",
+      "title": "ToolsKit.tech Calculators"
+    },
+    "tools": [
+      {
+        "name": "sip_calculator",
+        "title": "SIP Calculator",
+        "description": "Calculate the maturity value of a monthly SIP (Systematic Investment Plan) given monthly amount, expected annual return, and duration in years.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "monthlyAmount": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Monthly SIP amount (in your currency)."
+            },
+            "annualReturnPercent": {
+              "type": "number",
+              "description": "Expected annual return in percent, e.g. 12 for 12%."
+            },
+            "years": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Investment duration in years."
+            }
+          },
+          "required": [
+            "monthlyAmount",
+            "annualReturnPercent",
+            "years"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "emi_calculator",
+        "title": "Loan EMI Calculator",
+        "description": "Calculate the monthly EMI, total interest, and total payment for a loan given principal, annual interest rate, and tenure in years.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Loan principal amount."
+            },
+            "annualInterestPercent": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Annual interest rate in percent, e.g. 9.5"
+            },
+            "years": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Loan tenure in years."
+            }
+          },
+          "required": [
+            "principal",
+            "annualInterestPercent",
+            "years"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "age_calculator",
+        "title": "Age Calculator",
+        "description": "Calculate exact age in years, months, and days between a date of birth and an 'as-on' date (defaults to today).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "dateOfBirth": {
+              "type": "string",
+              "description": "Date of birth in YYYY-MM-DD format."
+            },
+            "asOnDate": {
+              "description": "Optional cutoff date YYYY-MM-DD; defaults to today (UTC).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "dateOfBirth"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "bmi_calculator",
+        "title": "BMI Calculator",
+        "description": "Calculate Body Mass Index (BMI) and the WHO weight category from height (cm) and weight (kg).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "heightCm": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Height in centimeters."
+            },
+            "weightKg": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Weight in kilograms."
+            }
+          },
+          "required": [
+            "heightCm",
+            "weightKg"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "gst_calculator",
+        "title": "GST Calculator",
+        "description": "Calculate GST (Goods and Services Tax) inclusive or exclusive amounts given a base amount and GST rate percent.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Base amount."
+            },
+            "gstRatePercent": {
+              "type": "number",
+              "description": "GST rate in percent (e.g. 5, 12, 18, 28)."
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "exclusive",
+                "inclusive"
+              ],
+              "description": "'exclusive' adds GST to amount; 'inclusive' extracts GST from amount."
+            }
+          },
+          "required": [
+            "amount",
+            "gstRatePercent",
+            "mode"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "word_counter",
+        "title": "Word Counter",
+        "description": "Count words, characters (with and without spaces), sentences, paragraphs, and estimated reading time for a block of text.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Text to analyze."
+            }
+          },
+          "required": [
+            "text"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "percentage_calculator",
+        "title": "Percentage Calculator",
+        "description": "Percentage utilities. Modes: 'percent_of' (X% of Y), 'what_percent' (X is what % of Y), 'change' (percent change from A to B).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "percent_of",
+                "what_percent",
+                "change"
+              ],
+              "description": "Which calculation to perform."
+            },
+            "a": {
+              "type": "number",
+              "description": "First number. Meaning depends on mode."
+            },
+            "b": {
+              "type": "number",
+              "description": "Second number. Meaning depends on mode."
+            }
+          },
+          "required": [
+            "mode",
+            "a",
+            "b"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

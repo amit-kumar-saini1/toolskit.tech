@@ -2,6 +2,8 @@
 // Full content lives in src/pages/BlogPost.tsx
 import blogInvestmentImage from "@/assets/blog-investment-plans-2026.webp";
 import blogPentagonImage from "@/assets/blog-pentagon-2026.jpg";
+import blogCockroachImage from "@/assets/blog-cockroach-janata-party.png";
+import blogEcommerceProfitImage from "@/assets/blog-ecommerce-profit-2026.jpg";
 
 export interface BlogPostMeta {
   id: number;
@@ -15,6 +17,36 @@ export interface BlogPostMeta {
 }
 
 export const blogPostsMeta: Record<string, BlogPostMeta> = {
+  "ecommerce-profit-calculator-amazon-shopify-2026": {
+    id: 34,
+    slug: "ecommerce-profit-calculator-amazon-shopify-2026",
+    title: "Ecommerce Profit Calculator 2026: Amazon, Shopify, eBay Sellers ने Real Profit ऐसे निकाला (Free Tool + Live Examples)",
+    excerpt: "Amazon FBA, Shopify, eBay, Etsy, Flipkart और Meesho sellers की असली कमाई कैसे निकालें — fees, ads, shipping, returns सब जोड़कर। 2026 का सबसे honest ecommerce profit calculator और 7 real case studies।",
+    category: "Ecommerce",
+    date: "2026-06-10",
+    readTime: "15 min read",
+    image: blogEcommerceProfitImage,
+  },
+  "cockroach-janta-party-kya-hai-cjp-abhijeet-dipke-2026": {
+    id: 33,
+    slug: "cockroach-janta-party-kya-hai-cjp-abhijeet-dipke-2026",
+    title: "Cockroach Janta Party (CJP) क्या है? 1 लाख+ Members, AI Memes और Abhijeet Dipke की पूरी कहानी — क्यों Gen Z खुद को 'कॉकरोच' कह रहा है (2026)",
+    excerpt: "भारत की नई वायरल 'Cockroach Janta Party' (CJP) — Boston University के छात्र Abhijeet Dipke ने 5 दिन में 1 लाख+ Members जोड़े, 15 मिलियन views, 'Main Bhi Cockroach' slogan और CJI की टिप्पणी से जन्मा satirical political movement। पूरी कहानी, manifesto, उद्देश्य और Gen Z का गुस्सा — हिंदी में।",
+    category: "Trending",
+    date: "2026-05-24",
+    readTime: "12 min read",
+    image: blogCockroachImage,
+  },
+  "traffic-kyu-gir-raha-hai-seo-fix-guide-2026": {
+    id: 32,
+    slug: "traffic-kyu-gir-raha-hai-seo-fix-guide-2026",
+    title: "Website Traffic क्यों गिर रहा है? Semrush Data से समझिए + 2026 का Complete SEO Fix Plan (Hindi)",
+    excerpt: "नए blog और tool pages बनाने के बाद भी traffic नहीं आ रहा? Semrush से रिपोर्ट निकालकर 7 असली कारण, on-page SEO checklist, internal linking, और keyword targeting का पूरा action plan — हिंदी में, ToolsKit.tech के असली डेटा के साथ।",
+    category: "SEO Guide",
+    date: "2026-05-24",
+    readTime: "18 min read",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+  },
   "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026": {
     id: 31,
     slug: "pentagon-duniya-ka-sabse-takatwar-defense-headquarter-2026",

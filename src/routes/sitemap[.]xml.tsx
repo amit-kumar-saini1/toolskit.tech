@@ -20,7 +20,6 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/remove-background", priority: "0.9", changefreq: "weekly" },
   { path: "/age-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/name-and-date-on-photo", priority: "0.9", changefreq: "weekly" },
-  { path: "/airforce-agniveer-photo-with-name-date", priority: "0.9", changefreq: "weekly" },
   { path: "/sip-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/etsy-fee-calculator", priority: "0.9", changefreq: "weekly" },
   { path: "/image-cropper", priority: "0.9", changefreq: "weekly" },
@@ -29,6 +28,25 @@ const STATIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: "/webp-to-jpg", priority: "0.9", changefreq: "weekly" },
   { path: "/jpg-to-png", priority: "0.9", changefreq: "weekly" },
   { path: "/gst-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/png-to-jpg", priority: "0.9", changefreq: "weekly" },
+  { path: "/hra-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/income-tax-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/compound-interest-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/tip-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/nps-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/percentage-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/gratuity-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/word-counter", priority: "0.9", changefreq: "weekly" },
+  { path: "/bmi-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/loan-emi-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/password-generator", priority: "0.9", changefreq: "weekly" },
+  { path: "/discount-calculator", priority: "0.9", changefreq: "weekly" },
+  { path: "/photo-cropper", priority: "0.9", changefreq: "weekly" },
+  { path: "/kb-to-mb-converter", priority: "0.9", changefreq: "weekly" },
+  { path: "/ilovepdf", priority: "0.9", changefreq: "weekly" },
+  { path: "/photo-remini", priority: "0.9", changefreq: "weekly" },
+  { path: "/compress-image-to-50kb", priority: "0.9", changefreq: "weekly" },
+  { path: "/ecommerce-profit-calculator", priority: "0.9", changefreq: "weekly" },
 ];
 
 
@@ -70,4 +88,4 @@ export const Route = createFileRoute("/sitemap.xml")({
         }),
     },
   },
-} as any);
+});

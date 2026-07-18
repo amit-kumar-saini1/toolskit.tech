@@ -9,7 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WordCounterRouteImport } from './routes/word-counter'
 import { Route as WebpToJpgRouteImport } from './routes/webp-to-jpg'
+import { Route as TipCalculatorRouteImport } from './routes/tip-calculator'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SipCalculatorRouteImport } from './routes/sip-calculator'
@@ -17,19 +19,36 @@ import { Route as RemoveBackgroundRouteImport } from './routes/remove-background
 import { Route as QrGeneratorRouteImport } from './routes/qr-generator'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PpfCalculatorRouteImport } from './routes/ppf-calculator'
+import { Route as PngToJpgRouteImport } from './routes/png-to-jpg'
+import { Route as PhotoReminiRouteImport } from './routes/photo-remini'
+import { Route as PhotoCropperRouteImport } from './routes/photo-cropper'
+import { Route as PercentageCalculatorRouteImport } from './routes/percentage-calculator'
 import { Route as PdfToImageRouteImport } from './routes/pdf-to-image'
+import { Route as PasswordGeneratorRouteImport } from './routes/password-generator'
 import { Route as PagesRouteImport } from './routes/pages'
+import { Route as NpsCalculatorRouteImport } from './routes/nps-calculator'
 import { Route as NameAndDateOnPhotoRouteImport } from './routes/name-and-date-on-photo'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as LoanEmiCalculatorRouteImport } from './routes/loan-emi-calculator'
+import { Route as KbToMbConverterRouteImport } from './routes/kb-to-mb-converter'
 import { Route as KbResizePixelRouteImport } from './routes/kb-resize-pixel'
 import { Route as JpgToPngRouteImport } from './routes/jpg-to-png'
+import { Route as IncomeTaxCalculatorRouteImport } from './routes/income-tax-calculator'
 import { Route as ImageToPdfRouteImport } from './routes/image-to-pdf'
 import { Route as ImageCropperRouteImport } from './routes/image-cropper'
 import { Route as ImageCompressorRouteImport } from './routes/image-compressor'
+import { Route as IlovepdfRouteImport } from './routes/ilovepdf'
+import { Route as HraCalculatorRouteImport } from './routes/hra-calculator'
 import { Route as GstCalculatorRouteImport } from './routes/gst-calculator'
+import { Route as GratuityCalculatorRouteImport } from './routes/gratuity-calculator'
 import { Route as FdCalculatorRouteImport } from './routes/fd-calculator'
 import { Route as EtsyFeeCalculatorRouteImport } from './routes/etsy-fee-calculator'
+import { Route as EcommerceProfitCalculatorRouteImport } from './routes/ecommerce-profit-calculator'
+import { Route as DiscountCalculatorRouteImport } from './routes/discount-calculator'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AirforceAgniveerPhotoWithNameDateRouteImport } from './routes/airforce-agniveer-photo-with-name-date'
+import { Route as CompressImageTo50kbRouteImport } from './routes/compress-image-to-50kb'
+import { Route as CompoundInterestCalculatorRouteImport } from './routes/compound-interest-calculator'
+import { Route as BmiCalculatorRouteImport } from './routes/bmi-calculator'
 import { Route as AgeCalculatorRouteImport } from './routes/age-calculator'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
@@ -60,10 +79,23 @@ import { Route as ToolsColorPickerRouteImport } from './routes/tools.color-picke
 import { Route as ToolsBmiCalculatorRouteImport } from './routes/tools.bmi-calculator'
 import { Route as ToolsAgeCalculatorRouteImport } from './routes/tools.age-calculator'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
+import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
+import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 
+const WordCounterRoute = WordCounterRouteImport.update({
+  id: '/word-counter',
+  path: '/word-counter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WebpToJpgRoute = WebpToJpgRouteImport.update({
   id: '/webp-to-jpg',
   path: '/webp-to-jpg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TipCalculatorRoute = TipCalculatorRouteImport.update({
+  id: '/tip-calculator',
+  path: '/tip-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -101,9 +133,34 @@ const PpfCalculatorRoute = PpfCalculatorRouteImport.update({
   path: '/ppf-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PngToJpgRoute = PngToJpgRouteImport.update({
+  id: '/png-to-jpg',
+  path: '/png-to-jpg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoReminiRoute = PhotoReminiRouteImport.update({
+  id: '/photo-remini',
+  path: '/photo-remini',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoCropperRoute = PhotoCropperRouteImport.update({
+  id: '/photo-cropper',
+  path: '/photo-cropper',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PercentageCalculatorRoute = PercentageCalculatorRouteImport.update({
+  id: '/percentage-calculator',
+  path: '/percentage-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PdfToImageRoute = PdfToImageRouteImport.update({
   id: '/pdf-to-image',
   path: '/pdf-to-image',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PasswordGeneratorRoute = PasswordGeneratorRouteImport.update({
+  id: '/password-generator',
+  path: '/password-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagesRoute = PagesRouteImport.update({
@@ -111,9 +168,29 @@ const PagesRoute = PagesRouteImport.update({
   path: '/pages',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NpsCalculatorRoute = NpsCalculatorRouteImport.update({
+  id: '/nps-calculator',
+  path: '/nps-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NameAndDateOnPhotoRoute = NameAndDateOnPhotoRouteImport.update({
   id: '/name-and-date-on-photo',
   path: '/name-and-date-on-photo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McpRoute = McpRouteImport.update({
+  id: '/mcp',
+  path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoanEmiCalculatorRoute = LoanEmiCalculatorRouteImport.update({
+  id: '/loan-emi-calculator',
+  path: '/loan-emi-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KbToMbConverterRoute = KbToMbConverterRouteImport.update({
+  id: '/kb-to-mb-converter',
+  path: '/kb-to-mb-converter',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KbResizePixelRoute = KbResizePixelRouteImport.update({
@@ -124,6 +201,11 @@ const KbResizePixelRoute = KbResizePixelRouteImport.update({
 const JpgToPngRoute = JpgToPngRouteImport.update({
   id: '/jpg-to-png',
   path: '/jpg-to-png',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IncomeTaxCalculatorRoute = IncomeTaxCalculatorRouteImport.update({
+  id: '/income-tax-calculator',
+  path: '/income-tax-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImageToPdfRoute = ImageToPdfRouteImport.update({
@@ -141,9 +223,24 @@ const ImageCompressorRoute = ImageCompressorRouteImport.update({
   path: '/image-compressor',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IlovepdfRoute = IlovepdfRouteImport.update({
+  id: '/ilovepdf',
+  path: '/ilovepdf',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HraCalculatorRoute = HraCalculatorRouteImport.update({
+  id: '/hra-calculator',
+  path: '/hra-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GstCalculatorRoute = GstCalculatorRouteImport.update({
   id: '/gst-calculator',
   path: '/gst-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GratuityCalculatorRoute = GratuityCalculatorRouteImport.update({
+  id: '/gratuity-calculator',
+  path: '/gratuity-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FdCalculatorRoute = FdCalculatorRouteImport.update({
@@ -156,17 +253,38 @@ const EtsyFeeCalculatorRoute = EtsyFeeCalculatorRouteImport.update({
   path: '/etsy-fee-calculator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EcommerceProfitCalculatorRoute =
+  EcommerceProfitCalculatorRouteImport.update({
+    id: '/ecommerce-profit-calculator',
+    path: '/ecommerce-profit-calculator',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DiscountCalculatorRoute = DiscountCalculatorRouteImport.update({
+  id: '/discount-calculator',
+  path: '/discount-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AirforceAgniveerPhotoWithNameDateRoute =
-  AirforceAgniveerPhotoWithNameDateRouteImport.update({
-    id: '/airforce-agniveer-photo-with-name-date',
-    path: '/airforce-agniveer-photo-with-name-date',
+const CompressImageTo50kbRoute = CompressImageTo50kbRouteImport.update({
+  id: '/compress-image-to-50kb',
+  path: '/compress-image-to-50kb',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompoundInterestCalculatorRoute =
+  CompoundInterestCalculatorRouteImport.update({
+    id: '/compound-interest-calculator',
+    path: '/compound-interest-calculator',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BmiCalculatorRoute = BmiCalculatorRouteImport.update({
+  id: '/bmi-calculator',
+  path: '/bmi-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgeCalculatorRoute = AgeCalculatorRouteImport.update({
   id: '/age-calculator',
   path: '/age-calculator',
@@ -317,25 +435,60 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char91DotwellKnownChar93OauthProtectedResourceRoute =
+  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
+    id: '/.well-known/oauth-protected-resource',
+    path: '/.well-known/oauth-protected-resource',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotmcpChar93ListToolsRoute =
+  Char91DotmcpChar93ListToolsRouteImport.update({
+    id: '/.mcp/list-tools',
+    path: '/.mcp/list-tools',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char91DotmcpChar93InvokeToolToolRoute =
+  Char91DotmcpChar93InvokeToolToolRouteImport.update({
+    id: '/.mcp/invoke-tool/$tool',
+    path: '/.mcp/invoke-tool/$tool',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
-  '/airforce-agniveer-photo-with-name-date': typeof AirforceAgniveerPhotoWithNameDateRoute
+  '/bmi-calculator': typeof BmiCalculatorRoute
+  '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
+  '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
+  '/discount-calculator': typeof DiscountCalculatorRoute
+  '/ecommerce-profit-calculator': typeof EcommerceProfitCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
+  '/hra-calculator': typeof HraCalculatorRoute
+  '/ilovepdf': typeof IlovepdfRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/kb-to-mb-converter': typeof KbToMbConverterRoute
+  '/loan-emi-calculator': typeof LoanEmiCalculatorRoute
+  '/mcp': typeof McpRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/nps-calculator': typeof NpsCalculatorRoute
   '/pages': typeof PagesRoute
+  '/password-generator': typeof PasswordGeneratorRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/percentage-calculator': typeof PercentageCalculatorRoute
+  '/photo-cropper': typeof PhotoCropperRoute
+  '/photo-remini': typeof PhotoReminiRoute
+  '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -343,7 +496,11 @@ export interface FileRoutesByFullPath {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -370,25 +527,43 @@ export interface FileRoutesByFullPath {
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
   '/blog/': typeof BlogIndexRoute
   '/tools/': typeof ToolsIndexRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
-  '/airforce-agniveer-photo-with-name-date': typeof AirforceAgniveerPhotoWithNameDateRoute
+  '/bmi-calculator': typeof BmiCalculatorRoute
+  '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
+  '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
+  '/discount-calculator': typeof DiscountCalculatorRoute
+  '/ecommerce-profit-calculator': typeof EcommerceProfitCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
+  '/hra-calculator': typeof HraCalculatorRoute
+  '/ilovepdf': typeof IlovepdfRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/kb-to-mb-converter': typeof KbToMbConverterRoute
+  '/loan-emi-calculator': typeof LoanEmiCalculatorRoute
+  '/mcp': typeof McpRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/nps-calculator': typeof NpsCalculatorRoute
   '/pages': typeof PagesRoute
+  '/password-generator': typeof PasswordGeneratorRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/percentage-calculator': typeof PercentageCalculatorRoute
+  '/photo-cropper': typeof PhotoCropperRoute
+  '/photo-remini': typeof PhotoReminiRoute
+  '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -396,7 +571,11 @@ export interface FileRoutesByTo {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -423,6 +602,7 @@ export interface FileRoutesByTo {
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
   '/blog': typeof BlogIndexRoute
   '/tools': typeof ToolsIndexRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -430,19 +610,36 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/age-calculator': typeof AgeCalculatorRoute
-  '/airforce-agniveer-photo-with-name-date': typeof AirforceAgniveerPhotoWithNameDateRoute
+  '/bmi-calculator': typeof BmiCalculatorRoute
+  '/compound-interest-calculator': typeof CompoundInterestCalculatorRoute
+  '/compress-image-to-50kb': typeof CompressImageTo50kbRoute
   '/contact': typeof ContactRoute
+  '/discount-calculator': typeof DiscountCalculatorRoute
+  '/ecommerce-profit-calculator': typeof EcommerceProfitCalculatorRoute
   '/etsy-fee-calculator': typeof EtsyFeeCalculatorRoute
   '/fd-calculator': typeof FdCalculatorRoute
+  '/gratuity-calculator': typeof GratuityCalculatorRoute
   '/gst-calculator': typeof GstCalculatorRoute
+  '/hra-calculator': typeof HraCalculatorRoute
+  '/ilovepdf': typeof IlovepdfRoute
   '/image-compressor': typeof ImageCompressorRoute
   '/image-cropper': typeof ImageCropperRoute
   '/image-to-pdf': typeof ImageToPdfRoute
+  '/income-tax-calculator': typeof IncomeTaxCalculatorRoute
   '/jpg-to-png': typeof JpgToPngRoute
   '/kb-resize-pixel': typeof KbResizePixelRoute
+  '/kb-to-mb-converter': typeof KbToMbConverterRoute
+  '/loan-emi-calculator': typeof LoanEmiCalculatorRoute
+  '/mcp': typeof McpRoute
   '/name-and-date-on-photo': typeof NameAndDateOnPhotoRoute
+  '/nps-calculator': typeof NpsCalculatorRoute
   '/pages': typeof PagesRoute
+  '/password-generator': typeof PasswordGeneratorRoute
   '/pdf-to-image': typeof PdfToImageRoute
+  '/percentage-calculator': typeof PercentageCalculatorRoute
+  '/photo-cropper': typeof PhotoCropperRoute
+  '/photo-remini': typeof PhotoReminiRoute
+  '/png-to-jpg': typeof PngToJpgRoute
   '/ppf-calculator': typeof PpfCalculatorRoute
   '/privacy': typeof PrivacyRoute
   '/qr-generator': typeof QrGeneratorRoute
@@ -450,7 +647,11 @@ export interface FileRoutesById {
   '/sip-calculator': typeof SipCalculatorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/tip-calculator': typeof TipCalculatorRoute
   '/webp-to-jpg': typeof WebpToJpgRoute
+  '/word-counter': typeof WordCounterRoute
+  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
+  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tools/age-calculator': typeof ToolsAgeCalculatorRoute
   '/tools/bmi-calculator': typeof ToolsBmiCalculatorRoute
@@ -477,6 +678,7 @@ export interface FileRoutesById {
   '/tools/unit-converter': typeof ToolsUnitConverterRoute
   '/blog/': typeof BlogIndexRoute
   '/tools/': typeof ToolsIndexRoute
+  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -485,19 +687,36 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/age-calculator'
-    | '/airforce-agniveer-photo-with-name-date'
+    | '/bmi-calculator'
+    | '/compound-interest-calculator'
+    | '/compress-image-to-50kb'
     | '/contact'
+    | '/discount-calculator'
+    | '/ecommerce-profit-calculator'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gratuity-calculator'
     | '/gst-calculator'
+    | '/hra-calculator'
+    | '/ilovepdf'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
+    | '/kb-to-mb-converter'
+    | '/loan-emi-calculator'
+    | '/mcp'
     | '/name-and-date-on-photo'
+    | '/nps-calculator'
     | '/pages'
+    | '/password-generator'
     | '/pdf-to-image'
+    | '/percentage-calculator'
+    | '/photo-cropper'
+    | '/photo-remini'
+    | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
@@ -505,7 +724,11 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -532,25 +755,43 @@ export interface FileRouteTypes {
     | '/tools/unit-converter'
     | '/blog/'
     | '/tools/'
+    | '/.mcp/invoke-tool/$tool'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/$'
     | '/about'
     | '/age-calculator'
-    | '/airforce-agniveer-photo-with-name-date'
+    | '/bmi-calculator'
+    | '/compound-interest-calculator'
+    | '/compress-image-to-50kb'
     | '/contact'
+    | '/discount-calculator'
+    | '/ecommerce-profit-calculator'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gratuity-calculator'
     | '/gst-calculator'
+    | '/hra-calculator'
+    | '/ilovepdf'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
+    | '/kb-to-mb-converter'
+    | '/loan-emi-calculator'
+    | '/mcp'
     | '/name-and-date-on-photo'
+    | '/nps-calculator'
     | '/pages'
+    | '/password-generator'
     | '/pdf-to-image'
+    | '/percentage-calculator'
+    | '/photo-cropper'
+    | '/photo-remini'
+    | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
@@ -558,7 +799,11 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -585,25 +830,43 @@ export interface FileRouteTypes {
     | '/tools/unit-converter'
     | '/blog'
     | '/tools'
+    | '/.mcp/invoke-tool/$tool'
   id:
     | '__root__'
     | '/'
     | '/$'
     | '/about'
     | '/age-calculator'
-    | '/airforce-agniveer-photo-with-name-date'
+    | '/bmi-calculator'
+    | '/compound-interest-calculator'
+    | '/compress-image-to-50kb'
     | '/contact'
+    | '/discount-calculator'
+    | '/ecommerce-profit-calculator'
     | '/etsy-fee-calculator'
     | '/fd-calculator'
+    | '/gratuity-calculator'
     | '/gst-calculator'
+    | '/hra-calculator'
+    | '/ilovepdf'
     | '/image-compressor'
     | '/image-cropper'
     | '/image-to-pdf'
+    | '/income-tax-calculator'
     | '/jpg-to-png'
     | '/kb-resize-pixel'
+    | '/kb-to-mb-converter'
+    | '/loan-emi-calculator'
+    | '/mcp'
     | '/name-and-date-on-photo'
+    | '/nps-calculator'
     | '/pages'
+    | '/password-generator'
     | '/pdf-to-image'
+    | '/percentage-calculator'
+    | '/photo-cropper'
+    | '/photo-remini'
+    | '/png-to-jpg'
     | '/ppf-calculator'
     | '/privacy'
     | '/qr-generator'
@@ -611,7 +874,11 @@ export interface FileRouteTypes {
     | '/sip-calculator'
     | '/sitemap.xml'
     | '/terms'
+    | '/tip-calculator'
     | '/webp-to-jpg'
+    | '/word-counter'
+    | '/.mcp/list-tools'
+    | '/.well-known/oauth-protected-resource'
     | '/blog/$slug'
     | '/tools/age-calculator'
     | '/tools/bmi-calculator'
@@ -638,6 +905,7 @@ export interface FileRouteTypes {
     | '/tools/unit-converter'
     | '/blog/'
     | '/tools/'
+    | '/.mcp/invoke-tool/$tool'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -645,19 +913,36 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   AgeCalculatorRoute: typeof AgeCalculatorRoute
-  AirforceAgniveerPhotoWithNameDateRoute: typeof AirforceAgniveerPhotoWithNameDateRoute
+  BmiCalculatorRoute: typeof BmiCalculatorRoute
+  CompoundInterestCalculatorRoute: typeof CompoundInterestCalculatorRoute
+  CompressImageTo50kbRoute: typeof CompressImageTo50kbRoute
   ContactRoute: typeof ContactRoute
+  DiscountCalculatorRoute: typeof DiscountCalculatorRoute
+  EcommerceProfitCalculatorRoute: typeof EcommerceProfitCalculatorRoute
   EtsyFeeCalculatorRoute: typeof EtsyFeeCalculatorRoute
   FdCalculatorRoute: typeof FdCalculatorRoute
+  GratuityCalculatorRoute: typeof GratuityCalculatorRoute
   GstCalculatorRoute: typeof GstCalculatorRoute
+  HraCalculatorRoute: typeof HraCalculatorRoute
+  IlovepdfRoute: typeof IlovepdfRoute
   ImageCompressorRoute: typeof ImageCompressorRoute
   ImageCropperRoute: typeof ImageCropperRoute
   ImageToPdfRoute: typeof ImageToPdfRoute
+  IncomeTaxCalculatorRoute: typeof IncomeTaxCalculatorRoute
   JpgToPngRoute: typeof JpgToPngRoute
   KbResizePixelRoute: typeof KbResizePixelRoute
+  KbToMbConverterRoute: typeof KbToMbConverterRoute
+  LoanEmiCalculatorRoute: typeof LoanEmiCalculatorRoute
+  McpRoute: typeof McpRoute
   NameAndDateOnPhotoRoute: typeof NameAndDateOnPhotoRoute
+  NpsCalculatorRoute: typeof NpsCalculatorRoute
   PagesRoute: typeof PagesRoute
+  PasswordGeneratorRoute: typeof PasswordGeneratorRoute
   PdfToImageRoute: typeof PdfToImageRoute
+  PercentageCalculatorRoute: typeof PercentageCalculatorRoute
+  PhotoCropperRoute: typeof PhotoCropperRoute
+  PhotoReminiRoute: typeof PhotoReminiRoute
+  PngToJpgRoute: typeof PngToJpgRoute
   PpfCalculatorRoute: typeof PpfCalculatorRoute
   PrivacyRoute: typeof PrivacyRoute
   QrGeneratorRoute: typeof QrGeneratorRoute
@@ -665,7 +950,11 @@ export interface RootRouteChildren {
   SipCalculatorRoute: typeof SipCalculatorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  TipCalculatorRoute: typeof TipCalculatorRoute
   WebpToJpgRoute: typeof WebpToJpgRoute
+  WordCounterRoute: typeof WordCounterRoute
+  Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
+  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ToolsAgeCalculatorRoute: typeof ToolsAgeCalculatorRoute
   ToolsBmiCalculatorRoute: typeof ToolsBmiCalculatorRoute
@@ -692,15 +981,30 @@ export interface RootRouteChildren {
   ToolsUnitConverterRoute: typeof ToolsUnitConverterRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
+  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/word-counter': {
+      id: '/word-counter'
+      path: '/word-counter'
+      fullPath: '/word-counter'
+      preLoaderRoute: typeof WordCounterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/webp-to-jpg': {
       id: '/webp-to-jpg'
       path: '/webp-to-jpg'
       fullPath: '/webp-to-jpg'
       preLoaderRoute: typeof WebpToJpgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tip-calculator': {
+      id: '/tip-calculator'
+      path: '/tip-calculator'
+      fullPath: '/tip-calculator'
+      preLoaderRoute: typeof TipCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -752,11 +1056,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PpfCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/png-to-jpg': {
+      id: '/png-to-jpg'
+      path: '/png-to-jpg'
+      fullPath: '/png-to-jpg'
+      preLoaderRoute: typeof PngToJpgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photo-remini': {
+      id: '/photo-remini'
+      path: '/photo-remini'
+      fullPath: '/photo-remini'
+      preLoaderRoute: typeof PhotoReminiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photo-cropper': {
+      id: '/photo-cropper'
+      path: '/photo-cropper'
+      fullPath: '/photo-cropper'
+      preLoaderRoute: typeof PhotoCropperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/percentage-calculator': {
+      id: '/percentage-calculator'
+      path: '/percentage-calculator'
+      fullPath: '/percentage-calculator'
+      preLoaderRoute: typeof PercentageCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pdf-to-image': {
       id: '/pdf-to-image'
       path: '/pdf-to-image'
       fullPath: '/pdf-to-image'
       preLoaderRoute: typeof PdfToImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/password-generator': {
+      id: '/password-generator'
+      path: '/password-generator'
+      fullPath: '/password-generator'
+      preLoaderRoute: typeof PasswordGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pages': {
@@ -766,11 +1105,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PagesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nps-calculator': {
+      id: '/nps-calculator'
+      path: '/nps-calculator'
+      fullPath: '/nps-calculator'
+      preLoaderRoute: typeof NpsCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/name-and-date-on-photo': {
       id: '/name-and-date-on-photo'
       path: '/name-and-date-on-photo'
       fullPath: '/name-and-date-on-photo'
       preLoaderRoute: typeof NameAndDateOnPhotoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-emi-calculator': {
+      id: '/loan-emi-calculator'
+      path: '/loan-emi-calculator'
+      fullPath: '/loan-emi-calculator'
+      preLoaderRoute: typeof LoanEmiCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kb-to-mb-converter': {
+      id: '/kb-to-mb-converter'
+      path: '/kb-to-mb-converter'
+      fullPath: '/kb-to-mb-converter'
+      preLoaderRoute: typeof KbToMbConverterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kb-resize-pixel': {
@@ -785,6 +1152,13 @@ declare module '@tanstack/react-router' {
       path: '/jpg-to-png'
       fullPath: '/jpg-to-png'
       preLoaderRoute: typeof JpgToPngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/income-tax-calculator': {
+      id: '/income-tax-calculator'
+      path: '/income-tax-calculator'
+      fullPath: '/income-tax-calculator'
+      preLoaderRoute: typeof IncomeTaxCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/image-to-pdf': {
@@ -808,11 +1182,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImageCompressorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ilovepdf': {
+      id: '/ilovepdf'
+      path: '/ilovepdf'
+      fullPath: '/ilovepdf'
+      preLoaderRoute: typeof IlovepdfRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hra-calculator': {
+      id: '/hra-calculator'
+      path: '/hra-calculator'
+      fullPath: '/hra-calculator'
+      preLoaderRoute: typeof HraCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gst-calculator': {
       id: '/gst-calculator'
       path: '/gst-calculator'
       fullPath: '/gst-calculator'
       preLoaderRoute: typeof GstCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gratuity-calculator': {
+      id: '/gratuity-calculator'
+      path: '/gratuity-calculator'
+      fullPath: '/gratuity-calculator'
+      preLoaderRoute: typeof GratuityCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fd-calculator': {
@@ -829,6 +1224,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EtsyFeeCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ecommerce-profit-calculator': {
+      id: '/ecommerce-profit-calculator'
+      path: '/ecommerce-profit-calculator'
+      fullPath: '/ecommerce-profit-calculator'
+      preLoaderRoute: typeof EcommerceProfitCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/discount-calculator': {
+      id: '/discount-calculator'
+      path: '/discount-calculator'
+      fullPath: '/discount-calculator'
+      preLoaderRoute: typeof DiscountCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -836,11 +1245,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/airforce-agniveer-photo-with-name-date': {
-      id: '/airforce-agniveer-photo-with-name-date'
-      path: '/airforce-agniveer-photo-with-name-date'
-      fullPath: '/airforce-agniveer-photo-with-name-date'
-      preLoaderRoute: typeof AirforceAgniveerPhotoWithNameDateRouteImport
+    '/compress-image-to-50kb': {
+      id: '/compress-image-to-50kb'
+      path: '/compress-image-to-50kb'
+      fullPath: '/compress-image-to-50kb'
+      preLoaderRoute: typeof CompressImageTo50kbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compound-interest-calculator': {
+      id: '/compound-interest-calculator'
+      path: '/compound-interest-calculator'
+      fullPath: '/compound-interest-calculator'
+      preLoaderRoute: typeof CompoundInterestCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bmi-calculator': {
+      id: '/bmi-calculator'
+      path: '/bmi-calculator'
+      fullPath: '/bmi-calculator'
+      preLoaderRoute: typeof BmiCalculatorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/age-calculator': {
@@ -1053,6 +1476,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/.well-known/oauth-protected-resource': {
+      id: '/.well-known/oauth-protected-resource'
+      path: '/.well-known/oauth-protected-resource'
+      fullPath: '/.well-known/oauth-protected-resource'
+      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/list-tools': {
+      id: '/.mcp/list-tools'
+      path: '/.mcp/list-tools'
+      fullPath: '/.mcp/list-tools'
+      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/.mcp/invoke-tool/$tool': {
+      id: '/.mcp/invoke-tool/$tool'
+      path: '/.mcp/invoke-tool/$tool'
+      fullPath: '/.mcp/invoke-tool/$tool'
+      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -1061,20 +1505,36 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   AgeCalculatorRoute: AgeCalculatorRoute,
-  AirforceAgniveerPhotoWithNameDateRoute:
-    AirforceAgniveerPhotoWithNameDateRoute,
+  BmiCalculatorRoute: BmiCalculatorRoute,
+  CompoundInterestCalculatorRoute: CompoundInterestCalculatorRoute,
+  CompressImageTo50kbRoute: CompressImageTo50kbRoute,
   ContactRoute: ContactRoute,
+  DiscountCalculatorRoute: DiscountCalculatorRoute,
+  EcommerceProfitCalculatorRoute: EcommerceProfitCalculatorRoute,
   EtsyFeeCalculatorRoute: EtsyFeeCalculatorRoute,
   FdCalculatorRoute: FdCalculatorRoute,
+  GratuityCalculatorRoute: GratuityCalculatorRoute,
   GstCalculatorRoute: GstCalculatorRoute,
+  HraCalculatorRoute: HraCalculatorRoute,
+  IlovepdfRoute: IlovepdfRoute,
   ImageCompressorRoute: ImageCompressorRoute,
   ImageCropperRoute: ImageCropperRoute,
   ImageToPdfRoute: ImageToPdfRoute,
+  IncomeTaxCalculatorRoute: IncomeTaxCalculatorRoute,
   JpgToPngRoute: JpgToPngRoute,
   KbResizePixelRoute: KbResizePixelRoute,
+  KbToMbConverterRoute: KbToMbConverterRoute,
+  LoanEmiCalculatorRoute: LoanEmiCalculatorRoute,
+  McpRoute: McpRoute,
   NameAndDateOnPhotoRoute: NameAndDateOnPhotoRoute,
+  NpsCalculatorRoute: NpsCalculatorRoute,
   PagesRoute: PagesRoute,
+  PasswordGeneratorRoute: PasswordGeneratorRoute,
   PdfToImageRoute: PdfToImageRoute,
+  PercentageCalculatorRoute: PercentageCalculatorRoute,
+  PhotoCropperRoute: PhotoCropperRoute,
+  PhotoReminiRoute: PhotoReminiRoute,
+  PngToJpgRoute: PngToJpgRoute,
   PpfCalculatorRoute: PpfCalculatorRoute,
   PrivacyRoute: PrivacyRoute,
   QrGeneratorRoute: QrGeneratorRoute,
@@ -1082,7 +1542,12 @@ const rootRouteChildren: RootRouteChildren = {
   SipCalculatorRoute: SipCalculatorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  TipCalculatorRoute: TipCalculatorRoute,
   WebpToJpgRoute: WebpToJpgRoute,
+  WordCounterRoute: WordCounterRoute,
+  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
+  Char91DotwellKnownChar93OauthProtectedResourceRoute:
+    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   BlogSlugRoute: BlogSlugRoute,
   ToolsAgeCalculatorRoute: ToolsAgeCalculatorRoute,
   ToolsBmiCalculatorRoute: ToolsBmiCalculatorRoute,
@@ -1109,6 +1574,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsUnitConverterRoute: ToolsUnitConverterRoute,
   BlogIndexRoute: BlogIndexRoute,
   ToolsIndexRoute: ToolsIndexRoute,
+  Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
